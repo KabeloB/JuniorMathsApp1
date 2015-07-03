@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="JuniorMathsApp1.ViewAllResultsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:JuniorMathsApp1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock HorizontalAlignment="Left" Margin="438,51,0,0" TextWrapping="Wrap" Text="View all previous test results" VerticalAlignment="Top" Height="46" Width="456" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="466,140,0,0" TextWrapping="Wrap" Text="Select child:" VerticalAlignment="Top" FontSize="20"/>
+        <ComboBox x:Name="cbSelectChild" HorizontalAlignment="Left" Margin="594,136,0,0" VerticalAlignment="Top" Width="223"/>
+        <Button x:Name="btnViewReustls" Content="View" HorizontalAlignment="Left" Margin="830,129,0,0" VerticalAlignment="Top" Width="98"/>
+        <TextBlock HorizontalAlignment="Left" Margin="479,220,0,0" TextWrapping="Wrap" Text="All Results:" VerticalAlignment="Top" Height="25" Width="148" FontSize="20"/>
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="503,564,0,0" VerticalAlignment="Top" Width="176"/>
+        <Button x:Name="btnReturnMainMenu" Content="Return to main menu" HorizontalAlignment="Left" Margin="737,564,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="479,250,0,0" TextWrapping="Wrap" Text="Result                      Date                        Time " VerticalAlignment="Top" Height="280" Width="458"/>
+
+    </Grid>
+</Page>

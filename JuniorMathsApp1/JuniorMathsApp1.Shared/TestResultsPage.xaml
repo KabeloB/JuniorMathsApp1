@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="JuniorMathsApp1.TestResultsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:JuniorMathsApp1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock HorizontalAlignment="Left" Margin="403,79,0,0" TextWrapping="Wrap" Text="The test results for (Name + Surname)" VerticalAlignment="Top" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="437,184,0,0" TextWrapping="Wrap" Text="Number of correct answers:" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="437,236,0,0" TextWrapping="Wrap" Text="Number of wrong answers:" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="437,291,0,0" TextWrapping="Wrap" Text="Date of test:" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="437,353,0,0" TextWrapping="Wrap" Text="Time of test:" VerticalAlignment="Top" FontSize="20"/>
+        <Button x:Name="btnBackToMainMenu" Content="Back to main menu" HorizontalAlignment="Left" Margin="615,434,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtCorrectAnswers" HorizontalAlignment="Left" Margin="700,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="txtWrongAnswers" HorizontalAlignment="Left" Margin="700,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="txtDateOfTest" HorizontalAlignment="Left" Margin="700,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="261"/>
+        <TextBox x:Name="txtTimeOfTest" HorizontalAlignment="Left" Margin="700,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="261"/>
+        <TextBlock HorizontalAlignment="Left" Margin="820,178,0,0" TextWrapping="Wrap" Text="/ 10" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="820,228,0,0" TextWrapping="Wrap" Text="/ 10" VerticalAlignment="Top" FontSize="20"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="JuniorMathsApp1.EditedSelectedChildPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:JuniorMathsApp1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock HorizontalAlignment="Left" Margin="509,75,0,0" TextWrapping="Wrap" Text="Please select child to edit" VerticalAlignment="Top" FontSize="36"/>
+        <RadioButton Content="Child Name" HorizontalAlignment="Left" Margin="685,174,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Child Name" HorizontalAlignment="Left" Margin="685,226,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Child Name" HorizontalAlignment="Left" Margin="685,286,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnProceed" Content="Proceed" HorizontalAlignment="Left" Margin="551,347,0,0" VerticalAlignment="Top" Width="126"/>
+        <Button x:Name="btnBackToMenu" Content="Back to menu" HorizontalAlignment="Left" Margin="786,347,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>

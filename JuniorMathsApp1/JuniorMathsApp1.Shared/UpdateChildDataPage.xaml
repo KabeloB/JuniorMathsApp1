@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="JuniorMathsApp1.UpdateChildDataPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:JuniorMathsApp1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock HorizontalAlignment="Left" Margin="405,100,0,0" TextWrapping="Wrap" Text="Please update child information" VerticalAlignment="Top" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="440,179,0,0" TextWrapping="Wrap" Text="Update name:" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="440,235,0,0" TextWrapping="Wrap" Text="Update surname:" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="440,295,0,0" TextWrapping="Wrap" Text="Update age:" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="440,376,0,0" TextWrapping="Wrap" Text="Update grade:" VerticalAlignment="Top" FontSize="20"/>
+        <RadioButton x:Name="rdFirstGrade" Content="1st Grade" HorizontalAlignment="Left" Margin="458,420,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <RadioButton x:Name="rdSecondGrade" Content="2nd Grade" HorizontalAlignment="Left" Margin="458,451,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Button x:Name="btnUpdateDetails" Content="Update Details" HorizontalAlignment="Left" Margin="486,530,0,0" VerticalAlignment="Top" Width="159"/>
+        <Button x:Name="btnBackToEditSelect" Content="Back" HorizontalAlignment="Left" Margin="702,530,0,0" VerticalAlignment="Top" Width="159"/>
+        <TextBox x:Name="txtUpdateName" HorizontalAlignment="Left" Margin="637,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239"/>
+        <TextBox x:Name="txtUpdateSurname" HorizontalAlignment="Left" Margin="637,227,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239"/>
+        <TextBox x:Name="txtUpdateAge" HorizontalAlignment="Left" Margin="637,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>MOBILE-LAB12</Machine>
+    <WindowsUser>Mod</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>669f98b4-29a3-46a4-a062-a4551c58ec80</PackageIdentityName>
+    <IntermediateOutputPath>d:\mod\documents\visual studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="d:\mod\documents\visual studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="d:\mod\documents\visual studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\Debug\JuniorMathsApp1.Windows.exe">
+      <PackagePath>JuniorMathsApp1.Windows.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\mod\documents\visual studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\mod\documents\visual studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\mod\documents\visual studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\mod\documents\visual studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\mod\documents\visual studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\mod\documents\visual studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\Debug\EditedSelectedChildPage.xbf">
+      <PackagePath>EditedSelectedChildPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\mod\documents\visual studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\mod\documents\visual studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\Debug\MenuPage.xbf">
+      <PackagePath>MenuPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\mod\documents\visual studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\Debug\NewChildSavedPage.xbf">
+      <PackagePath>NewChildSavedPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\mod\documents\visual studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\Debug\NewTestPage.xbf">
+      <PackagePath>NewTestPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\mod\documents\visual studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\Debug\RegistrationPage.xbf">
+      <PackagePath>RegistrationPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\mod\documents\visual studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\Debug\ResetPasswordPage.xbf">
+      <PackagePath>ResetPasswordPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\mod\documents\visual studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\Debug\TestResultsPage.xbf">
+      <PackagePath>TestResultsPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\mod\documents\visual studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\Debug\UpdateChildDataPage.xbf">
+      <PackagePath>UpdateChildDataPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\mod\documents\visual studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\Debug\VerifyUserPage.xbf">
+      <PackagePath>VerifyUserPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\mod\documents\visual studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\Debug\ViewAllResultsPage.xbf">
+      <PackagePath>ViewAllResultsPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\mod\documents\visual studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\Debug\JuniorMathsApp1.Windows.xr.xml">
+      <PackagePath>JuniorMathsApp1.Windows.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="d:\mod\documents\visual studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
