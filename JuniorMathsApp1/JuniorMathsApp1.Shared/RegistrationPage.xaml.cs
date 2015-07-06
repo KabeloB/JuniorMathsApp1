@@ -29,6 +29,42 @@ namespace JuniorMathsApp1
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
+            String name, surname, email, phoneNumber, password;
+
+            name = txtEnterName.Text;
+            surname = txtEnterSurname.Text;
+            email = txtEnterEmail.Text;
+            phoneNumber = txtEnterPhoneNo.Text;
+            password = txtEnterPassword.Text;
+
+            //Verify that user inputs are not empty first
+            if ((!name.Equals("")) && (!surname.Equals("")) && (!email.Equals("")) && (!phoneNumber.Equals("")) && (!password.Equals("")))
+            {
+                //Insert the supplied user inputs into database here!
+
+
+                //Verify that the information was successfully inserted!
+                /*user inputs were saved then redirect user to Login page*/
+                if(name.Equals(true))
+                {
+                    this.Frame.Navigate(typeof(MainPage));
+                }
+                else
+                {
+                    //Enter error message box here!
+                    //String ErrorMessage = "User input could not be saved into database!";
+                    this.Frame.Navigate(typeof(RegistrationPage));
+                }
+
+            }
+            else
+            {
+                //Enter error message box here!
+                //String ErrorMessage = "Invalid user inputs, Ensure that all fields are filled in!";
+                this.Frame.Navigate(typeof(RegistrationPage));
+            }
+
+
             this.Frame.Navigate(typeof(MenuPage));
         }
 

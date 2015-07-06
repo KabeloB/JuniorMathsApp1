@@ -27,16 +27,45 @@ namespace JuniorMathsApp1
             this.InitializeComponent();
         }
 
+        //This buttons controls the Login fuctionalities
         private void btnLogin1_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MenuPage));
+            //this.Frame.Navigate(typeof(MenuPage));
+
+            String username = txtUsername.Text;
+            String password = txtPassword.Text;
+            //String ErrorMessage =
+
+            //Verify that user inputs are not empty first
+            if((!username.Equals("")) && (!password.Equals("")))
+            {
+                if ((username.Equals("DatabaseUsername")) && (password.Equals("DatabasePassword")))
+                {
+                    this.Frame.Navigate(typeof(MenuPage));
+                }
+                else
+                {
+                    //Enter error message box here!
+                    //String ErrorMessage = "Invalid user inputs entered!";
+                    this.Frame.Navigate(typeof(MainPage));
+                }
+                
+            }
+            else
+            {
+                //Enter error message box here!
+                //String ErrorMessage = "Invalid user inputs entered!";
+                this.Frame.Navigate(typeof(MainPage));
+            }
         }
 
+        //This buttons controls the Registration fuctionalities
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(RegistrationPage));
         }
 
+        //This buttons controls the Password Reset fuctionalities
         private void btnForgotPassword_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(VerifyUserPage));
