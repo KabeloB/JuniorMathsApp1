@@ -65,14 +65,14 @@ namespace JuniorMathsApp1
 
 #endif
 
-            //Create Db if not exist
-            bool dbExist = await CheckDbAsync("MathApp.db");
-            if (!dbExist)
+
+            //Create table inside database
+            this.dbPath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "JuniorMathsApp.sqlite");
+            using(var dbase = new SQLite.SQLiteConnection(dbPath))
             {
-                await CreateDatabaseAsync();
-                await AddUsersAsync();
+                dbase.CreateTable<Register>();
             }
-            
+           
 
             Frame rootFrame = Window.Current.Content as Frame;
 
@@ -154,55 +154,8 @@ namespace JuniorMathsApp1
             deferral.Complete();
         }
 
+        public string DBPath { get; set; } 
 
-        //Newly created methods: KB
-        //========================================================================================
-        //Method to check whether database already exists
-        private async Task<bool> CheckDbAsync(string dbName)
-        {
-            bool dbExist = true;
-
-            try
-            {
-                StorageFile sf = await ApplicationData.Current.LocalFolder.GetFileAsync(dbName);
-            }
-            catch (Exception)
-            {
-                dbExist = false;
-            }
-
-            return dbExist;
-        }
-
-        //Method to create database
-        private async Task CreateDatabaseAsync()
-        {
-            SQLiteAsyncConnection conn = new SQLiteAsyncConnection("MathApp.db");
-            await conn.CreateTableAsync<Register>();
-        }
-
-
-        //Dao method to insert information into database
-        
-        public async Task AddUsersAsync()
-        {
-            // Create a users list
-            var userList = new List<Register>()
-            {
-                new Register()
-                {
-                    Name = "Kabelo",
-                    Surname = "Basetse",
-                    Email = "testing@gmail.com",
-                    PhoneNo = "0125559999",
-                    Password = "kb"
-                }
-            };
-            
-            // Add rows to the User Table
-            SQLiteAsyncConnection conn = new SQLiteAsyncConnection("MathApp.db");
-            await conn.InsertAllAsync(userList);
-        }
 
 
       
