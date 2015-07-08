@@ -1,0 +1,1 @@
+D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\JuniorMathsApp1.Windows.csproj;x86

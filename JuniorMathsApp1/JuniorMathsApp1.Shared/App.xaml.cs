@@ -1,12 +1,17 @@
-﻿using System;
+﻿
+using JuniorMathsApp1.Model;
+using SQLite;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,10 +30,15 @@ namespace JuniorMathsApp1
     /// </summary>
     public sealed partial class App : Application
     {
+        public string dbPath {get; set;}
+
+       
+
 #if WINDOWS_PHONE_APP
         private TransitionCollection transitions;
 #endif
 
+        public static SQLiteAsyncConnection conn = new SQLiteAsyncConnection("MathApp.db");
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -45,14 +55,24 @@ namespace JuniorMathsApp1
         /// search results, and so forth.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs e)
+        protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {
                 this.DebugSettings.EnableFrameRateCounter = true;
             }
+
 #endif
+
+            //Create Db if not exist
+            bool dbExist = await CheckDbAsync("MathApp.db");
+            if (!dbExist)
+            {
+                await CreateDatabaseAsync();
+                await AddUsersAsync();
+            }
+            
 
             Frame rootFrame = Window.Current.Content as Frame;
 
@@ -133,5 +153,58 @@ namespace JuniorMathsApp1
             // TODO: Save application state and stop any background activity
             deferral.Complete();
         }
+
+
+        //Newly created methods: KB
+        //========================================================================================
+        //Method to check whether database already exists
+        private async Task<bool> CheckDbAsync(string dbName)
+        {
+            bool dbExist = true;
+
+            try
+            {
+                StorageFile sf = await ApplicationData.Current.LocalFolder.GetFileAsync(dbName);
+            }
+            catch (Exception)
+            {
+                dbExist = false;
+            }
+
+            return dbExist;
+        }
+
+        //Method to create database
+        private async Task CreateDatabaseAsync()
+        {
+            SQLiteAsyncConnection conn = new SQLiteAsyncConnection("MathApp.db");
+            await conn.CreateTableAsync<Register>();
+        }
+
+
+        //Dao method to insert information into database
+        
+        public async Task AddUsersAsync()
+        {
+            // Create a users list
+            var userList = new List<Register>()
+            {
+                new Register()
+                {
+                    Name = "Kabelo",
+                    Surname = "Basetse",
+                    Email = "testing@gmail.com",
+                    PhoneNo = "0125559999",
+                    Password = "kb"
+                }
+            };
+            
+            // Add rows to the User Table
+            SQLiteAsyncConnection conn = new SQLiteAsyncConnection("MathApp.db");
+            await conn.InsertAllAsync(userList);
+        }
+
+
+      
     }
 }

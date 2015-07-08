@@ -1,4 +1,6 @@
-﻿using System;
+﻿using JuniorMathsApp1.Model;
+using SQLite;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,12 +24,30 @@ namespace JuniorMathsApp1
     /// </summary>
     public sealed partial class RegistrationPage : Page
     {
+        //public List<Register> users { get; set; }
+
         public RegistrationPage()
         {
             this.InitializeComponent();
         }
 
-        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        {
+
+
+            // Get users
+            var query = App.conn.Table<Register>();
+            //users = await query.ToListAsync();       => uncomment here if errors are encountered
+
+            // Show users
+            //UserList.ItemsSource = users;
+        }
+
+
+
+
+        private async void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
             String name, surname, email, phoneNumber, password;
 
@@ -37,24 +57,42 @@ namespace JuniorMathsApp1
             phoneNumber = txtEnterPhoneNo.Text;
             password = txtEnterPassword.Text;
 
+            
+
             //Verify that user inputs are not empty first
             if ((!name.Equals("")) && (!surname.Equals("")) && (!email.Equals("")) && (!phoneNumber.Equals("")) && (!password.Equals("")))
             {
                 //Insert the supplied user inputs into database here!
-
-
                 //Verify that the information was successfully inserted!
-                /*user inputs were saved then redirect user to Login page*/
-                if(name.Equals(true))
-                {
-                    this.Frame.Navigate(typeof(MainPage));
-                }
-                else
-                {
-                    //Enter error message box here!
-                    //String ErrorMessage = "User input could not be saved into database!";
-                    this.Frame.Navigate(typeof(RegistrationPage));
-                }
+                //user inputs were saved then redirect user to Login page!
+
+                    Register newUser = new Register()
+                    {
+                        
+                        Name = name,
+                        Surname = surname,
+                        Email = email,
+                        PhoneNo = phoneNumber,
+                        Password = password
+                    };
+
+                    // Add row to the User Table
+                    SQLiteAsyncConnection conn = new SQLiteAsyncConnection("MathApp.db");
+                    int result = await conn.InsertAsync(newUser);
+
+                    // Add to the user list
+                    //users.Add(newUser);
+
+                    //Refresh user list
+                    //UserList.ItemsSource = null;
+                    //UserList.ItemsSource = users;
+
+                    if(result > 0)
+                    {
+                        this.Frame.Navigate(typeof(MainPage));
+                    }
+                    
+                
 
             }
             else

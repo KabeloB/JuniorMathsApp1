@@ -22,6 +22,7 @@ namespace JuniorMathsApp1
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private JuniorMathsApp1.App app = (Application.Current as App);
         public MainPage()
         {
             this.InitializeComponent();
@@ -31,32 +32,27 @@ namespace JuniorMathsApp1
         private void btnLogin1_Click(object sender, RoutedEventArgs e)
         {
             //this.Frame.Navigate(typeof(MenuPage));
-
             String username = txtUsername.Text;
             String password = txtPassword.Text;
             //String ErrorMessage =
+            
 
-            //Verify that user inputs are not empty first
-            if((!username.Equals("")) && (!password.Equals("")))
-            {
-                if ((username.Equals("DatabaseUsername")) && (password.Equals("DatabasePassword")))
-                {
-                    this.Frame.Navigate(typeof(MenuPage));
-                }
-                else
-                {
-                    //Enter error message box here!
-                    //String ErrorMessage = "Invalid user inputs entered!";
-                    this.Frame.Navigate(typeof(MainPage));
-                }
+                    if ((!username.Equals("")) && (!password.Equals("")))
+                    {
+                        this.Frame.Navigate(typeof(MenuPage));
+                    }
+                    else
+                    {
+                        //Enter error message box here!
+                        //String ErrorMessage = "Invalid user inputs entered!";
+                        //this.Frame.Navigate(typeof(MainPage));
+                        
+                    }
                 
-            }
-            else
-            {
-                //Enter error message box here!
-                //String ErrorMessage = "Invalid user inputs entered!";
-                this.Frame.Navigate(typeof(MainPage));
-            }
+           
+            
+            //Verify that user inputs are not empty first
+        
         }
 
         //This buttons controls the Registration fuctionalities

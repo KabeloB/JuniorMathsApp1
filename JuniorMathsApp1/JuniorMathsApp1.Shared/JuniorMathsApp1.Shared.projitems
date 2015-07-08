@@ -24,6 +24,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Register.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)NewChildSavedPage.xaml.cs">
       <DependentUpon>NewChildSavedPage.xaml</DependentUpon>
     </Compile>
@@ -36,6 +37,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)ResetPasswordPage.xaml.cs">
       <DependentUpon>ResetPasswordPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SQLite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SQLiteAsync.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TestResultsPage.xaml.cs">
       <DependentUpon>TestResultsPage.xaml</DependentUpon>
     </Compile>

@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>MOBILE-LAB12</Machine>
+    <WindowsUser>Mod</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|x86</SolutionConfiguration>
+    <PackageArchitecture>x86</PackageArchitecture>
+    <PackageIdentityName>669f98b4-29a3-46a4-a062-a4551c58ec80</PackageIdentityName>
+    <IntermediateOutputPath>D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\obj\x86\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>5DDF7EA150A0AD30EF9ED649F122FC3B431F922BA58F7A0D922DA038937F7B9E</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>669f98b4-29a3-46a4-a062-a4551c58ec80_1.0.0.0_x86__4xwyns1sn5zry</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>669f98b4-29a3-46a4-a062-a4551c58ec80_4xwyns1sn5zry!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>669f98b4-29a3-46a4-a062-a4551c58ec80</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Mod</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-07T10:46:18.377</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\JuniorMathsApp1.Windows.exe">
+      <PackagePath>JuniorMathsApp1.Windows.exe</PackagePath>
+      <Modified>2015-07-07T12:08:41.273</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\SQLite.WinRT81\3.8.10.2\Redist\Debug\x86\sqlite3.dll">
+      <PackagePath>sqlite3.dll</PackagePath>
+      <Modified>2015-05-27T09:15:40.896</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T08:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T08:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T08:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T08:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2015-07-06T09:43:38.953</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\EditedSelectedChildPage.xbf">
+      <PackagePath>EditedSelectedChildPage.xbf</PackagePath>
+      <Modified>2015-07-06T09:43:38.956</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2015-07-07T10:46:17.106</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\MenuPage.xbf">
+      <PackagePath>MenuPage.xbf</PackagePath>
+      <Modified>2015-07-06T09:43:38.959</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\NewChildSavedPage.xbf">
+      <PackagePath>NewChildSavedPage.xbf</PackagePath>
+      <Modified>2015-07-06T09:43:38.961</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\NewTestPage.xbf">
+      <PackagePath>NewTestPage.xbf</PackagePath>
+      <Modified>2015-07-06T09:43:38.964</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\RegistrationPage.xbf">
+      <PackagePath>RegistrationPage.xbf</PackagePath>
+      <Modified>2015-07-06T09:43:38.983</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\ResetPasswordPage.xbf">
+      <PackagePath>ResetPasswordPage.xbf</PackagePath>
+      <Modified>2015-07-06T09:43:38.986</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\TestResultsPage.xbf">
+      <PackagePath>TestResultsPage.xbf</PackagePath>
+      <Modified>2015-07-06T09:43:38.990</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\UpdateChildDataPage.xbf">
+      <PackagePath>UpdateChildDataPage.xbf</PackagePath>
+      <Modified>2015-07-06T09:43:38.993</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\VerifyUserPage.xbf">
+      <PackagePath>VerifyUserPage.xbf</PackagePath>
+      <Modified>2015-07-06T09:43:38.996</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\ViewAllResultsPage.xbf">
+      <PackagePath>ViewAllResultsPage.xbf</PackagePath>
+      <Modified>2015-07-06T09:43:38.999</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\JuniorMathsApp1.Windows.xr.xml">
+      <PackagePath>JuniorMathsApp1.Windows.xr.xml</PackagePath>
+      <Modified>2015-07-06T09:43:38.847</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-07-07T10:46:17.816</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Debug</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Debug, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.12.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Debug</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Debug, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.12.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Debug</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Debug, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.12.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>
