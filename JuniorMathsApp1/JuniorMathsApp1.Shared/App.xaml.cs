@@ -157,52 +157,7 @@ namespace JuniorMathsApp1
 
         //Newly created methods: KB
         //========================================================================================
-        //Method to check whether database already exists
-        private async Task<bool> CheckDbAsync(string dbName)
-        {
-            bool dbExist = true;
-
-            try
-            {
-                StorageFile sf = await ApplicationData.Current.LocalFolder.GetFileAsync(dbName);
-            }
-            catch (Exception)
-            {
-                dbExist = false;
-            }
-
-            return dbExist;
-        }
-
-        //Method to create database
-        private async Task CreateDatabaseAsync()
-        {
-            SQLiteAsyncConnection conn = new SQLiteAsyncConnection("MathApp.db");
-            await conn.CreateTableAsync<Register>();
-        }
-
-
-        //Dao method to insert information into database
-        
-        public async Task AddUsersAsync()
-        {
-            // Create a users list
-            var userList = new List<Register>()
-            {
-                new Register()
-                {
-                    Name = "Kabelo",
-                    Surname = "Basetse",
-                    Email = "testing@gmail.com",
-                    PhoneNo = "0125559999",
-                    Password = "kb"
-                }
-            };
-            
-            // Add rows to the User Table
-            SQLiteAsyncConnection conn = new SQLiteAsyncConnection("MathApp.db");
-            await conn.InsertAllAsync(userList);
-        }
+       
 
 
       
