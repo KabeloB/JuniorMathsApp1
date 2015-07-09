@@ -122,7 +122,8 @@ namespace JuniorMathsApp1.ParentClasses
             using (var db = new SQLite.SQLiteConnection(app.DBPath))
             {
                 //var _register
-                var _register = db.Query<Register>("select * from Parents where Email='" +email+ "' and Password='" +password+ "'");
+                var _register = db.Query<Register>("select * from Parents where Email='" +email+
+                    "' and Password='" +password+ "'").FirstOrDefault;
                 return _register;
             }
 
