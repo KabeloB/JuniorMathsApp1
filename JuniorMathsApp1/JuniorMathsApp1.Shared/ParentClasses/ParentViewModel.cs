@@ -204,7 +204,8 @@ namespace JuniorMathsApp1.ParentClasses
             return result;
         }
 
-        public string DeleteChild(int parentId)
+        //Delete child records from database 
+        public string DeleteChild(int parentId, int childId)
         {
             string result = string.Empty;
             using (var db = new SQLite.SQLiteConnection(app.DBPath))
@@ -230,6 +231,7 @@ namespace JuniorMathsApp1.ParentClasses
             return result;
         }
 
+        //Retrieve new Parents ID from the database
         public int GetNewCustomerId()
         {
             int customerId = 0;
