@@ -162,8 +162,9 @@ namespace JuniorMathsApp1.ParentClasses
             return parentName;
         }
 
-        public string SaveCustomer(ParentViewModel register)
+        public string SaveCustomer(string name, string surname, string email, string phoneNo, string password)
         {
+            //register = new ParentViewModel();
             string result = string.Empty;
             using (var db = new SQLite.SQLiteConnection(app.DBPath))
             {
@@ -186,12 +187,12 @@ namespace JuniorMathsApp1.ParentClasses
                     {
                         int success = db.Insert(new Register()
                         {
-                            Id = register.id,
-                            Name = register.Name,
-                            Surname = register.Surname,
-                            Email = register.Email,
-                            PhoneNo = register.PhoneNo,
-                            Password = register.Password
+                            Id = 0,
+                            Name = name,
+                            Surname = surname,
+                            Email = email,
+                            PhoneNo =phoneNo,
+                            Password = password
                         });
                     }
                     result = "Success";

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +26,8 @@ namespace JuniorMathsApp1
     public sealed partial class RegistrationPage : Page
     {
         //public List<Register> users { get; set; }
+
+        public ParentViewModel parent = null;
 
         public RegistrationPage()
         {
@@ -49,6 +52,8 @@ namespace JuniorMathsApp1
 
         private async void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
+            parent = new ParentViewModel();
+
             String name, surname, email, phoneNumber, password;
 
             name = txtEnterName.Text;
@@ -66,6 +71,21 @@ namespace JuniorMathsApp1
                 //Verify that the information was successfully inserted!
                 //user inputs were saved then redirect user to Login page!
 
+
+                String status = parent.SaveCustomer(name, surname, email, phoneNumber, password);
+                if(status.Equals("Success"))
+                {
+                    this.Frame.Navigate(typeof(MainPage));
+                }
+                else if (status.Equals("This customer was not saved"))
+                {
+                    string msg = "Data storage was unsuccessful!";
+                    MessageDialog dialog = new MessageDialog(msg);
+                    this.Frame.Navigate(typeof(RegistrationPage));
+                }
+
+
+                /* Old Code for saving data
                     Register newUser = new Register()
                     {
                         
@@ -91,7 +111,7 @@ namespace JuniorMathsApp1
                     {
                         this.Frame.Navigate(typeof(MainPage));
                     }
-                    
+                    */
                 
 
             }
