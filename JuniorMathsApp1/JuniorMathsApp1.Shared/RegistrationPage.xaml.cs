@@ -90,36 +90,6 @@ namespace JuniorMathsApp1
                     MessageDialog dialog2 = new MessageDialog("Error:"  + ex.Message); 
                 }
 
-
-                /* Old Code for saving data
-                    Register newUser = new Register()
-                    {
-                        
-                        Name = name,
-                        Surname = surname,
-                        Email = email,
-                        PhoneNo = phoneNumber,
-                        Password = password
-                    };
-
-                    // Add row to the User Table
-                    SQLiteAsyncConnection conn = new SQLiteAsyncConnection("MathApp.db");
-                    int result = await conn.InsertAsync(newUser);
-
-                    // Add to the user list
-                    //users.Add(newUser);
-
-                    //Refresh user list
-                    //UserList.ItemsSource = null;
-                    //UserList.ItemsSource = users;
-
-                    if(result > 0)
-                    {
-                        this.Frame.Navigate(typeof(MainPage));
-                    }
-                    */
-                
-
             }
             else
             {
