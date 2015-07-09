@@ -116,6 +116,7 @@ namespace JuniorMathsApp1.ParentClasses
 
         private JuniorMathsApp1.App app = (Application.Current as App);
 
+        //Retrive all Parent details from the database where email and password match user inputs
         public Register GetCustomer(string email, string password)
         {
             //var register = new ParentViewModel();
