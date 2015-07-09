@@ -31,6 +31,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)NewTestPage.xaml.cs">
       <DependentUpon>NewTestPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ParentViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>
     </Compile>

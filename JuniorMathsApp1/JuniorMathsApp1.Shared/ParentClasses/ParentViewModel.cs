@@ -199,7 +199,7 @@ namespace JuniorMathsApp1.ParentClasses
                 }
                 catch (Exception ex)
                 {
-                    result = "This customer was not saved.";
+                    result = "This customer was not saved";
                 }
             }
             return result;
