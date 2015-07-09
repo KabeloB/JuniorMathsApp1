@@ -2,14 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 using Windows.UI.Xaml;
 
 namespace JuniorMathsApp1.ParentClasses
 {
-    public class ParentViewModel : ViewModelBase
+    class ParentViewModel
     {
-        #region Properties
-
         //Id
         private int id = 0;
         public int Id
@@ -23,7 +23,7 @@ namespace JuniorMathsApp1.ParentClasses
                 { return; }
 
                 id = value;
-                RaisePropertyChanged("Id");
+                
             }
         }
 
@@ -40,7 +40,7 @@ namespace JuniorMathsApp1.ParentClasses
                 { return; }
 
                 name = value;
-                RaisePropertyChanged("Name");
+               
             }
         }
 
@@ -57,7 +57,7 @@ namespace JuniorMathsApp1.ParentClasses
                 { return; }
 
                 surname = value;
-                RaisePropertyChanged("Surname");
+                
             }
         }
 
@@ -74,7 +74,7 @@ namespace JuniorMathsApp1.ParentClasses
                 { return; }
 
                 email = value;
-                RaisePropertyChanged("Email");
+                
             }
         }
 
@@ -91,7 +91,7 @@ namespace JuniorMathsApp1.ParentClasses
                 { return; }
 
                 phoneNo = value;
-                RaisePropertyChanged("PhoneNo");
+                
             }
         }
 
@@ -108,149 +108,67 @@ namespace JuniorMathsApp1.ParentClasses
                 { return; }
 
                 password = value;
-                RaisePropertyChanged("Password");
+                
             }
         }
-
-        #endregion "Properties"
 
         private JuniorMathsApp1.App app = (Application.Current as App);
-
         //Retrive all Parent details from the database where email and password match user inputs
-        public Register GetCustomer(string email, string password)
+        public Register getParent(string email, string password)
         {
-            //var register = new ParentViewModel();
-            using (var db = new SQLite.SQLiteConnection(app.DBPath))
+            using(var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                //var _register
-                var _register = db.Query<Register>("select * from Parents where Email='" +email+
-                    "' and Password='" +password+ "'").FirstOrDefault;
+                var _register = db.Query<Register>("Select * from Parents where Email='" + email + "' and Password='" + password + "'").FirstOrDefault;
                 return _register;
             }
-
         }
 
-
-        /*
-        public ParentViewModel GetCustomer(int customerId)
-        {
-            var register = new ParentViewModel();
-            using (var db = new SQLite.SQLiteConnection(app.DBPath))
-            {
-                var _register = (db.Table<Register>().Where(
-                    c => c.Id == customerId)).Single();
-                register.Id = _register.Id;
-                register.Name = _register.Name;
-                register.Surname = _register.Surname;
-                register.Email = _register.Email;
-                register.PhoneNo = _register.PhoneNo;
-                register.Password = _register.Password;
-            }
-            return register;
-        }
-
-         */
-        public string GetParentName(int parentId)
-        {
-            string parentName = "Unknown";
-            using (var db = new SQLite.SQLiteConnection(app.DBPath))
-            {
-                var register = (db.Table<Register>().Where(
-                    c => c.Id == parentId)).Single();
-                parentName = register.Name;
-            }
-            return parentName;
-        }
-
-        public string SaveCustomer(string name, string surname, string email, string phoneNo, string password)
+        //Method for saving parent details into the database
+        public void SaveCustomer(string name, string surname, string email, string phoneNo, string password)
         {
             //register = new ParentViewModel();
             string result = string.Empty;
-            using (var db = new SQLite.SQLiteConnection(app.DBPath))
+            using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
                 string change = string.Empty;
                 try
                 {
-                    var existingParent = (db.Table<Register>().Where(
-                        c => c.Id == register.Id)).SingleOrDefault();
+                    //var existingParent = (db.Table<Register>().Where(
+                    // c => c.Id == register.Id)).SingleOrDefault();
 
-                    if (existingParent != null)
+                    int success = db.Insert(new Register()
                     {
-                        existingParent.Name = register.Name;
-                        existingParent.Surname = register.Surname;
-                        existingParent.Email = register.Email;
-                        existingParent.PhoneNo = register.PhoneNo;
-                        existingParent.Password = register.Password;
-                        int success = db.Update(existingParent);
-                    }
-                    else
-                    {
-                        int success = db.Insert(new Register()
-                        {
-                            Id = 0,
-                            Name = name,
-                            Surname = surname,
-                            Email = email,
-                            PhoneNo =phoneNo,
-                            Password = password
-                        });
-                    }
-                    result = "Success";
+                        Id = 0,
+                        Name = name,
+                        Surname = surname,
+                        Email = email,
+                        PhoneNo = phoneNo,
+                        Password = password
+                    });
+
+                    // result = "Success";
                 }
                 catch (Exception ex)
                 {
-                    result = "This customer was not saved";
+                    //result = "This customer was not saved";
                 }
             }
-            return result;
+            //return result;
         }
 
-        //Delete child records from database 
-        public string DeleteChild(int parentId, int childId)
-        {
-            string result = string.Empty;
-            using (var db = new SQLite.SQLiteConnection(app.DBPath))
-            {
-                var children = db.Table<AddChild>().Where(
-                    p => p.ParentId == parentId);
-                foreach (AddChild project in children)
-                {
-                    db.Delete(project);
-                }
-                var existingChild = (db.Table<AddChild>().Where(
-                    c => c.Id == parentId)).Single();
 
-                if (db.Delete(existingChild) > 0)
-                {
-                    result = "Success";
-                }
-                else
-                {
-                    result = "This customer was not removed";
-                }
-            }
-            return result;
-        }
 
-        //Retrieve new Parents ID from the database
-        public int GetNewCustomerId()
-        {
-            int customerId = 0;
-            using (var db = new SQLite.SQLiteConnection(app.DBPath))
-            {
-                var customers = db.Table<Register>();
-                if (customers.Count() > 0)
-                {
-                    customerId = (from c in db.Table<Register>()
-                                  select c.Id).Max();
-                    customerId += 1;
-                }
-                else
-                {
-                    customerId = 1;
-                }
-            }
-            return customerId;
-        }
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

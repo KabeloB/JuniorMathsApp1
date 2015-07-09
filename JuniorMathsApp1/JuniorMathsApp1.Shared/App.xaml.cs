@@ -154,7 +154,6 @@ namespace JuniorMathsApp1
             deferral.Complete();
         }
 
-        public string DBPath { get; set; } 
 
 
 

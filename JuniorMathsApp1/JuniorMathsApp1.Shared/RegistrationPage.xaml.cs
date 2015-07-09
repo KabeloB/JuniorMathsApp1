@@ -1,4 +1,5 @@
 ﻿using JuniorMathsApp1.Model;
+using JuniorMathsApp1.ParentClasses;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -27,7 +28,7 @@ namespace JuniorMathsApp1
     {
         //public List<Register> users { get; set; }
 
-         ParentViewModel objParent = new ParentViewModel();
+        ParentViewModel objParent = new ParentViewModel();
 
         public RegistrationPage()
         {
@@ -50,7 +51,7 @@ namespace JuniorMathsApp1
 
 
 
-        private async void btnSubmit_Click(object sender, RoutedEventArgs e)
+        private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
             objParent = new ParentViewModel();
 
@@ -70,25 +71,26 @@ namespace JuniorMathsApp1
                 //Insert the supplied user inputs into database here!
                 //Verify that the information was successfully inserted!
                 //user inputs were saved then redirect user to Login page!
+                       objParent.SaveCustomer(name, surname, email, phoneNumber, password);
 
-                try
+                        this.Frame.Navigate(typeof(MenuPage));
+                   
+                /* try
                 { 
-                    String status = objParent.SaveCustomer(name, surname, email, phoneNumber, password);
-                    if(status.Equals("Success"))
-                    {
-                        this.Frame.Navigate(typeof(MainPage));
-                    }
-                    else if (status.Equals("This customer was not saved"))
-                    {
+                    
+                   
+                   
                         string msg = "Data storage was unsuccessful!";
                         MessageDialog dialog = new MessageDialog(msg);
                         this.Frame.Navigate(typeof(RegistrationPage));
-                    }
+                     
+                    
                 }
                 catch(Exception ex)
                 {
                     MessageDialog dialog2 = new MessageDialog("Error:"  + ex.Message); 
-                }
+
+                } */
 
             }
             else
@@ -99,7 +101,7 @@ namespace JuniorMathsApp1
             }
 
 
-            this.Frame.Navigate(typeof(MenuPage));
+            //this.Frame.Navigate(typeof(MenuPage));
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)

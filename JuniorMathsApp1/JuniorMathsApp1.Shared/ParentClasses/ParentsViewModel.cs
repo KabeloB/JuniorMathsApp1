@@ -7,7 +7,7 @@ using Windows.UI.Xaml;
 
 namespace JuniorMathsApp1.ParentClasses
 {
-    public class ParentsViewModel : ViewModelBase
+    class ParentsViewModel
     {
         private ObservableCollection<ParentViewModel> parents;
         public ObservableCollection<ParentViewModel> Parents
@@ -20,7 +20,6 @@ namespace JuniorMathsApp1.ParentClasses
             set
             {
                 parents = value;
-                RaisePropertyChanged("Parents");
             }
         }
         private JuniorMathsApp1.App app = (Application.Current as App);
@@ -28,7 +27,7 @@ namespace JuniorMathsApp1.ParentClasses
         public ObservableCollection<ParentViewModel> GetParents()
         {
             parents = new ObservableCollection<ParentViewModel>();
-            using (var db = new SQLite.SQLiteConnection(app.DBPath))
+            using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
                 var query = db.Table<Register>().OrderBy(c => c.Name);
                 foreach (var _register in query)
@@ -41,6 +40,7 @@ namespace JuniorMathsApp1.ParentClasses
                         Email = _register.Email,
                         PhoneNo = _register.PhoneNo,
                         Password = _register.Password
+                         
                     };
                     parents.Add(register);
                 }
