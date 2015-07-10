@@ -37,6 +37,14 @@ namespace JuniorMathsApp1
             this.InitializeComponent();
         }
 
+        //Code for displaying MessageBox
+        private async void messageBox(string msg)
+        {
+            var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
+            await msgDisplay.ShowAsync();
+
+        }
+
         //This buttons controls the Login fuctionalities
         private void btnLogin1_Click(object sender, RoutedEventArgs e)
         {
@@ -47,7 +55,9 @@ namespace JuniorMathsApp1
             //this.Frame.Navigate(typeof(MenuPage));
             String username = txtUsername.Text;
             String password = txtPassword.Text;
-            //String ErrorMessage =
+
+            //String ErrorMessage
+            string messageToDisplay = "";
             
 
                     if ((!username.Equals("")) && (!password.Equals("")))
@@ -55,17 +65,18 @@ namespace JuniorMathsApp1
                         try
                         {
                             //Get all parent details matching user supplied information
-                            objReg = objParent.GetCustomer(username, password);
+                            
+                            messageBox(messageToDisplay);
 
                             if((username.Equals(objReg.Email)) && (password.Equals(objReg.Password)))
                             {
-                                dialog = new MessageDialog("Welcome " + objReg.Name + " " + objReg.Surname);
-                                 this.Frame.Navigate(typeof(MenuPage));
+                                messageToDisplay = "Welcome " + objReg.Name + " " + objReg.Surname;
+                                messageBox(messageToDisplay);
                             }
                             else
                             {
-                                dialog = new MessageDialog("Invalid user details enetered!");
-                                this.Frame.Navigate(typeof(MainPage));
+                                messageToDisplay = "Invalid user details enetered!" ;
+                                messageBox(messageToDisplay);
                             }
 
                             
@@ -80,7 +91,7 @@ namespace JuniorMathsApp1
                     {
                         //Enter error message box here!
                         String ErrorMessage = "Input fields must not be empty!";
-                        dialog = new MessageDialog(ErrorMessage);
+                        messageBox(ErrorMessage);
                         //this.Frame.Navigate(typeof(MainPage));
                         
                     }

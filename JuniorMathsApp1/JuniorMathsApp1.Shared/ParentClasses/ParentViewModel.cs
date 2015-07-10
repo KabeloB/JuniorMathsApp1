@@ -11,6 +11,8 @@ namespace JuniorMathsApp1.ParentClasses
     class ParentViewModel
     {
         //Id
+
+        Register reg = null;
         private int id = 0;
         public int Id
         {
@@ -113,14 +115,24 @@ namespace JuniorMathsApp1.ParentClasses
         }
 
         private JuniorMathsApp1.App app = (Application.Current as App);
+
+
         //Retrive all Parent details from the database where email and password match user inputs
         public Register getParent(string email, string password)
         {
+             reg = new Register();
             using(var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                var _register = db.Query<Register>("Select * from Parents where Email='" + email + "' and Password='" + password + "'").FirstOrDefault;
-                return _register;
+
+                reg = db.Get<Register>("Select * from Parents where Email ='" +email+ "' and Password ='" +password+ "'");
+
+                /*
+                  var _register = db.Query<Register>("Select * from Parents where Email ='" + email + "' and Password ='" + password + "'").FirstOrDefault;
+                  return reg;
+                */
+
             }
+            return reg;
         }
 
         //Method for saving parent details into the database
