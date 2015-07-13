@@ -120,11 +120,11 @@ namespace JuniorMathsApp1.ParentClasses
         //Retrive all Parent details from the database where email and password match user inputs
         public Register getParent(string email, string password)
         {
-             reg = new Register();
+            reg = new Register();
             using(var db = new SQLite.SQLiteConnection(app.dbPath))
             {
 
-                reg = db.Get<Register>("Select * from Parents where Email ='" +email+ "' and Password ='" +password+ "'");
+                reg = db.Query<Register>("Select * from Parents where Email ='" +email+ "' and Password ='" +password+ "'").FirstOrDefault();
 
                 /*
                   var _register = db.Query<Register>("Select * from Parents where Email ='" + email + "' and Password ='" + password + "'").FirstOrDefault;
@@ -135,14 +135,14 @@ namespace JuniorMathsApp1.ParentClasses
             return reg;
         }
 
+
         //Method for saving parent details into the database
         public void SaveCustomer(string name, string surname, string email, string phoneNo, string password)
         {
-            //register = new ParentViewModel();
-            string result = string.Empty;
+            
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                string change = string.Empty;
+               
                 try
                 {
                     //var existingParent = (db.Table<Register>().Where(
@@ -158,14 +158,12 @@ namespace JuniorMathsApp1.ParentClasses
                         Password = password
                     });
 
-                    // result = "Success";
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    //result = "This customer was not saved";
+                   
                 }
             }
-            //return result;
         }
 
 

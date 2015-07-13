@@ -65,20 +65,25 @@ namespace JuniorMathsApp1
                         try
                         {
                             //Get all parent details matching user supplied information
+
+                            var confirm = objParent.getParent(username, password);
+
+                            if(confirm != null)
+                            {
+                                this.Frame.Navigate(typeof(MenuPage));
+                                messageToDisplay = "Welcome " + confirm.Name + " " + confirm.Surname;
+                                messageBox(messageToDisplay);
+                                
+                                
+                            }
+                             else
+                            {
+                                messageToDisplay = "Invalid user details enetered!";
+                                messageBox(messageToDisplay);
+                            }
+
+
                             
-                            messageBox(messageToDisplay);
-
-                            if((username.Equals(objReg.Email)) && (password.Equals(objReg.Password)))
-                            {
-                                messageToDisplay = "Welcome " + objReg.Name + " " + objReg.Surname;
-                                messageBox(messageToDisplay);
-                            }
-                            else
-                            {
-                                messageToDisplay = "Invalid user details enetered!" ;
-                                messageBox(messageToDisplay);
-                            }
-
                             
                         }
                         catch(Exception ex)
@@ -112,6 +117,11 @@ namespace JuniorMathsApp1
         private void btnForgotPassword_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(VerifyUserPage));
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ShowPage));
         }
     }
 }

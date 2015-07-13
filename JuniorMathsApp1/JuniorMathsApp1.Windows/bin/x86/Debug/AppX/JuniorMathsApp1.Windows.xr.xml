@@ -73,6 +73,14 @@
     </RootType>
     <RootType FullName="JuniorMathsApp1.RegistrationPage" />
     <RootType FullName="JuniorMathsApp1.ResetPasswordPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="JuniorMathsApp1.ShowPage" />
     <RootType FullName="JuniorMathsApp1.TestResultsPage" />
     <RootType FullName="JuniorMathsApp1.UpdateChildDataPage" />
     <RootType FullName="JuniorMathsApp1.VerifyUserPage" />

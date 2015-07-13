@@ -48,7 +48,13 @@ namespace JuniorMathsApp1
             //UserList.ItemsSource = users;
         }
 
+        private async void messageBox(string msg)
+        {
+            var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
+            await msgDisplay.ShowAsync();
 
+        }
+        String messageToDisplay = "";
 
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
@@ -73,7 +79,10 @@ namespace JuniorMathsApp1
                 //user inputs were saved then redirect user to Login page!
                        objParent.SaveCustomer(name, surname, email, phoneNumber, password);
 
-                        this.Frame.Navigate(typeof(MenuPage));
+                        this.Frame.Navigate(typeof(MainPage));
+                        messageToDisplay = "You have succesfully registered, Please user your credentials to login!";
+                        messageBox(messageToDisplay);
+
                    
                 /* try
                 { 

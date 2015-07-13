@@ -29,7 +29,7 @@ namespace JuniorMathsApp1.ParentClasses
             parents = new ObservableCollection<ParentViewModel>();
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                var query = db.Table<Register>().OrderBy(c => c.Name);
+                var query = db.Query<Register>("select * from parents");
                 foreach (var _register in query)
                 {
                     var register = new ParentViewModel()
