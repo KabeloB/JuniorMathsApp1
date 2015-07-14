@@ -39,12 +39,17 @@ namespace JuniorMathsApp1
 
             foreach(var p in parents)
             {
-                listView.Items.Add(p.Password);
+                listView.Items.Add(p.Name + " " + p.Surname + " " + p.Email);
             }
             
 
 
             base.OnNavigatedTo(e);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }

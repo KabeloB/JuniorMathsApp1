@@ -6,13 +6,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Windows.UI.Xaml;
 
-namespace JuniorMathsApp1.ParentClasses
+namespace JuniorMathsApp1.ChildrenClasses
 {
-    class ParentViewModel
+    class ChildrenViewModel
     {
         //Id
 
-        Register reg = null;
+        RegisterChild reg = null;
+
         private int id = 0;
         public int Id
         {
@@ -25,7 +26,24 @@ namespace JuniorMathsApp1.ParentClasses
                 { return; }
 
                 id = value;
-                
+
+            }
+        }
+
+        //Parent Id
+        private int parentid = 0;
+        public int ParentId
+        {
+            get
+            { return parentid; }
+
+            set
+            {
+                if (parentid == value)
+                { return; }
+
+                parentid = value;
+
             }
         }
 
@@ -42,7 +60,7 @@ namespace JuniorMathsApp1.ParentClasses
                 { return; }
 
                 name = value;
-               
+
             }
         }
 
@@ -59,115 +77,91 @@ namespace JuniorMathsApp1.ParentClasses
                 { return; }
 
                 surname = value;
-                
+
             }
         }
 
-        //Email
-        private string email = string.Empty;
-        public string Email
+        //Age
+        private int age = 0;
+        public int Age
         {
             get
-            { return email; }
+            { return age; }
 
             set
             {
-                if (email == value)
+                if (age == value)
                 { return; }
 
-                email = value;
-                
+                age = value;
+
             }
         }
 
-        //PhoneNumber
-        private string phoneNo = string.Empty;
-        public string PhoneNo
+        //Grade
+        private string grade = string.Empty;
+        public string Grade
         {
             get
-            { return phoneNo; }
+            { return grade; }
 
             set
             {
-                if (phoneNo == value)
+                if (grade == value)
                 { return; }
 
-                phoneNo = value;
-                
+                grade = value;
+
             }
         }
 
-        //Password
-        private string password = string.Empty;
-        public string Password
-        {
-            get
-            { return password; }
-
-            set
-            {
-                if (password == value)
-                { return; }
-
-                password = value;
-                
-            }
-        }
+        
 
         private JuniorMathsApp1.App app = (Application.Current as App);
 
 
         //Retrive all Parent details from the database where email and password match user inputs
-        public Register getParent(string email, string password)
+        public RegisterChild getChildDetails(int id, int parentId, string childName)
         {
-            reg = new Register();
-            using(var db = new SQLite.SQLiteConnection(app.dbPath))
+           reg = new RegisterChild();
+            using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-
-                reg = db.Query<Register>("Select * from Parents where Email ='" +email+ "' and Password ='" +password+ "'").FirstOrDefault();
-
-                /*
-                  var _register = db.Query<Register>("Select * from Parents where Email ='" + email + "' and Password ='" + password + "'").FirstOrDefault;
-                  return reg;
-                */
-
+                reg = db.Query<RegisterChild>("Select * from Parents where Id =" + id + ",ParentId = '"+ parentId+"  and Name ='" + name + "'").FirstOrDefault();
+               
             }
-            return reg;
+             return reg;
         }
 
 
 
         //Method for saving parent details into the database
-        public void SaveCustomer(string name, string surname, string email, string phoneNo, string password)
+        public void saveChild(int parentId, string name, string surname, int age, string grade)
         {
-            
+
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-               
+
                 try
                 {
                     //var existingParent = (db.Table<Register>().Where(
                     // c => c.Id == register.Id)).SingleOrDefault();
 
-                    int success = db.Insert(new Register()
+                    int success = db.Insert(new RegisterChild()
                     {
                         Id = 0,
+                        ParentId = parentId,
                         Name = name,
                         Surname = surname,
-                        Email = email,
-                        PhoneNo = phoneNo,
-                        Password = password
+                        Age = age,
+                        Grade = grade
                     });
 
                 }
                 catch (Exception)
                 {
-                   
+
                 }
             }
         }
-
-        //End of Methods
-
     }
 }

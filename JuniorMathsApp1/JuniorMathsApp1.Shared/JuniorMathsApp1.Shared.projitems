@@ -15,6 +15,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ChildrenClasses\ChildrensViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ChildrenClasses\ChildrenViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ChildViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)EditedSelectedChildPage.xaml.cs">
       <DependentUpon>EditedSelectedChildPage.xaml</DependentUpon>
     </Compile>
@@ -25,6 +28,7 @@
       <DependentUpon>MenuPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Model\Register.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\RegisterChild.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)NewChildSavedPage.xaml.cs">
       <DependentUpon>NewChildSavedPage.xaml</DependentUpon>
     </Compile>

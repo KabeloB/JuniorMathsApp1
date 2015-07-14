@@ -23,13 +23,13 @@
             <HubSection Header="Add new child details" Width="582">
                 <DataTemplate>
                     <Grid Height="566" Margin="10,0,-264,0">
-                        <TextBlock HorizontalAlignment="Left" Margin="98,10,0,0" TextWrapping="Wrap" Text="Eneter name:" VerticalAlignment="Top" FontSize="20"/>
+                        <TextBlock x:Name="LblEnterChildName" HorizontalAlignment="Left" Margin="98,10,0,0" TextWrapping="Wrap" Text="Eneter name:" VerticalAlignment="Top" FontSize="20"/>
                         <TextBlock HorizontalAlignment="Left" Margin="98,99,0,0" TextWrapping="Wrap" Text="Enter Surname:" VerticalAlignment="Top" FontSize="20"/>
                         <TextBlock HorizontalAlignment="Left" Margin="98,184,0,0" TextWrapping="Wrap" Text="Enter age:" VerticalAlignment="Top" FontSize="20"/>
                         <TextBlock HorizontalAlignment="Left" Margin="96,279,0,0" TextWrapping="Wrap" Text="Select grade:" VerticalAlignment="Top" FontSize="20"/>
-                        <RadioButton x:Name="rdGradeOne" Content="1st Grade" HorizontalAlignment="Left" Margin="95,320,0,0" VerticalAlignment="Top" FontSize="18"/>
-                        <RadioButton x:Name="rdGradeTwo" Content="2nd Grade" HorizontalAlignment="Left" Margin="95,351,0,0" VerticalAlignment="Top" FontSize="18"/>
-                        <Button x:Name="btnSaveInformation" Content="Save Information" HorizontalAlignment="Left" Margin="95,456,0,0" VerticalAlignment="Top" Width="340"/>
+                        <RadioButton x:Name="rdGradeOne" Content="1st Grade" HorizontalAlignment="Left" Margin="95,320,0,0" VerticalAlignment="Top" FontSize="18" Checked="rdGradeOne_Checked"/>
+                        <RadioButton x:Name="rdGradeTwo" Content="2nd Grade" HorizontalAlignment="Left" Margin="95,351,0,0" VerticalAlignment="Top" FontSize="18" Checked="rdGradeTwo_Checked"/>
+                        <Button x:Name="btnSaveInformation" Content="Save Information" HorizontalAlignment="Left" Margin="95,456,0,0" VerticalAlignment="Top" Width="340" Click="btnSaveInformation_Click"/>
                         <TextBox x:Name="txtChildName" HorizontalAlignment="Left" Margin="96,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="336"/>
                         <TextBox x:Name="txtChildSurname" HorizontalAlignment="Left" Margin="98,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="334"/>
                         <TextBox x:Name="txtChildAge" HorizontalAlignment="Left" Margin="98,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="334"/>
