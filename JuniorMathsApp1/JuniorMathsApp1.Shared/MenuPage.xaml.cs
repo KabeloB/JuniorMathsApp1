@@ -60,38 +60,53 @@ namespace JuniorMathsApp1
             this.Frame.Navigate(typeof(EditedSelectedChildPage));
         }
 
+        //Button for logging out from user account 
         private void btnLogout_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
         }
 
+       
+
+        private void rdGradeOne_Checked(object sender, RoutedEventArgs e)
+        {
+            grade = "Grade 1";
+        }
+
+        private void rdGradeTwo_Checked(object sender, RoutedEventArgs e)
+        {
+            grade = "Grade 2";
+        }
+
+
+        //Button for saving new child details into the database
         private void btnSaveInformation_Click(object sender, RoutedEventArgs e)
         {
             objParent = new ParentViewModel();
             objChild = new ChildrenViewModel();
             regChild = new RegisterChild();
 
-             
+
 
 
             //txtChildName = (TextBox)sender;
 
-           
+
             string childName = txtChildName.Text;
             string childSurname = txtChildSurname.Text;
             string childAge = txtChildAge.Text;
             int convertAge = 0;
-            
+
             convertAge = Convert.ToInt32(childAge);
-            
-             
+
+
             //Verify that user inputs are not empty first
             if ((!childName.Equals("")) && (!childSurname.Equals("")) && (!childAge.Equals("")))
             {
                 //Insert the supplied user inputs into database here!
                 //Verify that the information was successfully inserted!
                 //user inputs were saved then redirect user to Login page!
-              
+
                 //objChild.SaveChild(int parentId, string name, string surname, int age, string grade);
 
                 /*
@@ -116,18 +131,8 @@ namespace JuniorMathsApp1
                 //String ErrorMessage = "Invalid user inputs, Ensure that all fields are filled in!";
                 this.Frame.Navigate(typeof(RegistrationPage));
             }
-            
-            
-        }
 
-        private void rdGradeOne_Checked(object sender, RoutedEventArgs e)
-        {
-            grade = "Grade 1";
-        }
 
-        private void rdGradeTwo_Checked(object sender, RoutedEventArgs e)
-        {
-            grade = "Grade 2";
         }
 
         
