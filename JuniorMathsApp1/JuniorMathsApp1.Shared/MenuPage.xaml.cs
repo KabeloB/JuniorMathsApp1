@@ -25,30 +25,18 @@ namespace JuniorMathsApp1
     /// </summary>
     public sealed partial class MenuPage : Page
     {
-        ParentViewModel objParent = new ParentViewModel();
-        ChildrenViewModel objChild = new ChildrenViewModel();
-        RegisterChild regChild = new RegisterChild();
-
-
-       // private TextBox txtChildName;
-
-
-
+       
 
         public MenuPage()
         {
             this.InitializeComponent();
         }
-        string grade;
 
-        //Method for displaying message box
-        private async void messageBox(string msg)
+
+        public void ParentID(int id)
         {
-            var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
-            await msgDisplay.ShowAsync();
-
+            txtParentIden.Text = "" + id;
         }
-        String messageToDisplay = "";
 
         private void btnStartTest_Click(object sender, RoutedEventArgs e)
         {
@@ -67,72 +55,9 @@ namespace JuniorMathsApp1
         }
 
        
-
-        private void rdGradeOne_Checked(object sender, RoutedEventArgs e)
+        private void btnRegisterNewChild_Click(object sender, RoutedEventArgs e)
         {
-            grade = "Grade 1";
-        }
-
-        private void rdGradeTwo_Checked(object sender, RoutedEventArgs e)
-        {
-            grade = "Grade 2";
-        }
-
-
-        //Button for saving new child details into the database
-        private void btnSaveInformation_Click(object sender, RoutedEventArgs e)
-        {
-            objParent = new ParentViewModel();
-            objChild = new ChildrenViewModel();
-            regChild = new RegisterChild();
-
-
-
-
-            //txtChildName = (TextBox)sender;
-
-
-            string childName = txtChildName.Text;
-            string childSurname = txtChildSurname.Text;
-            string childAge = txtChildAge.Text;
-            int convertAge = 0;
-
-            convertAge = Convert.ToInt32(childAge);
-
-
-            //Verify that user inputs are not empty first
-            if ((!childName.Equals("")) && (!childSurname.Equals("")) && (!childAge.Equals("")))
-            {
-                //Insert the supplied user inputs into database here!
-                //Verify that the information was successfully inserted!
-                //user inputs were saved then redirect user to Login page!
-
-                //objChild.SaveChild(int parentId, string name, string surname, int age, string grade);
-
-                /*
-                var confirm = objParent.getParent(username, password);
-
-                objChild.saveChild(confirm.Id, childName, childSurname, convertAge, grade);
-
-                objParent.SaveCustomer(name, surname, email, phoneNumber, password);
-
-
-
-                this.Frame.Navigate(typeof(MainPage));
-                messageToDisplay = "You have succesfully registered, Please user your credentials to login!";
-                messageBox(messageToDisplay);
-                */
-
-
-            }
-            else
-            {
-                //Enter error message box here!
-                //String ErrorMessage = "Invalid user inputs, Ensure that all fields are filled in!";
-                this.Frame.Navigate(typeof(RegistrationPage));
-            }
-
-
+            this.Frame.Navigate(typeof(RegisterNewChild));
         }
 
         

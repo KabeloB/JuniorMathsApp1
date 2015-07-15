@@ -72,12 +72,18 @@ namespace JuniorMathsApp1
                             var confirm = objParent.getParent(username, password);
                             if(confirm != null)
                             {
+
                                 this.Frame.Navigate(typeof(MenuPage));
                                 messageToDisplay = "Welcome " + confirm.Name + " " + confirm.Surname +
                                                    "\nYour user ID is: " + confirm.Id;
                                 messageBox(messageToDisplay);
-                                
-                                
+
+                                int iden = confirm.Id;
+
+                                /*
+                                MenuPage newChild = new MenuPage();
+                                newChild.ParentID(confirm.Id);
+                                */
                             }
                              else
                             {

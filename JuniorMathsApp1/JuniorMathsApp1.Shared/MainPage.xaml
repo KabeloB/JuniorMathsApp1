@@ -8,15 +8,15 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock HorizontalAlignment="Left" Margin="549,113,0,0" TextWrapping="Wrap" Text="Junior Math App" VerticalAlignment="Top" FontSize="48" Width="386"/>
-        <TextBlock HorizontalAlignment="Left" Margin="526,219,0,0" TextWrapping="Wrap" Text="Eneter Username:" VerticalAlignment="Top" FontSize="24"/>
-        <TextBlock HorizontalAlignment="Left" Margin="526,268,0,0" TextWrapping="Wrap" Text="Eneter Password:" VerticalAlignment="Top" FontSize="24"/>
-        <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Margin="747,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252"/>
-        <Button x:Name="btnLogin1" Content="Login" HorizontalAlignment="Left" Margin="497,350,0,0" VerticalAlignment="Top" Click="btnLogin1_Click"/>
-        <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="679,350,0,0" VerticalAlignment="Top" Click="btnRegister_Click"/>
-        <Button x:Name="btnForgotPassword" Content="Forgot Password" HorizontalAlignment="Left" Margin="857,350,0,0" VerticalAlignment="Top" Click="btnForgotPassword_Click"/>
-        <Button Content="View all users account (For testing sqlite database)" HorizontalAlignment="Left" Margin="497,454,0,0" VerticalAlignment="Top" Width="505" Click="Button_Click"/>
-        <PasswordBox x:Name="pwbEnterPassword" HorizontalAlignment="Left" Margin="747,268,0,0" VerticalAlignment="Top" Width="252"/>
+        <TextBlock HorizontalAlignment="Left" Margin="111,91,0,0" TextWrapping="Wrap" Text="Junior Math App" VerticalAlignment="Top" FontSize="48" Width="386"/>
+        <TextBlock HorizontalAlignment="Left" Margin="111,187,0,0" TextWrapping="Wrap" Text="Eneter Username:" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="111,278,0,0" TextWrapping="Wrap" Text="Eneter Password:" VerticalAlignment="Top" FontSize="24"/>
+        <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Margin="111,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252"/>
+        <Button x:Name="btnLogin1" Content="Login" HorizontalAlignment="Left" Margin="108,377,0,0" VerticalAlignment="Top" Click="btnLogin1_Click"/>
+        <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="204,377,0,0" VerticalAlignment="Top" Click="btnRegister_Click"/>
+        <Button x:Name="btnForgotPassword" Content="Forgot Password" HorizontalAlignment="Left" Margin="108,433,0,0" VerticalAlignment="Top" Click="btnForgotPassword_Click"/>
+        <Button Content="View all users account (For testing sqlite database)" HorizontalAlignment="Left" Margin="108,498,0,0" VerticalAlignment="Top" Width="258" Click="Button_Click" Height="65"/>
+        <PasswordBox x:Name="pwbEnterPassword" HorizontalAlignment="Left" Margin="111,312,0,0" VerticalAlignment="Top" Width="252"/>
 
     </Grid>
 </Page>

@@ -20,6 +20,7 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="RenderTransformOrigin" />
+      <RootProperty Name="Inlines" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
       <RootProperty Name="Content" />
@@ -63,6 +64,10 @@
     <RootType FullName="JuniorMathsApp1.MenuPage" />
     <RootType FullName="JuniorMathsApp1.NewChildSavedPage" />
     <RootType FullName="JuniorMathsApp1.NewTestPage" />
+    <RootType FullName="Windows.UI.Xaml.Documents.Run">
+      <RootProperty Name="Text" />
+    </RootType>
+    <RootType FullName="JuniorMathsApp1.RegisterNewChild" />
     <RootType FullName="Windows.UI.Xaml.Media.CompositeTransform">
       <RootProperty Name="SkewX" />
       <RootProperty Name="TranslateX" />

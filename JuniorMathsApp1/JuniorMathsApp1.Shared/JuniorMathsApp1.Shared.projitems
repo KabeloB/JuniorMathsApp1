@@ -37,6 +37,9 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ParentClasses\ParentsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ParentClasses\ParentViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RegisterNewChild.xaml.cs">
+      <DependentUpon>RegisterNewChild.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>
     </Compile>
@@ -79,6 +82,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="$(MSBuildThisFileDirectory)NewTestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)RegisterNewChild.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
