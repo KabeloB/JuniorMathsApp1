@@ -8,42 +8,24 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Hub Header="Hub">
-            <HubSection Header="Welcome to main menu" Width="704">
-                <DataTemplate>
-                    <Grid Height="560" Margin="0,0,-324,0">
-                        <Button x:Name="btnStartTest" Content="Start new test" HorizontalAlignment="Left" Margin="77,62,0,0" VerticalAlignment="Top" Width="399" Click="btnStartTest_Click"/>
-                        <Button x:Name="btnViewTestResults" Content="View test results" HorizontalAlignment="Left" Margin="77,126,0,0" VerticalAlignment="Top" Width="399"/>
-                        <Button x:Name="btnEditChildDetails" Content="Edit Child Details" HorizontalAlignment="Left" Margin="77,190,0,0" VerticalAlignment="Top" Width="399" Click="btnEditChildDetails_Click"/>
-                        <Button x:Name="btnRemoveChild_" Content="Remove child from account" HorizontalAlignment="Left" Margin="80,250,0,0" VerticalAlignment="Top" Width="396"/>
-                        <Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="77,327,0,0" VerticalAlignment="Top" Width="399" Click="btnLogout_Click"/>
-                    </Grid>
-                </DataTemplate>
-            </HubSection>
-            <HubSection Header="Add new child details" Width="582">
-                <DataTemplate>
-                    <Grid Height="566" Margin="10,0,-264,0">
-                        <TextBlock x:Name="LblEnterChildName" HorizontalAlignment="Left" Margin="98,10,0,0" TextWrapping="Wrap" Text="Eneter name:" VerticalAlignment="Top" FontSize="20"/>
-                        <TextBlock HorizontalAlignment="Left" Margin="98,99,0,0" TextWrapping="Wrap" Text="Enter Surname:" VerticalAlignment="Top" FontSize="20"/>
-                        <TextBlock HorizontalAlignment="Left" Margin="98,184,0,0" TextWrapping="Wrap" Text="Enter age:" VerticalAlignment="Top" FontSize="20"/>
-                        <TextBlock HorizontalAlignment="Left" Margin="96,279,0,0" TextWrapping="Wrap" Text="Select grade:" VerticalAlignment="Top" FontSize="20"/>
-                        <RadioButton x:Name="rdGradeOne" Content="1st Grade" HorizontalAlignment="Left" Margin="95,320,0,0" VerticalAlignment="Top" FontSize="18" Checked="rdGradeOne_Checked"/>
-                        <RadioButton x:Name="rdGradeTwo" Content="2nd Grade" HorizontalAlignment="Left" Margin="95,351,0,0" VerticalAlignment="Top" FontSize="18" Checked="rdGradeTwo_Checked"/>
-                        <Button x:Name="btnSaveInformation" Content="Save Information" HorizontalAlignment="Left" Margin="95,456,0,0" VerticalAlignment="Top" Width="340" Click="btnSaveInformation_Click"/>
-                        <TextBox x:Name="txtChildName" HorizontalAlignment="Left" Margin="96,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="336"/>
-                        <TextBox x:Name="txtChildSurname" HorizontalAlignment="Left" Margin="98,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="334"/>
-                        <TextBox x:Name="txtChildAge" HorizontalAlignment="Left" Margin="98,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="334"/>
-                    </Grid>
-                </DataTemplate>
-            </HubSection>
-            <HubSection Header="Application details" Width="345">
-                <DataTemplate>
-                    <Grid Height="569" Margin="0,0,-84,0">
-                        <TextBlock HorizontalAlignment="Left" Margin="10,31,0,0" TextWrapping="Wrap" Text="This application will assist parents to keep track of their childrens  progress regarding thier mathematical skills by allowing them to take a series of math questions and calculating their test results to see how well they did." VerticalAlignment="Top" Height="197" Width="273" FontSize="20"/>
-                    </Grid>
-                </DataTemplate>
-            </HubSection>
-        </Hub>
-
+        <Button x:Name="btnStartTest" Content="Start new test" HorizontalAlignment="Left" Margin="47,170,0,0" VerticalAlignment="Top" Width="399" Click="btnStartTest_Click"/>
+        <Button x:Name="btnViewTestResults" Content="View test results" HorizontalAlignment="Left" Margin="47,234,0,0" VerticalAlignment="Top" Width="399"/>
+        <Button x:Name="btnEditChildDetails" Content="Edit Child Details" HorizontalAlignment="Left" Margin="47,298,0,0" VerticalAlignment="Top" Width="399" Click="btnEditChildDetails_Click"/>
+        <Button x:Name="btnRemoveChild_" Content="Remove child from account" HorizontalAlignment="Left" Margin="47,373,0,0" VerticalAlignment="Top" Width="396"/>
+        <Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="47,435,0,0" VerticalAlignment="Top" Width="399" Click="btnLogout_Click"/>
+        <TextBlock x:Name="LblEnterChildName" HorizontalAlignment="Left" Margin="519,170,0,0" TextWrapping="Wrap" Text="Eneter name:" VerticalAlignment="Top" FontSize="20" Height="28" Width="149"/>
+        <TextBlock HorizontalAlignment="Left" Margin="519,273,0,0" TextWrapping="Wrap" Text="Enter Surname:" VerticalAlignment="Top" FontSize="20" Height="26" Width="149"/>
+        <TextBlock HorizontalAlignment="Left" Margin="519,371,0,0" TextWrapping="Wrap" Text="Enter age:" VerticalAlignment="Top" FontSize="20" Height="27" Width="112"/>
+        <TextBlock HorizontalAlignment="Left" Margin="519,481,0,0" TextWrapping="Wrap" Text="Select grade:" VerticalAlignment="Top" FontSize="20" Height="27" Width="149"/>
+        <RadioButton x:Name="rdGradeOne" Content="1st Grade" HorizontalAlignment="Left" Margin="519,527,0,0" VerticalAlignment="Top" FontSize="18" Checked="rdGradeOne_Checked" Height="32" Width="92"/>
+        <RadioButton x:Name="rdGradeTwo" Content="2nd Grade" HorizontalAlignment="Left" Margin="519,563,0,0" VerticalAlignment="Top" FontSize="18" Checked="rdGradeTwo_Checked" Height="34" Width="98"/>
+        <Button x:Name="btnSaveInformation" Content="Save Information" HorizontalAlignment="Left" Margin="583,622,0,0" VerticalAlignment="Top" Width="288" Click="btnSaveInformation_Click" Height="44"/>
+        <TextBox x:Name="txtChildName" HorizontalAlignment="Left" Margin="519,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="419" Height="35" />
+        <TextBox x:Name="txtChildSurname" HorizontalAlignment="Left" Margin="519,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="419" Height="33"/>
+        <TextBox x:Name="txtChildAge" HorizontalAlignment="Left" Margin="519,401,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="419" Height="33"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1036,173,0,0" TextWrapping="Wrap" Text="This application will assist parents to keep track of their childrens  progress regarding thier mathematical skills by allowing them to take a series of math questions and calculating their test results to see how well they did." VerticalAlignment="Top" Height="220" Width="276" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,112,0,0" TextWrapping="Wrap" Text="Menu Functions" VerticalAlignment="Top" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="522,92,0,0" TextWrapping="Wrap" Text="Register new child" VerticalAlignment="Top" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1052,92,0,0" TextWrapping="Wrap" Text="About Application" VerticalAlignment="Top" FontSize="36"/>
     </Grid>
 </Page>

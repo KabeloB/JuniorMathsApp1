@@ -29,6 +29,12 @@ namespace JuniorMathsApp1
         ChildrenViewModel objChild = new ChildrenViewModel();
         RegisterChild regChild = new RegisterChild();
 
+
+       // private TextBox txtChildName;
+
+
+
+
         public MenuPage()
         {
             this.InitializeComponent();
@@ -64,11 +70,19 @@ namespace JuniorMathsApp1
             objParent = new ParentViewModel();
             objChild = new ChildrenViewModel();
             regChild = new RegisterChild();
-            /*
+
+             
+
+
+            //txtChildName = (TextBox)sender;
+
+           
             string childName = txtChildName.Text;
             string childSurname = txtChildSurname.Text;
             string childAge = txtChildAge.Text;
-            int convertAge = Integer.parseInt(childAge);
+            int convertAge = 0;
+            
+            convertAge = Convert.ToInt32(childAge);
             
              
             //Verify that user inputs are not empty first
@@ -82,7 +96,9 @@ namespace JuniorMathsApp1
 
                 /*
                 var confirm = objParent.getParent(username, password);
+
                 objChild.saveChild(confirm.Id, childName, childSurname, convertAge, grade);
+
                 objParent.SaveCustomer(name, surname, email, phoneNumber, password);
 
 
@@ -90,7 +106,7 @@ namespace JuniorMathsApp1
                 this.Frame.Navigate(typeof(MainPage));
                 messageToDisplay = "You have succesfully registered, Please user your credentials to login!";
                 messageBox(messageToDisplay);
-                
+                */
 
 
             }
@@ -100,7 +116,7 @@ namespace JuniorMathsApp1
                 //String ErrorMessage = "Invalid user inputs, Ensure that all fields are filled in!";
                 this.Frame.Navigate(typeof(RegistrationPage));
             }
-            */
+            
             
         }
 
@@ -113,6 +129,8 @@ namespace JuniorMathsApp1
         {
             grade = "Grade 2";
         }
+
+        
 
        
     }

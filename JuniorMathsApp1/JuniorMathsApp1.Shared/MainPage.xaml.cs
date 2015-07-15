@@ -31,6 +31,9 @@ namespace JuniorMathsApp1
 
         MessageDialog dialog = new MessageDialog("");
 
+
+        
+
         private JuniorMathsApp1.App app = (Application.Current as App);
         public MainPage()
         {
@@ -54,7 +57,7 @@ namespace JuniorMathsApp1
 
             //this.Frame.Navigate(typeof(MenuPage));
             string username = txtUsername.Text;
-            string password = txtPassword.Text;
+            string password = pwbEnterPassword.Password;
 
             //String ErrorMessage
             string messageToDisplay = "";

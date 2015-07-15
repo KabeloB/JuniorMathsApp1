@@ -12,11 +12,12 @@
         <TextBlock HorizontalAlignment="Left" Margin="526,219,0,0" TextWrapping="Wrap" Text="Eneter Username:" VerticalAlignment="Top" FontSize="24"/>
         <TextBlock HorizontalAlignment="Left" Margin="526,268,0,0" TextWrapping="Wrap" Text="Eneter Password:" VerticalAlignment="Top" FontSize="24"/>
         <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Margin="747,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252"/>
-        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="747,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252"/>
+        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="33,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252"/>
         <Button x:Name="btnLogin1" Content="Login" HorizontalAlignment="Left" Margin="497,350,0,0" VerticalAlignment="Top" Click="btnLogin1_Click"/>
         <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="679,350,0,0" VerticalAlignment="Top" Click="btnRegister_Click"/>
         <Button x:Name="btnForgotPassword" Content="Forgot Password" HorizontalAlignment="Left" Margin="857,350,0,0" VerticalAlignment="Top" Click="btnForgotPassword_Click"/>
         <Button Content="Show All Users" HorizontalAlignment="Left" Margin="500,522,0,0" VerticalAlignment="Top" Width="159" Click="Button_Click"/>
+        <PasswordBox x:Name="pwbEnterPassword" HorizontalAlignment="Left" Margin="747,268,0,0" VerticalAlignment="Top" Width="252"/>
 
     </Grid>
 </Page>
