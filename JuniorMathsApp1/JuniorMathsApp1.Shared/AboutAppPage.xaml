@@ -1,0 +1,15 @@
+﻿<Page
+    x:Class="JuniorMathsApp1.AboutAppPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:JuniorMathsApp1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock HorizontalAlignment="Left" Margin="48,133,0,0" TextWrapping="Wrap" Text="This application will assist parents to keep track of their childrens  progress regarding thier mathematical skills by allowing them to take a series of math questions and calculating their test results to see how well they did." VerticalAlignment="Top" Height="220" Width="276" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="48,71,0,0" TextWrapping="Wrap" Text="About Application" VerticalAlignment="Top" FontSize="36"/>
+
+    </Grid>
+</Page>

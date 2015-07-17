@@ -24,7 +24,7 @@ namespace JuniorMathsApp1.ChildrenClasses
         }
         private JuniorMathsApp1.App app = (Application.Current as App);
 
-        public ObservableCollection<ChildrenViewModel> GetParents()
+        public ObservableCollection<ChildrenViewModel> GetChildren()
         {
             parents = new ObservableCollection<ChildrenViewModel>();
             using (var db = new SQLite.SQLiteConnection(app.dbPath))

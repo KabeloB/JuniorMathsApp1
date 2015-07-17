@@ -20,13 +20,13 @@
     <AppXManifest Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-07-15T12:59:12.942</Modified>
+      <Modified>2015-07-17T07:18:37.227</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\JuniorMathsApp1.Windows.exe">
       <PackagePath>JuniorMathsApp1.Windows.exe</PackagePath>
-      <Modified>2015-07-15T13:40:09.758</Modified>
+      <Modified>2015-07-17T08:27:01.194</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\SQLite.WinRT81\3.8.10.2\Redist\Debug\x86\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
@@ -56,6 +56,10 @@
       <PackagePath>App.xbf</PackagePath>
       <Modified>2015-07-14T09:27:09.489</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\AboutAppPage.xbf">
+      <PackagePath>AboutAppPage.xbf</PackagePath>
+      <Modified>2015-07-17T07:52:32.250</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\EditedSelectedChildPage.xbf">
       <PackagePath>EditedSelectedChildPage.xbf</PackagePath>
       <Modified>2015-07-14T09:27:09.516</Modified>
@@ -66,7 +70,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\MenuPage.xbf">
       <PackagePath>MenuPage.xbf</PackagePath>
-      <Modified>2015-07-15T13:12:10.602</Modified>
+      <Modified>2015-07-17T07:52:32.251</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\NewChildSavedPage.xbf">
       <PackagePath>NewChildSavedPage.xbf</PackagePath>
@@ -78,11 +82,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\RegisterNewChild.xbf">
       <PackagePath>RegisterNewChild.xbf</PackagePath>
-      <Modified>2015-07-15T13:12:10.602</Modified>
+      <Modified>2015-07-17T07:52:32.251</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\RegistrationPage.xbf">
       <PackagePath>RegistrationPage.xbf</PackagePath>
-      <Modified>2015-07-14T09:27:09.594</Modified>
+      <Modified>2015-07-17T07:52:32.251</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\ResetPasswordPage.xbf">
       <PackagePath>ResetPasswordPage.xbf</PackagePath>
@@ -90,7 +94,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\ShowPage.xbf">
       <PackagePath>ShowPage.xbf</PackagePath>
-      <Modified>2015-07-14T09:27:09.604</Modified>
+      <Modified>2015-07-17T07:52:32.255</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\TestResultsPage.xbf">
       <PackagePath>TestResultsPage.xbf</PackagePath>
@@ -110,11 +114,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\JuniorMathsApp1.Windows.xr.xml">
       <PackagePath>JuniorMathsApp1.Windows.xr.xml</PackagePath>
-      <Modified>2015-07-15T12:59:11.595</Modified>
+      <Modified>2015-07-17T07:18:35.796</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-07-15T12:59:12.515</Modified>
+      <Modified>2015-07-17T07:18:36.460</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

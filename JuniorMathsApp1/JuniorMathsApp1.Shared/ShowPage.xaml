@@ -9,7 +9,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ListView x:Name="listView" HorizontalAlignment="Left" Height="646" Margin="87,63,0,0" VerticalAlignment="Top" Width="1009"/>
-        <Button Content="Back to Login Page" HorizontalAlignment="Left" Margin="1172,60,0,0" VerticalAlignment="Top" Width="143" Click="Button_Click"/>
+        <Button Content="Back to Login Page" HorizontalAlignment="Left" Margin="1136,60,0,0" VerticalAlignment="Top" Width="179" Click="Button_Click"/>
 
     </Grid>
 </Page>

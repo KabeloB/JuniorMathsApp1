@@ -16,12 +16,13 @@
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="Text" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="Width" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="FontSize" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="Inlines" />
     </RootType>
+    <RootType FullName="JuniorMathsApp1.AboutAppPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
       <RootProperty Name="Content" />
       <RootProperty Name="HorizontalAlignment" />
@@ -71,6 +72,7 @@
     <RootType FullName="Windows.UI.Xaml.Media.CompositeTransform">
       <RootProperty Name="SkewX" />
       <RootProperty Name="TranslateX" />
+      <RootProperty Name="Rotation" />
     </RootType>
     <RootType FullName="JuniorMathsApp1.RegistrationPage" />
     <RootType FullName="JuniorMathsApp1.ResetPasswordPage" />

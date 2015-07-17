@@ -25,18 +25,38 @@ namespace JuniorMathsApp1
     /// </summary>
     public sealed partial class MenuPage : Page
     {
-       
 
+        int getTheId = 0;
         public MenuPage()
         {
             this.InitializeComponent();
         }
-
-
-        public void ParentID(int id)
+        
+        public void getID(int id)
         {
-            txtParentIden.Text = "" + id;
+            
+                getTheId = id;
+            
         }
+
+        //Display the ID of the parent currently logged in
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            try
+            {
+                base.OnNavigatedTo(e);
+                getTheId = (int)e.Parameter;
+
+                txtParentIden.Text = "" + getTheId;
+            }
+            catch(Exception)
+            {
+
+            }
+           
+
+        }
+
 
         private void btnStartTest_Click(object sender, RoutedEventArgs e)
         {
@@ -57,8 +77,23 @@ namespace JuniorMathsApp1
        
         private void btnRegisterNewChild_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(RegisterNewChild));
+            if(getTheId != 0)
+            {
+                this.Frame.Navigate(typeof(RegisterNewChild), getTheId);
+            }
+            else
+            {
+                this.Frame.Navigate(typeof(MenuPage));
+            }
+            
         }
+
+        private void btnAboutApp_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(AboutAppPage));
+        }
+
+       
 
         
 

@@ -30,7 +30,7 @@ namespace JuniorMathsApp1
         Register objReg = new Register();
 
         MessageDialog dialog = new MessageDialog("");
-
+        MenuPage objMenu = new MenuPage();
 
         
 
@@ -54,6 +54,7 @@ namespace JuniorMathsApp1
             //Ojbjects for ParentViewModel and Register classes
             objParent = new ParentViewModel();
             objReg = new Register();
+            objMenu = new MenuPage();
 
             //this.Frame.Navigate(typeof(MenuPage));
             string username = txtUsername.Text;
@@ -73,17 +74,18 @@ namespace JuniorMathsApp1
                             if(confirm != null)
                             {
 
-                                this.Frame.Navigate(typeof(MenuPage));
+                                this.Frame.Navigate(typeof(MenuPage), confirm.Id);
+                                int iden = Convert.ToInt32(confirm.Id);//confirm.Id;
+                                objMenu.getID(iden);
+
+
+
                                 messageToDisplay = "Welcome " + confirm.Name + " " + confirm.Surname +
                                                    "\nYour user ID is: " + confirm.Id;
                                 messageBox(messageToDisplay);
 
-                                int iden = confirm.Id;
-
-                                /*
-                                MenuPage newChild = new MenuPage();
-                                newChild.ParentID(confirm.Id);
-                                */
+                                
+                                
                             }
                              else
                             {

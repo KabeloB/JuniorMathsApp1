@@ -13,12 +13,10 @@
         <Button x:Name="btnEditChildDetails" Content="Edit Child Details" HorizontalAlignment="Left" Margin="47,358,0,0" VerticalAlignment="Top" Width="399" Click="btnEditChildDetails_Click"/>
         <Button x:Name="btnRemoveChild_" Content="Remove child from account" HorizontalAlignment="Left" Margin="47,417,0,0" VerticalAlignment="Top" Width="396"/>
         <Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="44,519,0,0" VerticalAlignment="Top" Width="399" Click="btnLogout_Click"/>
-        <TextBlock HorizontalAlignment="Left" Margin="1036,173,0,0" TextWrapping="Wrap" Text="This application will assist parents to keep track of their childrens  progress regarding thier mathematical skills by allowing them to take a series of math questions and calculating their test results to see how well they did." VerticalAlignment="Top" Height="220" Width="276" FontSize="20"/>
         <TextBlock HorizontalAlignment="Left" Margin="50,112,0,0" TextWrapping="Wrap" Text="Menu Functions" VerticalAlignment="Top" FontSize="36"/>
-        <TextBlock HorizontalAlignment="Left" Margin="1052,92,0,0" TextWrapping="Wrap" Text="About Application" VerticalAlignment="Top" FontSize="36"/>
         <Button x:Name="btnRegisterNewChild" Content="Register New Child" HorizontalAlignment="Left" Margin="44,297,0,0" VerticalAlignment="Top" Width="399" Click="btnRegisterNewChild_Click"/>
-        <Button x:Name="btnAboutApp" Content="About App" HorizontalAlignment="Left" Margin="44,468,0,0" VerticalAlignment="Top" Width="396"/>
-        <TextBox x:Name="txtParentIden" HorizontalAlignment="Left" Margin="201,611,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179"/>
-        <TextBlock HorizontalAlignment="Left" Margin="83,611,0,0" TextWrapping="Wrap" Text="Parent Id:" VerticalAlignment="Top" FontSize="22"/>
+        <Button x:Name="btnAboutApp" Content="About App" HorizontalAlignment="Left" Margin="44,468,0,0" VerticalAlignment="Top" Width="396" Click="btnAboutApp_Click"/>
+        <TextBox x:Name="txtParentIden" HorizontalAlignment="Left" Margin="239,605,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,611,0,0" TextWrapping="Wrap" Text="Display Parent Id:" VerticalAlignment="Top" FontSize="22"/>
     </Grid>
 </Page>
