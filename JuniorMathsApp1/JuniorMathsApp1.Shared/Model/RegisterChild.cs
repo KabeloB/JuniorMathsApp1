@@ -12,13 +12,13 @@ namespace JuniorMathsApp1.Model
             [PrimaryKey, AutoIncrement]
             public int Id { get; set; }
 
-            public int ParentId { get; set; }
+            public string ParentId { get; set; }
 
             public string Name { get; set; }
 
             public string Surname { get; set; }
 
-            public int Age { get; set; }
+            public string Age { get; set; }
 
             public string Grade { get; set; }
 

@@ -16,6 +16,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+
+
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace JuniorMathsApp1
@@ -26,18 +28,20 @@ namespace JuniorMathsApp1
     public sealed partial class RegisterNewChild : Page
     {
 
-        ParentViewModel objParent = new ParentViewModel();
+        
         ChildrenViewModel objChild = new ChildrenViewModel();
-        RegisterChild regChild = new RegisterChild();
-        string grade;
 
-        string getParentIdNum;
-        
-        
+        string grade1 = "Grade 1";
+        string grade2 = "Grade 2";
 
+       
         public RegisterNewChild()
         {
             this.InitializeComponent();
+
+            cbSelectGrade.Items.Add("");
+            cbSelectGrade.Items.Add(grade1);
+            cbSelectGrade.Items.Add(grade2);
             
         }
 
@@ -45,8 +49,17 @@ namespace JuniorMathsApp1
         int parentId = 0;
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            base.OnNavigatedTo(e);
-            parentId = (Int32)e.Parameter;
+            try
+            {
+                base.OnNavigatedTo(e);
+                parentId = (int)e.Parameter;
+                txtGetParentIdNum.Text = "" + parentId;
+            }
+            catch(Exception)
+            {
+
+            }
+            
 
         }
 
@@ -60,52 +73,61 @@ namespace JuniorMathsApp1
         }
         String messageToDisplay = "";
 
-        //Choose the childs grade
-        private void rdGradeOne_Checked(object sender, RoutedEventArgs e)
-        {
-            grade = "Grade 1";
-        }
-
-        private void rdGradeTwo_Checked(object sender, RoutedEventArgs e)
-        {
-            grade = "Grade 2";
-        }
-
         //Button to save new child details into the database
 
         private void btnSaveInformation_Click(object sender, RoutedEventArgs e)
         {
-            objParent = new ParentViewModel();
+            
             objChild = new ChildrenViewModel();
-            regChild = new RegisterChild();
 
             string childName = txtChildName.Text;
             string childSurname = txtChildSurname.Text;
             string childAge = txtChildAge.Text;
-            int convertAge = 0;
 
-            convertAge = Convert.ToInt32(childAge);
+            string getGrade = (string)cbSelectGrade.SelectedItem;
 
-
+             
             //Verify that user inputs are not empty first
-            if ((!childName.Equals("")) && (!childSurname.Equals("")) && (!childAge.Equals("")))
+            if ((!childName.Equals("")) && (!childSurname.Equals("")) && (!childAge.Equals("")) && (!getGrade.Equals("")))
             {
+
+                //objChild.saveChild("" + parentId, childName, childSurname, childAge, getGrade);
+
+
+                
                 try
                 {
                     //Insert the supplied user inputs into database here!
                     //Verify that the information was successfully inserted!
                     //user inputs were saved then redirect user to Login page!
 
-                    //objChild.SaveChild(int parentId, string name, string surname, int age, string grade);
+                   int result = objChild.registerNewChild("" + parentId, childName, childSurname, childAge, getGrade);
+
+                   string m = objChild.getMessage();
+
+                   
+                   txtGetParentIdNum.Text = m;
+                    
+                    if(result > 0)
+                    {
+                    
+                        this.Frame.Navigate(typeof(MenuPage));
+                        messageToDisplay = "You have succesfully registered the following child to your account: " +
+                                            "\n" + childName + " " + childSurname;
+                        messageBox(messageToDisplay);
 
 
-                    objChild.saveChild(parentId, childName, childSurname, convertAge, grade);
+                    }
+                    else
+                    {
+                        this.Frame.Navigate(typeof(RegisterNewChild));
+                        messageToDisplay = "Failed to register this child: " +
+                                            "\n" + childName + " " + childSurname;
+                        messageBox(messageToDisplay);
+                    }
+                    
 
-
-                    this.Frame.Navigate(typeof(MenuPage));
-                    messageToDisplay = "You have succesfully registered the following child to your account: " +
-                                        "\n" + childName + " " + childSurname;
-                    messageBox(messageToDisplay);
+                    
                 }
                 catch(Exception)
                 {
@@ -120,8 +142,20 @@ namespace JuniorMathsApp1
             {
                 //Enter error message box here!
                 //String ErrorMessage = "Invalid user inputs, Ensure that all fields are filled in!";
-                this.Frame.Navigate(typeof(RegistrationPage));
+                this.Frame.Navigate(typeof(RegisterNewChild));
+                messageToDisplay = "Input fields can't be empty!";
+                messageBox(messageToDisplay);
             }
+
+
+
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MenuPage));
+        }
+
+
     }
 }

@@ -48,6 +48,8 @@ namespace JuniorMathsApp1
 
         }
 
+
+
         //This buttons controls the Login fuctionalities
         private void btnLogin1_Click(object sender, RoutedEventArgs e)
         {
@@ -63,6 +65,7 @@ namespace JuniorMathsApp1
             //String ErrorMessage
             string messageToDisplay = "";
             
+           
 
                     if ((!username.Equals("")) && (!password.Equals("")))
                     {

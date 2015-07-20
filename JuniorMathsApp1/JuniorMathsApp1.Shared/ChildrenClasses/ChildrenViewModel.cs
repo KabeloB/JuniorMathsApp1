@@ -10,10 +10,10 @@ namespace JuniorMathsApp1.ChildrenClasses
 {
     class ChildrenViewModel
     {
-        //Id
 
         RegisterChild reg = null;
 
+        //Child Id
         private int id = 0;
         public int Id
         {
@@ -30,9 +30,11 @@ namespace JuniorMathsApp1.ChildrenClasses
             }
         }
 
+        
+
         //Parent Id
-        private int parentid = 0;
-        public int ParentId
+        private string parentid = string.Empty;
+        public string ParentId
         {
             get
             { return parentid; }
@@ -46,6 +48,7 @@ namespace JuniorMathsApp1.ChildrenClasses
 
             }
         }
+
 
         //Name
         private string name = string.Empty;
@@ -82,8 +85,8 @@ namespace JuniorMathsApp1.ChildrenClasses
         }
 
         //Age
-        private int age = 0;
-        public int Age
+        private string age = string.Empty;
+        public string Age
         {
             get
             { return age; }
@@ -126,27 +129,29 @@ namespace JuniorMathsApp1.ChildrenClasses
            reg = new RegisterChild();
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                reg = db.Query<RegisterChild>("Select * from Parents where Id =" + id + ",ParentId = '"+ parentId+"  and Name ='" + name + "'").FirstOrDefault();
+                reg = db.Query<RegisterChild>("Select * from Child where Id =" + id + " and ParentId = '"+ parentId+"  and Name ='" + name + "'").FirstOrDefault();
                
             }
              return reg;
         }
 
-
-
-        //Method for saving parent details into the database
-        public void saveChild(int parentId, string name, string surname, int age, string grade)
+        public string getMessage()
         {
+            string msg = "There's communication!";
+            return msg;
+        }
 
+        //Method for saving child details into the database
+        public int registerNewChild(string parentId, string name, string surname, string age, string grade)
+        {
+            int success = 0;
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
 
                 try
                 {
-                    //var existingParent = (db.Table<Register>().Where(
-                    // c => c.Id == register.Id)).SingleOrDefault();
-
-                    int success = db.Insert(new RegisterChild()
+                    
+                    success = db.Insert(new RegisterChild()
                     {
                         Id = 0,
                         ParentId = parentId,
@@ -155,13 +160,17 @@ namespace JuniorMathsApp1.ChildrenClasses
                         Age = age,
                         Grade = grade
                     });
-
                 }
                 catch (Exception)
                 {
 
                 }
             }
+            return success;
         }
+
+
+
+
     }
 }

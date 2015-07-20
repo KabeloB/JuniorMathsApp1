@@ -71,6 +71,7 @@ namespace JuniorMathsApp1
             using(var dbase = new SQLite.SQLiteConnection(dbPath))
             {
                 dbase.CreateTable<Register>();
+                dbase.CreateTable<RegisterChild>();
             }
            
 

@@ -9,7 +9,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Button x:Name="btnStartTest" Content="Start new test" HorizontalAlignment="Left" Margin="47,170,0,0" VerticalAlignment="Top" Width="399" Click="btnStartTest_Click"/>
-        <Button x:Name="btnViewTestResults" Content="View test results" HorizontalAlignment="Left" Margin="47,234,0,0" VerticalAlignment="Top" Width="399"/>
+        <Button x:Name="btnViewTestResults" Content="View test results" HorizontalAlignment="Left" Margin="47,234,0,0" VerticalAlignment="Top" Width="399" Click="btnViewTestResults_Click"/>
         <Button x:Name="btnEditChildDetails" Content="Edit Child Details" HorizontalAlignment="Left" Margin="47,358,0,0" VerticalAlignment="Top" Width="399" Click="btnEditChildDetails_Click"/>
         <Button x:Name="btnRemoveChild_" Content="Remove child from account" HorizontalAlignment="Left" Margin="47,417,0,0" VerticalAlignment="Top" Width="396"/>
         <Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="44,519,0,0" VerticalAlignment="Top" Width="399" Click="btnLogout_Click"/>

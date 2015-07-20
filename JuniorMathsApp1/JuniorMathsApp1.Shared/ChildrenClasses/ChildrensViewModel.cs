@@ -29,7 +29,7 @@ namespace JuniorMathsApp1.ChildrenClasses
             parents = new ObservableCollection<ChildrenViewModel>();
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                var query = db.Query<RegisterChild>("select * from child");
+                var query = db.Query<RegisterChild>("select * from Child");
                 foreach (var _register in query)
                 {
                     var register = new ChildrenViewModel()

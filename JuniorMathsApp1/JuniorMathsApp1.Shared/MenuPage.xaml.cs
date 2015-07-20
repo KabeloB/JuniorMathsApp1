@@ -93,6 +93,11 @@ namespace JuniorMathsApp1
             this.Frame.Navigate(typeof(AboutAppPage));
         }
 
+        private void btnViewTestResults_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SelectChildToViewPage), getTheId);
+        }
+
        
 
         
