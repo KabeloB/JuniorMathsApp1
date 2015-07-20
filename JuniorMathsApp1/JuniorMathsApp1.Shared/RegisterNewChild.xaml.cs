@@ -110,8 +110,8 @@ namespace JuniorMathsApp1
                     
                     if(result > 0)
                     {
-                    
-                        this.Frame.Navigate(typeof(MenuPage));
+
+                        this.Frame.Navigate(typeof(MenuPage), parentId);
                         messageToDisplay = "You have succesfully registered the following child to your account: " +
                                             "\n" + childName + " " + childSurname;
                         messageBox(messageToDisplay);
@@ -120,7 +120,7 @@ namespace JuniorMathsApp1
                     }
                     else
                     {
-                        this.Frame.Navigate(typeof(RegisterNewChild));
+                        this.Frame.Navigate(typeof(RegisterNewChild), parentId);
                         messageToDisplay = "Failed to register this child: " +
                                             "\n" + childName + " " + childSurname;
                         messageBox(messageToDisplay);
@@ -142,7 +142,7 @@ namespace JuniorMathsApp1
             {
                 //Enter error message box here!
                 //String ErrorMessage = "Invalid user inputs, Ensure that all fields are filled in!";
-                this.Frame.Navigate(typeof(RegisterNewChild));
+                this.Frame.Navigate(typeof(RegisterNewChild), parentId);
                 messageToDisplay = "Input fields can't be empty!";
                 messageBox(messageToDisplay);
             }
@@ -153,7 +153,7 @@ namespace JuniorMathsApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MenuPage));
+            this.Frame.Navigate(typeof(MenuPage), parentId);
         }
 
 

@@ -28,8 +28,7 @@ namespace JuniorMathsApp1
         ObservableCollection<ParentViewModel> parents = null;
         ParentsViewModel parentsViewModel = null;
 
-        ObservableCollection<ChildrenViewModel> children = null;
-        ChildrensViewModel childrensViewModel = null;
+        
 
         public ShowPage()
         {
@@ -40,9 +39,6 @@ namespace JuniorMathsApp1
         {
             parentsViewModel = new ParentsViewModel();
             parents = parentsViewModel.GetParents();
-
-            childrensViewModel = new ChildrensViewModel();
-            children = childrensViewModel.GetChildren();
 
             foreach(var p in parents)
             {

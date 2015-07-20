@@ -47,5 +47,31 @@ namespace JuniorMathsApp1.ChildrenClasses
             }
             return parents;
         }
+
+
+        public ObservableCollection<ChildrenViewModel> GetChildren(int parentId)
+        {
+            parents = new ObservableCollection<ChildrenViewModel>();
+            using (var db = new SQLite.SQLiteConnection(app.dbPath))
+            {
+                string pId = "" + parentId;
+                var query = db.Query<RegisterChild>("select * from Child where parentId='" +pId+ "'" );
+                foreach (var _register in query)
+                {
+                    var register = new ChildrenViewModel()
+                    {
+                        Id = _register.Id,
+                        ParentId = _register.ParentId,
+                        Name = _register.Name,
+                        Surname = _register.Surname,
+                        Age = _register.Age,
+                        Grade = _register.Grade,
+
+                    };
+                    parents.Add(register);
+                }
+            }
+            return parents;
+        }
     }
 }

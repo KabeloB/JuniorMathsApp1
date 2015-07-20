@@ -1,5 +1,7 @@
-﻿using System;
+﻿using JuniorMathsApp1.ChildrenClasses;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,14 +24,49 @@ namespace JuniorMathsApp1
     /// </summary>
     public sealed partial class SelectChildToViewPage : Page
     {
+        ObservableCollection<ChildrenViewModel> children = null;
+        ChildrensViewModel childrensViewModel = null;
+
+        int parentId = 0;
+
         public SelectChildToViewPage()
         {
             this.InitializeComponent();
         }
 
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+
+            try
+            {
+                base.OnNavigatedTo(e);
+                parentId = (int)e.Parameter;
+
+                childrensViewModel = new ChildrensViewModel();
+                children = childrensViewModel.GetChildren(parentId);
+
+                foreach (var c in children)
+                {
+                    lsViewChildren.Items.Add(c.Name + " " + c.Surname);
+                }
+
+                base.OnNavigatedTo(e);
+
+            }
+            catch (Exception)
+            {
+
+            }
+            
+            
+        }
+
+
+
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MenuPage));
+            this.Frame.Navigate(typeof(MenuPage), parentId);
         }
 
         private void btnView_Click(object sender, RoutedEventArgs e)
