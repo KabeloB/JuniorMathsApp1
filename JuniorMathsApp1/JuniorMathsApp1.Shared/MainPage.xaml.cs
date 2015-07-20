@@ -71,31 +71,46 @@ namespace JuniorMathsApp1
                     {
                         try
                         {
-                            //Get all parent details matching user supplied information
-
-                            var confirm = objParent.getParent(username, password);
-                            if(confirm != null)
+                            string findTheAtSign = "@";
+                            bool isFound = false;
+                            for (int x = 0; x < username.Length; x++)
                             {
+                                isFound = username.Contains(findTheAtSign);
+                            }
 
-                                this.Frame.Navigate(typeof(MenuPage), confirm.Id);
-                                int iden = Convert.ToInt32(confirm.Id);//confirm.Id;
-                                objMenu.getID(iden);
+                            if(isFound == true)
+                            {
+                                 //Get all parent details matching user supplied information
+                                var confirm = objParent.getParent(username, password);
+                                if(confirm != null)
+                                {
+
+                                    this.Frame.Navigate(typeof(MenuPage), confirm.Id);
+                                    int iden = Convert.ToInt32(confirm.Id);//confirm.Id;
+                                    objMenu.getID(iden);
 
 
 
-                                messageToDisplay = "Welcome " + confirm.Name + " " + confirm.Surname +
-                                                   "\nYour user ID is: " + confirm.Id;
-                                messageBox(messageToDisplay);
+                                    messageToDisplay = "Welcome " + confirm.Name + " " + confirm.Surname +
+                                                       "\nYour user ID is: " + confirm.Id;
+                                    messageBox(messageToDisplay);
 
                                 
                                 
+                                }
+                                 else
+                                {
+                                    messageToDisplay = "Invalid user details enetered!";
+                                    messageBox(messageToDisplay);
+                                }
+
                             }
-                             else
+                            else
                             {
-                                messageToDisplay = "Invalid user details enetered!";
+                                messageToDisplay = "Invalid email address enetered!";
                                 messageBox(messageToDisplay);
                             }
-
+                                
 
                             
                             
