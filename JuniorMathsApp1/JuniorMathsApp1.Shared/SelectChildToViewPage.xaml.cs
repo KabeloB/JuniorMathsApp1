@@ -71,6 +71,7 @@ namespace JuniorMathsApp1
 
         private void btnView_Click(object sender, RoutedEventArgs e)
         {
+
             this.Frame.Navigate(typeof(ViewAllResultsPage));
         }
     }

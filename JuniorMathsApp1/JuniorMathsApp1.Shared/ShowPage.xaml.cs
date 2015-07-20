@@ -39,9 +39,10 @@ namespace JuniorMathsApp1
         {
             parentsViewModel = new ParentsViewModel();
             parents = parentsViewModel.GetParents();
-
+            //var list = listView.SelectedItems;
             foreach(var p in parents)
             {
+                //listView.Items.Add(p);
                 listView.Items.Add(p.Name + " " + p.Surname + " " + p.Email);
             }
             

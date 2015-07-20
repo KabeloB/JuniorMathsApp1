@@ -72,6 +72,7 @@ namespace JuniorMathsApp1
             {
                 dbase.CreateTable<Register>();
                 dbase.CreateTable<RegisterChild>();
+                dbase.CreateTable<TestResults>();
             }
            
 

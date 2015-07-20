@@ -32,6 +32,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Model\Register.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\RegisterChild.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\TestResults.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)NewChildSavedPage.xaml.cs">
       <DependentUpon>NewChildSavedPage.xaml</DependentUpon>
     </Compile>
@@ -57,6 +58,8 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SQLite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SQLiteAsync.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestClasses\TestsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestClasses\TestViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TestResultsPage.xaml.cs">
       <DependentUpon>TestResultsPage.xaml</DependentUpon>
     </Compile>
