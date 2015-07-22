@@ -8,7 +8,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView x:Name="lsViewChildren" HorizontalAlignment="Left" Height="575" Margin="46,79,0,0" VerticalAlignment="Top" Width="436" ItemClick="lsViewChildren_ItemClick"/>
+        <ListView x:Name="lsViewChildren" HorizontalAlignment="Left" Height="575" Margin="46,79,0,0" VerticalAlignment="Top" Width="436" SelectionChanged="MySelectionChanged" ItemClick="lsViewChildren_ItemClick" />
         <TextBlock HorizontalAlignment="Left" Margin="138,36,0,0" TextWrapping="Wrap" Text="Select child to view results" VerticalAlignment="Top" FontSize="20"/>
         <Button x:Name="btnView" Content="View test records" HorizontalAlignment="Left" Margin="86,675,0,0" VerticalAlignment="Top" Click="btnView_Click"/>
         <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="290,675,0,0" VerticalAlignment="Top" Width="148" Click="btnBack_Click"/>

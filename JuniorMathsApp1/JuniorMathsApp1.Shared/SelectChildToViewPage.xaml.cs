@@ -3,6 +3,7 @@ using JuniorMathsApp1.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -74,7 +75,7 @@ namespace JuniorMathsApp1
 
                 foreach (var c in children)
                 {
-                   lsViewChildren.Items.Add(c.Id + " " + c.Name + " " + c.Surname);
+                   lsViewChildren.Items.Add(c.Id + "-" + c.Name + " " + c.Surname);
 
                    selectedChildId = c.Id;
                    //Retrive selecte element from listView
@@ -107,16 +108,25 @@ namespace JuniorMathsApp1
         //Get the select item from the user
         private void lsViewChildren_ItemClick(object sender, ItemClickEventArgs e)
         {
-           var getElement = e.ClickedItem;
-           ele = "" +getElement;
-
+           //var getElement = e.ClickedItem;
+           //ele = "" +getElement;
            //regChild = (RegisterChild) getSelectedItem;
+
+            Debug.WriteLine("Click!");
         }
 
+        string objItems = "";
+        private void MySelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //Debug.WriteLine("Selected: {0}", e.AddedItems[0]);
+            objItems = "" +e.AddedItems[0];
+        }
+
+ 
         private void btnView_Click(object sender, RoutedEventArgs e)
         {
 
-            txtDisplayName.Text = "Parent ID:" + parentId + " ID: " + selectedChildId;
+            txtDisplayName.Text = "Parent ID:" + parentId + " ID: " + objItems;
             //this.Frame.Navigate(typeof(ViewAllResultsPage));
 
         }
