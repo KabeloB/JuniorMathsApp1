@@ -60,7 +60,7 @@ namespace JuniorMathsApp1
 
         private void btnStartTest_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(NewTestPage));
+            this.Frame.Navigate(typeof(SelectChildToTakeTestPage), getTheId);
         }
 
         private void btnEditChildDetails_Click(object sender, RoutedEventArgs e)

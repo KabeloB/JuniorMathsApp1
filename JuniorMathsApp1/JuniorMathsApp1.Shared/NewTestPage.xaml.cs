@@ -22,6 +22,9 @@ namespace JuniorMathsApp1
     /// </summary>
     public sealed partial class NewTestPage : Page
     {
+        //Random rnd = new Random();
+        //int number = rnd.Next(1, 13);
+
         public NewTestPage()
         {
             this.InitializeComponent();

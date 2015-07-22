@@ -10,9 +10,9 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock HorizontalAlignment="Left" Margin="21,35,0,0" TextWrapping="Wrap" Text="View all previous test results" VerticalAlignment="Top" Height="46" Width="456" FontSize="36"/>
         <TextBlock HorizontalAlignment="Left" Margin="31,104,0,0" TextWrapping="Wrap" Text="All Results:" VerticalAlignment="Top" Height="25" Width="148" FontSize="20"/>
-        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="28,634,0,0" VerticalAlignment="Top" Width="176"/>
-        <Button x:Name="btnReturnMainMenu" Content="Return to main menu" HorizontalAlignment="Left" Margin="304,634,0,0" VerticalAlignment="Top"/>
-        <ListView HorizontalAlignment="Left" Height="458" Margin="31,153,0,0" VerticalAlignment="Top" Width="446"/>
+        <Button x:ConnectionId='1' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="28,634,0,0" VerticalAlignment="Top" Width="176"                      />
+        <Button x:ConnectionId='2' x:Name="btnReturnMainMenu" Content="Return to main menu" HorizontalAlignment="Left" Margin="304,634,0,0" VerticalAlignment="Top"                                />
+        <ListView x:Name="lsViewTest" HorizontalAlignment="Left" Height="458" Margin="31,153,0,0" VerticalAlignment="Top" Width="446"/>
 
     </Grid>
 </Page>

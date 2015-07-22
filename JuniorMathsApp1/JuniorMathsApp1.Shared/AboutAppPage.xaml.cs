@@ -22,9 +22,34 @@ namespace JuniorMathsApp1
     /// </summary>
     public sealed partial class AboutAppPage : Page
     {
+        int parentID = 0;
+        string getTheId = "";
+
         public AboutAppPage()
         {
             this.InitializeComponent();
+        }
+
+        //Display the ID of the parent currently logged in
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            try
+            {
+                base.OnNavigatedTo(e);
+                parentID = (int)e.Parameter;
+
+            }
+            catch (Exception)
+            {
+
+            }
+
+
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MenuPage), parentID);
         }
     }
 }

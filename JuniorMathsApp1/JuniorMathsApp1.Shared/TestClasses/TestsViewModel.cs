@@ -24,12 +24,13 @@ namespace JuniorMathsApp1.TestClasses
         }
         private JuniorMathsApp1.App app = (Application.Current as App);
 
-        public ObservableCollection<TestViewModel> GetChildren()
+        //Retrive all test for children in your account
+        public ObservableCollection<TestViewModel> GetTest()
         {
             parents = new ObservableCollection<TestViewModel>();
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                var query = db.Query<TestResults>("select * from Child");
+                var query = db.Query<TestResults>("select * from TestResults");
                 foreach (var _register in query)
                 {
                     var register = new TestViewModel()
@@ -47,8 +48,8 @@ namespace JuniorMathsApp1.TestClasses
             return parents;
         }
 
-
-        public ObservableCollection<TestViewModel> GetChildren(int childId)
+        //Retrive all test for a particular child IdS
+        public ObservableCollection<TestViewModel> GetTests(int childId)
         {
             parents = new ObservableCollection<TestViewModel>();
             using (var db = new SQLite.SQLiteConnection(app.dbPath))

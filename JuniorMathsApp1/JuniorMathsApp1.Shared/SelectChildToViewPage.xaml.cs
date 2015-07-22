@@ -57,25 +57,11 @@ namespace JuniorMathsApp1
                 children = childrensViewModel.GetChildren(parentId);
                 regChild = new RegisterChild();
 
-
-                
-                /*
-                for (int p = 0; p < children.Count; p++)
-                {
-                    
-                    lsViewChildren.ItemsSource = children;
-                    
-                    var getItem = children.ElementAt<ChildrenViewModel>(p);
-                    selectedChildId = getItem.Id;
-                }
-                */
-
-
                 lsViewChildren.Items.Add("ID" + "\t" + "NAME & SURNAME");
 
                 foreach (var c in children)
                 {
-                   lsViewChildren.Items.Add(c.Id + "-" + c.Name + " " + c.Surname);
+                   lsViewChildren.Items.Add(c.Id + "-" + c.Name + "_" + c.Surname);
 
                    selectedChildId = c.Id;
                    //Retrive selecte element from listView
@@ -116,18 +102,27 @@ namespace JuniorMathsApp1
         }
 
         string objItems = "";
+        string idNum = "";
+        string name = "";
         private void MySelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             //Debug.WriteLine("Selected: {0}", e.AddedItems[0]);
             objItems = "" +e.AddedItems[0];
+            idNum = objItems.Substring(0,1);
+            name = objItems.Substring(2, objItems.IndexOf("_") - 2);
         }
 
  
         private void btnView_Click(object sender, RoutedEventArgs e)
         {
 
-            txtDisplayName.Text = "Parent ID:" + parentId + " ID: " + objItems;
-            //this.Frame.Navigate(typeof(ViewAllResultsPage));
+            txtDisplayName.Text = "Parent ID:" + parentId + " ID: " + idNum;
+
+            int convNum = Convert.ToInt32(idNum);
+
+            string objToSend = "" + parentId + "#" + idNum;
+
+            this.Frame.Navigate(typeof(ViewAllResultsPage),objToSend);
 
         }
 
