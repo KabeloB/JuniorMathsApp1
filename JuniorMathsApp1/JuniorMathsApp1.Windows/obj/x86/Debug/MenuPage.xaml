@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="JuniorMathsApp1.MenuPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:JuniorMathsApp1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:ConnectionId='1' x:Name="btnStartTest" Content="Start new test" HorizontalAlignment="Left" Margin="47,170,0,0" VerticalAlignment="Top" Width="399"                           />
+        <Button x:ConnectionId='2' x:Name="btnViewTestResults" Content="View test results" HorizontalAlignment="Left" Margin="47,234,0,0" VerticalAlignment="Top" Width="399"                                 />
+        <Button x:ConnectionId='3' x:Name="btnEditChildDetails" Content="Edit Child Details" HorizontalAlignment="Left" Margin="47,358,0,0" VerticalAlignment="Top" Width="399"                                  />
+        <Button x:Name="btnRemoveChild_" Content="Remove child from account" HorizontalAlignment="Left" Margin="47,417,0,0" VerticalAlignment="Top" Width="396"/>
+        <Button x:ConnectionId='4' x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="44,519,0,0" VerticalAlignment="Top" Width="399"                        />
+        <TextBlock HorizontalAlignment="Left" Margin="50,112,0,0" TextWrapping="Wrap" Text="Menu Functions" VerticalAlignment="Top" FontSize="36"/>
+        <Button x:ConnectionId='5' x:Name="btnRegisterNewChild" Content="Register New Child" HorizontalAlignment="Left" Margin="44,297,0,0" VerticalAlignment="Top" Width="399"                                  />
+        <Button x:ConnectionId='6' x:Name="btnAboutApp" Content="About App" HorizontalAlignment="Left" Margin="44,468,0,0" VerticalAlignment="Top" Width="396"                          />
+        <TextBox x:Name="txtParentIden" HorizontalAlignment="Left" Margin="239,605,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,611,0,0" TextWrapping="Wrap" Text="Display Parent Id:" VerticalAlignment="Top" FontSize="22"/>
+    </Grid>
+</Page>
+

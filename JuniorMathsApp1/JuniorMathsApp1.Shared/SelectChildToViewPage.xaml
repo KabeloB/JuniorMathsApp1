@@ -12,7 +12,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="138,36,0,0" TextWrapping="Wrap" Text="Select child to view results" VerticalAlignment="Top" FontSize="20"/>
         <Button x:Name="btnView" Content="View test records" HorizontalAlignment="Left" Margin="86,675,0,0" VerticalAlignment="Top" Click="btnView_Click"/>
         <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="290,675,0,0" VerticalAlignment="Top" Width="148" Click="btnBack_Click"/>
-        <TextBox x:Name="txtDisplayName" HorizontalAlignment="Left" Margin="590,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215"/>
+        <TextBox x:Name="txtDisplayName" HorizontalAlignment="Left" Margin="590,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="378"/>
 
     </Grid>
 </Page>

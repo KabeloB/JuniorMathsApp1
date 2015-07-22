@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="JuniorMathsApp1.SelectChildToViewPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:JuniorMathsApp1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ListView x:ConnectionId='1' x:Name="lsViewChildren" HorizontalAlignment="Left" Height="575" Margin="46,79,0,0" VerticalAlignment="Top" Width="436"                                     />
+        <TextBlock HorizontalAlignment="Left" Margin="138,36,0,0" TextWrapping="Wrap" Text="Select child to view results" VerticalAlignment="Top" FontSize="20"/>
+        <Button x:ConnectionId='2' x:Name="btnView" Content="View test records" HorizontalAlignment="Left" Margin="86,675,0,0" VerticalAlignment="Top"                      />
+        <Button x:ConnectionId='3' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="290,675,0,0" VerticalAlignment="Top" Width="148"                      />
+        <TextBox x:Name="txtDisplayName" HorizontalAlignment="Left" Margin="590,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="378"/>
+
+    </Grid>
+</Page>
+

@@ -32,6 +32,8 @@ namespace JuniorMathsApp1
         int parentId = 0;
         int selectedChildId = 0;
 
+        string getTheID = "";
+
 
         int getSelectedItem;
 
@@ -66,16 +68,20 @@ namespace JuniorMathsApp1
                     selectedChildId = getItem.Id;
                 }
                 */
+
+
                 lsViewChildren.Items.Add("ID" + "\t" + "NAME & SURNAME");
+
                 foreach (var c in children)
                 {
-                   lsViewChildren.Items.Add(c.Id + "\t" + c.Name + " " + c.Surname);
+                   lsViewChildren.Items.Add(c.Id + " " + c.Name + " " + c.Surname);
 
-
+                   selectedChildId = c.Id;
                    //Retrive selecte element from listView
-                   regChild = (RegisterChild)lsViewChildren.SelectedValue;
+                   //regChild = (RegisterChild)lsViewChildren.SelectedValue;
                 }
 
+                //var sel = lsViewChildren.SelectedItems.Cast<Object>.ToArray();
                 regChild = (RegisterChild) lsViewChildren.SelectedValue;
                 
                
@@ -97,21 +103,20 @@ namespace JuniorMathsApp1
             this.Frame.Navigate(typeof(MenuPage), parentId);
         }
 
+        string ele = "";
         //Get the select item from the user
         private void lsViewChildren_ItemClick(object sender, ItemClickEventArgs e)
         {
-           getSelectedItem = (int) e.ClickedItem;
+           var getElement = e.ClickedItem;
+           ele = "" +getElement;
 
            //regChild = (RegisterChild) getSelectedItem;
-
         }
-
 
         private void btnView_Click(object sender, RoutedEventArgs e)
         {
 
-            txtDisplayName.Text = "" + getSelectedItem + " ID: " + regChild.Id;
-
+            txtDisplayName.Text = "Parent ID:" + parentId + " ID: " + selectedChildId;
             //this.Frame.Navigate(typeof(ViewAllResultsPage));
 
         }

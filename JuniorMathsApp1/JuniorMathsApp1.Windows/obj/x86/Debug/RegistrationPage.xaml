@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="JuniorMathsApp1.RegistrationPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:JuniorMathsApp1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock HorizontalAlignment="Left" Margin="43,67,0,0" TextWrapping="Wrap" Text="Registration New Account" VerticalAlignment="Top" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="43,142,0,0" TextWrapping="Wrap" Text="Enter Name:" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="43,193,0,0" TextWrapping="Wrap" Text="Enter Surname:" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="txtEnterName" HorizontalAlignment="Left" Margin="254,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201"/>
+        <TextBlock HorizontalAlignment="Left" Margin="43,242,0,0" TextWrapping="Wrap" Text="Enter Email Address:" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="43,299,0,0" TextWrapping="Wrap" Text="Enter Phone Number:" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="43,358,0,0" TextWrapping="Wrap" Text="Enter Password:" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="txtEnterSurname" HorizontalAlignment="Left" Margin="254,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201"/>
+        <TextBox x:Name="txtEnterEmail" HorizontalAlignment="Left" Margin="255.185,236.328,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Width="201.836" Height="30.507">
+            <TextBox.RenderTransform>
+                <CompositeTransform SkewX="2.514" TranslateX="-0.702" Rotation="-0.004"/>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="txtEnterPhoneNo" HorizontalAlignment="Left" Margin="254,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201"/>
+        <Button x:ConnectionId='1' x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="61,426,0,0" VerticalAlignment="Top" Width="196"                        />
+        <TextBox x:Name="txtEnterPassword" HorizontalAlignment="Left" Margin="254,350,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201"/>
+        <Button x:ConnectionId='2' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="275,426,0,0" VerticalAlignment="Top" Width="196"                      />
+
+    </Grid>
+</Page>
+
