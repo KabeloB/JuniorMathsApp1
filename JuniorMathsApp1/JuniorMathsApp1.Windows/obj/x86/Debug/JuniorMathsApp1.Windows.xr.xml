@@ -82,6 +82,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
+      <RootEvent Name="ItemClick" />
     </RootType>
     <RootType FullName="JuniorMathsApp1.SelectChildToViewPage" />
     <RootType FullName="JuniorMathsApp1.ShowPage" />

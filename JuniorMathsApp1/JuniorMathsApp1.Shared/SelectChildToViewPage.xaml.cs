@@ -1,4 +1,5 @@
 ﻿using JuniorMathsApp1.ChildrenClasses;
+using JuniorMathsApp1.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -26,8 +27,14 @@ namespace JuniorMathsApp1
     {
         ObservableCollection<ChildrenViewModel> children = null;
         ChildrensViewModel childrensViewModel = null;
+        RegisterChild regChild = null;
 
         int parentId = 0;
+        int selectedChildId = 0;
+
+
+        int getSelectedItem;
+
 
         public SelectChildToViewPage()
         {
@@ -45,12 +52,33 @@ namespace JuniorMathsApp1
 
                 childrensViewModel = new ChildrensViewModel();
                 children = childrensViewModel.GetChildren(parentId);
+                regChild = new RegisterChild();
 
+
+                
+                /*
+                for (int p = 0; p < children.Count; p++)
+                {
+                    
+                    lsViewChildren.ItemsSource = children;
+                    
+                    var getItem = children.ElementAt<ChildrenViewModel>(p);
+                    selectedChildId = getItem.Id;
+                }
+                */
+                lsViewChildren.Items.Add("ID" + "\t" + "NAME & SURNAME");
                 foreach (var c in children)
                 {
-                    lsViewChildren.Items.Add(c.Name + " " + c.Surname);
+                   lsViewChildren.Items.Add(c.Id + "\t" + c.Name + " " + c.Surname);
+
+
+                   //Retrive selecte element from listView
+                   regChild = (RegisterChild)lsViewChildren.SelectedValue;
                 }
 
+                regChild = (RegisterChild) lsViewChildren.SelectedValue;
+                
+               
                 base.OnNavigatedTo(e);
 
             }
@@ -69,10 +97,27 @@ namespace JuniorMathsApp1
             this.Frame.Navigate(typeof(MenuPage), parentId);
         }
 
+        //Get the select item from the user
+        private void lsViewChildren_ItemClick(object sender, ItemClickEventArgs e)
+        {
+           getSelectedItem = (int) e.ClickedItem;
+
+           //regChild = (RegisterChild) getSelectedItem;
+
+        }
+
+
         private void btnView_Click(object sender, RoutedEventArgs e)
         {
 
-            this.Frame.Navigate(typeof(ViewAllResultsPage));
+            txtDisplayName.Text = "" + getSelectedItem + " ID: " + regChild.Id;
+
+            //this.Frame.Navigate(typeof(ViewAllResultsPage));
+
         }
+
+       
+
+        
     }
 }
