@@ -9,14 +9,14 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock HorizontalAlignment="Left" Margin="38,39,0,0" TextWrapping="Wrap" Text="Complete all questions" VerticalAlignment="Top" FontSize="36"/>
-        <TextBlock x:Name="lblEqualSign" HorizontalAlignment="Left" Margin="332,131,0,0" TextWrapping="Wrap" Text="=" VerticalAlignment="Top" FontSize="48"/>
+        <TextBlock x:Name="lblEqualSign" HorizontalAlignment="Left" Margin="368,131,0,0" TextWrapping="Wrap" Text="=" VerticalAlignment="Top" FontSize="48"/>
         <TextBox x:Name="txtEnterAnswer" HorizontalAlignment="Left" Margin="38,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="363"/>
         <TextBlock HorizontalAlignment="Left" Margin="107,225,0,0" TextWrapping="Wrap" Text="Enter answer here" VerticalAlignment="Top" FontSize="24"/>
         <Button x:Name="btnSubmitAnswer" Content="Submit" HorizontalAlignment="Left" Margin="27,405,0,0" VerticalAlignment="Top" Width="378" Height="58" FontSize="24" Click="btnSubmitAnswer_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="38,574,0,0" TextWrapping="Wrap" Text="Completed questions:  (" VerticalAlignment="Top" FontSize="24" Width="258"/>
-        <TextBlock x:Name="lblFirstNum" HorizontalAlignment="Left" Margin="84,131,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" FontSize="48"/>
-        <TextBlock x:Name="lblOperator" HorizontalAlignment="Left" Margin="143,131,0,0" TextWrapping="Wrap" Text="(+ - x)" VerticalAlignment="Top" FontSize="48"/>
-        <TextBlock x:Name="lblSecondNum" HorizontalAlignment="Left" Margin="301,131,0,0" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" FontSize="48"/>
+        <TextBlock x:Name="lblFirstNum" HorizontalAlignment="Left" Margin="84,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48"/>
+        <TextBlock x:Name="lblOperator" HorizontalAlignment="Left" Margin="143,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Width="49"/>
+        <TextBlock x:Name="lblSecondNum" HorizontalAlignment="Left" Margin="301,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48"/>
         <Button x:Name="btnCancelTest" Content="Cancel Test" HorizontalAlignment="Left" Margin="27,495,0,0" VerticalAlignment="Top" Height="58" Width="378" FontSize="24" Click="btnCancelTest_Click"/>
         <TextBlock x:Name="lblCompletedQuestion" HorizontalAlignment="Left" Margin="296,574,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" FontSize="24"/>
         <TextBlock HorizontalAlignment="Left" Margin="327,574,0,0" TextWrapping="Wrap" Text="/10)" VerticalAlignment="Top" FontSize="24"/>

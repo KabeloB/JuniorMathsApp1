@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JuniorMathsApp1.TestClasses;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -36,8 +37,13 @@ namespace JuniorMathsApp1
         int rightAnswer = 0;
         int wrongAnswers = 0;
 
-      
-        //int number = rnd.Next(1, 13);
+        int systemAnswer = 0;
+        string childsAnswer = "";
+        int convChildAnswer = 0;
+
+
+        TestViewModel objTest = new TestViewModel();
+        DateTime objDate = System.DateTime.Now;
         
 
 
@@ -54,26 +60,33 @@ namespace JuniorMathsApp1
         //Generate first random number
         public int getRandomNum1()
         {
-            this.InitializeComponent();
+           
 
             Random rnd = new Random();
-            int numGen = (int)rnd.Next(1, 13);
+            int numGen1 = (int)rnd.Next(1,13);
 
-            return numGen;
+            return numGen1;
         }
 
         //Generate second random number
         public int getRandomNum2()
         {
-            this.InitializeComponent();
+            
 
-            Random rnd = new Random();
-            int numGen = (int)rnd.Next(1, 13);
+            Random rnd2 = new Random();
+            int numGen2 = (int)rnd2.Next(1,13);
 
-            return numGen;
+            return numGen2;
         }
 
+        //Choose operand
+        public int getOperand()
+        {
+            Random rnd = new Random();
+            int numGen3 = (int)rnd.Next(1,4);
 
+            return numGen3;
+        }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -106,11 +119,23 @@ namespace JuniorMathsApp1
             return getCount;
         }
 
+        //Code for displaying MessageBox
+        string msg = "";
+        private async void messageBox(string msg)
+        {
+            var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
+            await msgDisplay.ShowAsync();
 
+        }
 
         private void btnCancelTest_Click(object sender, RoutedEventArgs e)
         {
-           
+            int getInsertResult = objTest.insertTestResults(childID, 0, 0, objDate.ToString());
+            this.Frame.Navigate(typeof(MenuPage), parentID);
+            msg = "You have cancelled the test!" +
+                  "\nYour score for the test will be 0!";
+            
+            messageBox(msg);
         }
 
         private void btnStartTest_Click(object sender, RoutedEventArgs e)
@@ -125,39 +150,161 @@ namespace JuniorMathsApp1
             lblFirstNum.Text = "" + getRandom1;
             lblSecondNum.Text = "" + getRandom2;
 
+            string strOperand = "";
+
+
+            int getTheOperand = getOperand();
+
+            if (getTheOperand == 1)
+            {
+                //Addition
+                strOperand = "+";
+                lblOperator.Text = strOperand;
+                systemAnswer = (getRandom1 + getRandom2);
+
+            }
+            else if (getTheOperand == 2)
+            {
+                //Subtraction
+                strOperand = "-";
+                lblOperator.Text = strOperand;
+                if (getRandom1 > getRandom2)
+                {
+                    systemAnswer = (getRandom1 - getRandom2);
+                }
+                else if (getRandom1 < getRandom2)
+                {
+                    systemAnswer = (getRandom2 - getRandom1);
+                }
+                else if (getRandom1 == getRandom1)
+                {
+
+                    systemAnswer = (getRandom1 - getRandom2);
+                }
+
+            }
+            else if (getTheOperand == 3)
+            {
+
+                //Multiplication
+                strOperand = "x";
+                lblOperator.Text = strOperand;
+                systemAnswer = (getRandom1 * getRandom2);
+            }
+
+
+
+
+
+            if (systemAnswer == convChildAnswer)
+            {
+                rightAnswer = rightAnswer + 1;
+            }
+            else
+            {
+                wrongAnswers = wrongAnswers + 1;
+            }
+
             lblCompletedQuestion.Text = "" + (count + 1);
         }
 
 
         private void btnSubmitAnswer_Click(object sender, RoutedEventArgs e)
         {
-            
-            while(count < 11)
+            doCalculation();
+
+            count = count + 1;
+
+            lblCompletedQuestion.Text = "" + count;
+
+            if(count == 10)
             {
-                lblFirstNum.Text = "" + getRandom1;
-                lblSecondNum.Text = "" + getRandom2;
-
-                int systemAnswer = (getRandom1 + getRandom2);
-                string childsAnswer = txtEnterAnswer.Text;
-                int convChildAnswer = Convert.ToInt32(childsAnswer);
+                int getInsertResult = objTest.insertTestResults(childID, rightAnswer, wrongAnswers, objDate.ToString());
 
 
-
-                if (systemAnswer == convChildAnswer)
-                {
-                    rightAnswer = rightAnswer + 1;
-                }
-                else
-                {
-                    wrongAnswers = wrongAnswers + 1;
-                }
-
-                getRandom1 = getRandomNum1();
-                getRandom2 = getRandomNum2();
-
+                this.Frame.Navigate(typeof(MenuPage), parentID);
+                msg = "You have completed all questions for the test!" +
+                      "\nGo to view results button to seee the score...";
+                messageBox(msg);
 
             }
-            
+        }
+
+        
+        public void doCalculation()
+        {
+            try
+            {
+                
+                    lblFirstNum.Text = "" + getRandom1;
+                    lblSecondNum.Text = "" + getRandom2;
+                    string strOperand = "";
+
+
+                    int getTheOperand = getOperand();
+
+                    if (getTheOperand == 1)
+                    {
+                        //Addition
+                        strOperand = "+";
+                        lblOperator.Text = strOperand;
+                        systemAnswer = (getRandom1 + getRandom2);
+
+                    }
+                    else if (getTheOperand == 2)
+                    {
+                        //Subtraction
+                        strOperand = "-";
+                        lblOperator.Text = strOperand;
+                        if (getRandom1 > getRandom2)
+                        {
+                            systemAnswer = (getRandom1 - getRandom2);
+                        }
+                        else if (getRandom1 < getRandom2)
+                        {
+                            systemAnswer = (getRandom2 - getRandom1);
+                        }
+                        else if (getRandom1 == getRandom1)
+                        {
+
+                            systemAnswer = (getRandom1 - getRandom2);
+                        }
+
+                    }
+                    else if (getTheOperand == 3)
+                    {
+
+                        //Multiplication
+                        strOperand = "x";
+                        lblOperator.Text = strOperand;
+                        systemAnswer = (getRandom1 * getRandom2);
+                    }
+
+
+                    childsAnswer = txtEnterAnswer.Text;
+                    convChildAnswer = Convert.ToInt32(childsAnswer);
+
+
+
+                    if (systemAnswer == convChildAnswer)
+                    {
+                        rightAnswer = rightAnswer + 1;
+                    }
+                    else
+                    {
+                        wrongAnswers = wrongAnswers + 1;
+                    }
+
+                    getRandom1 = getRandomNum1();
+                    getRandom2 = getRandomNum2();
+
+                    count = (count + 1);
+                
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }

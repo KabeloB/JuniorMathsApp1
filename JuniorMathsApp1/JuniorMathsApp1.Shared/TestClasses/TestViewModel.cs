@@ -118,7 +118,7 @@ namespace JuniorMathsApp1.TestClasses
         
 
         //Method for saving child details into the database
-        public int registerNewChild(int childID, int rightAnswers, int wrongAnswers, string date)
+        public int insertTestResults(int childID, int rightAnswers, int wrongAnswers, string date)
         {
             int success = 0;
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
