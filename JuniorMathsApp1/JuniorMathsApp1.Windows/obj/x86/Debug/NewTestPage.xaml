@@ -8,12 +8,19 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock HorizontalAlignment="Left" Margin="482,91,0,0" TextWrapping="Wrap" Text="Complete all questions" VerticalAlignment="Top" FontSize="36"/>
-        <TextBlock x:Name="lblEquation" HorizontalAlignment="Left" Margin="634,195,0,0" TextWrapping="Wrap" Text="4 + 6 = ?" VerticalAlignment="Top" FontSize="24"/>
-        <TextBox x:Name="txtEnterAnswer" HorizontalAlignment="Left" Margin="509,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="336"/>
-        <TextBlock HorizontalAlignment="Left" Margin="581,271,0,0" TextWrapping="Wrap" Text="Enter answer here" VerticalAlignment="Top" FontSize="24"/>
-        <Button x:Name="btnSubmitAnswer" Content="Submit" HorizontalAlignment="Left" Margin="578,419,0,0" VerticalAlignment="Top" Width="195"/>
-        <TextBlock HorizontalAlignment="Left" Margin="509,486,0,0" TextWrapping="Wrap" Text="Completed questions:  (4/10)" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="38,39,0,0" TextWrapping="Wrap" Text="Complete all questions" VerticalAlignment="Top" FontSize="36"/>
+        <TextBlock x:Name="lblEqualSign" HorizontalAlignment="Left" Margin="332,131,0,0" TextWrapping="Wrap" Text="=" VerticalAlignment="Top" FontSize="48"/>
+        <TextBox x:Name="txtEnterAnswer" HorizontalAlignment="Left" Margin="38,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="363"/>
+        <TextBlock HorizontalAlignment="Left" Margin="107,225,0,0" TextWrapping="Wrap" Text="Enter answer here" VerticalAlignment="Top" FontSize="24"/>
+        <Button x:ConnectionId='1' x:Name="btnSubmitAnswer" Content="Submit" HorizontalAlignment="Left" Margin="27,405,0,0" VerticalAlignment="Top" Width="378" Height="58" FontSize="24"                              />
+        <TextBlock HorizontalAlignment="Left" Margin="38,574,0,0" TextWrapping="Wrap" Text="Completed questions:  (" VerticalAlignment="Top" FontSize="24" Width="258"/>
+        <TextBlock x:Name="lblFirstNum" HorizontalAlignment="Left" Margin="84,131,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" FontSize="48"/>
+        <TextBlock x:Name="lblOperator" HorizontalAlignment="Left" Margin="143,131,0,0" TextWrapping="Wrap" Text="(+ - x)" VerticalAlignment="Top" FontSize="48"/>
+        <TextBlock x:Name="lblSecondNum" HorizontalAlignment="Left" Margin="301,131,0,0" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" FontSize="48"/>
+        <Button x:ConnectionId='2' x:Name="btnCancelTest" Content="Cancel Test" HorizontalAlignment="Left" Margin="27,495,0,0" VerticalAlignment="Top" Height="58" Width="378" FontSize="24"                            />
+        <TextBlock x:Name="lblCompletedQuestion" HorizontalAlignment="Left" Margin="296,574,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="327,574,0,0" TextWrapping="Wrap" Text="/10)" VerticalAlignment="Top" FontSize="24"/>
+        <Button x:ConnectionId='3' x:Name="btnStartTest" Content="Start Test" HorizontalAlignment="Left" Margin="27,329,0,0" VerticalAlignment="Top" Height="56" Width="378" FontSize="24"                           />
 
     </Grid>
 </Page>
