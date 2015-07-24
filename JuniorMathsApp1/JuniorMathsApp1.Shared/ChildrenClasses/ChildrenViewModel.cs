@@ -124,16 +124,18 @@ namespace JuniorMathsApp1.ChildrenClasses
 
 
         //Retrive all Parent details from the database where email and password match user inputs
-        public RegisterChild getChildDetails(int id, int parentId, string childName)
+        public int getChildDetails(int id)
         {
-           reg = new RegisterChild();
+            int result = 0;
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                reg = db.Query<RegisterChild>("Select * from Child where Id =" + id + " and ParentId = '"+ parentId+"  and Name ='" + name + "'").FirstOrDefault();
+                result = db.Execute("Delete from Child where Id =" + id);
                
             }
-             return reg;
+             return result;
         }
+
+
 
         public string getMessage()
         {

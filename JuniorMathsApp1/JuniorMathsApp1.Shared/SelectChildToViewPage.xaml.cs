@@ -122,7 +122,7 @@ namespace JuniorMathsApp1
 
             string objToSend = "" + parentId + "#" + idNum;
 
-            this.Frame.Navigate(typeof(ViewAllResultsPage),objToSend);
+            this.Frame.Navigate(typeof(ViewAllResultsPage), objToSend);
 
         }
 

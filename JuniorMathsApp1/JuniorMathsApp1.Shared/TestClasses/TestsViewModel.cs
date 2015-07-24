@@ -55,7 +55,7 @@ namespace JuniorMathsApp1.TestClasses
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
                 
-                var query = db.Query<TestResults>("select * from TestResults where childId=" + childId);
+                var query = db.Query<TestResults>("select * from TestResults where ChildId=" + childId);
                 foreach (var _register in query)
                 {
                     var register = new TestViewModel()

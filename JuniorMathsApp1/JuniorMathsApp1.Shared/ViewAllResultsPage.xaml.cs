@@ -28,6 +28,8 @@ namespace JuniorMathsApp1
         string getIds = "";
         int parentID = 0;
         int childID = 0;
+        string getParentID = "";
+        string getChildID = "";
 
         ObservableCollection<TestViewModel> test = null;
         TestsViewModel testsViewModel = null;
@@ -46,12 +48,15 @@ namespace JuniorMathsApp1
                 base.OnNavigatedTo(e);
                 getIds = (string)e.Parameter;
 
-                parentID = Convert.ToInt32(getIds.Substring(0, 1));
-                childID = Convert.ToInt32(getIds.Substring(2));
+                getParentID = getIds.Substring(0,1);
+                getChildID = getIds.Substring(2);
 
-                test = testsViewModel.GetTests(childID);
+                
 
-                lsViewTest.Items.Add("Test ID" + "\t" + "Child ID" + "\t" + "# Right Answers" + "\t" + "# Wrong Answers" + "\t" + "Date of Test");
+                testsViewModel = new TestsViewModel();
+                test = testsViewModel.GetTests(Convert.ToInt32(getIds.Substring(2)));
+
+                lsViewTest.Items.Add("Test ID" + "\t" + "Child ID" + "\t" + "#Right" + "\t" + "#Wrong " + "\t" + "Date of Test");
 
                 foreach (var c in test)
                 {
@@ -73,12 +78,20 @@ namespace JuniorMathsApp1
 
         private void btnReturnMainMenu_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MenuPage), parentID);
+           int getNum = myParentId(getParentID); 
+           this.Frame.Navigate(typeof(MenuPage), getNum);
+        }
+
+        public int myParentId(string m)
+        {
+            int returnNumP = Convert.ToInt32(m);
+            return returnNumP;
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(SelectChildToViewPage), parentID);
+            int getNum = myParentId(getParentID);
+            this.Frame.Navigate(typeof(SelectChildToViewPage), getNum);
         }
 
     }

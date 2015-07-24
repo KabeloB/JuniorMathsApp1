@@ -114,7 +114,6 @@ namespace JuniorMathsApp1
         {
             int getCount = count;
 
-
             btnCancelTest.IsEnabled = true;
             return getCount;
         }
@@ -185,7 +184,6 @@ namespace JuniorMathsApp1
             }
             else if (getTheOperand == 3)
             {
-
                 //Multiplication
                 strOperand = "x";
                 lblOperator.Text = strOperand;
@@ -193,7 +191,7 @@ namespace JuniorMathsApp1
             }
 
 
-
+            
 
 
             if (systemAnswer == convChildAnswer)
@@ -306,5 +304,9 @@ namespace JuniorMathsApp1
 
             }
         }
+
+
+
+
     }
 }
