@@ -9,13 +9,12 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Button x:Name="btnStartTest" Content="Start new test" HorizontalAlignment="Left" Margin="47,170,0,0" VerticalAlignment="Top" Width="399" Click="btnStartTest_Click"/>
-        <Button x:Name="btnViewTestResults" Content="View test results" HorizontalAlignment="Left" Margin="47,234,0,0" VerticalAlignment="Top" Width="399" Click="btnViewTestResults_Click"/>
-        <Button x:Name="btnEditChildDetails" Content="Edit Child Details" HorizontalAlignment="Left" Margin="47,358,0,0" VerticalAlignment="Top" Width="399" Click="btnEditChildDetails_Click"/>
-        <Button x:Name="btnRemoveChild_" Content="Remove child from account" HorizontalAlignment="Left" Margin="47,417,0,0" VerticalAlignment="Top" Width="396"/>
-        <Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="44,519,0,0" VerticalAlignment="Top" Width="399" Click="btnLogout_Click"/>
+        <Button x:Name="btnViewTestResults" Content="View more option" HorizontalAlignment="Left" Margin="47,234,0,0" VerticalAlignment="Top" Width="399" Click="btnViewTestResults_Click"/>
+        <Button x:Name="btnEditChildDetails" Content="Edit Account Details" HorizontalAlignment="Left" Margin="47,358,0,0" VerticalAlignment="Top" Width="399" Click="btnEditChildDetails_Click"/>
+        <Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="41,464,0,0" VerticalAlignment="Top" Width="399" Click="btnLogout_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="50,112,0,0" TextWrapping="Wrap" Text="Menu Functions" VerticalAlignment="Top" FontSize="36"/>
         <Button x:Name="btnRegisterNewChild" Content="Register New Child" HorizontalAlignment="Left" Margin="44,297,0,0" VerticalAlignment="Top" Width="399" Click="btnRegisterNewChild_Click"/>
-        <Button x:Name="btnAboutApp" Content="About App" HorizontalAlignment="Left" Margin="44,468,0,0" VerticalAlignment="Top" Width="396" Click="btnAboutApp_Click"/>
+        <Button x:Name="btnAboutApp" Content="About App" HorizontalAlignment="Left" Margin="44,413,0,0" VerticalAlignment="Top" Width="396" Click="btnAboutApp_Click"/>
         <TextBox x:Name="txtParentIden" HorizontalAlignment="Left" Margin="239,605,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198"/>
         <TextBlock HorizontalAlignment="Left" Margin="50,611,0,0" TextWrapping="Wrap" Text="Display Parent Id:" VerticalAlignment="Top" FontSize="22"/>
     </Grid>

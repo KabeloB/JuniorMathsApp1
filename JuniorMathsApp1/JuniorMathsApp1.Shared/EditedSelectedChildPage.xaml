@@ -8,12 +8,20 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock HorizontalAlignment="Left" Margin="509,75,0,0" TextWrapping="Wrap" Text="Please select child to edit" VerticalAlignment="Top" FontSize="36"/>
-        <RadioButton Content="Child Name" HorizontalAlignment="Left" Margin="685,174,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Child Name" HorizontalAlignment="Left" Margin="685,226,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Child Name" HorizontalAlignment="Left" Margin="685,286,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnProceed" Content="Proceed" HorizontalAlignment="Left" Margin="551,347,0,0" VerticalAlignment="Top" Width="126"/>
-        <Button x:Name="btnBackToMenu" Content="Back to menu" HorizontalAlignment="Left" Margin="786,347,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="34,53,0,0" TextWrapping="Wrap" Text="Please select child to edit" VerticalAlignment="Top" FontSize="36"/>
+        <Button x:Name="btnProceed" Content="Proceed" HorizontalAlignment="Left" Margin="33,495,0,0" VerticalAlignment="Top" Width="197" Click="btnProceed_Click"/>
+        <Button x:Name="btnBackToMenu" Content="Back" HorizontalAlignment="Left" Margin="297,495,0,0" VerticalAlignment="Top" Width="220"/>
+        <TextBlock HorizontalAlignment="Left" Margin="49,131,0,0" TextWrapping="Wrap" Text="Child ID:" VerticalAlignment="Top" FontSize="22"/>
+        <TextBlock HorizontalAlignment="Left" Margin="43,183,0,0" TextWrapping="Wrap" Text="Current Child Name:" VerticalAlignment="Top" FontSize="22"/>
+        <TextBlock HorizontalAlignment="Left" Margin="43,239,0,0" TextWrapping="Wrap" Text="Current Child Surname:" VerticalAlignment="Top" FontSize="22"/>
+        <TextBlock HorizontalAlignment="Left" Margin="49,301,0,0" TextWrapping="Wrap" Text="Current Child Age:" VerticalAlignment="Top" FontSize="22"/>
+        <TextBox x:Name="txtCurrentChildName" HorizontalAlignment="Left" Margin="300,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="655"/>
+        <TextBox x:Name="txtCurrentChildSurname_" HorizontalAlignment="Left" Margin="300,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214"/>
+        <TextBox x:Name="txtCurrentChildAge" HorizontalAlignment="Left" Margin="300,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214"/>
+        <TextBlock HorizontalAlignment="Left" Margin="49,359,0,0" TextWrapping="Wrap" Text="Current Child Grade:" VerticalAlignment="Top" FontSize="22"/>
+        <TextBlock x:Name="lblChildsID" HorizontalAlignment="Left" Margin="300,131,0,0" TextWrapping="Wrap" Text="-" VerticalAlignment="Top" FontSize="22" Width="214"/>
+        <ComboBox x:Name="cbCurrentChildGrade" HorizontalAlignment="Left" Margin="300,359,0,0" VerticalAlignment="Top" Width="214"/>
+        <Button x:Name="btnView" Content="View Child Details" HorizontalAlignment="Left" Margin="33,436,0,0" VerticalAlignment="Top" Width="486" Click="btnView_Click"/>
 
     </Grid>
 </Page>

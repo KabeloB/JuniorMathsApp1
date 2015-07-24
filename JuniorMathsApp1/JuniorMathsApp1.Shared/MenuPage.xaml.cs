@@ -65,7 +65,7 @@ namespace JuniorMathsApp1
 
         private void btnEditChildDetails_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(EditedSelectedChildPage));
+            //this.Frame.Navigate(typeof());
         }
 
         //Button for logging out from user account 

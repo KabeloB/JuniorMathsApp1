@@ -27,6 +27,7 @@ namespace JuniorMathsApp1
     public sealed partial class SelectChildToViewPage : Page
     {
         ObservableCollection<ChildrenViewModel> children = null;
+        ChildrenViewModel childrenViewModel = null;
         ChildrensViewModel childrensViewModel = null;
         RegisterChild regChild = null;
 
@@ -34,7 +35,7 @@ namespace JuniorMathsApp1
         int selectedChildId = 0;
 
         string getTheID = "";
-
+        string allChildDetails = "";
 
         int getSelectedItem;
 
@@ -61,9 +62,9 @@ namespace JuniorMathsApp1
 
                 foreach (var c in children)
                 {
-                   lsViewChildren.Items.Add(c.Id + "-" + c.Name + "_" + c.Surname);
+                   lsViewChildren.Items.Add(c.Id + "-" + c.Name + "_" + c.Surname + "#"+ c.Age + "$" + c.Grade);
 
-                   selectedChildId = c.Id;
+                   
                    //Retrive selecte element from listView
                    //regChild = (RegisterChild)lsViewChildren.SelectedValue;
                 }
@@ -77,13 +78,19 @@ namespace JuniorMathsApp1
             }
             catch (Exception)
             {
-
+                
             }
             
             
         }
 
+        //Code for displaying MessageBox
+        private async void messageBox(string msg)
+        {
+            var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
+            await msgDisplay.ShowAsync();
 
+        }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
@@ -104,12 +111,26 @@ namespace JuniorMathsApp1
         string objItems = "";
         string idNum = "";
         string name = "";
+        string surname =  "";
+        string age = "";
+        string grade = "";
         private void MySelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            try
+            {
+                objItems = "" +e.AddedItems[0];
+                idNum = objItems.Substring(0,1);
+                name = objItems.Substring(2, objItems.IndexOf("_"));
+                surname = objItems.Substring(objItems.IndexOf("_"), objItems.IndexOf("#"));
+                age = objItems.Substring(objItems.IndexOf("#"), objItems.IndexOf("$"));
+                grade = objItems.Substring(objItems.IndexOf("$"), objItems.Length);
+            }
+            catch(Exception)
+            {
+
+            }
             //Debug.WriteLine("Selected: {0}", e.AddedItems[0]);
-            objItems = "" +e.AddedItems[0];
-            idNum = objItems.Substring(0,1);
-            name = objItems.Substring(2, objItems.IndexOf("_") - 2);
+            
         }
 
  
@@ -123,6 +144,69 @@ namespace JuniorMathsApp1
             string objToSend = "" + parentId + "#" + idNum;
 
             this.Frame.Navigate(typeof(ViewAllResultsPage), objToSend);
+
+        }
+        //Method for converting string to integer
+        public int myParentId(string m)
+        {
+            int returnNumP = Convert.ToInt32(m);
+            return returnNumP;
+        }
+
+        private void btnDeleteChild_Click(object sender, RoutedEventArgs e)
+        {
+            childrenViewModel = new ChildrenViewModel();
+            string strMsg = "";
+            int convNum = myParentId(idNum);
+            int getResult = 0;
+
+            try
+            {
+                childrenViewModel.deleteChildRecords(convNum);
+                strMsg = "You have successfully deleted: " + name + " from the database!";
+                messageBox(strMsg);
+                this.Frame.Navigate(typeof(MenuPage), parentId);
+            }
+            catch(Exception)
+            {
+
+            }
+               
+               
+                
+               /*
+                if (getResult > 0)
+                {
+                    strMsg = "You have successfully deleted: " + name + " from the database!";
+                    messageBox(strMsg);
+                    this.Frame.Navigate(typeof(MenuPage), parentId);
+                }
+                else
+                {
+                    strMsg = "You were unable to delete: " + name + " from the database!";
+                    messageBox(strMsg);
+                    this.Frame.Navigate(typeof(SelectChildToViewPage), parentId);
+                }
+            */
+            
+                
+                
+            
+        }
+
+        private void btnEditChildDetails_Click(object sender, RoutedEventArgs e)
+        {
+            string chDetails = "" + idNum + "_" + name + "#" + age + "$" + grade + "%" + parentId;
+            this.Frame.Navigate(typeof(EditedSelectedChildPage), chDetails);
+        }
+
+        private void btnZZZZZZZZ_Click(object sender, RoutedEventArgs e)
+        {
+            txtI.Text = idNum;
+            txtN.Text = objItems;
+            txtS.Text = surname;
+            txtA.Text = age;
+            txtG.Text = grade;
 
         }
 
