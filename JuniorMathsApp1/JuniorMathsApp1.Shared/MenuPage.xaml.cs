@@ -47,7 +47,7 @@ namespace JuniorMathsApp1
                 base.OnNavigatedTo(e);
                 getTheId = (int)e.Parameter;
 
-                txtParentIden.Text = "" + getTheId;
+                lblParentIdenNum.Text = "" + getTheId;
             }
             catch(Exception)
             {

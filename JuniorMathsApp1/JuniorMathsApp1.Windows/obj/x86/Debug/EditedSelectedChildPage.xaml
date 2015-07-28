@@ -15,7 +15,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="43,183,0,0" TextWrapping="Wrap" Text="Current Child Name:" VerticalAlignment="Top" FontSize="22"/>
         <TextBlock HorizontalAlignment="Left" Margin="43,239,0,0" TextWrapping="Wrap" Text="Current Child Surname:" VerticalAlignment="Top" FontSize="22"/>
         <TextBlock HorizontalAlignment="Left" Margin="49,301,0,0" TextWrapping="Wrap" Text="Current Child Age:" VerticalAlignment="Top" FontSize="22"/>
-        <TextBox x:Name="txtCurrentChildName" HorizontalAlignment="Left" Margin="300,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="655"/>
+        <TextBox x:Name="txtCurrentChildName" HorizontalAlignment="Left" Margin="300,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="216"/>
         <TextBox x:Name="txtCurrentChildSurname_" HorizontalAlignment="Left" Margin="300,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214"/>
         <TextBox x:Name="txtCurrentChildAge" HorizontalAlignment="Left" Margin="300,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214"/>
         <TextBlock HorizontalAlignment="Left" Margin="49,359,0,0" TextWrapping="Wrap" Text="Current Child Grade:" VerticalAlignment="Top" FontSize="22"/>

@@ -8,15 +8,15 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:ConnectionId='1' x:Name="btnStartTest" Content="Start new test" HorizontalAlignment="Left" Margin="47,170,0,0" VerticalAlignment="Top" Width="399"                           />
-        <Button x:ConnectionId='2' x:Name="btnViewTestResults" Content="View more option" HorizontalAlignment="Left" Margin="47,234,0,0" VerticalAlignment="Top" Width="399"                                 />
-        <Button x:ConnectionId='3' x:Name="btnEditChildDetails" Content="Edit Account Details" HorizontalAlignment="Left" Margin="47,358,0,0" VerticalAlignment="Top" Width="399"                                  />
-        <Button x:ConnectionId='4' x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="41,464,0,0" VerticalAlignment="Top" Width="399"                        />
+        <Button x:ConnectionId='1' x:Name="btnStartTest" Content="Start new test" HorizontalAlignment="Left" Margin="50,203,0,0" VerticalAlignment="Top" Width="393"                           />
+        <Button x:ConnectionId='2' x:Name="btnViewTestResults" Content="View more options" HorizontalAlignment="Left" Margin="50,275,0,0" VerticalAlignment="Top" Width="393"                                 />
+        <Button x:ConnectionId='3' x:Name="btnEditChildDetails" Content="Edit Account Details" HorizontalAlignment="Left" Margin="50,425,0,0" VerticalAlignment="Top" Width="396"                                  />
+        <Button x:ConnectionId='4' x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="50,575,0,0" VerticalAlignment="Top" Width="393"                        />
         <TextBlock HorizontalAlignment="Left" Margin="50,112,0,0" TextWrapping="Wrap" Text="Menu Functions" VerticalAlignment="Top" FontSize="36"/>
-        <Button x:ConnectionId='5' x:Name="btnRegisterNewChild" Content="Register New Child" HorizontalAlignment="Left" Margin="44,297,0,0" VerticalAlignment="Top" Width="399"                                  />
-        <Button x:ConnectionId='6' x:Name="btnAboutApp" Content="About App" HorizontalAlignment="Left" Margin="44,413,0,0" VerticalAlignment="Top" Width="396"                          />
-        <TextBox x:Name="txtParentIden" HorizontalAlignment="Left" Margin="239,605,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198"/>
-        <TextBlock HorizontalAlignment="Left" Margin="50,611,0,0" TextWrapping="Wrap" Text="Display Parent Id:" VerticalAlignment="Top" FontSize="22"/>
+        <Button x:ConnectionId='5' x:Name="btnRegisterNewChild" Content="Register New Child" HorizontalAlignment="Left" Margin="50,347,0,0" VerticalAlignment="Top" Width="396"                                  />
+        <Button x:ConnectionId='6' x:Name="btnAboutApp" Content="About App" HorizontalAlignment="Left" Margin="50,499,0,0" VerticalAlignment="Top" Width="396"                          />
+        <TextBlock HorizontalAlignment="Left" Margin="50,160,0,0" TextWrapping="Wrap" Text="Display Parent Id:" VerticalAlignment="Top" FontSize="22"/>
+        <TextBlock x:Name="lblParentIdenNum" HorizontalAlignment="Left" Margin="234,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" Height="26" Width="51"/>
     </Grid>
 </Page>
 

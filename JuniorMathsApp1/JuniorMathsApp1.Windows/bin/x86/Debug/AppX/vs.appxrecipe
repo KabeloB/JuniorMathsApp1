@@ -26,7 +26,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\JuniorMathsApp1.Windows.exe">
       <PackagePath>JuniorMathsApp1.Windows.exe</PackagePath>
-      <Modified>2015-07-28T08:27:14.238</Modified>
+      <Modified>2015-07-28T08:56:12.033</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\SQLite.WinRT81\3.8.10.2\Redist\Debug\x86\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
@@ -62,7 +62,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\EditedSelectedChildPage.xbf">
       <PackagePath>EditedSelectedChildPage.xbf</PackagePath>
-      <Modified>2015-07-24T11:35:04.181</Modified>
+      <Modified>2015-07-28T08:56:11.626</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
@@ -70,7 +70,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\MenuPage.xbf">
       <PackagePath>MenuPage.xbf</PackagePath>
-      <Modified>2015-07-24T11:35:04.182</Modified>
+      <Modified>2015-07-28T08:56:11.644</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\NewChildSavedPage.xbf">
       <PackagePath>NewChildSavedPage.xbf</PackagePath>
@@ -98,7 +98,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\SelectChildToViewPage.xbf">
       <PackagePath>SelectChildToViewPage.xbf</PackagePath>
-      <Modified>2015-07-28T07:38:22.722</Modified>
+      <Modified>2015-07-28T08:56:11.645</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\ShowPage.xbf">
       <PackagePath>ShowPage.xbf</PackagePath>
