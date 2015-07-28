@@ -12,15 +12,8 @@
         <TextBlock HorizontalAlignment="Left" Margin="138,36,0,0" TextWrapping="Wrap" Text="Select child to view results" VerticalAlignment="Top" FontSize="20"/>
         <Button x:ConnectionId='2' x:Name="btnView" Content="View test records" HorizontalAlignment="Left" Margin="43,578,0,0" VerticalAlignment="Top"                       Width="188"/>
         <Button x:ConnectionId='3' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="287,644,0,0" VerticalAlignment="Top" Width="198"                      />
-        <TextBox x:Name="txtDisplayName" HorizontalAlignment="Left" Margin="590,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="378"/>
         <Button x:ConnectionId='4' x:Name="btnDeleteChild" Content="Delete" HorizontalAlignment="Left" Margin="287,578,0,0" VerticalAlignment="Top" Width="198"                             />
         <Button x:ConnectionId='5' x:Name="btnEditChildDetails" Content="Edit Details" HorizontalAlignment="Left" Margin="43,644,0,0" VerticalAlignment="Top" Width="188"                                  />
-        <Button x:ConnectionId='6' x:Name="btnZZZZZZZZ" Content="View" HorizontalAlignment="Left" Margin="681,411,0,0" VerticalAlignment="Top"                          />
-        <TextBox x:Name="txtI" HorizontalAlignment="Left" Margin="1038,320,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="210"/>
-        <TextBox x:Name="txtN" HorizontalAlignment="Left" Margin="1061,381,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="187"/>
-        <TextBox x:Name="txtS" HorizontalAlignment="Left" Margin="1061,446,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="187"/>
-        <TextBox x:Name="txtA" HorizontalAlignment="Left" Margin="1074,501,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="174"/>
-        <TextBox x:Name="txtG" HorizontalAlignment="Left" Margin="1061,559,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="187"/>
 
     </Grid>
 </Page>

@@ -137,7 +137,7 @@ namespace JuniorMathsApp1
         private void btnView_Click(object sender, RoutedEventArgs e)
         {
 
-            txtDisplayName.Text = "Parent ID:" + parentId + " ID: " + idNum;
+            
 
             int convNum = Convert.ToInt32(idNum);
 
@@ -153,6 +153,7 @@ namespace JuniorMathsApp1
             return returnNumP;
         }
 
+        //Button for deleting a child from an account
         private void btnDeleteChild_Click(object sender, RoutedEventArgs e)
         {
             childrenViewModel = new ChildrenViewModel();
@@ -171,42 +172,50 @@ namespace JuniorMathsApp1
             {
 
             }
-               
-               
+        }
+
+        //Button to update child details
+        private void btnEditChildDetails_Click(object sender, RoutedEventArgs e)
+        {
+            regChild = new RegisterChild();
+            childrenViewModel = new ChildrenViewModel();
+
+            int convertChildId = Convert.ToInt32(idNum);
+            int convertParentId = Convert.ToInt32(parentId);
+
+            
+            try
+            {
+                 regChild = childrenViewModel.getChildDetails(convertChildId,parentId);
+            }
+            catch(Exception)
+            {
+
+            }
                 
-               /*
-                if (getResult > 0)
+                
+
+                if(regChild != null)
                 {
-                    strMsg = "You have successfully deleted: " + name + " from the database!";
-                    messageBox(strMsg);
-                    this.Frame.Navigate(typeof(MenuPage), parentId);
+                    this.Frame.Navigate(typeof(EditedSelectedChildPage), regChild);
+                    string msg = "Found the child in the database";
+                    messageBox(msg);
                 }
                 else
                 {
-                    strMsg = "You were unable to delete: " + name + " from the database!";
-                    messageBox(strMsg);
-                    this.Frame.Navigate(typeof(SelectChildToViewPage), parentId);
+                    string msg = "Couldn't retrive child infomation from the database";
+                    this.Frame.Navigate(typeof(SelectChildToViewPage));
+                    messageBox(msg);
                 }
-            */
             
-                
-                
-            
-        }
 
-        private void btnEditChildDetails_Click(object sender, RoutedEventArgs e)
-        {
             string chDetails = "" + idNum + "_" + name + "#" + age + "$" + grade + "%" + parentId;
-            this.Frame.Navigate(typeof(EditedSelectedChildPage), chDetails);
+            
         }
 
         private void btnZZZZZZZZ_Click(object sender, RoutedEventArgs e)
         {
-            txtI.Text = idNum;
-            txtN.Text = objItems;
-            txtS.Text = surname;
-            txtA.Text = age;
-            txtG.Text = grade;
+            
 
         }
 

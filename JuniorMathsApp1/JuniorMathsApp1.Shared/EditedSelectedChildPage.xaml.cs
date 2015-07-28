@@ -1,4 +1,6 @@
-﻿using System;
+﻿using JuniorMathsApp1.ChildrenClasses;
+using JuniorMathsApp1.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -26,9 +28,13 @@ namespace JuniorMathsApp1
 
         string idNum = "";
         string name = "";
+        string surname = "";
         string age = "";
         string grade = "";
         string parentID = "";
+
+        RegisterChild regChild = null;
+        ChildrenViewModel childrenViewModel = null;
 
         public EditedSelectedChildPage()
         {
@@ -39,16 +45,18 @@ namespace JuniorMathsApp1
         //Display the ID of the parent currently logged in
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            regChild = new RegisterChild();
             try
             {
                 base.OnNavigatedTo(e);
-                getData = (string)e.Parameter;
+                regChild = (RegisterChild)e.Parameter;
 
-                idNum = getData.Substring(0, 1);
-                name = getData.Substring(2, getData.IndexOf("_") - 2);
-                age = getData.Substring(getData.IndexOf("#"), getData.IndexOf("$"));
-                grade = getData.Substring(getData.IndexOf("$"), getData.IndexOf("%"));
-                parentID = getData.Substring(getData.IndexOf("%"), getData.Length);
+                idNum = "" + regChild.Id;
+                name = "" + regChild.Name;
+                surname = "" + regChild.Surname;
+                age = "" + regChild.Age;
+                grade = "" + regChild.Grade;
+                parentID = "" + regChild.ParentId;
 
                 //displayChildsDetails(idNum, name, age, grade);
             }
@@ -57,6 +65,14 @@ namespace JuniorMathsApp1
 
             }
 
+
+        }
+
+        //Code for displaying MessageBox
+        private async void messageBox(string msg)
+        {
+            var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
+            await msgDisplay.ShowAsync();
 
         }
 
@@ -77,23 +93,53 @@ namespace JuniorMathsApp1
 
         private void btnProceed_Click(object sender, RoutedEventArgs e)
         {
+            childrenViewModel = new ChildrenViewModel();
             string id = lblChildsID.Text;
+            int convID = Convert.ToInt32(id);
+
             string newName = txtCurrentChildName.Text;
+            string newSurname = txtCurrentChildSurname_.Text;
             string newAge = txtCurrentChildName.Text;
             string getGrade = (string)cbCurrentChildGrade.SelectedItem;
+
+            int result = 0;
+            try
+            {
+                result = childrenViewModel.updateChildInfo(convID, parentID, newName, newSurname,newAge, getGrade);
+            }
+            catch(Exception)
+            {
+
+            }
+
+            if(result > 0)
+                {
+                    int ConvParentIden = Convert.ToInt32(parentID);
+                    this.Frame.Navigate(typeof(MenuPage), ConvParentIden);
+                    string msg = "Child details update was successful!";
+                    messageBox(msg);
+                }
+                else
+                {
+                    string msg = "Couldn't update child information!";
+                    this.Frame.Navigate(typeof(EditedSelectedChildPage));
+                    messageBox(msg);
+                }
             
         }
 
         private void btnView_Click(object sender, RoutedEventArgs e)
         {
             lblChildsID.Text = idNum;
-            txtCurrentChildName.Text = getData;
+            txtCurrentChildName.Text = name;
+            txtCurrentChildSurname_.Text = surname;
             txtCurrentChildAge.Text = age;
 
             cbCurrentChildGrade.Items.Add(grade);
             cbCurrentChildGrade.Items.Add("");
-            cbCurrentChildGrade.Items.Add("grade1");
-            cbCurrentChildGrade.Items.Add("grade2");
+            cbCurrentChildGrade.Items.Add("Grade 1");
+            cbCurrentChildGrade.Items.Add("Grade 2");
+
         }
 
     }
