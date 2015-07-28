@@ -135,6 +135,29 @@ namespace JuniorMathsApp1.ParentClasses
             return reg;
         }
 
+        //Check whether the user exixts in the database
+        public Register checkUserExistence(string email, string phoneNo)
+        {
+            reg = new Register();
+            using (var db = new SQLite.SQLiteConnection(app.dbPath))
+            {
+               reg = db.Query<Register>("Select * from Parents where Email='" + email + "' and PhoneNo='" + phoneNo + "'").FirstOrDefault();
+            }
+            return reg;
+        }
+
+        //Update child details in the database
+        public int updatePassword(int id, string password)
+        {
+            int updated = 0;
+            using (var db = new SQLite.SQLiteConnection(app.dbPath))
+            {
+                updated = db.Execute("Update Parents set Password='" + password + "' where Id=" + id);
+
+            }
+            return updated;
+        }
+
 
 
         //Method for saving parent details into the database

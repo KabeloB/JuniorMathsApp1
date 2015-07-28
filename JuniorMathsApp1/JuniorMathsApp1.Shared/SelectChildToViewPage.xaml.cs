@@ -62,7 +62,7 @@ namespace JuniorMathsApp1
 
                 foreach (var c in children)
                 {
-                   lsViewChildren.Items.Add(c.Id + "-" + c.Name + "_" + c.Surname + "#"+ c.Age + "$" + c.Grade);
+                   lsViewChildren.Items.Add(c.Id + "-" + c.Name + "_" + c.Surname);
 
                    
                    //Retrive selecte element from listView
@@ -180,12 +180,13 @@ namespace JuniorMathsApp1
             regChild = new RegisterChild();
             childrenViewModel = new ChildrenViewModel();
 
-            int convertChildId = Convert.ToInt32(idNum);
-            int convertParentId = Convert.ToInt32(parentId);
+            
 
             
             try
             {
+                int convertChildId = Convert.ToInt32(idNum);
+                int convertParentId = Convert.ToInt32(parentId);
                  regChild = childrenViewModel.getChildDetails(convertChildId,parentId);
             }
             catch(Exception)

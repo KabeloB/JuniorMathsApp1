@@ -142,4 +142,7 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\JuniorMathsApp-Background1.jpg" />
+  </ItemGroup>
 </Project>

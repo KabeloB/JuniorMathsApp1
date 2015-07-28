@@ -7,16 +7,19 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock HorizontalAlignment="Left" Margin="111,91,0,0" TextWrapping="Wrap" Text="Junior Math App" VerticalAlignment="Top" FontSize="48" Width="386"/>
-        <TextBlock HorizontalAlignment="Left" Margin="111,187,0,0" TextWrapping="Wrap" Text="Eneter Username:" VerticalAlignment="Top" FontSize="24"/>
-        <TextBlock HorizontalAlignment="Left" Margin="111,278,0,0" TextWrapping="Wrap" Text="Eneter Password:" VerticalAlignment="Top" FontSize="24"/>
-        <TextBox x:Name="txtUsername"  PlaceholderText="enter email address" HorizontalAlignment="Left" Margin="111,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252"/>
-        <Button x:ConnectionId='1' x:Name="btnLogin1" Content="Login" HorizontalAlignment="Left" Margin="108,377,0,0" VerticalAlignment="Top"                        />
-        <Button x:ConnectionId='2' x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="204,377,0,0" VerticalAlignment="Top"                          />
-        <Button x:ConnectionId='3' x:Name="btnForgotPassword" Content="Forgot Password" HorizontalAlignment="Left" Margin="108,433,0,0" VerticalAlignment="Top"                                />
-        <Button x:ConnectionId='4' Content="View all users account (For testing sqlite database)" HorizontalAlignment="Left" Margin="108,498,0,0" VerticalAlignment="Top" Width="258"                      Height="65"/>
-        <PasswordBox x:Name="pwbEnterPassword" PlaceholderText="enter password"  HorizontalAlignment="Left" Margin="111,312,0,0" VerticalAlignment="Top" Width="252"/>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
+        </Grid.Background>
+        <TextBlock HorizontalAlignment="Left" Margin="111,91,0,0" TextWrapping="Wrap" Text="Junior Math App" VerticalAlignment="Top" FontSize="48" Width="386" Foreground="#FF56D9EE"/>
+        <TextBlock HorizontalAlignment="Left" Margin="111,182,0,0" TextWrapping="Wrap" Text="Eneter Username:" VerticalAlignment="Top" FontSize="24" Foreground="#FF82C340"/>
+        <TextBlock HorizontalAlignment="Left" Margin="111,278,0,0" TextWrapping="Wrap" Text="Eneter Password:" VerticalAlignment="Top" FontSize="24" Foreground="#FF7FC13D"/>
+        <TextBox x:Name="txtUsername"  PlaceholderText="enter email address" HorizontalAlignment="Left" Margin="111,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="352"/>
+        <Button x:ConnectionId='1' x:Name="btnLogin1" Content="Login" HorizontalAlignment="Left" Margin="108,384,0,0" VerticalAlignment="Top"                         Width="358" Height="57" FontSize="20" Foreground="#FFEEE3E3" Background="#FF171010" BorderBrush="#FF1697E0"/>
+        <Button x:ConnectionId='2' x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="108,463,0,0" VerticalAlignment="Top"                           Width="358" Height="57" FontSize="20" Background="#FF131212" BorderBrush="#FF712CD4"/>
+        <Button x:ConnectionId='3' x:Name="btnForgotPassword" Content="Forgot Password" HorizontalAlignment="Left" Margin="108,541,0,0" VerticalAlignment="Top"                                 Height="62" Width="358" FontSize="20" Background="#FF0F0E0E" BorderBrush="#FFDA145C"/>
+        <Button x:ConnectionId='4' Content="View all users account (Testing)" HorizontalAlignment="Left" Margin="108,631,0,0" VerticalAlignment="Top" Width="358"                      Height="66" FontSize="20" Background="#FF131313" BorderBrush="#FF04EC2F"/>
+        <PasswordBox x:Name="pwbEnterPassword" PlaceholderText="enter password"  HorizontalAlignment="Left" Margin="111,312,0,0" VerticalAlignment="Top" Width="352"/>
 
     </Grid>
 </Page>

@@ -7,12 +7,17 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBox x:Name="txtConfirmEmail" HorizontalAlignment="Left" Margin="651,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231"/>
-        <TextBlock HorizontalAlignment="Left" Margin="360,130,0,0" TextWrapping="Wrap" Text="Enter all fields to proceed with reset" VerticalAlignment="Top" FontSize="36" Width="599"/>
-        <TextBlock HorizontalAlignment="Left" Margin="444,242,0,0" TextWrapping="Wrap" Text="Enter Email Address:" VerticalAlignment="Top" FontSize="20"/>
-        <Button x:Name="btnVerifyUserDetails" Content="Verify user details" HorizontalAlignment="Left" Margin="504,324,0,0" VerticalAlignment="Top" Click="btnVerifyUserDetails_Click"/>
-        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="692,324,0,0" VerticalAlignment="Top" Width="159" Click="btnBack_Click"/>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
+        </Grid.Background>
+        <TextBox x:Name="txtConfirmEmail" HorizontalAlignment="Left" Margin="64,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="369"/>
+        <TextBlock HorizontalAlignment="Left" Margin="101,81,0,0" TextWrapping="Wrap" Text="Verify User Details" VerticalAlignment="Top" FontSize="36" Width="300" Foreground="#FF1FCFC7"/>
+        <TextBlock HorizontalAlignment="Left" Margin="64,164,0,0" TextWrapping="Wrap" Text="Enter Email Address:" VerticalAlignment="Top" FontSize="24" Foreground="#FF14D626"/>
+        <Button x:Name="btnVerifyUserDetails" Content="Process" HorizontalAlignment="Left" Margin="61,379,0,0" VerticalAlignment="Top" Click="btnVerifyUserDetails_Click" Height="64" Width="166" FontSize="20" Foreground="#FFDAE2D6" BorderBrush="#FF46EE14" Background="#FF0F0F0F"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="269,379,0,0" VerticalAlignment="Top" Width="167" Click="btnBack_Click" Height="64" FontSize="20" BorderBrush="#FFD80D3C" Background="#FF111111"/>
+        <TextBlock HorizontalAlignment="Left" Margin="64,266,0,0" TextWrapping="Wrap" Text="Enter Phone Number:" VerticalAlignment="Top" FontSize="24" Foreground="#FF15DA39"/>
+        <TextBox x:Name="txtConfirmPhoneNo" HorizontalAlignment="Left" Margin="64,295,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="369"/>
 
     </Grid>
 </Page>
