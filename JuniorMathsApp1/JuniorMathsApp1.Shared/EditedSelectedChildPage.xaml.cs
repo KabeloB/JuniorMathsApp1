@@ -33,6 +33,8 @@ namespace JuniorMathsApp1
         string grade = "";
         string parentID = "";
 
+        string msgs = "";
+
         RegisterChild regChild = null;
         ChildrenViewModel childrenViewModel = null;
 
@@ -99,33 +101,44 @@ namespace JuniorMathsApp1
 
             string newName = txtCurrentChildName.Text;
             string newSurname = txtCurrentChildSurname_.Text;
-            string newAge = txtCurrentChildName.Text;
+            string newAge = txtCurrentChildAge.Text;
             string getGrade = (string)cbCurrentChildGrade.SelectedItem;
 
             int result = 0;
-            try
-            {
-                result = childrenViewModel.updateChildInfo(convID, parentID, newName, newSurname,newAge, getGrade);
-            }
-            catch(Exception)
-            {
-
-            }
-
-            if(result > 0)
+            
+                if((!newSurname.Equals("")) && (!newSurname.Equals("")) && (!newAge.Equals("")) && (!getGrade.Equals("")))
                 {
-                    int ConvParentIden = Convert.ToInt32(parentID);
-                    this.Frame.Navigate(typeof(MenuPage), ConvParentIden);
-                    string msg = "Child details update was successful!";
-                    messageBox(msg);
+                    try
+                    {
+                       result = childrenViewModel.updateChildInfo(convID, parentID, newName, newSurname,newAge, getGrade);
+
+                    }
+                    catch(Exception)
+                    {
+
+                    }
+
+
+                    if (result > 0)
+                    {
+                        int ConvParentIden = Convert.ToInt32(parentID);
+                        this.Frame.Navigate(typeof(MenuPage), ConvParentIden);
+                        string msg = "Child details update was successful!";
+                        messageBox(msg);
+                    }
+                    else
+                    {
+                        string msg = "Couldn't update child information!";
+                        messageBox(msg);
+                    }
+
                 }
                 else
                 {
-                    string msg = "Couldn't update child information!";
-                    this.Frame.Navigate(typeof(EditedSelectedChildPage));
-                    messageBox(msg);
+                    msgs = "Please ensure that all fields are filled in before proceeding to update!";
+                    messageBox(msgs);
                 }
-            
+                
         }
 
         private void btnView_Click(object sender, RoutedEventArgs e)
@@ -140,6 +153,12 @@ namespace JuniorMathsApp1
             cbCurrentChildGrade.Items.Add("Grade 1");
             cbCurrentChildGrade.Items.Add("Grade 2");
 
+        }
+
+        private void btnBackToMenu_Click(object sender, RoutedEventArgs e)
+        {
+            int convParentId = Convert.ToInt32(parentID);
+            this.Frame.Navigate(typeof(SelectChildToViewPage), convParentId);
         }
 
     }

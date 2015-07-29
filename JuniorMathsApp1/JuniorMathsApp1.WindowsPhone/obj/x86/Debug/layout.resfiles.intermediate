@@ -1,9 +1,11 @@
+Assets\JuniorMathsApp-Background1.jpg
 Assets\Logo.scale-240.png
 Assets\SmallLogo.scale-240.png
 Assets\SplashScreen.scale-240.png
 Assets\Square71x71Logo.scale-240.png
 Assets\StoreLogo.scale-240.png
 Assets\WideLogo.scale-240.png
+AboutAppPage.xbf
 App.xbf
 EditedSelectedChildPage.xbf
 JuniorMathsApp1.WindowsPhone.xr.xml
@@ -11,8 +13,11 @@ MainPage.xbf
 MenuPage.xbf
 NewChildSavedPage.xbf
 NewTestPage.xbf
+RegisterNewChild.xbf
 RegistrationPage.xbf
 ResetPasswordPage.xbf
+SelectChildToTakeTestPage.xbf
+SelectChildToViewPage.xbf
 ShowPage.xbf
 TestResultsPage.xbf
 UpdateChildDataPage.xbf

@@ -12,8 +12,8 @@
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
         <TextBlock HorizontalAlignment="Left" Margin="34,53,0,0" TextWrapping="Wrap" Text="Please select child to edit" VerticalAlignment="Top" FontSize="36" Foreground="#FF25D4E6"/>
-        <Button x:Name="btnProceed" Content="Proceed" HorizontalAlignment="Left" Margin="33,495,0,0" VerticalAlignment="Top" Width="197" Click="btnProceed_Click" BorderBrush="#FF3ED437" Background="#FF0C0202"/>
-        <Button x:Name="btnBackToMenu" Content="Back" HorizontalAlignment="Left" Margin="297,495,0,0" VerticalAlignment="Top" Width="220" Foreground="#FFE4D3D3" Background="#FF0A0202" BorderBrush="#FFE21010"/>
+        <Button x:Name="btnProceed" Content="Proceed To Update" HorizontalAlignment="Left" Margin="33,495,0,0" VerticalAlignment="Top" Width="197" Click="btnProceed_Click" BorderBrush="#FF3ED437" Background="#FF0C0202"/>
+        <Button x:Name="btnBackToMenu" Content="Back" HorizontalAlignment="Left" Margin="297,495,0,0" VerticalAlignment="Top" Width="220" Foreground="#FFE4D3D3" Background="#FF0A0202" BorderBrush="#FFE21010" Click="btnBackToMenu_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="49,131,0,0" TextWrapping="Wrap" Text="Child ID:" VerticalAlignment="Top" FontSize="22" Foreground="#FF51DC28"/>
         <TextBlock HorizontalAlignment="Left" Margin="43,183,0,0" TextWrapping="Wrap" Text="Current Child Name:" VerticalAlignment="Top" FontSize="22" Foreground="#FF4CD423"/>
         <TextBlock HorizontalAlignment="Left" Margin="43,239,0,0" TextWrapping="Wrap" Text="Current Child Surname:" VerticalAlignment="Top" FontSize="22" Foreground="#FF4CD423"/>
