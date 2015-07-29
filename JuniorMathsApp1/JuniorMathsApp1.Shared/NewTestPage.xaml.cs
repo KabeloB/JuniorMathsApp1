@@ -161,6 +161,16 @@ namespace JuniorMathsApp1
                 lblOperator.Text = strOperand;
                 systemAnswer = (getRandom1 + getRandom2);
 
+                //Check whether the answer is right or wrong
+                if (systemAnswer == convChildAnswer)
+                {
+                    rightAnswer = rightAnswer + 1;
+                }
+                else
+                {
+                    wrongAnswers = wrongAnswers + 1;
+                }
+
             }
             else if (getTheOperand == 2)
             {
@@ -170,15 +180,45 @@ namespace JuniorMathsApp1
                 if (getRandom1 > getRandom2)
                 {
                     systemAnswer = (getRandom1 - getRandom2);
+
+                    //Check whether the answer is right or wrong
+                    if (systemAnswer == convChildAnswer)
+                    {
+                        rightAnswer = rightAnswer + 1;
+                    }
+                    else
+                    {
+                        wrongAnswers = wrongAnswers + 1;
+                    }
                 }
                 else if (getRandom1 < getRandom2)
                 {
                     systemAnswer = (getRandom2 - getRandom1);
+
+                    //Check whether the answer is right or wrong
+                    if (systemAnswer == convChildAnswer)
+                    {
+                        rightAnswer = rightAnswer + 1;
+                    }
+                    else
+                    {
+                        wrongAnswers = wrongAnswers + 1;
+                    }
                 }
                 else if (getRandom1 == getRandom1)
                 {
 
                     systemAnswer = (getRandom1 - getRandom2);
+
+                    //Check whether the answer is right or wrong
+                    if (systemAnswer == convChildAnswer)
+                    {
+                        rightAnswer = rightAnswer + 1;
+                    }
+                    else
+                    {
+                        wrongAnswers = wrongAnswers + 1;
+                    }
                 }
 
             }
@@ -188,20 +228,18 @@ namespace JuniorMathsApp1
                 strOperand = "x";
                 lblOperator.Text = strOperand;
                 systemAnswer = (getRandom1 * getRandom2);
+
+                //Check whether the answer is right or wrong
+                if (systemAnswer == convChildAnswer)
+                {
+                    rightAnswer = rightAnswer + 1;
+                }
+                else
+                {
+                    wrongAnswers = wrongAnswers + 1;
+                }
             }
 
-
-            
-
-
-            if (systemAnswer == convChildAnswer)
-            {
-                rightAnswer = rightAnswer + 1;
-            }
-            else
-            {
-                wrongAnswers = wrongAnswers + 1;
-            }
 
             lblCompletedQuestion.Text = "" + (count + 1);
         }

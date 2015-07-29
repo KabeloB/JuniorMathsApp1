@@ -1,4 +1,5 @@
 ﻿using JuniorMathsApp1.ChildrenClasses;
+using JuniorMathsApp1.Model;
 using JuniorMathsApp1.TestClasses;
 using System;
 using System.Collections.Generic;
@@ -34,6 +35,9 @@ namespace JuniorMathsApp1
         ObservableCollection<TestViewModel> test = null;
         TestsViewModel testsViewModel = null;
 
+        ChildrenViewModel objChildrenViewModel = null;
+        RegisterChild objRegChild = null;
+
         public ViewAllResultsPage()
         {
             this.InitializeComponent();
@@ -51,12 +55,16 @@ namespace JuniorMathsApp1
                 getParentID = getIds.Substring(0,1);
                 getChildID = getIds.Substring(2);
 
+                objChildrenViewModel = new ChildrenViewModel();
+                objRegChild = new RegisterChild();
+
+                objRegChild = objChildrenViewModel.getChildDetails(Convert.ToInt32(getChildID), Convert.ToInt32(getParentID));
                 
 
                 testsViewModel = new TestsViewModel();
                 test = testsViewModel.GetTests(Convert.ToInt32(getIds.Substring(2)));
 
-                lsViewTest.Items.Add("Test ID" + "\t" + "Child ID" + "\t" + "#Right" + "\t" + "#Wrong " + "\t" + "Date of Test");
+                lsViewTest.Items.Add("Test ID" + "\t" + "Child ID" + "\t" + "#Right Answers" + "\t" + "#Wrong Answers " + "\t" + "Date of Test");
 
                 foreach (var c in test)
                 {
@@ -64,6 +72,8 @@ namespace JuniorMathsApp1
 
                 }
                 base.OnNavigatedTo(e);
+
+                lblChId.Text = "" + objRegChild.Id + " - " + objRegChild.Name + " " + objRegChild.Surname; 
 
             }
             catch (Exception)

@@ -116,6 +116,23 @@ namespace JuniorMathsApp1.ParentClasses
 
         private JuniorMathsApp1.App app = (Application.Current as App);
 
+        //Retrive all Parent details from the database where email and password match user inputs
+        public Register getParentDetails(int id)
+        {
+            reg = new Register();
+            using (var db = new SQLite.SQLiteConnection(app.dbPath))
+            {
+
+                reg = db.Query<Register>("Select * from Parents where Id =" + id).FirstOrDefault();
+
+                /*
+                  var _register = db.Query<Register>("Select * from Parents where Email ='" + email + "' and Password ='" + password + "'").FirstOrDefault;
+                  return reg;
+                */
+
+            }
+            return reg;
+        }
 
         //Retrive all Parent details from the database where email and password match user inputs
         public Register getParent(string email, string password)
@@ -146,13 +163,30 @@ namespace JuniorMathsApp1.ParentClasses
             return reg;
         }
 
-        //Update child details in the database
+        //Update new password for parent in the database
         public int updatePassword(int id, string password)
         {
             int updated = 0;
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
                 updated = db.Execute("Update Parents set Password='" + password + "' where Id=" + id);
+
+            }
+            return updated;
+        }
+
+        //Update all field for parent in the database
+        public int updateParentDetails(int id, string name, string surname, string email, string phone, string password)
+        {
+            int updated = 0;
+            using (var db = new SQLite.SQLiteConnection(app.dbPath))
+            {
+                updated = db.Execute("Update Parents set Name='" + name +
+                                                         "',Surname='" + surname +
+                                                         "',Email='" + email +
+                                                         "',PhoneNo='" + phone +
+                                                         "',Password='" + password +
+                                                         "' where Id=" + id);
 
             }
             return updated;

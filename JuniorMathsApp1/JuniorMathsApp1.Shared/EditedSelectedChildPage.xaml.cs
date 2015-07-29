@@ -106,7 +106,7 @@ namespace JuniorMathsApp1
 
             int result = 0;
             
-                if((!newSurname.Equals("")) && (!newSurname.Equals("")) && (!newAge.Equals("")) && (!getGrade.Equals("")))
+                if((!newSurname.Equals("")) && (!newSurname.Equals("")) && (!newAge.Equals("")))
                 {
                     try
                     {

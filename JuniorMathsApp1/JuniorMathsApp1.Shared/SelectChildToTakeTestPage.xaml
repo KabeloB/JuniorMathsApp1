@@ -7,11 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock HorizontalAlignment="Left" Margin="95,53,0,0" TextWrapping="Wrap" Text="Please select child to take test" VerticalAlignment="Top" FontSize="24"/>
-        <ListView x:Name="lsvChooseChild" HorizontalAlignment="Left" Height="528" Margin="39,110,0,0" VerticalAlignment="Top" Width="407" ItemClick="lsvChooseChild_ItemClick" SelectionChanged="MySelectionChanged"/>
-        <Button x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="58,660,0,0" VerticalAlignment="Top" Width="143" Click="btnSelect_Click"/>
-        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="271,660,0,0" VerticalAlignment="Top" Width="143" Click="btnBack_Click"/>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
+        </Grid.Background>
+        <TextBlock HorizontalAlignment="Left" Margin="39,31,0,0" TextWrapping="Wrap" Text="Please select child to take test" VerticalAlignment="Top" FontSize="36" Foreground="#FF1EE0D7"/>
+        <ListView x:Name="lsvChooseChild" HorizontalAlignment="Left" Height="462" Margin="39,79,0,0" VerticalAlignment="Top" Width="473" ItemClick="lsvChooseChild_ItemClick" SelectionChanged="MySelectionChanged" Foreground="#FF18EABA"/>
+        <Button x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="36,581,0,0" VerticalAlignment="Top" Width="196" Click="btnSelect_Click" Background="#FF010F01" BorderBrush="#FF17D828" FontSize="20"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="323,581,0,0" VerticalAlignment="Top" Width="192" Click="btnBack_Click" Background="#FF0E0101" BorderBrush="#FFE43F1A" FontSize="20"/>
 
     </Grid>
 </Page>

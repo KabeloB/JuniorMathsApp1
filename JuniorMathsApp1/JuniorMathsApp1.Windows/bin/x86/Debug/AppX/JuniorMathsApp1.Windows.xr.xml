@@ -9,7 +9,10 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Children" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
+      <RootProperty Name="Stretch" />
+      <RootProperty Name="ImageSource" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
@@ -30,19 +33,15 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
-      <RootProperty Name="BorderBrush" />
       <RootProperty Name="Background" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="FontSize" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Height" />
-      <RootProperty Name="FontSize" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="JuniorMathsApp1.AboutAppPage" />
-    <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
-      <RootProperty Name="Stretch" />
-      <RootProperty Name="ImageSource" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
@@ -71,6 +70,7 @@
     </RootType>
     <RootType FullName="JuniorMathsApp1.MainPage" />
     <RootType FullName="JuniorMathsApp1.MenuPage" />
+    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="JuniorMathsApp1.NewChildSavedPage" />
     <RootType FullName="JuniorMathsApp1.NewTestPage" />
     <RootType FullName="JuniorMathsApp1.RegisterNewChild" />
@@ -103,6 +103,7 @@
       <RootProperty Name="FontSize" />
     </RootType>
     <RootType FullName="JuniorMathsApp1.UpdateChildDataPage" />
+    <RootType FullName="JuniorMathsApp1.UpdateParentsDetailsPage" />
     <RootType FullName="JuniorMathsApp1.VerifyUserPage" />
     <RootType FullName="JuniorMathsApp1.ViewAllResultsPage" />
   </Roots.RootTypes>

@@ -152,5 +152,10 @@ namespace JuniorMathsApp1
         {
             this.Frame.Navigate(typeof(ShowPage));
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(AboutAppPage));
+        }
     }
 }

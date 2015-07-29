@@ -49,7 +49,7 @@ namespace JuniorMathsApp1
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MenuPage), parentID);
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }

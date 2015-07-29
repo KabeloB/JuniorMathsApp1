@@ -137,9 +137,14 @@ namespace JuniorMathsApp1
         private void btnView_Click(object sender, RoutedEventArgs e)
         {
 
-            
+            try 
+            {
+                int convNum = Convert.ToInt32(idNum);
+            }
+            catch(Exception)
+            {
 
-            int convNum = Convert.ToInt32(idNum);
+            }
 
             string objToSend = "" + parentId + "#" + idNum;
 

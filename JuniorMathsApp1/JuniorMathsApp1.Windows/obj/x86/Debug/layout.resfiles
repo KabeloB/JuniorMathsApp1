@@ -19,5 +19,6 @@ SelectChildToViewPage.xbf
 ShowPage.xbf
 TestResultsPage.xbf
 UpdateChildDataPage.xbf
+UpdateParentsDetailsPage.xbf
 VerifyUserPage.xbf
 ViewAllResultsPage.xbf

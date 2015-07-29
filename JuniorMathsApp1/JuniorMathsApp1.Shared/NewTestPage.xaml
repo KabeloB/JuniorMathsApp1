@@ -7,20 +7,23 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock HorizontalAlignment="Left" Margin="38,39,0,0" TextWrapping="Wrap" Text="Complete all questions" VerticalAlignment="Top" FontSize="36"/>
-        <TextBlock x:Name="lblEqualSign" HorizontalAlignment="Left" Margin="368,131,0,0" TextWrapping="Wrap" Text="=" VerticalAlignment="Top" FontSize="48"/>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
+        </Grid.Background>
+        <TextBlock HorizontalAlignment="Left" Margin="38,39,0,0" TextWrapping="Wrap" Text="Complete all questions" VerticalAlignment="Top" FontSize="36" Foreground="#FF12B9DE"/>
+        <TextBlock x:Name="lblEqualSign" HorizontalAlignment="Left" Margin="368,131,0,0" TextWrapping="Wrap" Text="=" VerticalAlignment="Top" FontSize="48" Foreground="#FF85D821"/>
         <TextBox x:Name="txtEnterAnswer" HorizontalAlignment="Left" Margin="38,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="363"/>
-        <TextBlock HorizontalAlignment="Left" Margin="107,225,0,0" TextWrapping="Wrap" Text="Enter answer here" VerticalAlignment="Top" FontSize="24"/>
-        <Button x:Name="btnSubmitAnswer" Content="Submit" HorizontalAlignment="Left" Margin="27,405,0,0" VerticalAlignment="Top" Width="378" Height="58" FontSize="24" Click="btnSubmitAnswer_Click"/>
-        <TextBlock HorizontalAlignment="Left" Margin="38,574,0,0" TextWrapping="Wrap" Text="Completed questions:  (" VerticalAlignment="Top" FontSize="24" Width="258"/>
+        <TextBlock HorizontalAlignment="Left" Margin="107,225,0,0" TextWrapping="Wrap" Text="Enter answer here" VerticalAlignment="Top" FontSize="24" Foreground="#FF3EE60D"/>
+        <Button x:Name="btnSubmitAnswer" Content="Submit" HorizontalAlignment="Left" Margin="27,405,0,0" VerticalAlignment="Top" Width="378" Height="58" FontSize="24" Click="btnSubmitAnswer_Click" Background="#FF0E0101" BorderBrush="#FF1E4FF3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="30,626,0,0" TextWrapping="Wrap" Text="Completed questions:  (" VerticalAlignment="Top" FontSize="24" Width="258" Foreground="#FF10EC10"/>
         <TextBlock x:Name="lblFirstNum" HorizontalAlignment="Left" Margin="84,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48"/>
         <TextBlock x:Name="lblOperator" HorizontalAlignment="Left" Margin="143,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Width="49"/>
         <TextBlock x:Name="lblSecondNum" HorizontalAlignment="Left" Margin="301,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48"/>
-        <Button x:Name="btnCancelTest" Content="Cancel Test" HorizontalAlignment="Left" Margin="27,495,0,0" VerticalAlignment="Top" Height="58" Width="378" FontSize="24" Click="btnCancelTest_Click"/>
-        <TextBlock x:Name="lblCompletedQuestion" HorizontalAlignment="Left" Margin="296,574,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" FontSize="24"/>
-        <TextBlock HorizontalAlignment="Left" Margin="327,574,0,0" TextWrapping="Wrap" Text="/10)" VerticalAlignment="Top" FontSize="24"/>
-        <Button x:Name="btnStartTest" Content="Start Test" HorizontalAlignment="Left" Margin="27,329,0,0" VerticalAlignment="Top" Height="56" Width="378" FontSize="24" Click="btnStartTest_Click"/>
+        <Button x:Name="btnCancelTest" Content="Cancel Test" HorizontalAlignment="Left" Margin="27,495,0,0" VerticalAlignment="Top" Height="58" Width="378" FontSize="24" Click="btnCancelTest_Click" Background="#FF0E0101" BorderBrush="#FFF32A0A"/>
+        <TextBlock x:Name="lblCompletedQuestion" HorizontalAlignment="Left" Margin="288,626,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" FontSize="24" Foreground="#FFE41774"/>
+        <TextBlock HorizontalAlignment="Left" Margin="319,626,0,0" TextWrapping="Wrap" Text="/10)" VerticalAlignment="Top" FontSize="24" Foreground="#FF1BC313"/>
+        <Button x:Name="btnStartTest" Content="Start Test" HorizontalAlignment="Left" Margin="27,329,0,0" VerticalAlignment="Top" Height="56" Width="378" FontSize="24" Click="btnStartTest_Click" Foreground="#FFE3EEED" Background="#FF110101" BorderBrush="#FF2EF10F"/>
 
     </Grid>
 </Page>

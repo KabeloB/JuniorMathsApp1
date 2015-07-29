@@ -53,7 +53,7 @@ namespace JuniorMathsApp1
             {
                 base.OnNavigatedTo(e);
                 parentId = (int)e.Parameter;
-                txtGetParentIdNum.Text = "" + parentId;
+                lblGetParentIdNum.Text = "" + parentId;
             }
             catch(Exception)
             {
@@ -106,7 +106,7 @@ namespace JuniorMathsApp1
                    string m = objChild.getMessage();
 
                    
-                   txtGetParentIdNum.Text = m;
+                   lblGetParentIdNum.Text = m;
                     
                     if(result > 0)
                     {
