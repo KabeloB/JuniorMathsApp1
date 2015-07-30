@@ -20,7 +20,6 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ChildrenClasses\ChildrensViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ChildrenClasses\ChildrenViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ChildViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)EditedSelectedChildPage.xaml.cs">
       <DependentUpon>EditedSelectedChildPage.xaml</DependentUpon>
     </Compile>
@@ -33,9 +32,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Model\Register.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\RegisterChild.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\TestResults.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)NewChildSavedPage.xaml.cs">
-      <DependentUpon>NewChildSavedPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)NewTestPage.xaml.cs">
       <DependentUpon>NewTestPage.xaml</DependentUpon>
     </Compile>
@@ -56,16 +52,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)SelectChildToViewPage.xaml.cs">
       <DependentUpon>SelectChildToViewPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)ShowPage.xaml.cs">
-      <DependentUpon>ShowPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SQLite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SQLiteAsync.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TestClasses\TestsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TestClasses\TestViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)TestResultsPage.xaml.cs">
-      <DependentUpon>TestResultsPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)UpdateChildDataPage.xaml.cs">
       <DependentUpon>UpdateChildDataPage.xaml</DependentUpon>
     </Compile>
@@ -96,10 +86,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="$(MSBuildThisFileDirectory)NewChildSavedPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="$(MSBuildThisFileDirectory)NewTestPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -121,14 +107,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="$(MSBuildThisFileDirectory)SelectChildToViewPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="$(MSBuildThisFileDirectory)ShowPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="$(MSBuildThisFileDirectory)TestResultsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -68,6 +68,7 @@ namespace JuniorMathsApp1
 
             //Create tables inside database
             this.dbPath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "JuniorMathsApp.sqlite");
+
             using(var dbase = new SQLite.SQLiteConnection(dbPath))
             {
                 dbase.CreateTable<Register>();

@@ -93,7 +93,6 @@
     </RootType>
     <RootType FullName="JuniorMathsApp1.SelectChildToTakeTestPage" />
     <RootType FullName="JuniorMathsApp1.SelectChildToViewPage" />
-    <RootType FullName="JuniorMathsApp1.ShowPage" />
     <RootType FullName="JuniorMathsApp1.TestResultsPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
       <RootProperty Name="Content" />

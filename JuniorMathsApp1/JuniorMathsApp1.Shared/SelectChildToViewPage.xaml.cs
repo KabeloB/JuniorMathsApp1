@@ -136,25 +136,42 @@ namespace JuniorMathsApp1
  
         private void btnView_Click(object sender, RoutedEventArgs e)
         {
-
-            try 
+            string msg = "";
+            int convNum = 0;
+            try
             {
-                int convNum = Convert.ToInt32(idNum);
+                convNum = Convert.ToInt32(idNum);
             }
-            catch(Exception)
+            catch (Exception)
             {
 
             }
 
-            string objToSend = "" + parentId + "#" + idNum;
-
-            this.Frame.Navigate(typeof(ViewAllResultsPage), objToSend);
+            if(convNum <= 0)
+            {
+                msg = "Please select a child first before proceeding with viewing test results!";
+                messageBox(msg);
+            }
+            else
+            {
+                string objToSend = "" + parentId + "#" + idNum;
+                this.Frame.Navigate(typeof(ViewAllResultsPage), objToSend);
+            }
+           
 
         }
         //Method for converting string to integer
         public int myParentId(string m)
         {
-            int returnNumP = Convert.ToInt32(m);
+            int returnNumP = 0;
+            try
+            {
+               returnNumP = Convert.ToInt32(m);
+            }
+            catch(Exception)
+            {
+
+            }
             return returnNumP;
         }
 
@@ -166,16 +183,24 @@ namespace JuniorMathsApp1
             int convNum = myParentId(idNum);
             int getResult = 0;
 
-            try
+            if (convNum <= 0)
             {
-                childrenViewModel.deleteChildRecords(convNum);
-                strMsg = "You have successfully deleted: " + name + " from the database!";
+                strMsg = "Please select a child first before proceeding with the delete process!";
                 messageBox(strMsg);
-                this.Frame.Navigate(typeof(MenuPage), parentId);
             }
-            catch(Exception)
+            else
             {
+                try
+                {
+                    childrenViewModel.deleteChildRecords(convNum);
+                    strMsg = "You have successfully deleted: " + name + " from the database!";
+                    messageBox(strMsg);
+                    this.Frame.Navigate(typeof(MenuPage), parentId);
+                }
+                catch (Exception)
+                {
 
+                }
             }
         }
 
@@ -185,22 +210,29 @@ namespace JuniorMathsApp1
             regChild = new RegisterChild();
             childrenViewModel = new ChildrenViewModel();
 
-            
+            int convertChildId = 0;
+            int convertParentId = 0;
+            string strMsg = "";
 
-            
             try
             {
-                int convertChildId = Convert.ToInt32(idNum);
-                int convertParentId = Convert.ToInt32(parentId);
-                 regChild = childrenViewModel.getChildDetails(convertChildId,parentId);
+                convertChildId = Convert.ToInt32(idNum);
+                convertParentId = Convert.ToInt32(parentId);
+                regChild = childrenViewModel.getChildDetails(convertChildId,parentId);
             }
             catch(Exception)
             {
 
             }
-                
-                
 
+
+            if ((convertChildId <= 0) && (convertParentId <= 0))
+            {
+                strMsg = "Please select a child first before proceeding with the editing process!";
+                messageBox(strMsg);
+            }
+            else
+            {
                 if(regChild != null)
                 {
                     this.Frame.Navigate(typeof(EditedSelectedChildPage), regChild);
@@ -210,22 +242,12 @@ namespace JuniorMathsApp1
                 else
                 {
                     string msg = "Couldn't retrive child infomation from the database";
-                    this.Frame.Navigate(typeof(SelectChildToViewPage));
                     messageBox(msg);
                 }
-            
-
-            string chDetails = "" + idNum + "_" + name + "#" + age + "$" + grade + "%" + parentId;
-            
+            }
         }
+         
 
-        private void btnZZZZZZZZ_Click(object sender, RoutedEventArgs e)
-        {
-            
-
-        }
-
-       
 
         
     }

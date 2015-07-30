@@ -100,14 +100,14 @@ namespace JuniorMathsApp1
                                 }
                                  else
                                 {
-                                    messageToDisplay = "Invalid user details enetered!";
+                                    messageToDisplay = "Invalid user details entered!";
                                     messageBox(messageToDisplay);
                                 }
 
                             }
                             else
                             {
-                                messageToDisplay = "Invalid email address enetered!";
+                                messageToDisplay = "Invalid email address entered!";
                                 messageBox(messageToDisplay);
                             }
                                 
@@ -148,10 +148,7 @@ namespace JuniorMathsApp1
             this.Frame.Navigate(typeof(VerifyUserPage));
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(ShowPage));
-        }
+        
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {

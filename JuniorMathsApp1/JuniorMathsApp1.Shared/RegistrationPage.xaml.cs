@@ -105,8 +105,8 @@ namespace JuniorMathsApp1
             else
             {
                 //Enter error message box here!
-                //String ErrorMessage = "Invalid user inputs, Ensure that all fields are filled in!";
-                this.Frame.Navigate(typeof(RegistrationPage));
+                messageToDisplay = "Invalid user inputs, Ensure that all fields are filled in!";
+                messageBox(messageToDisplay);
             }
 
 
@@ -116,6 +116,15 @@ namespace JuniorMathsApp1
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            txtEnterName.Text = "";
+            txtEnterSurname.Text = "";
+            txtEnterEmail.Text = "";
+            txtEnterPhoneNo.Text = "";
+            txtEnterPassword.Text = "";
         }
     }
 }

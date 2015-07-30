@@ -74,6 +74,14 @@ namespace JuniorMathsApp1
 
 
         }
+
+        //Code for displaying MessageBox
+        private async void messageBox(string msg)
+        {
+            var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
+            await msgDisplay.ShowAsync();
+
+        }
         
         private void lsvChooseChild_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -83,6 +91,7 @@ namespace JuniorMathsApp1
         string objItems = "";
         string idNum = "";
         string name = "";
+        string msg = "";
         private void MySelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             //Debug.WriteLine("Selected: {0}", e.AddedItems[0]);
@@ -93,11 +102,26 @@ namespace JuniorMathsApp1
 
         private void btnSelect_Click(object sender, RoutedEventArgs e)
         {
-            int convNum = Convert.ToInt32(idNum);
+            int convNum = 0;
+            try
+            {
+              convNum = Convert.ToInt32(idNum);
+            }
+            catch(Exception)
+            {
 
-            string objToSend = "" + parentId + "#" + idNum;
-
-            this.Frame.Navigate(typeof(NewTestPage), objToSend);
+            }
+            if(convNum <= 0)
+            {
+                msg = "Please select a child first before proceeding with the test!";
+                messageBox(msg);
+            }
+            else
+            {
+                string objToSend = "" + parentId + "#" + idNum;
+                this.Frame.Navigate(typeof(NewTestPage), objToSend);
+            }
+           
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
