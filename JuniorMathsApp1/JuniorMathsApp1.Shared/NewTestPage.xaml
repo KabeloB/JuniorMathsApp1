@@ -21,9 +21,11 @@
         <TextBlock x:Name="lblOperator" HorizontalAlignment="Left" Margin="143,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Width="49"/>
         <TextBlock x:Name="lblSecondNum" HorizontalAlignment="Left" Margin="301,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48"/>
         <Button x:Name="btnCancelTest" Content="Cancel Test" HorizontalAlignment="Left" Margin="27,495,0,0" VerticalAlignment="Top" Height="58" Width="378" FontSize="24" Click="btnCancelTest_Click" Background="#FF0E0101" BorderBrush="#FFF32A0A"/>
-        <TextBlock x:Name="lblCompletedQuestion" HorizontalAlignment="Left" Margin="288,626,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" FontSize="24" Foreground="#FFE41774"/>
+        <TextBlock x:Name="lblCompletedQuestion" HorizontalAlignment="Left" Margin="288,626,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Foreground="#FFE41774"/>
         <TextBlock HorizontalAlignment="Left" Margin="319,626,0,0" TextWrapping="Wrap" Text="/10)" VerticalAlignment="Top" FontSize="24" Foreground="#FF1BC313"/>
         <Button x:Name="btnStartTest" Content="Start Test" HorizontalAlignment="Left" Margin="27,329,0,0" VerticalAlignment="Top" Height="56" Width="378" FontSize="24" Click="btnStartTest_Click" Foreground="#FFE3EEED" Background="#FF110101" BorderBrush="#FF2EF10F"/>
+        <TextBlock x:Name="txtRight" HorizontalAlignment="Left" Margin="54,675,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="242"/>
+        <TextBlock x:Name="txtWrong" HorizontalAlignment="Left" Margin="54,712,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="247"/>
 
     </Grid>
 </Page>

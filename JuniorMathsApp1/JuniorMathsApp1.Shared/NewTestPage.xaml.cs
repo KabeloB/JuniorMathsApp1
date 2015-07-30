@@ -40,6 +40,7 @@ namespace JuniorMathsApp1
         int systemAnswer = 0;
         string childsAnswer = "";
         int convChildAnswer = 0;
+        int countResult = 0;
 
 
         TestViewModel objTest = new TestViewModel();
@@ -83,7 +84,7 @@ namespace JuniorMathsApp1
         public int getOperand()
         {
             Random rnd = new Random();
-            int numGen3 = (int)rnd.Next(1,4);
+            int numGen3 = (int)rnd.Next(1,3);
 
             return numGen3;
         }
@@ -143,117 +144,19 @@ namespace JuniorMathsApp1
             btnCancelTest.IsEnabled = true;
             btnStartTest.IsEnabled = false;
 
-            getRandom1 = getRandomNum1();
-            getRandom2 = getRandomNum2();
-
-            lblFirstNum.Text = "" + getRandom1;
-            lblSecondNum.Text = "" + getRandom2;
-
-            string strOperand = "";
-
-
-            int getTheOperand = getOperand();
-
-            if (getTheOperand == 1)
-            {
-                //Addition
-                strOperand = "+";
-                lblOperator.Text = strOperand;
-                systemAnswer = (getRandom1 + getRandom2);
-
-                //Check whether the answer is right or wrong
-                if (systemAnswer == convChildAnswer)
-                {
-                    rightAnswer = rightAnswer + 1;
-                }
-                else
-                {
-                    wrongAnswers = wrongAnswers + 1;
-                }
-
-            }
-            else if (getTheOperand == 2)
-            {
-                //Subtraction
-                strOperand = "-";
-                lblOperator.Text = strOperand;
-                if (getRandom1 > getRandom2)
-                {
-                    systemAnswer = (getRandom1 - getRandom2);
-
-                    //Check whether the answer is right or wrong
-                    if (systemAnswer == convChildAnswer)
-                    {
-                        rightAnswer = rightAnswer + 1;
-                    }
-                    else
-                    {
-                        wrongAnswers = wrongAnswers + 1;
-                    }
-                }
-                else if (getRandom1 < getRandom2)
-                {
-                    systemAnswer = (getRandom2 - getRandom1);
-
-                    //Check whether the answer is right or wrong
-                    if (systemAnswer == convChildAnswer)
-                    {
-                        rightAnswer = rightAnswer + 1;
-                    }
-                    else
-                    {
-                        wrongAnswers = wrongAnswers + 1;
-                    }
-                }
-                else if (getRandom1 == getRandom1)
-                {
-
-                    systemAnswer = (getRandom1 - getRandom2);
-
-                    //Check whether the answer is right or wrong
-                    if (systemAnswer == convChildAnswer)
-                    {
-                        rightAnswer = rightAnswer + 1;
-                    }
-                    else
-                    {
-                        wrongAnswers = wrongAnswers + 1;
-                    }
-                }
-
-            }
-            else if (getTheOperand == 3)
-            {
-                //Multiplication
-                strOperand = "x";
-                lblOperator.Text = strOperand;
-                systemAnswer = (getRandom1 * getRandom2);
-
-                //Check whether the answer is right or wrong
-                if (systemAnswer == convChildAnswer)
-                {
-                    rightAnswer = rightAnswer + 1;
-                }
-                else
-                {
-                    wrongAnswers = wrongAnswers + 1;
-                }
-            }
-
-
-            lblCompletedQuestion.Text = "" + (count + 1);
+            int cnt = doCalculation();
         }
 
 
         private void btnSubmitAnswer_Click(object sender, RoutedEventArgs e)
         {
-            doCalculation();
 
-            count = count + 1;
+            
+            countResult = doCalculation();
 
-            lblCompletedQuestion.Text = "" + count;
+            lblCompletedQuestion.Text = "" + countResult;
 
-            if(count == 10)
+            if(countResult > 10)
             {
                 int getInsertResult = objTest.insertTestResults(childID, rightAnswer, wrongAnswers, objDate.ToString());
 
@@ -264,83 +167,137 @@ namespace JuniorMathsApp1
                 messageBox(msg);
 
             }
+
+            
         }
 
         
-        public void doCalculation()
+        public int doCalculation()
         {
             try
             {
-                
+                    count = (count + 1);
+
+                    getRandom1 = getRandomNum1();
+                    getRandom2 = getRandomNum2();
+                    
                     lblFirstNum.Text = "" + getRandom1;
                     lblSecondNum.Text = "" + getRandom2;
+
                     string strOperand = "";
 
 
                     int getTheOperand = getOperand();
 
-                    if (getTheOperand == 1)
+                    if(getTheOperand == 1)
                     {
                         //Addition
                         strOperand = "+";
                         lblOperator.Text = strOperand;
                         systemAnswer = (getRandom1 + getRandom2);
 
+                        //Code for checking whether the answer is correct
+                        childsAnswer = txtEnterAnswer.Text;
+                        convChildAnswer = Convert.ToInt32(childsAnswer);
+
+                        if(systemAnswer == convChildAnswer)
+                        {
+                            rightAnswer = rightAnswer + 1;
+                        }
+                        else if(systemAnswer != convChildAnswer)
+                        {
+                            wrongAnswers = wrongAnswers + 1;
+                        }
+
                     }
-                    else if (getTheOperand == 2)
+                    else if(getTheOperand == 2)
                     {
                         //Subtraction
                         strOperand = "-";
                         lblOperator.Text = strOperand;
-                        if (getRandom1 > getRandom2)
+
+                        if(getRandom1 > getRandom2)
                         {
                             systemAnswer = (getRandom1 - getRandom2);
+
+                            //Code for checking whether the answer is correct
+                            childsAnswer = txtEnterAnswer.Text;
+                            convChildAnswer = Convert.ToInt32(childsAnswer);
+                            if (systemAnswer == convChildAnswer)
+                            {
+                                rightAnswer = rightAnswer + 1;
+                            }
+                            else if (systemAnswer != convChildAnswer)
+                            {
+                                wrongAnswers = wrongAnswers + 1;
+                            }
                         }
-                        else if (getRandom1 < getRandom2)
+                        else if(getRandom1 < getRandom2)
                         {
                             systemAnswer = (getRandom2 - getRandom1);
-                        }
-                        else if (getRandom1 == getRandom1)
-                        {
 
+                            //Code for checking whether the answer is correct
+                            childsAnswer = txtEnterAnswer.Text;
+                            convChildAnswer = Convert.ToInt32(childsAnswer);
+                            if (systemAnswer == convChildAnswer)
+                            {
+                                rightAnswer = rightAnswer + 1;
+                            }
+                            else if(systemAnswer != convChildAnswer)
+                            {
+                                wrongAnswers = wrongAnswers + 1;
+                            }
+                        }
+                        else if(getRandom1 == getRandom2)
+                        {
                             systemAnswer = (getRandom1 - getRandom2);
+
+                            //Code for checking whether the answer is correct
+                            childsAnswer = txtEnterAnswer.Text;
+                            convChildAnswer = Convert.ToInt32(childsAnswer);
+                            if (systemAnswer == convChildAnswer)
+                            {
+                                rightAnswer = rightAnswer + 1;
+                            }
+                            else if (systemAnswer != convChildAnswer)
+                            {
+                                wrongAnswers = wrongAnswers + 1;
+                            }
                         }
 
                     }
-                    else if (getTheOperand == 3)
+                    else if(getTheOperand == 3)
                     {
 
                         //Multiplication
                         strOperand = "x";
                         lblOperator.Text = strOperand;
                         systemAnswer = (getRandom1 * getRandom2);
+
+                        //Code for checking whether the answer is correct
+                        childsAnswer = txtEnterAnswer.Text;
+                        convChildAnswer = Convert.ToInt32(childsAnswer);
+                        if (systemAnswer == convChildAnswer)
+                        {
+                            rightAnswer = rightAnswer + 1;
+                        }
+                        else if(systemAnswer != convChildAnswer)
+                        {
+                            wrongAnswers = wrongAnswers + 1;
+                        }
                     }
 
+                    txtRight.Text = "" + rightAnswer;
+                    txtWrong.Text = "" + wrongAnswers;
 
-                    childsAnswer = txtEnterAnswer.Text;
-                    convChildAnswer = Convert.ToInt32(childsAnswer);
-
-
-
-                    if (systemAnswer == convChildAnswer)
-                    {
-                        rightAnswer = rightAnswer + 1;
-                    }
-                    else
-                    {
-                        wrongAnswers = wrongAnswers + 1;
-                    }
-
-                    getRandom1 = getRandomNum1();
-                    getRandom2 = getRandomNum2();
-
-                    count = (count + 1);
                 
             }
             catch (Exception)
             {
 
             }
+
+            return count;
         }
 
 

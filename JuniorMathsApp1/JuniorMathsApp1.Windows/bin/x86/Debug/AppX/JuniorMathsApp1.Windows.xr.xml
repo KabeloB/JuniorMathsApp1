@@ -25,7 +25,6 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontStyle" />
       <RootProperty Name="FontWeight" />
-      <RootProperty Name="RenderTransformOrigin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
@@ -70,8 +69,6 @@
     </RootType>
     <RootType FullName="JuniorMathsApp1.MainPage" />
     <RootType FullName="JuniorMathsApp1.MenuPage" />
-    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
-    <RootType FullName="JuniorMathsApp1.NewChildSavedPage" />
     <RootType FullName="JuniorMathsApp1.NewTestPage" />
     <RootType FullName="JuniorMathsApp1.RegisterNewChild" />
     <RootType FullName="Windows.UI.Xaml.Media.CompositeTransform">
@@ -93,7 +90,7 @@
     </RootType>
     <RootType FullName="JuniorMathsApp1.SelectChildToTakeTestPage" />
     <RootType FullName="JuniorMathsApp1.SelectChildToViewPage" />
-    <RootType FullName="JuniorMathsApp1.TestResultsPage" />
+    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
       <RootProperty Name="Content" />
       <RootProperty Name="HorizontalAlignment" />
