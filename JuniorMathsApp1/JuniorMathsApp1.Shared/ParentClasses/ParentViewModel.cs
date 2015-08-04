@@ -116,6 +116,20 @@ namespace JuniorMathsApp1.ParentClasses
 
         private JuniorMathsApp1.App app = (Application.Current as App);
 
+        //Retrive all Parent details from the database to check whether email address exists
+        public Register checkUserExistence()
+        {
+            reg = new Register();
+            using (var db = new SQLite.SQLiteConnection(app.dbPath))
+            {
+
+                reg = db.Query<Register>("Select * from Parents").FirstOrDefault();
+
+
+            }
+            return reg;
+        }
+
         //Retrive all Parent details from the database where email and password match user inputs
         public Register getParentDetails(int id)
         {

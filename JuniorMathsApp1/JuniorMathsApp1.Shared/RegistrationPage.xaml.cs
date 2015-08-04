@@ -69,59 +69,78 @@ namespace JuniorMathsApp1
             phoneNumber = txtEnterPhoneNo.Text;
             password = txtEnterPassword.Text;
             bool isFound = false;
-            bool itsANumber = false;
+            bool itsANumber = true;
             char getChar = ' ';
+
+           
             
                 //Verify that user inputs are not empty first
                 if ((!name.Equals("")) && (!surname.Equals("")) && (!email.Equals("")) && (!phoneNumber.Equals("")) && (!password.Equals("")))
                 {
+                   
+                    //check if phone number is ten characters long(South Affrican phone number)
+                    int count = 0;
+                    for(int z = 0; z < phoneNumber.Length; z++)
+                    {
+                        count = count + 1;
+                       
+                       
+                        try
+                        {
+                            char getCharacter = phoneNumber.ElementAt(z);
+
+                            if(getCharacter.Equals("0"))
+                                if(getCharacter.Equals("1"))
+                                    if(getCharacter.Equals("2"))
+                                       if(getCharacter.Equals("3"))
+                                          if(getCharacter.Equals("4"))
+                                              if(getCharacter.Equals("5"))
+                                                  if(getCharacter.Equals("6"))
+                                                      if(getCharacter.Equals("7"))
+                                                          if(getCharacter.Equals("8"))
+                                                              if(getCharacter.Equals("9"))
+                            {
+                                itsANumber = true;
+                            }
+                            else
+                            {
+                                itsANumber = false;
+                            }
+
+
+
+                            
+
+                        }
+                        catch(ArgumentNullException)
+                        {
+
+                        }
+                        catch(ArgumentOutOfRangeException)
+                        {
+
+                        }
+
+                        /*
+                            if((getCharacter.Equals('0')) ||
+                               (getCharacter.Equals('1')) ||
+                               (getCharacter.Equals('2')) ||
+                               (getCharacter.Equals('3')) ||
+                               (getCharacter.Equals('4')) ||
+                               (getCharacter.Equals('5')) ||
+                               (getCharacter.Equals('6')) ||
+                               (getCharacter.Equals('7')) ||
+                               (getCharacter.Equals('8')) ||
+                               (getCharacter.Equals('9')))
+                            { */
+
+                    }
+
+                    
                     //Insert the supplied user inputs into database here!
                     //Verify that the information was successfully inserted!
                     //user inputs were saved then redirect user to Login page!
 
-
-                    
-                    //Check whether phone number values are numeric
-                    /*for (int i = 0; i < phoneNumber.Length; i++)
-                    {
-                        
-                            getChar = phoneNumber.ElementAt(i);
-                        
-                            /*if ((getChar.Equals('0')) ||
-                                (getChar.Equals('1')) ||
-                                (getChar.Equals('2')) ||
-                                (getChar.Equals('3')) ||
-                                (getChar.Equals('4')) ||
-                                (getChar.Equals('5')) ||
-                                (getChar.Equals('6')) ||
-                                (getChar.Equals('7')) ||
-                                (getChar.Equals('8')) ||
-                                (getChar.Equals('9')))
-                                
-                             if((!phoneNumber.Contains("0")) ||
-                                (!phoneNumber.Contains("1")) ||
-                                (!phoneNumber.Contains("2")) ||
-                                (!phoneNumber.Contains("3")) ||
-                                (!phoneNumber.Contains("4")) ||
-                                (!phoneNumber.Contains("5")) ||
-                                (!phoneNumber.Contains("6")) ||
-                                (!phoneNumber.Contains("7")) ||
-                                (!phoneNumber.Contains("8")) ||
-                                (!phoneNumber.Contains("9")))  
-                            {
-                                messageToDisplay = "Please enter a numeric characters for the phone number!";
-                                messageBox(messageToDisplay);
-                                itsANumber = false;
-                            }
-                            else
-                            {
-                                itsANumber = true;
-                            }
-
-
-                       
-                    }
-                    */
 
                     //Check whether email address is correct
                     string findTheAtSign = "@";
@@ -131,13 +150,29 @@ namespace JuniorMathsApp1
                     }
 
                 
-                    if((isFound == true) && (itsANumber == true))
+                    if(isFound == true)
                     {
-                        objParent.SaveCustomer(name, surname, email, phoneNumber, password);
-
-                        this.Frame.Navigate(typeof(MainPage));
-                        messageToDisplay = "You have succesfully registered, Please user your credentials to login!";
-                        messageBox(messageToDisplay);
+                        if(count == 10)
+                        {
+                            if(itsANumber == true)
+                            {
+                                //objParent.SaveCustomer(name, surname, email, phoneNumber, password);
+                                //this.Frame.Navigate(typeof(MainPage));
+                                messageToDisplay = "You have succesfully registered, Please user your credentials to login!";
+                                messageBox(messageToDisplay);
+                            }
+                            else
+                            {
+                                messageToDisplay = "Please enter numeric characters only for the phone number! " + itsANumber;
+                                messageBox(messageToDisplay);
+                            }
+                        }
+                        else
+                        {
+                            messageToDisplay = "Phone number must be ten didgits long!" +
+                                               "\nThe number entered is: (" + count + ") characters long!";
+                            messageBox(messageToDisplay);
+                        }
                         
                     }
                     else
@@ -172,6 +207,36 @@ namespace JuniorMathsApp1
             txtEnterEmail.Text = "";
             txtEnterPhoneNo.Text = "";
             txtEnterPassword.Text = "";
+        }
+
+        private bool checkNumber(string num)
+        {
+            bool itsANumber = false;
+
+            for (int x = 0; x < num.Length; x++)
+            {
+                if((!num.Contains("0")) ||
+                   (!num.Contains("1")) ||
+                   (!num.Contains("2")) ||
+                   (!num.Contains("3")) ||
+                   (!num.Contains("4")) ||
+                   (!num.Contains("5")) ||
+                   (!num.Contains("6")) ||
+                   (!num.Contains("7")) ||
+                   (!num.Contains("8")) ||
+                   (!num.Contains("9")))
+                {
+                    messageToDisplay = "Please enter a numeric characters for the phone number!";
+                    messageBox(messageToDisplay);
+                    itsANumber = false;
+                }
+                else
+                {
+                    itsANumber = true;
+                }
+
+            }
+            return itsANumber;
         }
 
         
