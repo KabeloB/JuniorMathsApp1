@@ -69,7 +69,7 @@ namespace JuniorMathsApp1
             phoneNumber = txtEnterPhoneNo.Text;
             password = txtEnterPassword.Text;
             bool isFound = false;
-            bool itsANumber = true;
+            bool itsANumber = false;
             char getChar = ' ';
 
            
@@ -83,40 +83,38 @@ namespace JuniorMathsApp1
                     for(int z = 0; z < phoneNumber.Length; z++)
                     {
                         count = count + 1;
-                       
-                       
+
+                        char getCharacter = ' ';
+
                         try
                         {
-                            char getCharacter = phoneNumber.ElementAt(z);
-
-                            if(getCharacter.Equals("0"))
-                                if(getCharacter.Equals("1"))
-                                    if(getCharacter.Equals("2"))
-                                       if(getCharacter.Equals("3"))
-                                          if(getCharacter.Equals("4"))
-                                              if(getCharacter.Equals("5"))
-                                                  if(getCharacter.Equals("6"))
-                                                      if(getCharacter.Equals("7"))
-                                                          if(getCharacter.Equals("8"))
-                                                              if(getCharacter.Equals("9"))
-                            {
-                                itsANumber = true;
-                            }
-                            else
-                            {
-                                itsANumber = false;
-                            }
+                           getCharacter = (char)phoneNumber.ElementAt(z);
+                           int convNum = Convert.ToInt32(getCharacter);
 
 
-
-                            
+                           if(convNum == 0 || convNum == 1 ||
+                              convNum == 2 || convNum == 3 ||
+                              convNum == 4 || convNum == 5 ||
+                              convNum == 6 || convNum == 7 ||
+                              convNum == 8 || convNum == 9)
+                           {
+                               itsANumber = true;
+                           }
+                           else
+                           {
+                               itsANumber = false;
+                           }
 
                         }
-                        catch(ArgumentNullException)
+                        catch (ArgumentNullException)
                         {
 
                         }
-                        catch(ArgumentOutOfRangeException)
+                        catch (ArgumentOutOfRangeException)
+                        {
+
+                        }
+                        catch(Exception)
                         {
 
                         }
@@ -135,6 +133,7 @@ namespace JuniorMathsApp1
                             { */
 
                     }
+
 
                     
                     //Insert the supplied user inputs into database here!
@@ -163,7 +162,7 @@ namespace JuniorMathsApp1
                             }
                             else
                             {
-                                messageToDisplay = "Please enter numeric characters only for the phone number! " + itsANumber;
+                                messageToDisplay = "Please enter numeric characters only for the phone number! ";
                                 messageBox(messageToDisplay);
                             }
                         }

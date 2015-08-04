@@ -68,7 +68,7 @@ namespace JuniorMathsApp1
 
                 foreach (var c in test)
                 {
-                    lsViewTest.Items.Add(c.Id + "\t" + c.ChildId + "\t" + c.RightAnswers + "\t" + c.WrongAnswers + "\t" + c.Date);
+                    lsViewTest.Items.Add(c.Id + "\t" + c.ChildId + "           \t" + c.RightAnswers + "                           \t" + c.WrongAnswers + "             \t" + c.Date);
 
                 }
                 base.OnNavigatedTo(e);

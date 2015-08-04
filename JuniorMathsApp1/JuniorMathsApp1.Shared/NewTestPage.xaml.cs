@@ -145,6 +145,7 @@ namespace JuniorMathsApp1
             btnStartTest.IsEnabled = false;
 
             int cnt = doCalculation();
+            lblCompletedQuestion.Text = "" + cnt;
         }
 
 
@@ -279,11 +280,11 @@ namespace JuniorMathsApp1
                         convChildAnswer = Convert.ToInt32(childsAnswer);
                         if (systemAnswer == convChildAnswer)
                         {
-                            rightAnswer = rightAnswer + 1;
+                            rightAnswer=+1;
                         }
                         else if(systemAnswer != convChildAnswer)
                         {
-                            wrongAnswers = wrongAnswers + 1;
+                            wrongAnswers =+1;
                         }
                     }
 

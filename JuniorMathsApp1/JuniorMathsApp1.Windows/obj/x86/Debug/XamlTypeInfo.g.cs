@@ -124,7 +124,7 @@ namespace JuniorMathsApp1.JuniorMathsApp1_Windows_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[16];
+            _typeNameTable = new string[15];
             _typeNameTable[0] = "JuniorMathsApp1.AboutAppPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -137,12 +137,11 @@ namespace JuniorMathsApp1.JuniorMathsApp1_Windows_XamlTypeInfo
             _typeNameTable[9] = "JuniorMathsApp1.ResetPasswordPage";
             _typeNameTable[10] = "JuniorMathsApp1.SelectChildToTakeTestPage";
             _typeNameTable[11] = "JuniorMathsApp1.SelectChildToViewPage";
-            _typeNameTable[12] = "JuniorMathsApp1.UpdateChildDataPage";
-            _typeNameTable[13] = "JuniorMathsApp1.UpdateParentsDetailsPage";
-            _typeNameTable[14] = "JuniorMathsApp1.VerifyUserPage";
-            _typeNameTable[15] = "JuniorMathsApp1.ViewAllResultsPage";
+            _typeNameTable[12] = "JuniorMathsApp1.UpdateParentsDetailsPage";
+            _typeNameTable[13] = "JuniorMathsApp1.VerifyUserPage";
+            _typeNameTable[14] = "JuniorMathsApp1.ViewAllResultsPage";
 
-            _typeTable = new global::System.Type[16];
+            _typeTable = new global::System.Type[15];
             _typeTable[0] = typeof(global::JuniorMathsApp1.AboutAppPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -155,10 +154,9 @@ namespace JuniorMathsApp1.JuniorMathsApp1_Windows_XamlTypeInfo
             _typeTable[9] = typeof(global::JuniorMathsApp1.ResetPasswordPage);
             _typeTable[10] = typeof(global::JuniorMathsApp1.SelectChildToTakeTestPage);
             _typeTable[11] = typeof(global::JuniorMathsApp1.SelectChildToViewPage);
-            _typeTable[12] = typeof(global::JuniorMathsApp1.UpdateChildDataPage);
-            _typeTable[13] = typeof(global::JuniorMathsApp1.UpdateParentsDetailsPage);
-            _typeTable[14] = typeof(global::JuniorMathsApp1.VerifyUserPage);
-            _typeTable[15] = typeof(global::JuniorMathsApp1.ViewAllResultsPage);
+            _typeTable[12] = typeof(global::JuniorMathsApp1.UpdateParentsDetailsPage);
+            _typeTable[13] = typeof(global::JuniorMathsApp1.VerifyUserPage);
+            _typeTable[14] = typeof(global::JuniorMathsApp1.ViewAllResultsPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -203,10 +201,9 @@ namespace JuniorMathsApp1.JuniorMathsApp1_Windows_XamlTypeInfo
         private object Activate_9_ResetPasswordPage() { return new global::JuniorMathsApp1.ResetPasswordPage(); }
         private object Activate_10_SelectChildToTakeTestPage() { return new global::JuniorMathsApp1.SelectChildToTakeTestPage(); }
         private object Activate_11_SelectChildToViewPage() { return new global::JuniorMathsApp1.SelectChildToViewPage(); }
-        private object Activate_12_UpdateChildDataPage() { return new global::JuniorMathsApp1.UpdateChildDataPage(); }
-        private object Activate_13_UpdateParentsDetailsPage() { return new global::JuniorMathsApp1.UpdateParentsDetailsPage(); }
-        private object Activate_14_VerifyUserPage() { return new global::JuniorMathsApp1.VerifyUserPage(); }
-        private object Activate_15_ViewAllResultsPage() { return new global::JuniorMathsApp1.ViewAllResultsPage(); }
+        private object Activate_12_UpdateParentsDetailsPage() { return new global::JuniorMathsApp1.UpdateParentsDetailsPage(); }
+        private object Activate_13_VerifyUserPage() { return new global::JuniorMathsApp1.VerifyUserPage(); }
+        private object Activate_14_ViewAllResultsPage() { return new global::JuniorMathsApp1.ViewAllResultsPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -296,30 +293,23 @@ namespace JuniorMathsApp1.JuniorMathsApp1_Windows_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 12:   //  JuniorMathsApp1.UpdateChildDataPage
+            case 12:   //  JuniorMathsApp1.UpdateParentsDetailsPage
                 userType = new global::JuniorMathsApp1.JuniorMathsApp1_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_12_UpdateChildDataPage;
+                userType.Activator = Activate_12_UpdateParentsDetailsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 13:   //  JuniorMathsApp1.UpdateParentsDetailsPage
+            case 13:   //  JuniorMathsApp1.VerifyUserPage
                 userType = new global::JuniorMathsApp1.JuniorMathsApp1_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_13_UpdateParentsDetailsPage;
+                userType.Activator = Activate_13_VerifyUserPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 14:   //  JuniorMathsApp1.VerifyUserPage
+            case 14:   //  JuniorMathsApp1.ViewAllResultsPage
                 userType = new global::JuniorMathsApp1.JuniorMathsApp1_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_14_VerifyUserPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 15:   //  JuniorMathsApp1.ViewAllResultsPage
-                userType = new global::JuniorMathsApp1.JuniorMathsApp1_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_15_ViewAllResultsPage;
+                userType.Activator = Activate_14_ViewAllResultsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -657,7 +647,5 @@ namespace JuniorMathsApp1.JuniorMathsApp1_Windows_XamlTypeInfo
         }
     }
 }
-
-
 
 
