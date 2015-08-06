@@ -38,8 +38,8 @@ namespace JuniorMathsApp1
         int wrongAnswers = 0;
 
         int systemAnswer = 0;
-        string childsAnswer = "";
         int convChildAnswer = 0;
+        
         int countResult = 0;
 
 
@@ -84,7 +84,7 @@ namespace JuniorMathsApp1
         public int getOperand()
         {
             Random rnd = new Random();
-            int numGen3 = (int)rnd.Next(1,3);
+            int numGen3 = (int)rnd.Next(1,4);
 
             return numGen3;
         }
@@ -157,7 +157,7 @@ namespace JuniorMathsApp1
 
             lblCompletedQuestion.Text = "" + countResult;
 
-            if(countResult > 10)
+            if(countResult == 10)
             {
                 int getInsertResult = objTest.insertTestResults(childID, rightAnswer, wrongAnswers, objDate.ToString());
 
@@ -173,10 +173,13 @@ namespace JuniorMathsApp1
         }
 
         
+        //Method to decide the type of question to be presented to the child
         public int doCalculation()
         {
             try
             {
+                   
+
                     count = (count + 1);
 
                     getRandom1 = getRandomNum1();
@@ -196,12 +199,13 @@ namespace JuniorMathsApp1
                         strOperand = "+";
                         lblOperator.Text = strOperand;
                         systemAnswer = (getRandom1 + getRandom2);
+                        //txtEnterAnswer.Text = systemAnswer.ToString();
 
+                        string childAnswer = txtEnterAnswer.Text + "";
                         //Code for checking whether the answer is correct
-                        childsAnswer = txtEnterAnswer.Text;
-                        convChildAnswer = Convert.ToInt32(childsAnswer);
+                        convChildAnswer = Convert.ToInt32(childAnswer);
 
-                        if(systemAnswer == convChildAnswer)
+                        if(systemAnswer.ToString().Equals(childAnswer))
                         {
                             rightAnswer = rightAnswer + 1;
                         }
@@ -220,10 +224,12 @@ namespace JuniorMathsApp1
                         if(getRandom1 > getRandom2)
                         {
                             systemAnswer = (getRandom1 - getRandom2);
+                            //txtEnterAnswer.Text = systemAnswer + "";
 
                             //Code for checking whether the answer is correct
-                            childsAnswer = txtEnterAnswer.Text;
-                            convChildAnswer = Convert.ToInt32(childsAnswer);
+                            //childsAnswer = txtEnterAnswer.Text;
+                            convChildAnswer = Convert.ToInt16(txtEnterAnswer.Text);
+
                             if (systemAnswer == convChildAnswer)
                             {
                                 rightAnswer = rightAnswer + 1;
@@ -236,15 +242,17 @@ namespace JuniorMathsApp1
                         else if(getRandom1 < getRandom2)
                         {
                             systemAnswer = (getRandom2 - getRandom1);
+                            //txtEnterAnswer.Text = systemAnswer + "";
 
                             //Code for checking whether the answer is correct
-                            childsAnswer = txtEnterAnswer.Text;
-                            convChildAnswer = Convert.ToInt32(childsAnswer);
+                            //childsAnswer = txtEnterAnswer.Text;
+                            convChildAnswer = Convert.ToInt16(txtEnterAnswer.Text);
+
                             if (systemAnswer == convChildAnswer)
                             {
                                 rightAnswer = rightAnswer + 1;
                             }
-                            else if(systemAnswer != convChildAnswer)
+                            else if (systemAnswer != convChildAnswer)
                             {
                                 wrongAnswers = wrongAnswers + 1;
                             }
@@ -252,10 +260,12 @@ namespace JuniorMathsApp1
                         else if(getRandom1 == getRandom2)
                         {
                             systemAnswer = (getRandom1 - getRandom2);
+                            //txtEnterAnswer.Text = systemAnswer + "";
 
                             //Code for checking whether the answer is correct
-                            childsAnswer = txtEnterAnswer.Text;
-                            convChildAnswer = Convert.ToInt32(childsAnswer);
+                            //childsAnswer = txtEnterAnswer.Text;
+                            convChildAnswer = Convert.ToInt16(txtEnterAnswer.Text);
+
                             if (systemAnswer == convChildAnswer)
                             {
                                 rightAnswer = rightAnswer + 1;
@@ -274,22 +284,35 @@ namespace JuniorMathsApp1
                         strOperand = "x";
                         lblOperator.Text = strOperand;
                         systemAnswer = (getRandom1 * getRandom2);
+                        //txtEnterAnswer.Text = systemAnswer + "";
 
                         //Code for checking whether the answer is correct
-                        childsAnswer = txtEnterAnswer.Text;
-                        convChildAnswer = Convert.ToInt32(childsAnswer);
+                        //childsAnswer = txtEnterAnswer.Text;
+                        //convChildAnswer = Convert.ToInt32(childsAnswer);
+                        convChildAnswer = Convert.ToInt16(txtEnterAnswer.Text);
+
                         if (systemAnswer == convChildAnswer)
                         {
-                            rightAnswer=+1;
+                            rightAnswer = rightAnswer + 1;
+
+                            systemAnswer = 0;
+                            convChildAnswer = 0;
                         }
-                        else if(systemAnswer != convChildAnswer)
+                        else if (systemAnswer != convChildAnswer)
                         {
-                            wrongAnswers =+1;
+                            wrongAnswers = wrongAnswers + 1;
+
+                            systemAnswer = 0;
+                            convChildAnswer = 0;
                         }
                     }
 
-                    txtRight.Text = "" + rightAnswer;
-                    txtWrong.Text = "" + wrongAnswers;
+                    txtRight.Text = "Number Of Correct Answers: (" + rightAnswer + ")";
+                    txtWrong.Text = "Number Of Wrong Answers: " + wrongAnswers + ")";
+                    
+                    //systemAnswer = 0;
+                    //convChildAnswer = 0;
+                    //txtEnterAnswer.Text = "";
 
                 
             }

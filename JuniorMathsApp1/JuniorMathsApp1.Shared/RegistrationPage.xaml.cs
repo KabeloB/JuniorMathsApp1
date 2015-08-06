@@ -77,7 +77,20 @@ namespace JuniorMathsApp1
                 //Verify that user inputs are not empty first
                 if ((!name.Equals("")) && (!surname.Equals("")) && (!email.Equals("")) && (!phoneNumber.Equals("")) && (!password.Equals("")))
                 {
-                   
+
+                    int count = 0;
+                    for (int z = 0; z < phoneNumber.Length; z++)
+                    {
+                        count = count + 1;
+                    }
+
+                    
+
+
+
+
+
+                    /*
                     //check if phone number is ten characters long(South Affrican phone number)
                     int count = 0;
                     for(int z = 0; z < phoneNumber.Length; z++)
@@ -88,6 +101,8 @@ namespace JuniorMathsApp1
 
                         try
                         {
+
+
                            getCharacter = (char)phoneNumber.ElementAt(z);
                            int convNum = Convert.ToInt32(getCharacter);
 
@@ -104,7 +119,7 @@ namespace JuniorMathsApp1
                            {
                                itsANumber = false;
                            }
-
+                           
                         }
                         catch (ArgumentNullException)
                         {
@@ -130,9 +145,10 @@ namespace JuniorMathsApp1
                                (getCharacter.Equals('7')) ||
                                (getCharacter.Equals('8')) ||
                                (getCharacter.Equals('9')))
-                            { */
+                            { 
 
                     }
+                    */
 
 
                     
@@ -153,6 +169,26 @@ namespace JuniorMathsApp1
                     {
                         if(count == 10)
                         {
+                            try
+                            {
+                                int numberEntered = int.Parse(txtEnterPhoneNo.Text);
+                                if (numberEntered < 1 || numberEntered > 10)
+                                {
+                                    messageBox("You must enter a number between 1 and 10");
+                                }
+                                else 
+                                {
+                                    itsANumber = true;
+                                }
+                            }
+                            catch (FormatException)
+                            {
+
+                                messageBox("You need to enter an integer");
+                            }
+
+
+
                             if(itsANumber == true)
                             {
                                 //objParent.SaveCustomer(name, surname, email, phoneNumber, password);
