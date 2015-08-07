@@ -72,13 +72,17 @@ namespace JuniorMathsApp1
                         try
                         {
                             string findTheAtSign = "@";
-                            bool isFound = false;
+                            string findThePeriod = ".";
+                            bool isFoundAtSign = false;
+                            bool isFoundPeriod = false;
                             for (int x = 0; x < username.Length; x++)
                             {
-                                isFound = username.Contains(findTheAtSign);
+                                isFoundAtSign = username.Contains(findTheAtSign);
+                                isFoundPeriod = username.Contains(findThePeriod);
+                                
                             }
 
-                            if(isFound == true)
+                            if((isFoundAtSign == true) && (isFoundPeriod == true))
                             {
                                  //Get all parent details matching user supplied information
                                 var confirm = objParent.getParent(username, password);
@@ -100,7 +104,8 @@ namespace JuniorMathsApp1
                                 }
                                  else
                                 {
-                                    messageToDisplay = "Invalid user details entered!";
+                                    messageToDisplay = "Invalid user details entered!" +
+                                                       "Please ensure that user details entered are correct";
                                     messageBox(messageToDisplay);
                                 }
 
@@ -124,7 +129,7 @@ namespace JuniorMathsApp1
                     else
                     {
                         //Enter error message box here!
-                        String ErrorMessage = "Input fields must not be empty!";
+                        String ErrorMessage = "Please ensure that all text field are entered!";
                         messageBox(ErrorMessage);
                         //this.Frame.Navigate(typeof(MainPage));
                         
