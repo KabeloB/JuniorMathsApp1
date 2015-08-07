@@ -122,9 +122,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Assets\JuniorMathsApp-Background1.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Grade1QuestionsXML\Grade1.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Grade1QuestionsClass\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Grade2QuestionsClass\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Grade2QuestionsXML\" />
   </ItemGroup>
 </Project>

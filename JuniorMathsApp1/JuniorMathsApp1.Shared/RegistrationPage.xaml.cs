@@ -96,7 +96,7 @@ namespace JuniorMathsApp1
                     for (int x = 0; x < email.Length; x++)
                     {
                         isFoundAtSign = email.Contains(findTheAtSign);
-                        isFoundAtSign = email.Contains(findTheAtSign);
+                        isFoundPeriod = email.Contains(findThePeriod);
                     }
 
                 
