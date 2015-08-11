@@ -154,6 +154,7 @@ namespace JuniorMathsApp1
             messageBox(msg);
         }
 
+        //Button to initiate a new test 
         private void btnStartTest_Click(object sender, RoutedEventArgs e)
         {
             btnSubmitAnswer.IsEnabled = true;
@@ -419,7 +420,7 @@ namespace JuniorMathsApp1
                             strOperand = "+";
                             lblOperator.Text = strOperand;
                             systemAnswer = (getRandom1 + getRandom2);
-                            //txtEnterAnswer.Text = systemAnswer + "";
+                            txtEnterAnswer.Text = systemAnswer + "";
 
 
                             //Code for checking whether the answer is correct
@@ -445,7 +446,7 @@ namespace JuniorMathsApp1
                             if (getRandom1 > getRandom2)
                             {
                                 systemAnswer = (getRandom1 - getRandom2);
-                                //txtEnterAnswer.Text = systemAnswer + "";
+                                txtEnterAnswer.Text = systemAnswer + "";
 
                                 //Code for checking whether the answer is correct
                                 childsAnswer = "" + txtEnterAnswer.Text;
@@ -467,7 +468,7 @@ namespace JuniorMathsApp1
 
 
                                 systemAnswer = (getRandom2 - getRandom1);
-                                //txtEnterAnswer.Text = systemAnswer + "";
+                                txtEnterAnswer.Text = systemAnswer + "";
 
                                 //Code for checking whether the answer is correct
                                 childsAnswer = "" + txtEnterAnswer.Text;
@@ -485,7 +486,7 @@ namespace JuniorMathsApp1
                             else if (getRandom1 == getRandom2)
                             {
                                 systemAnswer = (getRandom1 - getRandom2);
-                                //txtEnterAnswer.Text = systemAnswer + "";
+                                txtEnterAnswer.Text = systemAnswer + "";
 
                                 //Code for checking whether the answer is correct
                                 childsAnswer = "" + txtEnterAnswer.Text;
@@ -509,7 +510,7 @@ namespace JuniorMathsApp1
                             strOperand = "x";
                             lblOperator.Text = strOperand;
                             systemAnswer = (getRandom1 * getRandom2);
-                            //txtEnterAnswer.Text = systemAnswer + "";
+                            txtEnterAnswer.Text = systemAnswer + "";
 
                             //Code for checking whether the answer is correct
                             childsAnswer = "" + txtEnterAnswer.Text;
@@ -529,11 +530,6 @@ namespace JuniorMathsApp1
 
                         txtRight.Text = "Number Of Correct Answers: (" + rightAnswer + ")";
                         txtWrong.Text = "Number Of Wrong Answers: " + wrongAnswers + ")";
-
-                        //systemAnswer = 0;
-                        //convChildAnswer = 0;
-                        //txtEnterAnswer.Text = "";
-
 
                     }
                     catch (Exception)

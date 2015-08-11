@@ -166,36 +166,5 @@ namespace JuniorMathsApp1
             txtEnterPassword.Text = "";
         }
 
-        private bool checkNumber(string num)
-        {
-            bool itsANumber = false;
-
-            for (int x = 0; x < num.Length; x++)
-            {
-                if((!num.Contains("0")) ||
-                   (!num.Contains("1")) ||
-                   (!num.Contains("2")) ||
-                   (!num.Contains("3")) ||
-                   (!num.Contains("4")) ||
-                   (!num.Contains("5")) ||
-                   (!num.Contains("6")) ||
-                   (!num.Contains("7")) ||
-                   (!num.Contains("8")) ||
-                   (!num.Contains("9")))
-                {
-                    messageToDisplay = "Please enter a numeric characters for the phone number!";
-                    messageBox(messageToDisplay);
-                    itsANumber = false;
-                }
-                else
-                {
-                    itsANumber = true;
-                }
-
-            }
-            return itsANumber;
-        }
-
-        
     }
 }
