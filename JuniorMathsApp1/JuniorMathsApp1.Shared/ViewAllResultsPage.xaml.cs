@@ -34,6 +34,7 @@ namespace JuniorMathsApp1
 
         ObservableCollection<TestViewModel> test = null;
         TestsViewModel testsViewModel = null;
+        TestViewModel objTestViewModel = null;
 
         ChildrenViewModel objChildrenViewModel = null;
         RegisterChild objRegChild = null;
@@ -84,6 +85,14 @@ namespace JuniorMathsApp1
 
         }
 
+        //Code for displaying MessageBox
+        private async void messageBox(string msg)
+        {
+            var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
+            await msgDisplay.ShowAsync();
+
+        }
+
 
 
         private void btnReturnMainMenu_Click(object sender, RoutedEventArgs e)
@@ -98,10 +107,44 @@ namespace JuniorMathsApp1
             return returnNumP;
         }
 
+        public int myChildId(string m)
+        {
+            int returnNumP = Convert.ToInt32(m);
+            return returnNumP;
+        }
+
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             int getNum = myParentId(getParentID);
             this.Frame.Navigate(typeof(SelectChildToViewPage), getNum);
+        }
+
+        //Button to delete all child test results
+        private void btnDeleteAll_Click(object sender, RoutedEventArgs e)
+        {
+            if(!getChildID.Equals(""))
+            {
+                int convChildId = myChildId(getChildID);
+                int convParentId = myParentId(getParentID);
+                objChildrenViewModel = new ChildrenViewModel();
+                objRegChild = new RegisterChild();
+                objTestViewModel = new TestViewModel();
+
+                objRegChild = objChildrenViewModel.getChildDetails(convChildId, convParentId);
+                objTestViewModel.deleteChildTestRecords(convChildId);
+
+
+                this.Frame.Navigate(typeof(SelectChildToViewPage), convParentId);
+                string msg = "All child test records for " + objRegChild.Name + " " + objRegChild.Surname + " were successfully deleted";
+                messageBox(msg);
+
+
+
+            }
+            else
+            {
+                messageBox("Child id can't be empty!");
+            }
         }
 
     }

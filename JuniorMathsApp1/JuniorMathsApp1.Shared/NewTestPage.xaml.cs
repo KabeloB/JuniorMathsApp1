@@ -345,11 +345,9 @@ namespace JuniorMathsApp1
             
         }
 
-
+        //Button to submit the answer
         private void btnSubmitAnswer_Click(object sender, RoutedEventArgs e)
         {
-
-            
             countResult = doCalculation();
 
             lblCompletedQuestion.Text = "" + countResult;
@@ -375,6 +373,7 @@ namespace JuniorMathsApp1
         {
             int systemAnswer = 0;
             string childsAnswer = "";
+
             //get the random number to select a random question: Conver the number to a string
             int getQuest = getRandomQuestion();
             string getQuestString = getQuest.ToString();

@@ -143,5 +143,16 @@ namespace JuniorMathsApp1.TestClasses
             }
             return success;
         }
+
+        //Delete all child test records from the Test Table
+        public void deleteChildTestRecords(int childid)
+        {
+
+            using (var db = new SQLite.SQLiteConnection(app.dbPath))
+            {
+                var result = db.Query<TestResults>("Delete from TestResults where Childid =" + childid);
+
+            }
+        }
     }
 }

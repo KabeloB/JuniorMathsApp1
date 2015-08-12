@@ -651,13 +651,3 @@ namespace JuniorMathsApp1.JuniorMathsApp1_Windows_XamlTypeInfo
 
 
 
-
-
-
-
-
-
-
-
-
-

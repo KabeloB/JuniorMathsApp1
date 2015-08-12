@@ -1,5 +1,6 @@
 ﻿using JuniorMathsApp1.ChildrenClasses;
 using JuniorMathsApp1.Model;
+using JuniorMathsApp1.TestClasses;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -29,6 +30,7 @@ namespace JuniorMathsApp1
         ObservableCollection<ChildrenViewModel> children = null;
         ChildrenViewModel childrenViewModel = null;
         ChildrensViewModel childrensViewModel = null;
+        TestViewModel objTestViewModel = null;
         RegisterChild regChild = null;
 
         int parentId = 0;
@@ -160,7 +162,7 @@ namespace JuniorMathsApp1
            
 
         }
-        //Method for converting string to integer
+        //Method for converting string to integer for parent id
         public int myParentId(string m)
         {
             int returnNumP = 0;
@@ -175,10 +177,26 @@ namespace JuniorMathsApp1
             return returnNumP;
         }
 
+        //Method for converting string to integer for child id
+        public int myChildId(string m)
+        {
+            int returnNumP = 0;
+            try
+            {
+                returnNumP = Convert.ToInt32(m);
+            }
+            catch (Exception)
+            {
+
+            }
+            return returnNumP;
+        }
+
         //Button for deleting a child from an account
         private void btnDeleteChild_Click(object sender, RoutedEventArgs e)
         {
             childrenViewModel = new ChildrenViewModel();
+            objTestViewModel = new TestViewModel();
             string strMsg = "";
             int convNum = myParentId(idNum);
             int getResult = 0;
