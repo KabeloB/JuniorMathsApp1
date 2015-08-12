@@ -1,4 +1,6 @@
 ﻿
+using JuniorMathsApp1.ChildrenClasses;
+using JuniorMathsApp1.Model;
 using JuniorMathsApp1.TestClasses;
 using System;
 using System.Collections.Generic;
@@ -48,6 +50,8 @@ namespace JuniorMathsApp1
 
 
         TestViewModel objTest = new TestViewModel();
+        ChildrenViewModel objChildrenViewModel = null;
+        RegisterChild objRegChild = null;
         DateTime objDate = System.DateTime.Now;
         
 
@@ -57,16 +61,22 @@ namespace JuniorMathsApp1
             this.InitializeComponent();
 
             btnSubmitAnswer.IsEnabled = false;
-            btnCancelTest.IsEnabled = false; 
+            btnCancelTest.IsEnabled = false;
+            txtEnterAnswer.IsEnabled = false;
+
+
             Random rnd = new Random();
             int num = (int) rnd.Next(1,13);
+
+            cbTestDifficulty.Items.Add("");
+            cbTestDifficulty.Items.Add("Biginner");
+            cbTestDifficulty.Items.Add("Intermediate");
+            cbTestDifficulty.Items.Add("Advanced");
         }
 
         //Retrive random questions from the xml file
         public int getRandomQuestion()
         {
-
-
             Random rnd = new Random();
             int numQuestion = (int)rnd.Next(1, 11);
 
@@ -116,6 +126,11 @@ namespace JuniorMathsApp1
                 parentID = Convert.ToInt32(getIds.Substring(0, 1));
                 childID = Convert.ToInt32(getIds.Substring(2));
 
+                objRegChild = new RegisterChild();
+                objChildrenViewModel = new ChildrenViewModel();
+
+                objRegChild = objChildrenViewModel.getChildDetails(childID, parentID);
+
                 base.OnNavigatedTo(e);
 
             }
@@ -157,178 +172,80 @@ namespace JuniorMathsApp1
         //Button to initiate a new test 
         private void btnStartTest_Click(object sender, RoutedEventArgs e)
         {
-            btnSubmitAnswer.IsEnabled = true;
-            btnCancelTest.IsEnabled = true;
-            btnStartTest.IsEnabled = false;
-            int systemAnswer = 0;
-            string childsAnswer = "";
-
-
-            //get the random number to select a random question: Conver the number to a string
-            int getQuest = getRandomQuestion();
-            string getQuestString = getQuest.ToString();
-
-
-            XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Grade1.xml");
-            var number1 = doc.Descendants("Number");
-            string id = "";
-            string num1 = "";
-            string num2 = "";
-            
-            foreach(var numberOne in number1)
+            try
             {
-                int fullLength = numberOne.Value.Length;
-                id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("/"));
-                num1 = numberOne.Value.Substring(numberOne.Value.IndexOf("/") + 1, numberOne.Value.IndexOf("-") - 2);
-                num2 = numberOne.Value.Substring(numberOne.Value.IndexOf("-") + 1);
-
-                //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
 
 
-                        if(getQuestString.Equals(id))
+                int systemAnswer = 0;
+
+                //get the random number to select a random question: Conver the number to a string
+                int getQuest = getRandomQuestion();
+                string getQuestString = getQuest.ToString();
+
+                //get the childs grade
+                string childGrade = objRegChild.Grade;
+
+                if (childGrade.Equals("Grade 1"))
+                {
+                    //Get the selected test difficulty
+                    string getTestDifficulty = (string)cbTestDifficulty.SelectedItem;
+
+                    if (getTestDifficulty.Equals(""))
+                    {
+                        btnSubmitAnswer.IsEnabled = false;
+                        btnCancelTest.IsEnabled = false;
+                        txtEnterAnswer.IsEnabled = false;
+
+                        messageBox("Please select a difficulty level first before proceeding!");
+                    }
+                    else if (getTestDifficulty.Equals("Biginner"))
+                    {
+                        btnSubmitAnswer.IsEnabled = true;
+                        btnCancelTest.IsEnabled = true;
+                        txtEnterAnswer.IsEnabled = true;
+                        cbTestDifficulty.IsEnabled = false;
+                        btnStartTest.IsEnabled = false;
+
+
+                        XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Beginner.xml");
+                        var number1 = doc.Descendants("Number");
+                        var answer = doc.Descendants("Answer");
+
+                        foreach (var numberOne in number1)
                         {
-                    
+                            string id = "";
+                            string equation = "";
+                            string answer1 = "";
+                            string childsAnswer1 = "";
+
+                            int fullLength = numberOne.Value.Length;
+                            id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("-"));
+                            equation = numberOne.Value.Substring(numberOne.Value.IndexOf("-") + 1, numberOne.Value.IndexOf("=") - 2);
+                            answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
+
+                            //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
+
+
+                            if (getQuestString.Equals(id))
+                            {
+
                                 try
                                 {
-                                        count = (count + 1);
+                                    //Display the equation and allow user to enter the answer
+                                    lblEquation.Text = "" + equation;
+                                    childsAnswer1 = txtEnterAnswer.Text;
 
-                                        getRandom1 = Convert.ToInt32(num1);
-                                        getRandom2 = Convert.ToInt32(num2);
-                    
-                                        lblFirstNum.Text = "" + getRandom1;
-                                        lblSecondNum.Text = "" + getRandom2;
-
-                                        string strOperand = "";
-
-
-                                        int getTheOperand = getOperand();
-
-                                        if(getTheOperand == 1)
-                                        {
-                                            //Addition
-                                            strOperand = "+";
-                                            lblOperator.Text = strOperand;
-                                            systemAnswer = (getRandom1 + getRandom2);
-                                            txtEnterAnswer.Text = systemAnswer + "";
-
-                                            
-                                            //Code for checking whether the answer is correct
-                                            childsAnswer = "" + txtEnterAnswer.Text;
-                                            convChildAnswer = Convert.ToInt32(childsAnswer);
-
-                                            if(systemAnswer.ToString().Equals(txtEnterAnswer.Text))
-                                            {
-                                                rightAnswer = rightAnswer + 1;
-                                            }
-                                            else if(systemAnswer != convChildAnswer)
-                                            {
-                                                wrongAnswers = wrongAnswers + 1;
-                                            }
-
-                                        }
-                                        else if(getTheOperand == 2)
-                                        {
-                                            //Subtraction
-                                            strOperand = "-";
-                                            lblOperator.Text = strOperand;
-
-                                            if(getRandom1 > getRandom2)
-                                            {
-                                                systemAnswer = (getRandom1 - getRandom2);
-                                                txtEnterAnswer.Text = systemAnswer + "";
-
-                                                //Code for checking whether the answer is correct
-                                                childsAnswer = "" +  txtEnterAnswer.Text;
-                                                convChildAnswer = Convert.ToInt32(txtEnterAnswer.Text);
-
-                                                if (systemAnswer == convChildAnswer)
-                                                {
-                                                    rightAnswer = rightAnswer + 1;
-                                                }
-                                                else if (systemAnswer != convChildAnswer)
-                                                {
-                                                    wrongAnswers = wrongAnswers + 1;
-                                                }
-                                            }
-                                            else if(getRandom1 < getRandom2)
-                                            {
-                                                lblFirstNum.Text = "" + getRandom2;
-                                                lblSecondNum.Text = "" + getRandom1;
+                                    //Code for checking whether the answer is correct
+                                    if (answer1.Equals(childsAnswer1))
+                                    {
+                                        rightAnswer = rightAnswer + 1;
+                                    }
+                                    else
+                                    {
+                                        wrongAnswers = wrongAnswers + 1;
+                                    }
 
 
-                                                systemAnswer = (getRandom2 - getRandom1);
-                                                txtEnterAnswer.Text = systemAnswer + "";
-
-                                                //Code for checking whether the answer is correct
-                                                childsAnswer = "" + txtEnterAnswer.Text;
-                                                convChildAnswer = Convert.ToInt32(txtEnterAnswer.Text);
-
-                                                if (systemAnswer == convChildAnswer)
-                                                {
-                                                    rightAnswer = rightAnswer + 1;
-                                                }
-                                                else if (systemAnswer != convChildAnswer)
-                                                {
-                                                    wrongAnswers = wrongAnswers + 1;
-                                                }
-                                            }
-                                            else if(getRandom1 == getRandom2)
-                                            {
-                                                systemAnswer = (getRandom1 - getRandom2);
-                                                txtEnterAnswer.Text = systemAnswer + "";
-
-                                                //Code for checking whether the answer is correct
-                                                childsAnswer = "" + txtEnterAnswer.Text;
-                                                convChildAnswer = Convert.ToInt32(txtEnterAnswer.Text);
-
-                                                if (systemAnswer == convChildAnswer)
-                                                {
-                                                    rightAnswer = rightAnswer + 1;
-                                                }
-                                                else if (systemAnswer != convChildAnswer)
-                                                {
-                                                    wrongAnswers = wrongAnswers + 1;
-                                                }
-                                            }
-
-                                        }
-                                        else if(getTheOperand == 3)
-                                        {
-
-                                            //Multiplication
-                                            strOperand = "x";
-                                            lblOperator.Text = strOperand;
-                                            systemAnswer = (getRandom1 * getRandom2);
-                                            txtEnterAnswer.Text = systemAnswer + "";
-
-                                            //Code for checking whether the answer is correct
-                                            childsAnswer = "" + txtEnterAnswer.Text;
-                                            convChildAnswer = Convert.ToInt32(txtEnterAnswer.Text);
-
-                                            if (systemAnswer == convChildAnswer)
-                                            {
-                                                rightAnswer = rightAnswer + 1;
-
-                                                systemAnswer = 0;
-                                                convChildAnswer = 0;
-                                            }
-                                            else if (systemAnswer != convChildAnswer)
-                                            {
-                                                wrongAnswers = wrongAnswers + 1;
-
-                                                systemAnswer = 0;
-                                                convChildAnswer = 0;
-                                            }
-                                        }
-
-                                        txtRight.Text = "Number Of Correct Answers: (" + rightAnswer + ")";
-                                        txtWrong.Text = "Number Of Wrong Answers: " + wrongAnswers + ")";
-                    
-                                        //systemAnswer = 0;
-                                        //convChildAnswer = 0;
-                                        //txtEnterAnswer.Text = "";
-
-                
                                 }
                                 catch (Exception)
                                 {
@@ -336,11 +253,36 @@ namespace JuniorMathsApp1
                                 }
 
 
+                            }
+
                         }
-                
+
+                    }
+                    else if (getTestDifficulty.Equals("Intermediate"))
+                    {
+                        XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Intermediate.xml");
+                        var number1 = doc.Descendants("Number");
+                        var answer = doc.Descendants("Answer");
+
+                    }
+                    else if (getTestDifficulty.Equals("Advanced"))
+                    {
+                        XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Advanced.xml");
+                        var number1 = doc.Descendants("Number");
+                        var answer = doc.Descendants("Answer");
+
+                    }
+                }
+                else if (childGrade.Equals("Grade 2"))
+                {
+
+                }
+            }
+            catch(Exception)
+            {
+
             }
 
-            
             lblCompletedQuestion.Text = "" + count;
             
         }
@@ -371,9 +313,8 @@ namespace JuniorMathsApp1
         //Method to decide the type of question to be presented to the child
         public int doCalculation()
         {
-            int systemAnswer = 0;
-            string childsAnswer = "";
-
+            
+            /*
             //get the random number to select a random question: Conver the number to a string
             int getQuest = getRandomQuestion();
             string getQuestString = getQuest.ToString();
@@ -540,6 +481,7 @@ namespace JuniorMathsApp1
                 }
 
             }
+            */
 
             lblCompletedQuestion.Text = "" + count;
             return count;
