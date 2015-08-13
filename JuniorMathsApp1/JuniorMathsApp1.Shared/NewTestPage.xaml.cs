@@ -47,6 +47,7 @@ namespace JuniorMathsApp1
         int convChildAnswer = 0;
         
         int countResult = 0;
+        int incrementQuestions = 0;
 
 
         TestViewModel objTest = new TestViewModel();
@@ -71,7 +72,7 @@ namespace JuniorMathsApp1
 
             cbTestDifficulty.Items.Add("");
             cbTestDifficulty.Items.Add("Biginner");
-            cbTestDifficulty.Items.Add("Fair");
+            cbTestDifficulty.Items.Add("Intermediate");
             cbTestDifficulty.Items.Add("Advanced");
         }
 
@@ -175,7 +176,7 @@ namespace JuniorMathsApp1
         {
             try
             {
-
+                incrementQuestions = incrementQuestions + 1;
                 count = (count + 1);
                 int systemAnswer = 0;
 
@@ -227,13 +228,13 @@ namespace JuniorMathsApp1
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
-                                equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("=") - 1);
+                                equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
                                 //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
 
 
-                                if (getQuestString.Equals(id))
+                                if (id.Equals("" + incrementQuestions))
                                 {
 
                                     try
@@ -255,6 +256,8 @@ namespace JuniorMathsApp1
                                         {
                                             wrongAnswers = wrongAnswers + 1;
                                         }
+                                        txtRight.Text = "Number Of Correct Answers: (" + rightAnswer + ")";
+                                        txtWrong.Text = "Number Of Wrong Answers: (" + wrongAnswers + ")";
 
 
                                     }
@@ -269,9 +272,9 @@ namespace JuniorMathsApp1
                             }
 
                         }
-                        else if (getTestDifficulty.Equals("Fair"))
+                        else if (getTestDifficulty.Equals("Intermediate"))
                         {
-                            XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Fair.xml");
+                            XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Medium.xml");
                             var number2 = doc.Descendants("Number");
                             var answer = doc.Descendants("Answer");
 
@@ -291,13 +294,13 @@ namespace JuniorMathsApp1
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
-                                equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
+                                equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("=") + 1);
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
                                 //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
 
 
-                                if (getQuestString.Equals(id))
+                                if (id.Equals("" + incrementQuestions))
                                 {
 
                                     try
@@ -319,6 +322,8 @@ namespace JuniorMathsApp1
                                         {
                                             wrongAnswers = wrongAnswers + 1;
                                         }
+                                        txtRight.Text = "Number Of Correct Answers: (" + rightAnswer + ")";
+                                        txtWrong.Text = "Number Of Wrong Answers: (" + wrongAnswers + ")";
 
 
                                     }
@@ -355,13 +360,13 @@ namespace JuniorMathsApp1
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
-                                equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
+                                equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("=") + 1);
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
                                 //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
 
 
-                                if (getQuestString.Equals(id))
+                                if (id.Equals("" + incrementQuestions))
                                 {
 
                                     try
@@ -383,6 +388,8 @@ namespace JuniorMathsApp1
                                         {
                                             wrongAnswers = wrongAnswers + 1;
                                         }
+                                        txtRight.Text = "Number Of Correct Answers: (" + rightAnswer + ")";
+                                        txtWrong.Text = "Number Of Wrong Answers: (" + wrongAnswers + ")";
 
 
                                     }
@@ -398,8 +405,6 @@ namespace JuniorMathsApp1
 
                         }
 
-                        txtRight.Text = "Number Of Correct Answers: (" + rightAnswer + ")";
-                        txtWrong.Text = "Number Of Wrong Answers: (" + wrongAnswers + ")";
 
                         lblCompletedQuestion.Text = "" + count;
 
@@ -455,6 +460,7 @@ namespace JuniorMathsApp1
         {
             try
             {
+                incrementQuestions = incrementQuestions + 1;
                 count = (count + 1);
                 //get the random number to select a random question: Conver the number to a string
                 int getQuest = getRandomQuestion();
@@ -498,7 +504,7 @@ namespace JuniorMathsApp1
                                 //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
 
 
-                                if (getQuestString.Equals(id))
+                                if (id.Equals("" + incrementQuestions))
                                 {
 
                                     try
@@ -520,6 +526,8 @@ namespace JuniorMathsApp1
                                         {
                                             wrongAnswers = wrongAnswers + 1;
                                         }
+                                        txtRight.Text = "Number Of Correct Answers: (" + rightAnswer + ")";
+                                        txtWrong.Text = "Number Of Wrong Answers: (" + wrongAnswers + ")";
 
 
                                     }
@@ -534,9 +542,9 @@ namespace JuniorMathsApp1
                             }
 
                         }
-                        else if (getTestDifficulty.Equals("Fair"))
+                        else if (getTestDifficulty.Equals("Intermediate"))
                         {
-                            XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Fair.xml");
+                            XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Medium.xml");
                             var number2 = doc.Descendants("Number");
                             var answer = doc.Descendants("Answer");
 
@@ -556,13 +564,13 @@ namespace JuniorMathsApp1
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
-                                equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
+                                equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("=") + 1);
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
                                 //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
 
 
-                                if (getQuestString.Equals(id))
+                                if (id.Equals("" + incrementQuestions))
                                 {
 
                                     try
@@ -584,6 +592,8 @@ namespace JuniorMathsApp1
                                         {
                                             wrongAnswers = wrongAnswers + 1;
                                         }
+                                        txtRight.Text = "Number Of Correct Answers: (" + rightAnswer + ")";
+                                        txtWrong.Text = "Number Of Wrong Answers: (" + wrongAnswers + ")";
 
 
                                     }
@@ -620,13 +630,13 @@ namespace JuniorMathsApp1
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
-                                equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
+                                equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("=") + 1);
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
                                 //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
 
 
-                                if (getQuestString.Equals(id))
+                                if (id.Equals("" + incrementQuestions))
                                 {
 
                                     try
@@ -648,7 +658,8 @@ namespace JuniorMathsApp1
                                         {
                                             wrongAnswers = wrongAnswers + 1;
                                         }
-
+                                        txtRight.Text = "Number Of Correct Answers: (" + rightAnswer + ")";
+                                        txtWrong.Text = "Number Of Wrong Answers: (" + wrongAnswers + ")";
 
                                     }
                                     catch (Exception)
@@ -663,8 +674,7 @@ namespace JuniorMathsApp1
 
                         }
 
-                        txtRight.Text = "Number Of Correct Answers: (" + rightAnswer + ")";
-                        txtWrong.Text = "Number Of Wrong Answers: (" + wrongAnswers + ")";
+                        
 
                         lblCompletedQuestion.Text = "" + count;
 

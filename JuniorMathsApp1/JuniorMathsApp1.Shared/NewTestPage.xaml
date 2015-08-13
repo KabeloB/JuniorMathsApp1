@@ -12,20 +12,20 @@
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
         <TextBlock HorizontalAlignment="Left" Margin="38,39,0,0" TextWrapping="Wrap" Text="Complete all questions" VerticalAlignment="Top" FontSize="36" Foreground="#FF12B9DE"/>
-        <TextBox x:Name="txtEnterAnswer" HorizontalAlignment="Left" Margin="38,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="363"/>
         <TextBlock HorizontalAlignment="Left" Margin="107,225,0,0" TextWrapping="Wrap" Text="Enter answer here" VerticalAlignment="Top" FontSize="24" Foreground="#FF3EE60D"/>
-        <Button x:Name="btnSubmitAnswer" Content="Submit" HorizontalAlignment="Left" Margin="27,480,0,0" VerticalAlignment="Top" Width="378" Height="58" FontSize="24" Click="btnSubmitAnswer_Click" Background="#FF0E0101" BorderBrush="#FF1E4FF3"/>
-        <TextBlock HorizontalAlignment="Left" Margin="30,626,0,0" TextWrapping="Wrap" Text="Completed questions:  (" VerticalAlignment="Top" FontSize="24" Width="258" Foreground="#FF10EC10"/>
+        <Button x:Name="btnSubmitAnswer" Content="Submit" HorizontalAlignment="Left" Margin="35,480,0,0" VerticalAlignment="Top" Width="370" Height="58" FontSize="24" Click="btnSubmitAnswer_Click" Background="#FF0E0101" BorderBrush="#FF1E4FF3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="38,626,0,0" TextWrapping="Wrap" Text="Completed questions:  (" VerticalAlignment="Top" FontSize="24" Width="258" Foreground="#FF10EC10"/>
         <Button x:Name="btnCancelTest" Content="Cancel Test" HorizontalAlignment="Left" Margin="225,549,0,0" VerticalAlignment="Top" Height="58" Width="180" FontSize="24" Click="btnCancelTest_Click" Background="#FF0E0101" BorderBrush="#FFF32A0A"/>
         <TextBlock x:Name="lblCompletedQuestion" HorizontalAlignment="Left" Margin="288,626,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Foreground="#FFE41774"/>
         <TextBlock HorizontalAlignment="Left" Margin="319,626,0,0" TextWrapping="Wrap" Text="/10)" VerticalAlignment="Top" FontSize="24" Foreground="#FF1BC313"/>
-        <Button x:Name="btnStartTest" Content="Start Test" HorizontalAlignment="Left" Margin="27,410,0,0" VerticalAlignment="Top" Height="56" Width="378" FontSize="24" Click="btnStartTest_Click" Foreground="#FFE3EEED" Background="#FF110101" BorderBrush="#FF2EF10F"/>
-        <TextBlock x:Name="txtRight" HorizontalAlignment="Left" Margin="54,675,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="830"/>
-        <TextBlock x:Name="txtWrong" HorizontalAlignment="Left" Margin="54,712,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="830"/>
+        <Button x:Name="btnStartTest" Content="Start Test" HorizontalAlignment="Left" Margin="35,410,0,0" VerticalAlignment="Top" Height="56" Width="370" FontSize="24" Click="btnStartTest_Click" Foreground="#FFE3EEED" Background="#FF110101" BorderBrush="#FF2EF10F"/>
+        <TextBlock x:Name="txtRight" HorizontalAlignment="Left" Margin="38,675,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="846"/>
+        <TextBlock x:Name="txtWrong" HorizontalAlignment="Left" Margin="38,712,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="846"/>
         <TextBlock x:Name="lblEquation" HorizontalAlignment="Left" Margin="145,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="125" FontSize="48" Foreground="#FFE2E20C"/>
         <ComboBox x:Name="cbTestDifficulty" HorizontalAlignment="Left" Margin="38,357,0,0" VerticalAlignment="Top" Width="183"/>
         <TextBlock HorizontalAlignment="Left" Margin="38,324,0,0" TextWrapping="Wrap" Text="Please select difficulty and (Start test)" VerticalAlignment="Top" FontSize="24" Foreground="#FF04E0E0"/>
-        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="27,549,0,0" VerticalAlignment="Top" Width="176" Height="58" Background="#FF131001" BorderBrush="#FFDBF009" FontSize="24" Click="btnBack_Click"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="35,549,0,0" VerticalAlignment="Top" Width="168" Height="58" Background="#FF131001" BorderBrush="#FFDBF009" FontSize="24" Click="btnBack_Click"/>
+        <TextBox x:Name="txtEnterAnswer" HorizontalAlignment="Left" Margin="38,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="363"/>
 
     </Grid>
 </Page>
