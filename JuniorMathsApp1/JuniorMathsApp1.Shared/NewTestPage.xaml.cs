@@ -62,6 +62,7 @@ namespace JuniorMathsApp1
 
             btnSubmitAnswer.IsEnabled = false;
             btnCancelTest.IsEnabled = false;
+            btnBack.IsEnabled = true;
             txtEnterAnswer.IsEnabled = false;
 
 
@@ -70,7 +71,7 @@ namespace JuniorMathsApp1
 
             cbTestDifficulty.Items.Add("");
             cbTestDifficulty.Items.Add("Biginner");
-            cbTestDifficulty.Items.Add("Intermediate");
+            cbTestDifficulty.Items.Add("Fair");
             cbTestDifficulty.Items.Add("Advanced");
         }
 
@@ -185,209 +186,229 @@ namespace JuniorMathsApp1
                 //get the childs grade
                 string childGrade = objRegChild.Grade;
 
-                if (childGrade.Equals("Grade 1"))
+                if(childGrade.Equals("Grade 1"))
                 {
                     //Get the selected test difficulty
-                    string getTestDifficulty = (string)cbTestDifficulty.SelectedItem;
+                    string getTestDifficulty = "" + cbTestDifficulty.SelectedItem;
 
                     if (getTestDifficulty.Equals(""))
                     {
                         btnSubmitAnswer.IsEnabled = false;
                         btnCancelTest.IsEnabled = false;
+                        btnBack.IsEnabled = true;
                         txtEnterAnswer.IsEnabled = false;
 
-                        messageBox("Please select a difficulty level first before proceeding!");
+                        string msg = "Please select a difficulty level first before proceeding!";
+                        messageBox(msg);
                     }
-                    else if (getTestDifficulty.Equals("Biginner"))
+                    else
                     {
-                        btnSubmitAnswer.IsEnabled = true;
-                        btnCancelTest.IsEnabled = true;
-                        txtEnterAnswer.IsEnabled = true;
-                        cbTestDifficulty.IsEnabled = false;
-                        btnStartTest.IsEnabled = false;
-
-
-                        XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Beginner.xml");
-                        var number1 = doc.Descendants("Number");
-                        var answer = doc.Descendants("Answer");
-
-                        foreach (var numberOne in number1)
+                        //Put this block of code in the ELSE BLOCK
+                        if (getTestDifficulty.Equals("Biginner"))
                         {
-                            string id = "";
-                            string equation = "";
-                            string answer1 = "";
-                            string childsAnswer1 = "";
-
-                            int fullLength = numberOne.Value.Length;
-                            id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("-"));
-                            equation = numberOne.Value.Substring(numberOne.Value.IndexOf("-") + 1, numberOne.Value.IndexOf("=") - 1);
-                            answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
-
-                            //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
+                            btnSubmitAnswer.IsEnabled = true;
+                            btnCancelTest.IsEnabled = true;
+                            btnBack.IsEnabled = false;
+                            txtEnterAnswer.IsEnabled = true;
+                            cbTestDifficulty.IsEnabled = false;
+                            btnStartTest.IsEnabled = false;
 
 
-                            if (getQuestString.Equals(id))
+                            XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Beginner.xml");
+                            var number1 = doc.Descendants("Number");
+                            var answer = doc.Descendants("Answer");
+
+                            foreach (var numberOne in number1)
                             {
+                                string id = "";
+                                string equation = "";
+                                string answer1 = "";
+                                string childsAnswer1 = "";
 
-                                try
+                                int fullLength = numberOne.Value.Length;
+                                id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
+                                equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("=") - 1);
+                                answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
+
+                                //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
+
+
+                                if (getQuestString.Equals(id))
                                 {
-                                    //Display the equation and allow user to enter the answer
-                                    lblEquation.Text = equation;
-                                    childsAnswer1 = txtEnterAnswer.Text;
-                                    //txtEnterAnswer.Text = "" + answer1;
 
-                                    int convertSysterAnswer = Convert.ToInt32(answer1);
-                                    int convertChildAnswer = Convert.ToInt32(childsAnswer1);
-
-                                    //Code for checking whether the answer is correct
-                                    if(convertSysterAnswer == convertChildAnswer)
+                                    try
                                     {
-                                        rightAnswer = rightAnswer + 1;
+                                        //Display the equation and allow user to enter the answer
+                                        lblEquation.Text = equation;
+                                        childsAnswer1 = txtEnterAnswer.Text;
+                                        //txtEnterAnswer.Text = "" + answer1;
+
+                                        int convertSysterAnswer = Convert.ToInt32(answer1);
+                                        int convertChildAnswer = Convert.ToInt32(childsAnswer1);
+
+                                        //Code for checking whether the answer is correct
+                                        if (convertSysterAnswer == convertChildAnswer)
+                                        {
+                                            rightAnswer = rightAnswer + 1;
+                                        }
+                                        else
+                                        {
+                                            wrongAnswers = wrongAnswers + 1;
+                                        }
+
+
                                     }
-                                    else
+                                    catch (Exception)
                                     {
-                                        wrongAnswers = wrongAnswers + 1;
+
                                     }
 
 
                                 }
-                                catch (Exception)
+
+                            }
+
+                        }
+                        else if (getTestDifficulty.Equals("Fair"))
+                        {
+                            XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Fair.xml");
+                            var number2 = doc.Descendants("Number");
+                            var answer = doc.Descendants("Answer");
+
+                            btnSubmitAnswer.IsEnabled = true;
+                            btnCancelTest.IsEnabled = true;
+                            btnBack.IsEnabled = false;
+                            txtEnterAnswer.IsEnabled = true;
+                            cbTestDifficulty.IsEnabled = false;
+                            btnStartTest.IsEnabled = false;
+
+                            foreach (var numberOne in number2)
+                            {
+                                string id = "";
+                                string equation = "";
+                                string answer1 = "";
+                                string childsAnswer1 = "";
+
+                                int fullLength = numberOne.Value.Length;
+                                id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
+                                equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
+                                answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
+
+                                //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
+
+
+                                if (getQuestString.Equals(id))
                                 {
+
+                                    try
+                                    {
+                                        //Display the equation and allow user to enter the answer
+                                        lblEquation.Text = equation;
+                                        childsAnswer1 = txtEnterAnswer.Text;
+                                        //txtEnterAnswer.Text = answer1;
+
+                                        int convertSysterAnswer = Convert.ToInt32(answer1);
+                                        int convertChildAnswer = Convert.ToInt32(childsAnswer1);
+
+                                        //Code for checking whether the answer is correct
+                                        if (convertSysterAnswer == convertChildAnswer)
+                                        {
+                                            rightAnswer = rightAnswer + 1;
+                                        }
+                                        else
+                                        {
+                                            wrongAnswers = wrongAnswers + 1;
+                                        }
+
+
+                                    }
+                                    catch (Exception)
+                                    {
+
+                                    }
+
 
                                 }
 
+                            }
+
+                        }
+                        else if (getTestDifficulty.Equals("Advanced"))
+                        {
+                            XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Advanced.xml");
+                            var number3 = doc.Descendants("Number");
+                            var answer = doc.Descendants("Answer");
+
+                            btnSubmitAnswer.IsEnabled = true;
+                            btnCancelTest.IsEnabled = true;
+                            btnBack.IsEnabled = false;
+                            txtEnterAnswer.IsEnabled = true;
+                            cbTestDifficulty.IsEnabled = false;
+                            btnStartTest.IsEnabled = false;
+
+                            foreach (var numberOne in number3)
+                            {
+                                string id = "";
+                                string equation = "";
+                                string answer1 = "";
+                                string childsAnswer1 = "";
+
+                                int fullLength = numberOne.Value.Length;
+                                id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
+                                equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
+                                answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
+
+                                //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
+
+
+                                if (getQuestString.Equals(id))
+                                {
+
+                                    try
+                                    {
+                                        //Display the equation and allow user to enter the answer
+                                        lblEquation.Text = equation;
+                                        childsAnswer1 = txtEnterAnswer.Text;
+                                        //txtEnterAnswer.Text = answer1;
+
+                                        int convertSysterAnswer = Convert.ToInt32(answer1);
+                                        int convertChildAnswer = Convert.ToInt32(childsAnswer1);
+
+                                        //Code for checking whether the answer is correct
+                                        if (convertSysterAnswer == convertChildAnswer)
+                                        {
+                                            rightAnswer = rightAnswer + 1;
+                                        }
+                                        else
+                                        {
+                                            wrongAnswers = wrongAnswers + 1;
+                                        }
+
+
+                                    }
+                                    catch (Exception)
+                                    {
+
+                                    }
+
+
+                                }
 
                             }
 
                         }
 
-                    }
-                    else if(getTestDifficulty.Equals("Intermediate"))
-                    {
-                        btnSubmitAnswer.IsEnabled = true;
-                        btnCancelTest.IsEnabled = true;
-                        txtEnterAnswer.IsEnabled = true;
-                        cbTestDifficulty.IsEnabled = false;
-                        btnStartTest.IsEnabled = false;
+                        txtRight.Text = "Number Of Correct Answers: (" + rightAnswer + ")";
+                        txtWrong.Text = "Number Of Wrong Answers: (" + wrongAnswers + ")";
 
-                        XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Intermediate.xml");
-                        var number1 = doc.Descendants("Number");
-                        var answer = doc.Descendants("Answer");
+                        lblCompletedQuestion.Text = "" + count;
 
-                        foreach (var numberOne in number1)
-                        {
-                            string id = "";
-                            string equation = "";
-                            string answer1 = "";
-                            string childsAnswer1 = "";
-
-                            int fullLength = numberOne.Value.Length;
-                            id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("-"));
-                            equation = numberOne.Value.Substring(numberOne.Value.IndexOf("-") + 1, numberOne.Value.IndexOf("=") - 1);
-                            answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
-
-                            //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
-
-
-                            if (getQuestString.Equals(id))
-                            {
-
-                                try
-                                {
-                                    //Display the equation and allow user to enter the answer
-                                    lblEquation.Text = equation;
-                                    childsAnswer1 = txtEnterAnswer.Text;
-                                    //txtEnterAnswer.Text = "" + answer1;
-
-                                    int convertSysterAnswer = Convert.ToInt32(answer1);
-                                    int convertChildAnswer = Convert.ToInt32(childsAnswer1);
-
-                                    //Code for checking whether the answer is correct
-                                    if (convertSysterAnswer == convertChildAnswer)
-                                    {
-                                        rightAnswer = rightAnswer + 1;
-                                    }
-                                    else
-                                    {
-                                        wrongAnswers = wrongAnswers + 1;
-                                    }
-
-
-                                }
-                                catch (Exception)
-                                {
-
-                                }
-
-
-                            }
-
-                        }
 
                     }
-                    else if(getTestDifficulty.Equals("Advanced"))
-                    {
-                        XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Advanced.xml");
-                        var number1 = doc.Descendants("Number");
-                        var answer = doc.Descendants("Answer");
-
-                        btnSubmitAnswer.IsEnabled = true;
-                        btnCancelTest.IsEnabled = true;
-                        txtEnterAnswer.IsEnabled = true;
-                        cbTestDifficulty.IsEnabled = false;
-                        btnStartTest.IsEnabled = false;
-
-                        foreach (var numberOne in number1)
-                        {
-                            string id = "";
-                            string equation = "";
-                            string answer1 = "";
-                            string childsAnswer1 = "";
-
-                            int fullLength = numberOne.Value.Length;
-                            id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("-"));
-                            equation = numberOne.Value.Substring(numberOne.Value.IndexOf("-") + 1, numberOne.Value.IndexOf("=") - 1);
-                            answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
-
-                            //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
 
 
-                            if (getQuestString.Equals(id))
-                            {
 
-                                try
-                                {
-                                    //Display the equation and allow user to enter the answer
-                                    lblEquation.Text = equation;
-                                    childsAnswer1 = txtEnterAnswer.Text;
-                                    //txtEnterAnswer.Text = answer1;
-
-                                    int convertSysterAnswer = Convert.ToInt32(answer1);
-                                    int convertChildAnswer = Convert.ToInt32(childsAnswer1);
-
-                                    //Code for checking whether the answer is correct
-                                    if (convertSysterAnswer == convertChildAnswer)
-                                    {
-                                        rightAnswer = rightAnswer + 1;
-                                    }
-                                    else
-                                    {
-                                        wrongAnswers = wrongAnswers + 1;
-                                    }
-
-
-                                }
-                                catch (Exception)
-                                {
-
-                                }
-
-
-                            }
-
-                        }
-
-                    }
+                    
                 }
                 else if (childGrade.Equals("Grade 2"))
                 {
@@ -402,10 +423,7 @@ namespace JuniorMathsApp1
             {
 
             }
-            txtRight.Text = "Number Of Correct Answers: (" + rightAnswer + ")";
-            txtWrong.Text = "Number Of Wrong Answers: (" + wrongAnswers + ")";
-
-            lblCompletedQuestion.Text = "" + count;
+            
             
         }
 
@@ -448,205 +466,214 @@ namespace JuniorMathsApp1
                 if (childGrade.Equals("Grade 1"))
                 {
                     //Get the selected test difficulty
-                    string getTestDifficulty = (string)cbTestDifficulty.SelectedItem;
+                    string getTestDifficulty = "" + cbTestDifficulty.SelectedItem;
 
-                    if (getTestDifficulty.Equals(""))
-                    {
-                        btnSubmitAnswer.IsEnabled = false;
-                        btnCancelTest.IsEnabled = false;
-                        txtEnterAnswer.IsEnabled = false;
-
-                        messageBox("Please select a difficulty level first before proceeding!");
-                    }
-                    else if (getTestDifficulty.Equals("Biginner"))
-                    {
-                        XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Beginner.xml");
-                        var number1 = doc.Descendants("Number");
-                        var answer = doc.Descendants("Answer");
-
-                        btnSubmitAnswer.IsEnabled = true;
-                        btnCancelTest.IsEnabled = true;
-                        txtEnterAnswer.IsEnabled = true;
-                        cbTestDifficulty.IsEnabled = false;
-                        btnStartTest.IsEnabled = false;
-
-                        foreach (var numberOne in number1)
+                        //Put this block of code in the ELSE BLOCK
+                        if (getTestDifficulty.Equals("Biginner"))
                         {
-                            string id = "";
-                            string equation = "";
-                            string answer1 = "";
-                            string childsAnswer1 = "";
-
-                            int fullLength = numberOne.Value.Length;
-                            id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("-"));
-                            equation = numberOne.Value.Substring(numberOne.Value.IndexOf("-") + 1, numberOne.Value.IndexOf("=") - 1);
-                            answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
-
-                            //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
+                            btnSubmitAnswer.IsEnabled = true;
+                            btnCancelTest.IsEnabled = true;
+                            btnBack.IsEnabled = false;
+                            txtEnterAnswer.IsEnabled = true;
+                            cbTestDifficulty.IsEnabled = false;
+                            btnStartTest.IsEnabled = false;
 
 
-                            if (getQuestString.Equals(id))
+                            XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Beginner.xml");
+                            var number1 = doc.Descendants("Number");
+                            var answer = doc.Descendants("Answer");
+
+                            foreach (var numberOne in number1)
                             {
+                                string id = "";
+                                string equation = "";
+                                string answer1 = "";
+                                string childsAnswer1 = "";
 
-                                try
+                                int fullLength = numberOne.Value.Length;
+                                id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
+                                equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("=") - 1);
+                                answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
+
+                                //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
+
+
+                                if (getQuestString.Equals(id))
                                 {
-                                    //Display the equation and allow user to enter the answer
-                                    lblEquation.Text = equation;
-                                    childsAnswer1 = txtEnterAnswer.Text;
-                                    //txtEnterAnswer.Text = answer1;
 
-                                    int convertSysterAnswer = Convert.ToInt32(answer1);
-                                    int convertChildAnswer = Convert.ToInt32(childsAnswer1);
-
-                                    //Code for checking whether the answer is correct
-                                    if (convertSysterAnswer == convertChildAnswer)
+                                    try
                                     {
-                                        rightAnswer = rightAnswer + 1;
+                                        //Display the equation and allow user to enter the answer
+                                        lblEquation.Text = equation;
+                                        childsAnswer1 = txtEnterAnswer.Text;
+                                        //txtEnterAnswer.Text = "" + answer1;
+
+                                        int convertSysterAnswer = Convert.ToInt32(answer1);
+                                        int convertChildAnswer = Convert.ToInt32(childsAnswer1);
+
+                                        //Code for checking whether the answer is correct
+                                        if (convertSysterAnswer == convertChildAnswer)
+                                        {
+                                            rightAnswer = rightAnswer + 1;
+                                        }
+                                        else
+                                        {
+                                            wrongAnswers = wrongAnswers + 1;
+                                        }
+
+
                                     }
-                                    else
+                                    catch (Exception)
                                     {
-                                        wrongAnswers = wrongAnswers + 1;
+
                                     }
 
 
                                 }
-                                catch (Exception)
+
+                            }
+
+                        }
+                        else if (getTestDifficulty.Equals("Fair"))
+                        {
+                            XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Fair.xml");
+                            var number2 = doc.Descendants("Number");
+                            var answer = doc.Descendants("Answer");
+
+                            btnSubmitAnswer.IsEnabled = true;
+                            btnCancelTest.IsEnabled = true;
+                            btnBack.IsEnabled = false;
+                            txtEnterAnswer.IsEnabled = true;
+                            cbTestDifficulty.IsEnabled = false;
+                            btnStartTest.IsEnabled = false;
+
+                            foreach (var numberOne in number2)
+                            {
+                                string id = "";
+                                string equation = "";
+                                string answer1 = "";
+                                string childsAnswer1 = "";
+
+                                int fullLength = numberOne.Value.Length;
+                                id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
+                                equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
+                                answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
+
+                                //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
+
+
+                                if (getQuestString.Equals(id))
                                 {
+
+                                    try
+                                    {
+                                        //Display the equation and allow user to enter the answer
+                                        lblEquation.Text = equation;
+                                        childsAnswer1 = txtEnterAnswer.Text;
+                                        //txtEnterAnswer.Text = answer1;
+
+                                        int convertSysterAnswer = Convert.ToInt32(answer1);
+                                        int convertChildAnswer = Convert.ToInt32(childsAnswer1);
+
+                                        //Code for checking whether the answer is correct
+                                        if (convertSysterAnswer == convertChildAnswer)
+                                        {
+                                            rightAnswer = rightAnswer + 1;
+                                        }
+                                        else
+                                        {
+                                            wrongAnswers = wrongAnswers + 1;
+                                        }
+
+
+                                    }
+                                    catch (Exception)
+                                    {
+
+                                    }
+
 
                                 }
 
+                            }
+
+                        }
+                        else if (getTestDifficulty.Equals("Advanced"))
+                        {
+                            XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Advanced.xml");
+                            var number3 = doc.Descendants("Number");
+                            var answer = doc.Descendants("Answer");
+
+                            btnSubmitAnswer.IsEnabled = true;
+                            btnCancelTest.IsEnabled = true;
+                            btnBack.IsEnabled = false;
+                            txtEnterAnswer.IsEnabled = true;
+                            cbTestDifficulty.IsEnabled = false;
+                            btnStartTest.IsEnabled = false;
+
+                            foreach (var numberOne in number3)
+                            {
+                                string id = "";
+                                string equation = "";
+                                string answer1 = "";
+                                string childsAnswer1 = "";
+
+                                int fullLength = numberOne.Value.Length;
+                                id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
+                                equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
+                                answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
+
+                                //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
+
+
+                                if (getQuestString.Equals(id))
+                                {
+
+                                    try
+                                    {
+                                        //Display the equation and allow user to enter the answer
+                                        lblEquation.Text = equation;
+                                        childsAnswer1 = txtEnterAnswer.Text;
+                                        //txtEnterAnswer.Text = answer1;
+
+                                        int convertSysterAnswer = Convert.ToInt32(answer1);
+                                        int convertChildAnswer = Convert.ToInt32(childsAnswer1);
+
+                                        //Code for checking whether the answer is correct
+                                        if (convertSysterAnswer == convertChildAnswer)
+                                        {
+                                            rightAnswer = rightAnswer + 1;
+                                        }
+                                        else
+                                        {
+                                            wrongAnswers = wrongAnswers + 1;
+                                        }
+
+
+                                    }
+                                    catch (Exception)
+                                    {
+
+                                    }
+
+
+                                }
 
                             }
 
                         }
 
-                    }
-                    else if (getTestDifficulty.Equals("Intermediate"))
-                    {
-                        XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Intermediate.xml");
-                        var number1 = doc.Descendants("Number");
-                        var answer = doc.Descendants("Answer");
+                        txtRight.Text = "Number Of Correct Answers: (" + rightAnswer + ")";
+                        txtWrong.Text = "Number Of Wrong Answers: (" + wrongAnswers + ")";
 
-                        btnSubmitAnswer.IsEnabled = true;
-                        btnCancelTest.IsEnabled = true;
-                        txtEnterAnswer.IsEnabled = true;
-                        cbTestDifficulty.IsEnabled = false;
-                        btnStartTest.IsEnabled = false;
-
-                        foreach (var numberOne in number1)
-                        {
-                            string id = "";
-                            string equation = "";
-                            string answer1 = "";
-                            string childsAnswer1 = "";
-
-                            int fullLength = numberOne.Value.Length;
-                            id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("-"));
-                            equation = numberOne.Value.Substring(numberOne.Value.IndexOf("-") + 1, numberOne.Value.IndexOf("=") - 1);
-                            answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
-
-                            //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
+                        lblCompletedQuestion.Text = "" + count;
 
 
-                            if (getQuestString.Equals(id))
-                            {
-
-                                try
-                                {
-                                    //Display the equation and allow user to enter the answer
-                                    lblEquation.Text = equation;
-                                    childsAnswer1 = txtEnterAnswer.Text;
-                                    //txtEnterAnswer.Text = answer1;
-
-                                    int convertSysterAnswer = Convert.ToInt32(answer1);
-                                    int convertChildAnswer = Convert.ToInt32(childsAnswer1);
-
-                                    //Code for checking whether the answer is correct
-                                    if (convertSysterAnswer == convertChildAnswer)
-                                    {
-                                        rightAnswer = rightAnswer + 1;
-                                    }
-                                    else
-                                    {
-                                        wrongAnswers = wrongAnswers + 1;
-                                    }
+                    
 
 
-                                }
-                                catch (Exception)
-                                {
-
-                                }
 
 
-                            }
-
-                        }
-
-                    }
-                    else if (getTestDifficulty.Equals("Advanced"))
-                    {
-                        XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Advanced.xml");
-                        var number1 = doc.Descendants("Number");
-                        var answer = doc.Descendants("Answer");
-
-                        btnSubmitAnswer.IsEnabled = true;
-                        btnCancelTest.IsEnabled = true;
-                        txtEnterAnswer.IsEnabled = true;
-                        cbTestDifficulty.IsEnabled = false;
-                        btnStartTest.IsEnabled = false;
-
-                        foreach (var numberOne in number1)
-                        {
-                            string id = "";
-                            string equation = "";
-                            string answer1 = "";
-                            string childsAnswer1 = "";
-
-                            int fullLength = numberOne.Value.Length;
-                            id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("-"));
-                            equation = numberOne.Value.Substring(numberOne.Value.IndexOf("-") + 1, numberOne.Value.IndexOf("=") - 1);
-                            answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
-
-                            //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
-
-
-                            if (getQuestString.Equals(id))
-                            {
-
-                                try
-                                {
-                                    //Display the equation and allow user to enter the answer
-                                    lblEquation.Text = equation;
-                                    childsAnswer1 = txtEnterAnswer.Text;
-                                    //txtEnterAnswer.Text = answer1;
-
-                                    int convertSysterAnswer = Convert.ToInt32(answer1);
-                                    int convertChildAnswer = Convert.ToInt32(childsAnswer1);
-
-                                    //Code for checking whether the answer is correct
-                                    if (convertSysterAnswer == convertChildAnswer)
-                                    {
-                                        rightAnswer = rightAnswer + 1;
-                                    }
-                                    else
-                                    {
-                                        wrongAnswers = wrongAnswers + 1;
-                                    }
-
-
-                                }
-                                catch (Exception)
-                                {
-
-                                }
-
-
-                            }
-
-                        }
-
-                    }
                 }
                 else if (childGrade.Equals("Grade 2"))
                 {
@@ -660,183 +687,13 @@ namespace JuniorMathsApp1
 
             }
 
-            txtRight.Text = "Number Of Correct Answers: (" + rightAnswer + ")";
-            txtWrong.Text = "Number Of Wrong Answers: (" + wrongAnswers + ")";
-
-            lblCompletedQuestion.Text = "" + count;
             return count;
 
-            
-            /*
-            //get the random number to select a random question: Conver the number to a string
-            int getQuest = getRandomQuestion();
-            string getQuestString = getQuest.ToString();
+        }
 
-
-            XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Grade1.xml");
-            var number1 = doc.Descendants("Number");
-            string id = "";
-            string num1 = "";
-            string num2 = "";
-
-            foreach (var numberOne in number1)
-            {
-                int fullLength = numberOne.Value.Length;
-                id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("/"));
-                num1 = numberOne.Value.Substring(numberOne.Value.IndexOf("/") + 1, numberOne.Value.IndexOf("-") - 2);
-                num2 = numberOne.Value.Substring(numberOne.Value.IndexOf("-") + 1);
-
-                //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
-
-
-                if (getQuestString.Equals(id))
-                {
-
-                    try
-                    {
-                        count = (count + 1);
-
-                        getRandom1 = Convert.ToInt32(num1);
-                        getRandom2 = Convert.ToInt32(num2);
-
-                        lblFirstNum.Text = "" + getRandom1;
-                        lblSecondNum.Text = "" + getRandom2;
-
-                        string strOperand = "";
-
-
-                        int getTheOperand = getOperand();
-
-                        if (getTheOperand == 1)
-                        {
-                            //Addition
-                            strOperand = "+";
-                            lblOperator.Text = strOperand;
-                            systemAnswer = (getRandom1 + getRandom2);
-                            txtEnterAnswer.Text = systemAnswer + "";
-
-
-                            //Code for checking whether the answer is correct
-                            childsAnswer = "" + txtEnterAnswer.Text;
-                            convChildAnswer = Convert.ToInt32(childsAnswer);
-
-                            if (systemAnswer.ToString().Equals(txtEnterAnswer.Text))
-                            {
-                                rightAnswer = rightAnswer + 1;
-                            }
-                            else if (systemAnswer != convChildAnswer)
-                            {
-                                wrongAnswers = wrongAnswers + 1;
-                            }
-
-                        }
-                        else if (getTheOperand == 2)
-                        {
-                            //Subtraction
-                            strOperand = "-";
-                            lblOperator.Text = strOperand;
-
-                            if (getRandom1 > getRandom2)
-                            {
-                                systemAnswer = (getRandom1 - getRandom2);
-                                txtEnterAnswer.Text = systemAnswer + "";
-
-                                //Code for checking whether the answer is correct
-                                childsAnswer = "" + txtEnterAnswer.Text;
-                                convChildAnswer = Convert.ToInt32(txtEnterAnswer.Text);
-
-                                if (systemAnswer == convChildAnswer)
-                                {
-                                    rightAnswer = rightAnswer + 1;
-                                }
-                                else if (systemAnswer != convChildAnswer)
-                                {
-                                    wrongAnswers = wrongAnswers + 1;
-                                }
-                            }
-                            else if (getRandom1 < getRandom2)
-                            {
-                                lblFirstNum.Text = "" + getRandom2;
-                                lblSecondNum.Text = "" + getRandom1;
-
-
-                                systemAnswer = (getRandom2 - getRandom1);
-                                txtEnterAnswer.Text = systemAnswer + "";
-
-                                //Code for checking whether the answer is correct
-                                childsAnswer = "" + txtEnterAnswer.Text;
-                                convChildAnswer = Convert.ToInt32(txtEnterAnswer.Text);
-
-                                if (systemAnswer == convChildAnswer)
-                                {
-                                    rightAnswer = rightAnswer + 1;
-                                }
-                                else if (systemAnswer != convChildAnswer)
-                                {
-                                    wrongAnswers = wrongAnswers + 1;
-                                }
-                            }
-                            else if (getRandom1 == getRandom2)
-                            {
-                                systemAnswer = (getRandom1 - getRandom2);
-                                txtEnterAnswer.Text = systemAnswer + "";
-
-                                //Code for checking whether the answer is correct
-                                childsAnswer = "" + txtEnterAnswer.Text;
-                                convChildAnswer = Convert.ToInt32(txtEnterAnswer.Text);
-
-                                if (systemAnswer == convChildAnswer)
-                                {
-                                    rightAnswer = rightAnswer + 1;
-                                }
-                                else if (systemAnswer != convChildAnswer)
-                                {
-                                    wrongAnswers = wrongAnswers + 1;
-                                }
-                            }
-
-                        }
-                        else if (getTheOperand == 3)
-                        {
-
-                            //Multiplication
-                            strOperand = "x";
-                            lblOperator.Text = strOperand;
-                            systemAnswer = (getRandom1 * getRandom2);
-                            txtEnterAnswer.Text = systemAnswer + "";
-
-                            //Code for checking whether the answer is correct
-                            childsAnswer = "" + txtEnterAnswer.Text;
-                            convChildAnswer = Convert.ToInt32(txtEnterAnswer.Text);
-
-                            if (systemAnswer == convChildAnswer)
-                            {
-                                rightAnswer = rightAnswer + 1;
-
-                            }
-                            else if (systemAnswer != convChildAnswer)
-                            {
-                                wrongAnswers = wrongAnswers + 1;
-
-                            }
-                        }
-
-                        txtRight.Text = "Number Of Correct Answers: (" + rightAnswer + ")";
-                        txtWrong.Text = "Number Of Wrong Answers: " + wrongAnswers + ")";
-
-                    }
-                    catch (Exception)
-                    {
-
-                    }
-
-
-                }
-
-            }
-            */
-
-            
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SelectChildToTakeTestPage), parentID);
         }
 
 
