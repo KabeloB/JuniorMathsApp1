@@ -663,7 +663,7 @@ namespace JuniorMathsApp1
 
             lblCompletedQuestion.Text = "" + countResult;
 
-            if (countResult >= 10)
+            if (countResult > 10)
             {
                 int getInsertResult = objTest.insertTestResults(childID, rightAnswer, wrongAnswers, objDate.ToString());
 

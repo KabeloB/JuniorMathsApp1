@@ -96,7 +96,7 @@ namespace JuniorMathsApp1
         {
             //Debug.WriteLine("Selected: {0}", e.AddedItems[0]);
             objItems = "" + e.AddedItems[0];
-            idNum = objItems.Substring(0, 1);
+            idNum = objItems.Substring(0, objItems.IndexOf("-"));
             name = objItems.Substring(2, objItems.IndexOf("_") - 2);
         }
 

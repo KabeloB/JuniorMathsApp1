@@ -16,7 +16,7 @@
         <Button x:ConnectionId='2' x:Name="btnView" Content="View test records" HorizontalAlignment="Left" Margin="43,578,0,0" VerticalAlignment="Top"                       Width="188" Background="#FF110F0F" BorderBrush="#FF3BD418"/>
         <Button x:ConnectionId='3' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="287,644,0,0" VerticalAlignment="Top" Width="198"                       Background="#FF111010" BorderBrush="#FF8D0FD4"/>
         <Button x:ConnectionId='4' x:Name="btnDeleteChild" Content="Delete" HorizontalAlignment="Left" Margin="287,578,0,0" VerticalAlignment="Top" Width="198"                              Background="#FF0F0D0D" BorderBrush="#FFE01745"/>
-        <Button x:ConnectionId='5' x:Name="btnEditChildDetails" Content="Edit Details" HorizontalAlignment="Left" Margin="43,644,0,0" VerticalAlignment="Top" Width="188"                                   Background="#FF111010" BorderBrush="#FF23CFCF"/>
+        <Button x:ConnectionId='5' x:Name="btnEditChildDetails" Content="Edit Child Details" HorizontalAlignment="Left" Margin="43,644,0,0" VerticalAlignment="Top" Width="188"                                   Background="#FF111010" BorderBrush="#FF23CFCF"/>
 
     </Grid>
 </Page>
