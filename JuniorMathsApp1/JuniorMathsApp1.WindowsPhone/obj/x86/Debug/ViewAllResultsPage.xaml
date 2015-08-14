@@ -7,13 +7,18 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock HorizontalAlignment="Left" Margin="21,35,0,0" TextWrapping="Wrap" Text="View all previous test results" VerticalAlignment="Top" Height="46" Width="456" FontSize="36"/>
-        <TextBlock HorizontalAlignment="Left" Margin="31,104,0,0" TextWrapping="Wrap" Text="All Results:" VerticalAlignment="Top" Height="25" Width="148" FontSize="20"/>
-        <Button x:ConnectionId='1' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="28,634,0,0" VerticalAlignment="Top" Width="176"                      />
-        <Button x:ConnectionId='2' x:Name="btnReturnMainMenu" Content="Return to main menu" HorizontalAlignment="Left" Margin="304,634,0,0" VerticalAlignment="Top"                                />
-        <ListView x:Name="lsViewTest" HorizontalAlignment="Left" Height="458" Margin="31,153,0,0" VerticalAlignment="Top" Width="446"/>
-        <TextBox x:Name="txtChId" HorizontalAlignment="Left" Margin="627,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282"/>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
+        </Grid.Background>
+        <TextBlock HorizontalAlignment="Left" Margin="111,74,0,0" TextWrapping="Wrap" Text="View all previous test results" VerticalAlignment="Top" Height="46" Width="456" FontSize="36" Foreground="#FF19F1E8"/>
+        <TextBlock HorizontalAlignment="Left" Margin="31,167,0,0" TextWrapping="Wrap" Text="All Results:" VerticalAlignment="Top" Height="25" Width="148" FontSize="24" Foreground="#FF19DC19"/>
+        <Button x:ConnectionId='1' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="386,646,0,0" VerticalAlignment="Top" Width="213"                       Height="43" Background="#FF0F0101" BorderBrush="#FFF31111"/>
+        <Button x:ConnectionId='2' x:Name="btnReturnMainMenu" Content="Return to main menu" HorizontalAlignment="Left" Margin="87,646,0,0" VerticalAlignment="Top"                                 Height="43" Width="213" Background="#FF011501" BorderBrush="#FF2FEA12"/>
+        <ListView x:Name="lsViewTest" HorizontalAlignment="Left" Height="406" Margin="31,220,0,0" VerticalAlignment="Top" Width="641" Foreground="#FF21DECD"/>
+        <TextBlock HorizontalAlignment="Left" Margin="31,125,0,0" TextWrapping="Wrap" Text="Results for:" VerticalAlignment="Top" Foreground="#FF18E418" FontSize="24"/>
+        <TextBlock x:Name="lblChId" HorizontalAlignment="Left" Margin="153,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="324" Foreground="#FF12F0E6"/>
+        <Button x:ConnectionId='3' x:Name="btnDeleteAll" Content="Delete all" HorizontalAlignment="Left" Margin="87,705,0,0" VerticalAlignment="Top" Height="43" Width="213" Background="#FF00010E" BorderBrush="#FF1326EA"                           />
 
     </Grid>
 </Page>

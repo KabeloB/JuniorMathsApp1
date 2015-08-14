@@ -228,7 +228,7 @@ namespace JuniorMathsApp1
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
-                                equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
+                                equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("=") - 1);
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
                                 //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
@@ -272,9 +272,9 @@ namespace JuniorMathsApp1
                             }
 
                         }
-                        else if (getTestDifficulty.Equals("Intermediate"))
+                        else if(getTestDifficulty.Equals("Intermediate"))
                         {
-                            XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Medium.xml");
+                            XDocument doc = XDocument.Load(@"Grade1QuestionsXML2\Medium.xml");
                             var number2 = doc.Descendants("Number");
                             var answer = doc.Descendants("Answer");
 
@@ -294,7 +294,7 @@ namespace JuniorMathsApp1
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
-                                equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("=") + 1);
+                                equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("=") + 2);
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
                                 //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
@@ -340,7 +340,7 @@ namespace JuniorMathsApp1
                         }
                         else if (getTestDifficulty.Equals("Advanced"))
                         {
-                            XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Advanced.xml");
+                            XDocument doc = XDocument.Load(@"Grade1QuestionsXML3\Advanced.xml");
                             var number3 = doc.Descendants("Number");
                             var answer = doc.Descendants("Answer");
 
@@ -461,6 +461,7 @@ namespace JuniorMathsApp1
             try
             {
                 incrementQuestions = incrementQuestions + 1;
+
                 count = (count + 1);
                 //get the random number to select a random question: Conver the number to a string
                 int getQuest = getRandomQuestion();
@@ -471,8 +472,8 @@ namespace JuniorMathsApp1
 
                 if (childGrade.Equals("Grade 1"))
                 {
-                    //Get the selected test difficulty
-                    string getTestDifficulty = "" + cbTestDifficulty.SelectedItem;
+                        //Get the selected test difficulty
+                        string getTestDifficulty = "" + cbTestDifficulty.SelectedItem;
 
                         //Put this block of code in the ELSE BLOCK
                         if (getTestDifficulty.Equals("Biginner"))
@@ -498,7 +499,7 @@ namespace JuniorMathsApp1
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
-                                equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("=") - 1);
+                                equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("=") + 1);
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
                                 //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
@@ -526,6 +527,7 @@ namespace JuniorMathsApp1
                                         {
                                             wrongAnswers = wrongAnswers + 1;
                                         }
+
                                         txtRight.Text = "Number Of Correct Answers: (" + rightAnswer + ")";
                                         txtWrong.Text = "Number Of Wrong Answers: (" + wrongAnswers + ")";
 
@@ -544,7 +546,7 @@ namespace JuniorMathsApp1
                         }
                         else if (getTestDifficulty.Equals("Intermediate"))
                         {
-                            XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Medium.xml");
+                            XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Beginner.xml");
                             var number2 = doc.Descendants("Number");
                             var answer = doc.Descendants("Answer");
 
@@ -610,7 +612,7 @@ namespace JuniorMathsApp1
                         }
                         else if (getTestDifficulty.Equals("Advanced"))
                         {
-                            XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Advanced.xml");
+                            XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Beginner.xml");
                             var number3 = doc.Descendants("Number");
                             var answer = doc.Descendants("Answer");
 
@@ -658,6 +660,7 @@ namespace JuniorMathsApp1
                                         {
                                             wrongAnswers = wrongAnswers + 1;
                                         }
+
                                         txtRight.Text = "Number Of Correct Answers: (" + rightAnswer + ")";
                                         txtWrong.Text = "Number Of Wrong Answers: (" + wrongAnswers + ")";
 
@@ -666,7 +669,6 @@ namespace JuniorMathsApp1
                                     {
 
                                     }
-
 
                                 }
 
@@ -677,11 +679,6 @@ namespace JuniorMathsApp1
                         
 
                         lblCompletedQuestion.Text = "" + count;
-
-
-                    
-
-
 
 
                 }
