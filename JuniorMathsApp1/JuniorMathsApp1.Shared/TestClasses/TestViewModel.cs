@@ -150,7 +150,7 @@ namespace JuniorMathsApp1.TestClasses
 
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                var result = db.Query<TestResults>("Delete from TestResults where Childid =" + childid);
+                var result = db.Query<TestResults>("Delete from TestResults where ChildId =" + childid);
 
             }
         }

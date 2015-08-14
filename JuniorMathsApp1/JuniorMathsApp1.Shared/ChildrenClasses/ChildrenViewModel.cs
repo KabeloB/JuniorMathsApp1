@@ -188,7 +188,7 @@ namespace JuniorMathsApp1.ChildrenClasses
             
             using (var db = new SQLite.SQLiteConnection(app.dbPath))
             {
-                var result = db.Query<RegisterChild>("Delete from Child where Id =" + id);
+                var result = db.Query<RegisterChild>("Delete from Child where Id =" + id );
 
             }
         }

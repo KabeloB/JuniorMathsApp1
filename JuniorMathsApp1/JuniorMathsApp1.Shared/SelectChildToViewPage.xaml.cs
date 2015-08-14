@@ -120,12 +120,17 @@ namespace JuniorMathsApp1
         {
             try
             {
+                objItems = "" + e.AddedItems[0];
+                idNum = objItems.Substring(0, objItems.IndexOf("-"));
+                name = objItems.Substring(2, objItems.IndexOf("_") - 2);
+                /*
                 objItems = "" +e.AddedItems[0];
-                idNum = objItems.Substring(0,1);
+                idNum = objItems.Substring(0, objItems.IndexOf("_"));
                 name = objItems.Substring(2, objItems.IndexOf("_"));
                 surname = objItems.Substring(objItems.IndexOf("_"), objItems.IndexOf("#"));
                 age = objItems.Substring(objItems.IndexOf("#"), objItems.IndexOf("$"));
                 grade = objItems.Substring(objItems.IndexOf("$"), objItems.Length);
+                 * */
             }
             catch(Exception)
             {
@@ -211,6 +216,7 @@ namespace JuniorMathsApp1
                 try
                 {
                     childrenViewModel.deleteChildRecords(convNum);
+                    objTestViewModel.deleteChildTestRecords(convNum);
                     strMsg = "You have successfully deleted: " + name + " from the database!";
                     messageBox(strMsg);
                     this.Frame.Navigate(typeof(MenuPage), parentId);
