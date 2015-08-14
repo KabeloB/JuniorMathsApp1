@@ -546,7 +546,7 @@ namespace JuniorMathsApp1
                         }
                         else if (getTestDifficulty.Equals("Intermediate"))
                         {
-                            XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Beginner.xml");
+                            XDocument doc = XDocument.Load(@"Grade1QuestionsXML2\Medium.xml");
                             var number2 = doc.Descendants("Number");
                             var answer = doc.Descendants("Answer");
 
@@ -612,7 +612,7 @@ namespace JuniorMathsApp1
                         }
                         else if (getTestDifficulty.Equals("Advanced"))
                         {
-                            XDocument doc = XDocument.Load(@"Grade1QuestionsXML\Beginner.xml");
+                            XDocument doc = XDocument.Load(@"Grade1QuestionsXML3\Advanced.xml");
                             var number3 = doc.Descendants("Number");
                             var answer = doc.Descendants("Answer");
 
