@@ -229,23 +229,24 @@ namespace JuniorMathsApp1
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
+                                int convertXMLid = Convert.ToInt32(id);
+
                                 equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
                                 //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
 
-                                //txtEnterAnswer.Text = "" + answer1;
-                                childsAnswer1 = txtEnterAnswer.Text;
+                               
 
-                                if (id.Equals("" + incrementQuestions))
+                                if (incrementQuestions == (convertXMLid - 1))
                                 {
 
                                     try
                                     {
                                         //Display the equation and allow user to enter the answer
                                         lblEquation.Text = equation;
-                                        
-                                        
+                                        //txtEnterAnswer.Text = "" + answer1;
+                                        childsAnswer1 = txtEnterAnswer.Text;
 
                                         int convertSysterAnswer = Convert.ToInt32(answer1);
                                         int convertChildAnswer = Convert.ToInt32(childsAnswer1);
@@ -297,6 +298,8 @@ namespace JuniorMathsApp1
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
+                                int convertXMLid = Convert.ToInt32(id);
+
                                 equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
@@ -364,6 +367,8 @@ namespace JuniorMathsApp1
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
+                                int convertXMLid = Convert.ToInt32(id);
+
                                 equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
@@ -460,6 +465,8 @@ namespace JuniorMathsApp1
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
+                                int convertXMLid = Convert.ToInt32(id);
+
                                 equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
@@ -527,6 +534,8 @@ namespace JuniorMathsApp1
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
+                                int convertXMLid = Convert.ToInt32(id);
+
                                 equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
@@ -594,6 +603,8 @@ namespace JuniorMathsApp1
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
+                                int convertXMLid = Convert.ToInt32(id);
+
                                 equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
@@ -681,7 +692,7 @@ namespace JuniorMathsApp1
         }
 
 
-        //Method to decide the type of question to be presented to the child
+        //Method to retrieve the remaining question
         public int doCalculation()
         {
             try
@@ -725,13 +736,15 @@ namespace JuniorMathsApp1
 
                             int fullLength = numberOne.Value.Length;
                             id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
+                            int convertXMLid = Convert.ToInt32(id);
+
                             equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("=") - 1);
                             answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
                             //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
 
 
-                            if (id.Equals("" + incrementQuestions))
+                            if (convertXMLid == incrementQuestions)
                             {
 
                                 try
@@ -763,7 +776,6 @@ namespace JuniorMathsApp1
 
                                 }
 
-
                             }
 
                         }
@@ -791,6 +803,8 @@ namespace JuniorMathsApp1
 
                             int fullLength = numberOne.Value.Length;
                             id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
+                            int convertXMLid = Convert.ToInt32(id);
+
                             equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
                             answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
@@ -858,6 +872,8 @@ namespace JuniorMathsApp1
 
                             int fullLength = numberOne.Value.Length;
                             id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
+                            int convertXMLid = Convert.ToInt32(id);
+
                             equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
                             answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
@@ -956,6 +972,8 @@ namespace JuniorMathsApp1
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
+                                int convertXMLid = Convert.ToInt32(id);
+
                                 equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
@@ -1023,6 +1041,8 @@ namespace JuniorMathsApp1
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
+                                int convertXMLid = Convert.ToInt32(id);
+
                                 equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
@@ -1090,6 +1110,8 @@ namespace JuniorMathsApp1
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
+                                int convertXMLid = Convert.ToInt32(id);
+
                                 equation = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 

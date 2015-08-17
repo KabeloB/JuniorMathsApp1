@@ -50,6 +50,9 @@
     <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Shared\Grade1QuestionsXML\Beginner.xml">
       <PackagePath>Grade1QuestionsXML\Beginner.xml</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Shared\Grade1QuestionsXML\Beginner1.xml">
+      <PackagePath>Grade1QuestionsXML\Beginner1.xml</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Shared\Grade2QuestionsXML2\Medium.xml">
       <PackagePath>Grade2QuestionsXML2\Medium.xml</PackagePath>
     </AppxPackagedFile>
