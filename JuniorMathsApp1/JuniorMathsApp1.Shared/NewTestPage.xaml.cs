@@ -179,10 +179,11 @@ namespace JuniorMathsApp1
                 incrementQuestions = incrementQuestions + 1;
                 count = (count + 1);
                 int systemAnswer = 0;
+                string childsAnswer1 = txtEnterAnswer.Text;
 
                 //get the random number to select a random question: Conver the number to a string
-                int getQuest = getRandomQuestion();
-                string getQuestString = getQuest.ToString();
+                //int getQuest = getRandomQuestion();
+                //string getQuestString = getQuest.ToString();
 
                 //get the childs grade
                 string childGrade = objRegChild.Grade;
@@ -199,7 +200,7 @@ namespace JuniorMathsApp1
                         btnBack.IsEnabled = true;
                         txtEnterAnswer.IsEnabled = false;
 
-                        string msg = "Please select a difficulty level first before proceeding!";
+                        string msg = "Please select a difficulty level first before proceeding with the test!";
                         messageBox(msg);
                     }
                     else
@@ -224,7 +225,7 @@ namespace JuniorMathsApp1
                                 string id = "";
                                 string equation = "";
                                 string answer1 = "";
-                                string childsAnswer1 = "";
+                                
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
@@ -233,6 +234,8 @@ namespace JuniorMathsApp1
 
                                 //lstTeams.Items.Add(id +"*" + num1 + " Last number is:"+ num2);
 
+                                //txtEnterAnswer.Text = "" + answer1;
+                                childsAnswer1 = txtEnterAnswer.Text;
 
                                 if (id.Equals("" + incrementQuestions))
                                 {
@@ -241,8 +244,7 @@ namespace JuniorMathsApp1
                                     {
                                         //Display the equation and allow user to enter the answer
                                         lblEquation.Text = equation;
-                                        txtEnterAnswer.Text = "" + answer1;
-                                        childsAnswer1 = txtEnterAnswer.Text;
+                                        
                                         
 
                                         int convertSysterAnswer = Convert.ToInt32(answer1);
@@ -291,7 +293,7 @@ namespace JuniorMathsApp1
                                 string id = "";
                                 string equation = "";
                                 string answer1 = "";
-                                string childsAnswer1 = "";
+                                //string childsAnswer1 = "";
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
@@ -308,7 +310,7 @@ namespace JuniorMathsApp1
                                     {
                                         //Display the equation and allow user to enter the answer
                                         lblEquation.Text = equation;
-                                        txtEnterAnswer.Text = answer1;
+                                        //txtEnterAnswer.Text = answer1;
                                         childsAnswer1 = txtEnterAnswer.Text;
                                         
 
@@ -358,7 +360,7 @@ namespace JuniorMathsApp1
                                 string id = "";
                                 string equation = "";
                                 string answer1 = "";
-                                string childsAnswer1 = "";
+                                //string childsAnswer1 = "";
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
@@ -375,7 +377,7 @@ namespace JuniorMathsApp1
                                     {
                                         //Display the equation and allow user to enter the answer
                                         lblEquation.Text = equation;
-                                        txtEnterAnswer.Text = answer1;
+                                        //txtEnterAnswer.Text = answer1;
                                         childsAnswer1 = txtEnterAnswer.Text;
 
                                         int convertSysterAnswer = Convert.ToInt32(answer1);
@@ -454,7 +456,7 @@ namespace JuniorMathsApp1
                                 string id = "";
                                 string equation = "";
                                 string answer1 = "";
-                                string childsAnswer1 = "";
+                                //string childsAnswer1 = "";
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
@@ -471,7 +473,7 @@ namespace JuniorMathsApp1
                                     {
                                         //Display the equation and allow user to enter the answer
                                         lblEquation.Text = equation;
-                                        txtEnterAnswer.Text = "" + answer1;
+                                        //txtEnterAnswer.Text = "" + answer1;
                                         childsAnswer1 = txtEnterAnswer.Text;
 
 
@@ -521,7 +523,7 @@ namespace JuniorMathsApp1
                                 string id = "";
                                 string equation = "";
                                 string answer1 = "";
-                                string childsAnswer1 = "";
+                                //string childsAnswer1 = "";
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
@@ -538,7 +540,7 @@ namespace JuniorMathsApp1
                                     {
                                         //Display the equation and allow user to enter the answer
                                         lblEquation.Text = equation;
-                                        txtEnterAnswer.Text = answer1;
+                                        //txtEnterAnswer.Text = answer1;
                                         childsAnswer1 = txtEnterAnswer.Text;
 
 
@@ -588,7 +590,7 @@ namespace JuniorMathsApp1
                                 string id = "";
                                 string equation = "";
                                 string answer1 = "";
-                                string childsAnswer1 = "";
+                                //string childsAnswer1 = "";
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
@@ -605,7 +607,7 @@ namespace JuniorMathsApp1
                                     {
                                         //Display the equation and allow user to enter the answer
                                         lblEquation.Text = equation;
-                                        txtEnterAnswer.Text = answer1;
+                                        //txtEnterAnswer.Text = answer1;
                                         childsAnswer1 = txtEnterAnswer.Text;
 
                                         int convertSysterAnswer = Convert.ToInt32(answer1);
@@ -663,7 +665,7 @@ namespace JuniorMathsApp1
 
             lblCompletedQuestion.Text = "" + countResult;
 
-            if (countResult > 10)
+            if (countResult > 11)
             {
                 int getInsertResult = objTest.insertTestResults(childID, rightAnswer, wrongAnswers, objDate.ToString());
 
@@ -684,6 +686,7 @@ namespace JuniorMathsApp1
         {
             try
             {
+                string childsAnswer1 = txtEnterAnswer.Text;
                 incrementQuestions = incrementQuestions + 1;
                 count = (count + 1);
                 //get the random number to select a random question: Conver the number to a string
@@ -718,7 +721,7 @@ namespace JuniorMathsApp1
                             string id = "";
                             string equation = "";
                             string answer1 = "";
-                            string childsAnswer1 = "";
+                            //string childsAnswer1 = "";
 
                             int fullLength = numberOne.Value.Length;
                             id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
@@ -735,7 +738,7 @@ namespace JuniorMathsApp1
                                 {
                                     //Display the equation and allow user to enter the answer
                                     lblEquation.Text = equation;
-                                    txtEnterAnswer.Text = "" + answer1;
+                                    //txtEnterAnswer.Text = "" + answer1;
                                     childsAnswer1 = txtEnterAnswer.Text;
 
                                     int convertSysterAnswer = Convert.ToInt32(answer1);
@@ -784,7 +787,7 @@ namespace JuniorMathsApp1
                             string id = "";
                             string equation = "";
                             string answer1 = "";
-                            string childsAnswer1 = "";
+                            //string childsAnswer1 = "";
 
                             int fullLength = numberOne.Value.Length;
                             id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
@@ -801,7 +804,7 @@ namespace JuniorMathsApp1
                                 {
                                     //Display the equation and allow user to enter the answer
                                     lblEquation.Text = equation;
-                                    txtEnterAnswer.Text = answer1;
+                                    //txtEnterAnswer.Text = answer1;
                                     childsAnswer1 = txtEnterAnswer.Text;
                                     
 
@@ -851,7 +854,7 @@ namespace JuniorMathsApp1
                             string id = "";
                             string equation = "";
                             string answer1 = "";
-                            string childsAnswer1 = "";
+                            //string childsAnswer1 = "";
 
                             int fullLength = numberOne.Value.Length;
                             id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
@@ -868,7 +871,7 @@ namespace JuniorMathsApp1
                                 {
                                     //Display the equation and allow user to enter the answer
                                     lblEquation.Text = equation;
-                                    txtEnterAnswer.Text = answer1;
+                                    //txtEnterAnswer.Text = answer1;
                                     childsAnswer1 = txtEnterAnswer.Text;
                                     
 
@@ -949,7 +952,7 @@ namespace JuniorMathsApp1
                                 string id = "";
                                 string equation = "";
                                 string answer1 = "";
-                                string childsAnswer1 = "";
+                                //string childsAnswer1 = "";
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
@@ -966,7 +969,7 @@ namespace JuniorMathsApp1
                                     {
                                         //Display the equation and allow user to enter the answer
                                         lblEquation.Text = equation;
-                                        txtEnterAnswer.Text = "" + answer1;
+                                        //txtEnterAnswer.Text = "" + answer1;
                                         childsAnswer1 = txtEnterAnswer.Text;
 
 
@@ -1016,7 +1019,7 @@ namespace JuniorMathsApp1
                                 string id = "";
                                 string equation = "";
                                 string answer1 = "";
-                                string childsAnswer1 = "";
+                                //string childsAnswer1 = "";
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
@@ -1033,7 +1036,7 @@ namespace JuniorMathsApp1
                                     {
                                         //Display the equation and allow user to enter the answer
                                         lblEquation.Text = equation;
-                                        txtEnterAnswer.Text = answer1;
+                                        //txtEnterAnswer.Text = answer1;
                                         childsAnswer1 = txtEnterAnswer.Text;
 
 
@@ -1083,7 +1086,7 @@ namespace JuniorMathsApp1
                                 string id = "";
                                 string equation = "";
                                 string answer1 = "";
-                                string childsAnswer1 = "";
+                                //string childsAnswer1 = "";
 
                                 int fullLength = numberOne.Value.Length;
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
@@ -1100,7 +1103,7 @@ namespace JuniorMathsApp1
                                     {
                                         //Display the equation and allow user to enter the answer
                                         lblEquation.Text = equation;
-                                        txtEnterAnswer.Text = answer1;
+                                        //txtEnterAnswer.Text = answer1;
                                         childsAnswer1 = txtEnterAnswer.Text;
 
                                         int convertSysterAnswer = Convert.ToInt32(answer1);
