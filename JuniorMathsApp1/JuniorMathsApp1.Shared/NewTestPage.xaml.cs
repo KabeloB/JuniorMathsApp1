@@ -50,6 +50,8 @@ namespace JuniorMathsApp1
         int completedQuestions = 0;
         string storeAnswer = "";
 
+        bool outOfTime = false;
+
         string[] equation = new string[10];
         string[] answerArray = new string[10];
 
@@ -78,12 +80,9 @@ namespace JuniorMathsApp1
             cbTestDifficulty.Items.Add("Intermediate");
             cbTestDifficulty.Items.Add("Advanced");
 
+
+            timer.Tick += Each_Tick;
             
-        }
-        public void Each_Tick(object sender, object e)
-        {
-           
-           
         }
 
         
@@ -156,6 +155,43 @@ namespace JuniorMathsApp1
 
         }
 
+        public void Each_Tick(object sender, object e)
+        {
+            s = s - 1;
+            if(s == -1)
+            {
+                m = m - 1;
+                s = 59;
+            }
+
+
+            if (m == -1)
+            {
+                h = h - 1;
+                m = 59;
+            }
+
+            if ((h == 0) &&(m == 0) && (s == 0))
+            {
+                timer.Stop();
+                outOfTime = true;
+            }
+
+            if (outOfTime == true)
+            {
+                int autoWrong = 10 - rightAnswer;
+                int getInsertResult = objTest.insertTestResults(childID, rightAnswer, autoWrong, objDate.ToString());
+
+
+                this.Frame.Navigate(typeof(MenuPage), parentID);
+                msg = "Sorry!" +
+                      "\nYou ran out of time...";
+                messageBox(msg);
+            }
+
+            lblTimeRemaining.Text = h + "min " + m + "sec";
+        }
+
         public int testDetails(int count)
         {
             int getCount = count;
@@ -190,7 +226,12 @@ namespace JuniorMathsApp1
         private void btnStartTest_Click(object sender, RoutedEventArgs e)
         {
 
-            
+            h = 2;
+            m = 0;
+            s = 0;
+
+            timer.Start();
+
             try
             {
                 //get the random number to select a random question: Conver the number to a string
@@ -549,6 +590,7 @@ namespace JuniorMathsApp1
                 messageBox(msg);
 
             }
+           
             incrementArray = incrementArray + 1;
             countIndex = countIndex + 1;
             doCalculation();
@@ -676,9 +718,6 @@ namespace JuniorMathsApp1
                             lblEquation.Text = "" + equation[incrementArray];
 
                             sendAnswer = Convert.ToInt32(answerArray[countIndex]);
-
-
-
                         }
 
 
