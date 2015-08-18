@@ -25,6 +25,7 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontStyle" />
       <RootProperty Name="FontWeight" />
+      <RootProperty Name="RenderTransformOrigin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />

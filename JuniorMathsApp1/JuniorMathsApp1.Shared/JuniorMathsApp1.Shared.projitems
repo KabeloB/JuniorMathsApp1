@@ -125,7 +125,6 @@
     <Content Include="$(MSBuildThisFileDirectory)Grade1QuestionsXML2\Medium.xml" />
     <Content Include="$(MSBuildThisFileDirectory)Grade1QuestionsXML3\Advanced.xml" />
     <Content Include="$(MSBuildThisFileDirectory)Grade1QuestionsXML\Beginner.xml" />
-    <Content Include="$(MSBuildThisFileDirectory)Grade1QuestionsXML\Beginner1.xml" />
     <Content Include="$(MSBuildThisFileDirectory)Grade2QuestionsXML2\Medium.xml" />
     <Content Include="$(MSBuildThisFileDirectory)Grade2QuestionsXML3\Advanced.xml" />
     <Content Include="$(MSBuildThisFileDirectory)Grade2QuestionsXML\Beginner.xml" />

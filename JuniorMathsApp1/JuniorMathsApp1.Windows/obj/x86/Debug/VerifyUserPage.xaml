@@ -14,8 +14,8 @@
         <TextBox x:Name="txtConfirmEmail" HorizontalAlignment="Left" Margin="64,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="369"/>
         <TextBlock HorizontalAlignment="Left" Margin="101,81,0,0" TextWrapping="Wrap" Text="Verify User Details" VerticalAlignment="Top" FontSize="36" Width="300" Foreground="#FF1FCFC7"/>
         <TextBlock HorizontalAlignment="Left" Margin="64,164,0,0" TextWrapping="Wrap" Text="Enter Email Address:" VerticalAlignment="Top" FontSize="24" Foreground="#FF14D626"/>
-        <Button x:ConnectionId='1' x:Name="btnVerifyUserDetails" Content="Process" HorizontalAlignment="Left" Margin="61,379,0,0" VerticalAlignment="Top"                                    Height="64" Width="166" FontSize="20" Foreground="#FFDAE2D6" BorderBrush="#FF46EE14" Background="#FF0F0F0F"/>
-        <Button x:ConnectionId='2' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="269,379,0,0" VerticalAlignment="Top" Width="167"                       Height="64" FontSize="20" BorderBrush="#FFD80D3C" Background="#FF111111"/>
+        <Button x:ConnectionId='1' x:Name="btnVerifyUserDetails" Content="Process" HorizontalAlignment="Left" Margin="61,379,0,0" VerticalAlignment="Top"                                    Height="49" Width="166" FontSize="20" Foreground="#FFDAE2D6" BorderBrush="#FF46EE14" Background="#FF0F0F0F"/>
+        <Button x:ConnectionId='2' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="269,379,0,0" VerticalAlignment="Top" Width="167"                       Height="49" FontSize="20" BorderBrush="#FFD80D3C" Background="#FF111111"/>
         <TextBlock HorizontalAlignment="Left" Margin="64,266,0,0" TextWrapping="Wrap" Text="Enter Phone Number:" VerticalAlignment="Top" FontSize="24" Foreground="#FF15DA39"/>
         <TextBox x:Name="txtConfirmPhoneNo" HorizontalAlignment="Left" Margin="64,295,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="369"/>
 
