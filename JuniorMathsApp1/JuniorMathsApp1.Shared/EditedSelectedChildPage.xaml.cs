@@ -60,6 +60,19 @@ namespace JuniorMathsApp1
                 grade = "" + regChild.Grade;
                 parentID = "" + regChild.ParentId;
 
+
+                //Display Child details on load Code
+                lblChildsID.Text = idNum;
+                txtCurrentChildName.Text = name;
+                txtCurrentChildSurname_.Text = surname;
+                txtCurrentChildAge.Text = age;
+
+                cbCurrentChildGrade.Items.Add(grade);
+                cbCurrentChildGrade.Items.Add("");
+                cbCurrentChildGrade.Items.Add("Grade 1");
+                cbCurrentChildGrade.Items.Add("Grade 2");
+
+
                 //displayChildsDetails(idNum, name, age, grade);
             }
             catch (Exception)
@@ -156,19 +169,7 @@ namespace JuniorMathsApp1
                 
         }
 
-        private void btnView_Click(object sender, RoutedEventArgs e)
-        {
-            lblChildsID.Text = idNum;
-            txtCurrentChildName.Text = name;
-            txtCurrentChildSurname_.Text = surname;
-            txtCurrentChildAge.Text = age;
-
-            cbCurrentChildGrade.Items.Add(grade);
-            cbCurrentChildGrade.Items.Add("");
-            cbCurrentChildGrade.Items.Add("Grade 1");
-            cbCurrentChildGrade.Items.Add("Grade 2");
-
-        }
+        
 
         private void btnBackToMenu_Click(object sender, RoutedEventArgs e)
         {

@@ -24,8 +24,8 @@
         <TextBox x:Name="txtEnterNewEmail" HorizontalAlignment="Left" Margin="278,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
         <TextBox x:Name="txtEnterNewPhoneNo" HorizontalAlignment="Left" Margin="278,376,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
         <TextBox x:Name="txtEnterNewPassword" HorizontalAlignment="Left" Margin="278,435,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
-        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="43,527,0,0" VerticalAlignment="Top" Width="225" FontSize="20" BorderBrush="#FF1BD14C" Background="#FF0C0101" Click="Button_Click"/>
-        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="324,527,0,0" VerticalAlignment="Top" Width="217" FontSize="20" Background="#FF110101" BorderBrush="#FFEE1313" Click="btnBack_Click"/>
+        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="43,527,0,0" VerticalAlignment="Top" Width="225" FontSize="16" BorderBrush="#FF1BD14C" Background="#FF0C0101" Click="Button_Click"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="316,527,0,0" VerticalAlignment="Top" Width="225" FontSize="16" Background="#FF110101" BorderBrush="#FFEE1313" Click="btnBack_Click"/>
 
     </Grid>
 </Page>

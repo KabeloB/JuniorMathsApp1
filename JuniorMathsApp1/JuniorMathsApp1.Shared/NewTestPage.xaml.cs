@@ -779,10 +779,9 @@ namespace JuniorMathsApp1
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(SelectChildToTakeTestPage), parentID);
+            
         }
 
-
-
-
+        
     }
 }

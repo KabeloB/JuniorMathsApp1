@@ -13,12 +13,12 @@
         </Grid.Background>
         <TextBlock HorizontalAlignment="Left" Margin="90,74,0,0" TextWrapping="Wrap" Text="View all previous test results" VerticalAlignment="Top" Height="46" Width="456" FontSize="36" Foreground="#FF19F1E8"/>
         <TextBlock HorizontalAlignment="Left" Margin="90,174,0,0" TextWrapping="Wrap" Text="All Results:" VerticalAlignment="Top" Height="25" Width="148" FontSize="24" Foreground="#FF19DC19"/>
-        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="386,646,0,0" VerticalAlignment="Top" Width="213" Click="btnBack_Click" Height="43" Background="#FF0F0101" BorderBrush="#FFF31111"/>
-        <Button x:Name="btnReturnMainMenu" Content="Return to main menu" HorizontalAlignment="Left" Margin="87,646,0,0" VerticalAlignment="Top" Click="btnReturnMainMenu_Click" Height="43" Width="213" Background="#FF011501" BorderBrush="#FF2FEA12"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="386,646,0,0" VerticalAlignment="Top" Width="213" Click="btnBack_Click" Height="43" Background="#FF0F0101" BorderBrush="#FFF31111" FontSize="16"/>
+        <Button x:Name="btnReturnMainMenu" Content="Return to main menu" HorizontalAlignment="Left" Margin="87,646,0,0" VerticalAlignment="Top" Click="btnReturnMainMenu_Click" Height="43" Width="213" Background="#FF011501" BorderBrush="#FF2FEA12" FontSize="16"/>
         <ListView x:Name="lsViewTest" HorizontalAlignment="Left" Height="406" Margin="90,220,0,0" VerticalAlignment="Top" Width="506" Foreground="#FF21DECD"/>
         <TextBlock HorizontalAlignment="Left" Margin="90,127,0,0" TextWrapping="Wrap" Text="Results for:" VerticalAlignment="Top" Foreground="#FF18E418" FontSize="24"/>
         <TextBlock x:Name="lblChId" HorizontalAlignment="Left" Margin="222,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="324" Foreground="#FF12F0E6"/>
-        <Button x:Name="btnDeleteAll" Content="Delete all" HorizontalAlignment="Left" Margin="87,705,0,0" VerticalAlignment="Top" Height="43" Width="213" Background="#FF00010E" BorderBrush="#FF1326EA" Click="btnDeleteAll_Click"/>
+        <Button x:Name="btnDeleteAll" Content="Delete all" HorizontalAlignment="Left" Margin="87,705,0,0" VerticalAlignment="Top" Height="43" Width="213" Background="#FF00010E" BorderBrush="#FF1326EA" Click="btnDeleteAll_Click" FontSize="16"/>
 
     </Grid>
 </Page>

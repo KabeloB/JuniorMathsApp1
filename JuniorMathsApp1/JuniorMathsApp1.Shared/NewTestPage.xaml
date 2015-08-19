@@ -23,7 +23,7 @@
         <TextBlock x:Name="txtWrong" HorizontalAlignment="Left" Margin="38,712,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="846"/>
         <TextBlock x:Name="lblEquation" HorizontalAlignment="Left" Margin="145,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="125" FontSize="48" Foreground="#FFE2E20C"/>
         <ComboBox x:Name="cbTestDifficulty" HorizontalAlignment="Left" Margin="38,325,0,0" VerticalAlignment="Top" Width="183"/>
-        <TextBlock HorizontalAlignment="Left" Margin="38,291,0,0" TextWrapping="Wrap" Text="Please select difficulty and (Start test)" VerticalAlignment="Top" FontSize="24" Foreground="#FF04E0E0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="38,291,0,0" TextWrapping="Wrap" Text="Please select difficulty:" VerticalAlignment="Top" FontSize="24" Foreground="#FF04E0E0"/>
         <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="35,549,0,0" VerticalAlignment="Top" Width="168" Height="58" Background="#FF131001" BorderBrush="#FFDBF009" FontSize="24" Click="btnBack_Click"/>
         <TextBox x:Name="txtEnterAnswer" HorizontalAlignment="Left" Margin="38,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="363"/>
         <TextBlock x:Name="lblTimeRemaining" HorizontalAlignment="Left" Margin="269,364,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="132" FontSize="24" Foreground="#FFBBE012"/>

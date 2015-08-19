@@ -27,6 +27,9 @@ namespace JuniorMathsApp1
     {
 
         int getTheId = 0;
+
+        ParentViewModel objParentViewModel = null;
+        Register objRegister = null;
         public MenuPage()
         {
             this.InitializeComponent();
@@ -47,7 +50,13 @@ namespace JuniorMathsApp1
                 base.OnNavigatedTo(e);
                 getTheId = (int)e.Parameter;
 
-                lblParentIdenNum.Text = "" + getTheId;
+                objRegister = new Register();
+                objParentViewModel = new ParentViewModel();
+
+                objRegister = objParentViewModel.getParentDetails(getTheId);
+
+
+                lblParentIdenNum.Text = "" + objRegister.Name + " " +objRegister.Surname;
             }
             catch(Exception)
             {
