@@ -586,7 +586,7 @@ namespace JuniorMathsApp1
 
                         if (convUserAnswer == convSystemAnswer)
                         {
-                            txtRight.Text = "Correct Answers: " + (rightAnswer = rightAnswer + 1);
+                            txtRight.Text = "Correct Answers: " + (rightAnswer = rightAnswer + 1) ;
 
                         }
                         else

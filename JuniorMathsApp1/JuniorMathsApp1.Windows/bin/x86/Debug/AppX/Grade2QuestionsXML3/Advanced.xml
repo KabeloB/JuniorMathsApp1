@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advanced>
+  <Question>
+    <Number>0.20+5=25</Number>
+  </Question>
+  <Question>
+    <Number>1.9+9=18</Number>
+  </Question>
+  <Question>
+    <Number>2.9+7=16</Number>
+  </Question>
+  <Question>
+    <Number>3.18-7=11</Number>
+  </Question>
+  <Question>
+    <Number>4.15-9=6</Number>
+  </Question>
+  <Question>
+    <Number>5.30-16=14</Number>
+  </Question>
+  <Question>
+    <Number>6.10x5=50</Number>
+  </Question>
+  <Question>
+    <Number>7.15x4=30</Number>
+  </Question>
+  <Question>
+    <Number>8.5x5=25</Number>
+  </Question>
+  <Question>
+    <Number>9.60-40=20</Number>
+  </Question>
+</Advanced>
