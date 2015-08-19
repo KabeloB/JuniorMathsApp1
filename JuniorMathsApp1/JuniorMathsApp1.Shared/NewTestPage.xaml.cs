@@ -576,6 +576,7 @@ namespace JuniorMathsApp1
                 int verifyNum;
                 bool isNumerical = int.TryParse(getUserAnswer, out verifyNum);
 
+                //check if user answer is entered
                 if(!getUserAnswer.Equals(""))
                 {
                     if (isNumerical == true)
