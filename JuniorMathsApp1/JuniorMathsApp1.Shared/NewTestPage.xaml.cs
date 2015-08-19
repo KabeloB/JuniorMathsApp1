@@ -227,7 +227,17 @@ namespace JuniorMathsApp1
         private void btnStartTest_Click(object sender, RoutedEventArgs e)
         {
 
-            h = 2;
+            if(objRegChild.Grade.Equals("Grade 1"))
+            {
+                //Allocated time to finish test in minutes
+                h = 10;
+            }
+            else
+            {
+                h = 5;
+            }
+
+            
             m = 0;
             s = 0;
 
@@ -550,11 +560,6 @@ namespace JuniorMathsApp1
 
             }
 
-            
-
-
-                
-
 
         }
 
@@ -600,7 +605,7 @@ namespace JuniorMathsApp1
                             timer.Stop();
                             this.Frame.Navigate(typeof(MenuPage), parentID);
                             msg = "You have completed all questions for the test!" +
-                                  "\nGo to view results button to seee the score...";
+                                  "\nNavigate to view results to display the score...";
                             messageBox(msg);
 
                         }
