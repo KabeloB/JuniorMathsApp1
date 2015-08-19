@@ -102,18 +102,24 @@ namespace JuniorMathsApp1
             string newName = txtCurrentChildName.Text;
             string newSurname = txtCurrentChildSurname_.Text;
             string newAge = txtCurrentChildAge.Text;
-            string getGrade = (string)cbCurrentChildGrade.SelectedItem;
+            string getGrade = "" + cbCurrentChildGrade.SelectedItem;
 
             int result = 0;
-            
-                if((!newSurname.Equals("")) && (!newSurname.Equals("")) && (!newAge.Equals("")))
+
+            if ((!newSurname.Equals("")) && (!newSurname.Equals("")) && (!newAge.Equals("")) && (!getGrade.Equals("")))
+            {
+
+                int verifyNum;
+                bool isNumerical = int.TryParse(newAge, out verifyNum);
+
+                if(isNumerical == true)
                 {
                     try
                     {
-                       result = childrenViewModel.updateChildInfo(convID, parentID, newName, newSurname,newAge, getGrade);
+                        result = childrenViewModel.updateChildInfo(convID, parentID, newName, newSurname, newAge, getGrade);
 
                     }
-                    catch(Exception)
+                    catch (Exception)
                     {
 
                     }
@@ -131,13 +137,22 @@ namespace JuniorMathsApp1
                         string msg = "Couldn't update child information!";
                         messageBox(msg);
                     }
-
                 }
                 else
                 {
-                    msgs = "Please ensure that all fields are filled in before proceeding to update!";
+                    msgs = "Please enter numeric characters only for the age!";
                     messageBox(msgs);
                 }
+
+
+                    
+
+             }
+             else
+             {
+                 msgs = "Please ensure that all fields are filled in before proceeding to update!";
+                 messageBox(msgs);
+             }
                 
         }
 

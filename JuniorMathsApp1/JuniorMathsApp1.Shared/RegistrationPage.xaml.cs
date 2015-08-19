@@ -133,7 +133,7 @@ namespace JuniorMathsApp1
                     else
                     {
                         messageToDisplay = "Invalid email address entered!" +
-                                           "\nPlease ensure that the email address contains an (@) character";
+                                           "\nPlease ensure that the email address contains these characters: (@) and (.)";
                         messageBox(messageToDisplay);
                     }
                    

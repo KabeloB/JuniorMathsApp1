@@ -65,11 +65,11 @@ namespace JuniorMathsApp1
                 testsViewModel = new TestsViewModel();
                 test = testsViewModel.GetTests(Convert.ToInt32(getIds.Substring(2)));
 
-                lsViewTest.Items.Add("Test ID" + "\t" + "Child ID" + "\t" + "#Right Answers" + "\t" + "#Wrong Answers " + "\t" + "Date of Test");
+                lsViewTest.Items.Add("Test ID" + "\t" + "Right" + "\t" + "Wrong" + "\t" + "Date & Time");
 
                 foreach (var c in test)
                 {
-                    lsViewTest.Items.Add(c.Id + "\t" + c.ChildId + "           \t" + c.RightAnswers + "                           \t" + c.WrongAnswers + "             \t" + c.Date);
+                    lsViewTest.Items.Add(c.Id +  " \t" + c.RightAnswers + "\t" + c.WrongAnswers + "\t" + c.Date);
 
                 }
                 base.OnNavigatedTo(e);

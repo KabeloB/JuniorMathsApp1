@@ -94,32 +94,82 @@ namespace JuniorMathsApp1
             string updatePhone = txtEnterNewPhoneNo.Text;
             string updatePassword = txtEnterNewPassword.Text;
 
+            bool isFoundAtSign = false;
+            bool isFoundPeriod = false;
+
+
             if ((!updateName.Equals("")) && (!updateSurname.Equals("")) && (!updateEmail.Equals("")) && (!updatePhone.Equals("")) && (!updatePassword.Equals("")))
             {
                 objRegister = new Register();
                 int updateResult = 0;
                 objParentViewModel = new ParentViewModel();
 
-                try
+                //Check whether email address is correct
+                string findTheAtSign = "@";
+                string findThePeriod = ".";
+                for (int x = 0; x < updateEmail.Length; x++)
                 {
-                    updateResult = objParentViewModel.updateParentDetails(convID, updateName, updateSurname, updateEmail, updatePhone, updatePassword);
+                    isFoundAtSign = updateEmail.Contains(findTheAtSign);
+                    isFoundPeriod = updateEmail.Contains(findThePeriod);
                 }
-                catch (Exception)
-                {
 
+                //check the phone number for validity
+                int count = 0;
+                for (int z = 0; z < updatePhone.Length; z++)
+                {
+                    count = count + 1;
                 }
 
-                if (updateResult > 0)
+                int verifyNum;
+                bool isNumerical = int.TryParse(updatePhone, out verifyNum);
+
+                if ((isFoundAtSign == true) && (isFoundPeriod == true))
                 {
-                    this.Frame.Navigate(typeof(MenuPage), parentId);
-                    msg = "Update was successful!";
-                    messageBox(msg);
+                    if (count == 10)
+                    {
+                        if (isNumerical == true)
+                        {
+                            try
+                            {
+                                updateResult = objParentViewModel.updateParentDetails(convID, updateName, updateSurname, updateEmail, updatePhone, updatePassword);
+                            }
+                            catch (Exception)
+                            {
+
+                            }
+
+                            if (updateResult > 0)
+                            {
+                                this.Frame.Navigate(typeof(MenuPage), parentId);
+                                msg = "Update was successful!";
+                                messageBox(msg);
+                            }
+                            else
+                            {
+                                msg = "Update was unsuccessful!";
+                                messageBox(msg);
+                            }
+                        }
+                        else
+                        {
+                            msg = "Please enter numeric characters only for the phone number! ";
+                            messageBox(msg);
+                        }
+                    }
+                    else
+                    {
+                        msg = "Phone number must be ten (10) characters long!" +
+                              "\nThe number you entered is: (" + count + ") characters long!";
+                        messageBox(msg);
+                    }
                 }
                 else
                 {
-                    msg = "Update was unsuccessful!";
+                    msg = "Invalid email address entered!" +
+                          "\nPlease ensure that the email address contains these characters: (@) and (.)";
                     messageBox(msg);
                 }
+
             }
             else
             {

@@ -77,75 +77,88 @@ namespace JuniorMathsApp1
 
         private void btnSaveInformation_Click(object sender, RoutedEventArgs e)
         {
-            
-            objChild = new ChildrenViewModel();
-
-            string childName = txtChildName.Text;
-            string childSurname = txtChildSurname.Text;
-            string childAge = txtChildAge.Text;
-
-            string getGrade = (string)cbSelectGrade.SelectedItem;
-
-             
-            //Verify that user inputs are not empty first
-            if ((!childName.Equals("")) && (!childSurname.Equals("")) && (!childAge.Equals("")) && (!getGrade.Equals("")))
+            try
             {
+                objChild = new ChildrenViewModel();
 
-                //objChild.saveChild("" + parentId, childName, childSurname, childAge, getGrade);
+                string childName = txtChildName.Text;
+                string childSurname = txtChildSurname.Text;
+                string childAge = txtChildAge.Text;
+
+                string getGrade = "" + cbSelectGrade.SelectedItem;
 
 
-                
-                try
+                //Verify that user inputs are not empty first
+                if ((!childName.Equals("")) && (!childSurname.Equals("")) && (!childAge.Equals("")) && (!getGrade.Equals("")))
                 {
-                    //Insert the supplied user inputs into database here!
-                    //Verify that the information was successfully inserted!
-                    //user inputs were saved then redirect user to Login page!
 
-                   int result = objChild.registerNewChild("" + parentId, childName, childSurname, childAge, getGrade);
+                    //objChild.saveChild("" + parentId, childName, childSurname, childAge, getGrade);
 
-                   string m = objChild.getMessage();
+                    int verifyNum;
+                    bool isNumerical = int.TryParse(childAge, out verifyNum);
 
-                   
-                   lblGetParentIdNum.Text = m;
-                    
-                    if(result > 0)
+                    if (isNumerical == true)
                     {
+                        try
+                        {
+                            //Insert the supplied user inputs into database here!
+                            //Verify that the information was successfully inserted!
+                            //user inputs were saved then redirect user to Login page!
 
-                        this.Frame.Navigate(typeof(MenuPage), parentId);
-                        messageToDisplay = "You have succesfully registered the following child to your account: " +
-                                            "\n" + childName + " " + childSurname;
-                        messageBox(messageToDisplay);
+                            int result = objChild.registerNewChild("" + parentId, childName, childSurname, childAge, getGrade);
+
+                            string m = objChild.getMessage();
 
 
+                            lblGetParentIdNum.Text = m;
+
+                            if (result > 0)
+                            {
+
+                                this.Frame.Navigate(typeof(MenuPage), parentId);
+                                messageToDisplay = "You have succesfully registered the following child to your account: " +
+                                                    "\n" + childName + " " + childSurname;
+                                messageBox(messageToDisplay);
+
+
+                            }
+                            else
+                            {
+                                this.Frame.Navigate(typeof(RegisterNewChild), parentId);
+                                messageToDisplay = "Failed to register this child: " +
+                                                    "\n" + childName + " " + childSurname;
+                                messageBox(messageToDisplay);
+                            }
+
+
+
+                        }
+                        catch (Exception)
+                        {
+
+                        }
                     }
                     else
                     {
-                        this.Frame.Navigate(typeof(RegisterNewChild), parentId);
-                        messageToDisplay = "Failed to register this child: " +
-                                            "\n" + childName + " " + childSurname;
+                        messageToDisplay = "Please enter numeric characters only for the age!";
                         messageBox(messageToDisplay);
                     }
-                    
 
-                    
                 }
-                catch(Exception)
+                else
                 {
-
+                    //Enter error message box here!
+                    //String ErrorMessage = "Invalid user inputs, Ensure that all fields are filled in!";
+                    //this.Frame.Navigate(typeof(RegisterNewChild), parentId);
+                    messageToDisplay = "Input fields can't be empty!";
+                    messageBox(messageToDisplay);
                 }
-                
-                
-
-
             }
-            else
+            catch(Exception)
             {
-                //Enter error message box here!
-                //String ErrorMessage = "Invalid user inputs, Ensure that all fields are filled in!";
-                this.Frame.Navigate(typeof(RegisterNewChild), parentId);
-                messageToDisplay = "Input fields can't be empty!";
-                messageBox(messageToDisplay);
+
             }
+            
 
 
 

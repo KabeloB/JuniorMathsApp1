@@ -47,6 +47,9 @@ namespace JuniorMathsApp1
 
         private void btnVerifyUserDetails_Click(object sender, RoutedEventArgs e)
         {
+            bool isFoundAtSign = false;
+            bool isFoundPeriod = false;
+
             objReg = new Register();
             objParentViewModel = new ParentViewModel();
             
@@ -56,29 +59,80 @@ namespace JuniorMathsApp1
             
             if((!getEmail.Equals("")) && (!getPhoneNum.Equals("")))
             {
-                try
-                {
-                        objReg = objParentViewModel.checkUserExistence(getEmail, getPhoneNum);
-                }
-                catch (Exception)
-                {
 
+                //Check whether email address is correct
+                string findTheAtSign = "@";
+                string findThePeriod = ".";
+                for (int x = 0; x < getEmail.Length; x++)
+                {
+                    isFoundAtSign = getEmail.Contains(findTheAtSign);
+                    isFoundPeriod = getEmail.Contains(findThePeriod);
                 }
 
-                if (objReg != null)
+                //check the phone number for validity
+                int count = 0;
+                for (int z = 0; z < getPhoneNum.Length; z++)
                 {
-                    this.Frame.Navigate(typeof(ResetPasswordPage), objReg);
-                    msg = "User account details found in the database!" +
-                          "\nProceed to reset your password.";
-                    messageBox(msg);
+                    count = count + 1;
+                }
+
+                int verifyNum;
+                bool isNumerical = int.TryParse(getPhoneNum, out verifyNum);
+
+                if ((isFoundAtSign == true) && (isFoundPeriod == true))
+                {
+                    if (count == 10)
+                   {
+                        if(isNumerical == true)
+                        {
+                            try
+                            {
+                                objReg = objParentViewModel.checkUserExistence(getEmail, getPhoneNum);
+                            }
+                            catch (Exception)
+                            {
+
+                            }
+
+                            if (objReg != null)
+                            {
+                                this.Frame.Navigate(typeof(ResetPasswordPage), objReg);
+                                msg = "User account details found in the database!" +
+                                      "\nProceed to reset your password.";
+                                messageBox(msg);
+                            }
+                            else
+                            {
+                                this.Frame.Navigate(typeof(VerifyUserPage));
+                                msg = "Information entered did not match anything in the database!" +
+                                      "\nEnsure that the information is correct!";
+                                messageBox(msg);
+                            }
+                        }
+                        else
+                        {
+                            msg = "Please enter numeric characters only for the phone number!";
+                            messageBox(msg);
+                        }
+                   }
+                   else
+                   {
+                       msg = "Phone number must be ten (10) characters long!" +
+                             "\nThe number you entered is: (" + count + ") characters long!";
+                       messageBox(msg);
+                   }
                 }
                 else
                 {
-                    this.Frame.Navigate(typeof(VerifyUserPage));
-                    msg = "Information enetered did not match anything in the database!" +
-                          "\nEnsure that the information is correct!";
+                    msg = "Invalid email address entered!" +
+                          "\nPlease ensure that the email address contains these characters: (@) and (.)";
                     messageBox(msg);
                 }
+
+
+
+
+                
 
             }
             else

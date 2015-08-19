@@ -185,7 +185,8 @@ namespace JuniorMathsApp1
 
                 this.Frame.Navigate(typeof(MenuPage), parentID);
                 msg = "Sorry!" +
-                      "\nYou ran out of time...";
+                      "\nYou ran out of time..." + 
+                      "\nNavigate to test results to view score.";
                 messageBox(msg);
             }
 
@@ -230,7 +231,7 @@ namespace JuniorMathsApp1
             m = 0;
             s = 0;
 
-            timer.Start();
+            
 
             try
             {
@@ -260,6 +261,8 @@ namespace JuniorMathsApp1
                     }
                     else
                     {
+                        timer.Start();
+
                         //Put this block of code in the ELSE BLOCK
                         if (getTestDifficulty.Equals("Biginner"))
                         {
@@ -405,6 +408,8 @@ namespace JuniorMathsApp1
                     }
                     else
                     {
+                        timer.Start();
+
                         //Put this block of code in the ELSE BLOCK
                         if (getTestDifficulty.Equals("Biginner"))
                         {
@@ -558,42 +563,71 @@ namespace JuniorMathsApp1
         //Button to submit the answer
         private void btnSubmitAnswer_Click(object sender, RoutedEventArgs e)
         {
-
-            string getUserAnswer = txtEnterAnswer.Text;
-            int convUserAnswer = Convert.ToInt32(getUserAnswer);
-
-           
-            int convSystemAnswer = Convert.ToInt32(storeAnswer);
-
-            if(convUserAnswer == convSystemAnswer)
+            try
             {
-                txtRight.Text = "Correct Answers: " + (rightAnswer = rightAnswer + 1);
-                    
+                string getUserAnswer = txtEnterAnswer.Text;
+
+                //Check whether input is numeric 
+                int verifyNum;
+                bool isNumerical = int.TryParse(getUserAnswer, out verifyNum);
+
+                if(!getUserAnswer.Equals(""))
+                {
+                    if (isNumerical == true)
+                    {
+                        int convUserAnswer = Convert.ToInt32(getUserAnswer);
+
+                        int convSystemAnswer = Convert.ToInt32(storeAnswer);
+
+                        if (convUserAnswer == convSystemAnswer)
+                        {
+                            txtRight.Text = "Correct Answers: " + (rightAnswer = rightAnswer + 1);
+
+                        }
+                        else
+                        {
+                            txtWrong.Text = "Wrong Answers: " + (wrongAnswers = wrongAnswers + 1);
+                        }
+
+
+                        completedQuestions = completedQuestions + 1;
+                        lblCount.Text = "" + completedQuestions;
+
+                        if (completedQuestions >= 10)
+                        {
+                            int getInsertResult = objTest.insertTestResults(childID, rightAnswer, wrongAnswers, objDate.ToString());
+
+                            timer.Stop();
+                            this.Frame.Navigate(typeof(MenuPage), parentID);
+                            msg = "You have completed all questions for the test!" +
+                                  "\nGo to view results button to seee the score...";
+                            messageBox(msg);
+
+                        }
+
+                        incrementArray = incrementArray + 1;
+                        countIndex = countIndex + 1;
+                        txtEnterAnswer.Text = "";
+                        doCalculation();
+                    }
+                    else
+                    {
+                        msg = "Please ensure that the answer entered is numeric!";
+                        messageBox(msg);
+                    }
+                }
+                else
+                {
+                    msg = "Please enter an answer before proceeding!";
+                    messageBox(msg);
+                }
+               
             }
-            else
+            catch(Exception ex)
             {
-                txtWrong.Text = "Wrong Answers: " + (wrongAnswers = wrongAnswers + 1);
+                
             }
-
-
-            completedQuestions = completedQuestions + 1;
-            lblCount.Text = "" + completedQuestions;
-
-            if (completedQuestions >= 10)
-            {
-                int getInsertResult = objTest.insertTestResults(childID, rightAnswer, wrongAnswers, objDate.ToString());
-
-
-                this.Frame.Navigate(typeof(MenuPage), parentID);
-                msg = "You have completed all questions for the test!" +
-                      "\nGo to view results button to seee the score...";
-                messageBox(msg);
-
-            }
-           
-            incrementArray = incrementArray + 1;
-            countIndex = countIndex + 1;
-            doCalculation();
+            
 
 
         }

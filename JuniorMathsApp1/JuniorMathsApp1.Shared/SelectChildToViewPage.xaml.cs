@@ -260,7 +260,8 @@ namespace JuniorMathsApp1
                 if(regChild != null)
                 {
                     this.Frame.Navigate(typeof(EditedSelectedChildPage), regChild);
-                    string msg = "Found the child in the database";
+                    string msg = "Found child details in the database!" +
+                                  "\nClick the (View) button to display the childs details...";
                     messageBox(msg);
                 }
                 else

@@ -105,7 +105,7 @@ namespace JuniorMathsApp1
                                  else
                                 {
                                     messageToDisplay = "Invalid user details entered!" +
-                                                       "Please ensure that user details entered are correct";
+                                                       "\nPlease ensure that the username and password entered are correct...";
                                     messageBox(messageToDisplay);
                                 }
 

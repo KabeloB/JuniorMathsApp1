@@ -89,26 +89,28 @@ namespace JuniorMathsApp1
                     {
                         int ParentId = (int)objReg.Id;
                         resultPassword = objParentViewModel.updatePassword(ParentId, newPassW);
+
+                        if (resultPassword > 0)
+                        {
+                            msg = "Password successfully updated!" +
+                                  "\nPlease use the new password to login next time!";
+                            messageBox(msg);
+                            this.Frame.Navigate(typeof(MainPage));
+                        }
+                        else
+                        {
+                            msg = "Password updated was unsuccessful!" +
+                                  "\nPlease start the reset password process again!";
+                            messageBox(msg);
+                            this.Frame.Navigate(typeof(MainPage));
+                        }
                     }
                     catch(Exception)
                     {
 
                     }
 
-                    if(resultPassword > 0)
-                    {
-                        msg = "Password successfully updated!" +
-                              "\nPlease use the new password to login next time!";
-                        messageBox(msg);
-                        this.Frame.Navigate(typeof(MainPage));
-                    }
-                    else
-                    {
-                        msg = "Password updated was unsuccessful!" +
-                              "\nPlease start the reset password process again!";
-                        messageBox(msg);
-                        this.Frame.Navigate(typeof(MainPage));
-                    }
+                   
 
                 }
                 else

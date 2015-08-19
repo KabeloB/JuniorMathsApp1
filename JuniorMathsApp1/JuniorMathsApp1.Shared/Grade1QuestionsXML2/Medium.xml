@@ -1,33 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Medium>
   <Question>
-    <Number>1.18+2=20</Number>
+    <Number>0.18+2=20</Number>
   </Question>
   <Question>
-    <Number>2.10+6=16</Number>
+    <Number>1.10+6=16</Number>
   </Question>
   <Question>
-    <Number>3.8+5=13</Number>
+    <Number>2.8+5=13</Number>
   </Question>
   <Question>
-    <Number>4.17-7=10</Number>
+    <Number>3.17-7=10</Number>
   </Question>
   <Question>
-    <Number>5.15-10=5</Number>
+    <Number>4.15-10=5</Number>
   </Question>
   <Question>
-    <Number>6.28-14=14</Number>
+    <Number>5.28-14=14</Number>
   </Question>
   <Question>
-    <Number>7.6x4=20</Number>
+    <Number>6.6x4=20</Number>
   </Question>
   <Question>
-    <Number>8.5x6=30</Number>
+    <Number>7.5x6=30</Number>
   </Question>
   <Question>
-    <Number>9.3x5=15</Number>
+    <Number>8.3x5=15</Number>
   </Question>
   <Question>
-    <Number>10.20-10=10</Number>
+    <Number>9.20-10=10</Number>
   </Question>
 </Medium>
