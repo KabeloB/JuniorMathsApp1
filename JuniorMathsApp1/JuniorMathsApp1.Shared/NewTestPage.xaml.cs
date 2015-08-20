@@ -230,11 +230,11 @@ namespace JuniorMathsApp1
             if(objRegChild.Grade.Equals("Grade 1"))
             {
                 //Allocated time to finish test in minutes
-                h = 10;
+                h = 5;
             }
             else
             {
-                h = 5;
+                h = 3;
             }
 
             
