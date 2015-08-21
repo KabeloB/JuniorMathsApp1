@@ -11,24 +11,24 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
-        <TextBlock HorizontalAlignment="Left" Margin="43,67,0,0" TextWrapping="Wrap" Text="Registration New Account" VerticalAlignment="Top" FontSize="36" Foreground="#FF21D1E2"/>
-        <TextBlock HorizontalAlignment="Left" Margin="43,142,0,0" TextWrapping="Wrap" Text="Enter Name:" VerticalAlignment="Top" FontSize="20" Foreground="#FF0CF536"/>
-        <TextBlock HorizontalAlignment="Left" Margin="43,193,0,0" TextWrapping="Wrap" Text="Enter Surname:" VerticalAlignment="Top" FontSize="20" Foreground="#FF0EF037"/>
-        <TextBox x:Name="txtEnterName" HorizontalAlignment="Left" Margin="254,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201"/>
-        <TextBlock HorizontalAlignment="Left" Margin="43,242,0,0" TextWrapping="Wrap" Text="Enter Email Address:" VerticalAlignment="Top" FontSize="20" Foreground="#FF11F93B"/>
-        <TextBlock HorizontalAlignment="Left" Margin="43,299,0,0" TextWrapping="Wrap" Text="Enter Phone Number:" VerticalAlignment="Top" FontSize="20" Foreground="#FF16F53F"/>
-        <TextBlock HorizontalAlignment="Left" Margin="43,358,0,0" TextWrapping="Wrap" Text="Enter Password:" VerticalAlignment="Top" FontSize="20" Foreground="#FF14EE3C"/>
-        <TextBox x:Name="txtEnterSurname" HorizontalAlignment="Left" Margin="254,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201"/>
-        <TextBox x:Name="txtEnterEmail" HorizontalAlignment="Left" Margin="255.185,236.328,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Width="201.836" Height="30.507">
+        <TextBlock HorizontalAlignment="Left" Margin="20,10,0,0" TextWrapping="Wrap" Text="Registration New Account" VerticalAlignment="Top" FontSize="20" Foreground="#FF21D1E2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,61,0,0" TextWrapping="Wrap" Text="Enter Name:" VerticalAlignment="Top" FontSize="16" Foreground="#FF0CF536"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,116,0,0" TextWrapping="Wrap" Text="Enter Surname:" VerticalAlignment="Top" FontSize="16" Foreground="#FF0EF037"/>
+        <TextBox x:Name="txtEnterName" HorizontalAlignment="Left" Margin="176,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,175,0,0" TextWrapping="Wrap" Text="Enter Email Address:" VerticalAlignment="Top" FontSize="16" Foreground="#FF11F93B"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,234,0,0" TextWrapping="Wrap" Text="Enter Phone Number:" VerticalAlignment="Top" FontSize="16" Foreground="#FF16F53F"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,292,0,0" TextWrapping="Wrap" Text="Enter Password:" VerticalAlignment="Top" FontSize="16" Foreground="#FF14EE3C"/>
+        <TextBox x:Name="txtEnterSurname" HorizontalAlignment="Left" Margin="176,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Height="32" FontSize="16"/>
+        <TextBox x:Name="txtEnterEmail" HorizontalAlignment="Left" Margin="176.602,155.821,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Width="200.958" Height="34.98" FontSize="16">
             <TextBox.RenderTransform>
-                <CompositeTransform SkewX="2.514" TranslateX="-0.702" Rotation="-0.004"/>
+                <CompositeTransform SkewX="-0.087" TranslateX="0.025" Rotation="0.204" TranslateY="0.013"/>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtEnterPhoneNo" HorizontalAlignment="Left" Margin="254,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" />
-        <Button x:ConnectionId='1' x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="40,436,0,0" VerticalAlignment="Top" Width="196"                         Background="#FF0F0101" BorderBrush="#FF1D62DA"/>
-        <TextBox x:Name="txtEnterPassword" HorizontalAlignment="Left" Margin="254,350,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201"/>
-        <Button x:ConnectionId='2' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="262,436,0,0" VerticalAlignment="Top" Width="196"                       BorderBrush="#FFF12F10" Background="#FF0F0101"/>
-        <Button x:ConnectionId='3' Content="Clear All" HorizontalAlignment="Left" Margin="40,494,0,0" VerticalAlignment="Top" Width="196" Background="#FF0A0101" BorderBrush="#FFC0EC2A"                     />
+        <TextBox x:Name="txtEnterPhoneNo" HorizontalAlignment="Left" Margin="176,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" FontSize="16" />
+        <Button x:ConnectionId='1' x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="20,346,0,0" VerticalAlignment="Top" Width="152"                         Background="#FF0F0101" BorderBrush="#FF1D62DA" Height="39"/>
+        <TextBox x:Name="txtEnterPassword" HorizontalAlignment="Left" Margin="176,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Height="34" FontSize="16"/>
+        <Button x:ConnectionId='2' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="225,346,0,0" VerticalAlignment="Top" Width="152"                       BorderBrush="#FFF12F10" Background="#FF0F0101"/>
+        <Button x:ConnectionId='3' Content="Clear All" HorizontalAlignment="Left" Margin="20,407,0,0" VerticalAlignment="Top" Width="152" Background="#FF0A0101" BorderBrush="#FFC0EC2A"                     />
 
     </Grid>
 </Page>

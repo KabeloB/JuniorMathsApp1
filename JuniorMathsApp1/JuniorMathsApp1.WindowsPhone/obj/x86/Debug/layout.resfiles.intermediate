@@ -1,10 +1,4 @@
 Assets\JuniorMathsApp-Background1.jpg
-Grade1QuestionsXML\Advanced.xml
-Grade1QuestionsXML\Beginner.xml
-Grade1QuestionsXML\Medium.xml
-Grade2QuestionsXML\Advanced.xml
-Grade2QuestionsXML\Beginner.xml
-Grade2QuestionsXML\Medium.xml
 Assets\Logo.scale-240.png
 Assets\SmallLogo.scale-240.png
 Assets\SplashScreen.scale-240.png
@@ -26,3 +20,9 @@ SelectChildToViewPage.xbf
 UpdateParentsDetailsPage.xbf
 VerifyUserPage.xbf
 ViewAllResultsPage.xbf
+Grade1QuestionsXML\Beginner.xml
+Grade1QuestionsXML2\Medium.xml
+Grade1QuestionsXML3\Advanced.xml
+Grade2QuestionsXML\Beginner.xml
+Grade2QuestionsXML2\Medium.xml
+Grade2QuestionsXML3\Advanced.xml

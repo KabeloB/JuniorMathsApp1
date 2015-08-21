@@ -11,14 +11,14 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
-        <Button x:ConnectionId='1' x:Name="btnStartTest" Content="Start new test" HorizontalAlignment="Left" Margin="50,203,0,0" VerticalAlignment="Top" Width="393"                            Height="54" FontSize="20" Background="#FF010D11"/>
-        <Button x:ConnectionId='2' x:Name="btnViewTestResults" Content="View more options" HorizontalAlignment="Left" Margin="50,275,0,0" VerticalAlignment="Top" Width="393"                                  Height="54" RenderTransformOrigin="0.481,1.395" FontSize="20" Background="#FF01080F"/>
-        <Button x:ConnectionId='3' x:Name="btnEditChildDetails" Content="Edit Account Details" HorizontalAlignment="Left" Margin="50,425,0,0" VerticalAlignment="Top" Width="393"                                   Height="54" FontSize="20" Background="#FF0E0101"/>
-        <Button x:ConnectionId='4' x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="50,497,0,0" VerticalAlignment="Top" Width="393"                         Height="54" FontSize="20" Background="#FF0A0101"/>
-        <TextBlock HorizontalAlignment="Left" Margin="99,112,0,0" TextWrapping="Wrap" Text="Menu Functions" VerticalAlignment="Top" FontSize="36" FontStyle="Italic" FontWeight="Bold" Foreground="#FF23CFE0"/>
-        <Button x:ConnectionId='5' x:Name="btnRegisterNewChild" Content="Register New Child" HorizontalAlignment="Left" Margin="50,350,0,0" VerticalAlignment="Top" Width="393"                                   Height="54" FontSize="20" Background="#FF0A0101"/>
-        <TextBlock HorizontalAlignment="Left" Margin="125,160,0,0" TextWrapping="Wrap" Text="Logged-In Parent Id:" VerticalAlignment="Top" FontSize="22" Foreground="#FF08D2E6"/>
-        <TextBlock x:Name="lblParentIdenNum" HorizontalAlignment="Left" Margin="328,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" Height="26" Width="35" Foreground="#FF47DC26"/>
+        <Button x:ConnectionId='1' x:Name="btnStartTest" Content="Start New Test" HorizontalAlignment="Left" Margin="13,94,0,0" VerticalAlignment="Top" Width="279"                            Height="54" FontSize="16" Background="#FF010D11"/>
+        <Button x:ConnectionId='2' x:Name="btnViewTestResults" Content="View More Options" HorizontalAlignment="Left" Margin="13,149,0,0" VerticalAlignment="Top" Width="279"                                  Height="54" RenderTransformOrigin="0.481,1.395" FontSize="16" Background="#FF01080F"/>
+        <Button x:ConnectionId='3' x:Name="btnEditChildDetails" Content="Edit Parent Account Details" HorizontalAlignment="Left" Margin="13,263,0,0" VerticalAlignment="Top" Width="279"                                   Height="54" FontSize="16" Background="#FF0E0101"/>
+        <Button x:ConnectionId='4' x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="13,323,0,0" VerticalAlignment="Top" Width="279"                         Height="54" FontSize="16" Background="#FF0A0101"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Menu Functions" VerticalAlignment="Top" FontSize="20" FontStyle="Italic" FontWeight="Bold" Foreground="#FF23CFE0"/>
+        <Button x:ConnectionId='5' x:Name="btnRegisterNewChild" Content="Register New Child" HorizontalAlignment="Left" Margin="13,206,0,0" VerticalAlignment="Top" Width="279"                                   Height="54" FontSize="16" Background="#FF0A0101"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,39,0,0" TextWrapping="Wrap" Text="Logged-in as:" VerticalAlignment="Top" FontSize="16" Foreground="#FF08D2E6"/>
+        <TextBlock x:Name="lblParentIdenNum" HorizontalAlignment="Left" Margin="13,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Height="26" Width="367" Foreground="#FF47DC26"/>
     </Grid>
 </Page>
 

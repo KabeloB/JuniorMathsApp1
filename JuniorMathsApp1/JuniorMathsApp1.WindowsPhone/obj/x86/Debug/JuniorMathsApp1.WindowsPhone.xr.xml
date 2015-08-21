@@ -8,6 +8,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
       <RootProperty Name="Children" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
       <RootProperty Name="Stretch" />
@@ -25,6 +26,7 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontStyle" />
       <RootProperty Name="FontWeight" />
+      <RootProperty Name="RenderTransformOrigin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
@@ -35,20 +37,21 @@
       <RootProperty Name="Background" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="FontSize" />
-      <RootProperty Name="Foreground" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="JuniorMathsApp1.AboutAppPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="Height" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="UseLayoutRounding" />
       <RootProperty Name="RenderTransform" />
@@ -58,6 +61,8 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="JuniorMathsApp1.EditedSelectedChildPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
@@ -66,6 +71,8 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="JuniorMathsApp1.MainPage" />
     <RootType FullName="JuniorMathsApp1.MenuPage" />
@@ -75,6 +82,7 @@
       <RootProperty Name="SkewX" />
       <RootProperty Name="TranslateX" />
       <RootProperty Name="Rotation" />
+      <RootProperty Name="TranslateY" />
     </RootType>
     <RootType FullName="JuniorMathsApp1.RegistrationPage" />
     <RootType FullName="JuniorMathsApp1.ResetPasswordPage" />
@@ -85,6 +93,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Foreground" />
+      <RootProperty Name="FontSize" />
       <RootEvent Name="ItemClick" />
       <RootEvent Name="SelectionChanged" />
     </RootType>

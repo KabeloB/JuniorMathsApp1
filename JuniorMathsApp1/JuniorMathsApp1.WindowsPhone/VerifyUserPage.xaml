@@ -11,13 +11,13 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
-        <TextBox x:Name="txtConfirmEmail" HorizontalAlignment="Left" Margin="64,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="369"/>
-        <TextBlock HorizontalAlignment="Left" Margin="101,81,0,0" TextWrapping="Wrap" Text="Verify User Details" VerticalAlignment="Top" FontSize="36" Width="300" Foreground="#FF1FCFC7"/>
-        <TextBlock HorizontalAlignment="Left" Margin="64,164,0,0" TextWrapping="Wrap" Text="Enter Email Address:" VerticalAlignment="Top" FontSize="24" Foreground="#FF14D626"/>
-        <Button x:Name="btnVerifyUserDetails" Content="Process" HorizontalAlignment="Left" Margin="61,392,0,0" VerticalAlignment="Top" Click="btnVerifyUserDetails_Click" Height="36" Width="166" FontSize="16" Foreground="#FFDAE2D6" BorderBrush="#FF46EE14" Background="#FF0F0F0F"/>
-        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="269,392,0,0" VerticalAlignment="Top" Width="167" Click="btnBack_Click" Height="36" FontSize="16" BorderBrush="#FFD80D3C" Background="#FF111111"/>
-        <TextBlock HorizontalAlignment="Left" Margin="64,266,0,0" TextWrapping="Wrap" Text="Enter Phone Number:" VerticalAlignment="Top" FontSize="24" Foreground="#FF15DA39"/>
-        <TextBox x:Name="txtConfirmPhoneNo" HorizontalAlignment="Left" Margin="64,295,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="369"/>
+        <TextBox x:Name="txtConfirmEmail" HorizontalAlignment="Left" Margin="13,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="369" FontSize="16" Height="26"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Verify User Details" VerticalAlignment="Top" FontSize="20" Width="300" Foreground="#FF1FCFC7"/>
+        <TextBlock HorizontalAlignment="Left" Margin="13,67,0,0" TextWrapping="Wrap" Text="Enter Email Address:" VerticalAlignment="Top" FontSize="16" Foreground="#FF14D626"/>
+        <Button x:Name="btnVerifyUserDetails" Content="Process" HorizontalAlignment="Left" Margin="13,247,0,0" VerticalAlignment="Top" Click="btnVerifyUserDetails_Click" Height="41" Width="166" FontSize="16" Foreground="#FFDAE2D6" BorderBrush="#FF46EE14" Background="#FF0F0F0F"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="215,247,0,0" VerticalAlignment="Top" Width="167" Click="btnBack_Click" Height="36" FontSize="16" BorderBrush="#FFD80D3C" Background="#FF111111"/>
+        <TextBlock HorizontalAlignment="Left" Margin="13,169,0,0" TextWrapping="Wrap" Text="Enter Phone Number:" VerticalAlignment="Top" FontSize="16" Foreground="#FF15DA39"/>
+        <TextBox x:Name="txtConfirmPhoneNo" HorizontalAlignment="Left" Margin="13,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="369" FontSize="16" Height="23"/>
 
     </Grid>
 </Page>
