@@ -32,6 +32,8 @@ namespace JuniorMathsApp1
         MessageDialog dialog = new MessageDialog("");
         MenuPage objMenu = new MenuPage();
 
+        MessageDialog msgBox = null;
+
         
 
         private JuniorMathsApp1.App app = (Application.Current as App);
@@ -41,21 +43,16 @@ namespace JuniorMathsApp1
         }
 
         //Code for displaying MessageBox
-        private async void messageBox(string msg)
+        public async void messageBox(string msg)
         {
-            try
-            {
+           
+            
+
+            
                 var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
                 await msgDisplay.ShowAsync();
-            }
-            catch(Exception)
-            {
-
-            }
-            catch (ArgumentException)
-            {
-
-            }
+                
+           
             
 
         }
@@ -106,10 +103,12 @@ namespace JuniorMathsApp1
                                     objMenu.getID(iden);
 
 
+                                    MessageDialog msgBox = new MessageDialog("Welcome " + confirm.Name + " " + confirm.Surname +
+                                                       "\nYour user ID is: " + confirm.Id);
 
-                                    messageToDisplay = "Welcome " + confirm.Name + " " + confirm.Surname +
-                                                       "\nYour user ID is: " + confirm.Id;
-                                    messageBox(messageToDisplay);
+                                    //messageToDisplay = "Welcome " + confirm.Name + " " + confirm.Surname +
+                                                       //"\nYour user ID is: " + confirm.Id;
+                                    //messageBox(messageToDisplay);
 
                                 
                                 

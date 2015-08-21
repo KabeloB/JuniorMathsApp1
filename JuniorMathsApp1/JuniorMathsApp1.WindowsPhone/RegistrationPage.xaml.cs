@@ -50,6 +50,7 @@ namespace JuniorMathsApp1
 
         private async void messageBox(string msg)
         {
+            
             var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
             await msgDisplay.ShowAsync();
 
@@ -108,19 +109,26 @@ namespace JuniorMathsApp1
                             int verifyNum;
                             bool isNumerical = int.TryParse(phoneNumber, out verifyNum);
 
+                            objParent.SaveCustomer(name, surname, email, phoneNumber, password);
+                            this.Frame.Navigate(typeof(MainPage));
+                            MessageDialog msgBox = new MessageDialog("You have succesfully registered a new account..." +
+                                               "\nPlease use your new user credentials to login!");
+
+                            //messageToDisplay = "You have succesfully registered a new account..." +
+                                              // "\nPlease use your new user credentials to login!";
+                            //messageBox(messageToDisplay);
+
+                            /*
                             if(isNumerical == true)
                             {
-                                objParent.SaveCustomer(name, surname, email, phoneNumber, password);
-                                this.Frame.Navigate(typeof(MainPage));
-                                messageToDisplay = "You have succesfully registered a new account..." +
-                                                   "\nPlease use your new user credentials to login!";
-                                messageBox(messageToDisplay);
+                                
                             }
                             else
                             {
                                 messageToDisplay = "Please enter numeric characters only for the phone number! ";
                                 messageBox(messageToDisplay);
                             }
+                            */
                         }
                         else
                         {

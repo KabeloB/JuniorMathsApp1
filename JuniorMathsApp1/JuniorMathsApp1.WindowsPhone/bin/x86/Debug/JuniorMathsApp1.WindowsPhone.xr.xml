@@ -62,7 +62,6 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="FontSize" />
-      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="JuniorMathsApp1.EditedSelectedChildPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
