@@ -12,9 +12,9 @@
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
         <TextBlock HorizontalAlignment="Left" Margin="22,25,0,0" TextWrapping="Wrap" Text="Please select child to take test" VerticalAlignment="Top" FontSize="20" Foreground="#FF1EE0D7"/>
-        <ListView x:Name="lsvChooseChild" HorizontalAlignment="Left" Height="376" Margin="21,54,0,0" VerticalAlignment="Top" Width="356" ItemClick="lsvChooseChild_ItemClick" SelectionChanged="MySelectionChanged" Foreground="#FF18EABA"/>
         <Button x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="22,455,0,0" VerticalAlignment="Top" Width="158" Click="btnSelect_Click" Background="#FF010F01" BorderBrush="#FF17D828" FontSize="16"/>
         <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="219,455,0,0" VerticalAlignment="Top" Width="158" Click="btnBack_Click" Background="#FF0E0101" BorderBrush="#FFE43F1A" FontSize="16"/>
+        <ListView x:Name="lsvChooseChild" HorizontalAlignment="Left" Height="375" Margin="22,66,0,0" VerticalAlignment="Top" Width="355" FontSize="16"/>
 
     </Grid>
 </Page>

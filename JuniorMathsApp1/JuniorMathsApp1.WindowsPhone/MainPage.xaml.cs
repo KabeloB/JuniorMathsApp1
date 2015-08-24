@@ -45,16 +45,8 @@ namespace JuniorMathsApp1
         //Code for displaying MessageBox
         public async void messageBox(string msg)
         {
-           
-            
-
-            
-                var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
-                await msgDisplay.ShowAsync();
-                
-           
-            
-
+            var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
+            await msgDisplay.ShowAsync();
         }
 
 
@@ -102,13 +94,9 @@ namespace JuniorMathsApp1
                                     int iden = Convert.ToInt32(confirm.Id);//confirm.Id;
                                     objMenu.getID(iden);
 
-
-                                    MessageDialog msgBox = new MessageDialog("Welcome " + confirm.Name + " " + confirm.Surname +
-                                                       "\nYour user ID is: " + confirm.Id);
-
-                                    //messageToDisplay = "Welcome " + confirm.Name + " " + confirm.Surname +
-                                                       //"\nYour user ID is: " + confirm.Id;
-                                    //messageBox(messageToDisplay);
+                                    messageToDisplay = "Welcome " + confirm.Name + " " + confirm.Surname +
+                                                       "\nYour user ID is: " + confirm.Id;
+                                    messageBox(messageToDisplay);
 
                                 
                                 
@@ -133,14 +121,15 @@ namespace JuniorMathsApp1
                         }
                         catch(Exception ex)
                         {
-                            dialog = new MessageDialog("Error: " + ex.Message);
+                            string ErrorMessage = "Error: " + ex.Message;
+                            messageBox(ErrorMessage);
                         }
                         
                     }
                     else
                     {
                         //Enter error message box here!
-                        String ErrorMessage = "Please ensure that all text field are entered!";
+                        string ErrorMessage = "Please ensure that all text field are entered!";
                         messageBox(ErrorMessage);
                         //this.Frame.Navigate(typeof(MainPage));
                         

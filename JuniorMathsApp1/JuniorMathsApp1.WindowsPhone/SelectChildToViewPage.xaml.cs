@@ -116,6 +116,7 @@ namespace JuniorMathsApp1
         string surname =  "";
         string age = "";
         string grade = "";
+        //private void MySelectionChanged(object sender, SelectionChangedEventArgs e)
         private void MySelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
@@ -147,7 +148,16 @@ namespace JuniorMathsApp1
             int convNum = 0;
             try
             {
-                convNum = Convert.ToInt32(idNum);
+                if(idNum.Equals(""))
+                {
+                    string msgErr = "Please select a child before proceeding!";
+                    messageBox(msgErr);
+                }
+                else
+                {
+                   convNum = Convert.ToInt32(idNum);
+                }
+               
             }
             catch (Exception)
             {
@@ -188,7 +198,15 @@ namespace JuniorMathsApp1
             int returnNumP = 0;
             try
             {
-                returnNumP = Convert.ToInt32(m);
+                if(m.Equals(""))
+                {
+                    string msg = "Please select a child before proceeding with the deleting process!";
+                }
+                else
+                {
+                   returnNumP = Convert.ToInt32(m);
+                }
+               
             }
             catch (Exception)
             {

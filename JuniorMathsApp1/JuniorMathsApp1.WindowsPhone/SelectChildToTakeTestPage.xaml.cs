@@ -105,12 +105,22 @@ namespace JuniorMathsApp1
             int convNum = 0;
             try
             {
-              convNum = Convert.ToInt32(idNum);
+                if(idNum.Equals(""))
+                {
+                    msg = "Please select a child first before proceeding with the test!";
+                    messageBox(msg);
+                }
+                else
+                {
+                    convNum = Convert.ToInt32(idNum);
+                }
+                
             }
             catch(Exception)
             {
 
             }
+
             if(convNum <= 0)
             {
                 msg = "Please select a child first before proceeding with the test!";
