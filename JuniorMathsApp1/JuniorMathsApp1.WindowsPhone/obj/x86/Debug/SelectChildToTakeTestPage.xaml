@@ -14,7 +14,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="22,25,0,0" TextWrapping="Wrap" Text="Please select child to take test" VerticalAlignment="Top" FontSize="20" Foreground="#FF1EE0D7"/>
         <Button x:ConnectionId='1' x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="22,455,0,0" VerticalAlignment="Top" Width="158"                         Background="#FF010F01" BorderBrush="#FF17D828" FontSize="16"/>
         <Button x:ConnectionId='2' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="219,455,0,0" VerticalAlignment="Top" Width="158"                       Background="#FF0E0101" BorderBrush="#FFE43F1A" FontSize="16"/>
-        <ListView x:Name="lsvChooseChild" HorizontalAlignment="Left" Height="375" Margin="22,66,0,0" VerticalAlignment="Top" Width="355" FontSize="16"/>
+        <ListView x:ConnectionId='3' x:Name="lsvChooseChild" HorizontalAlignment="Left" Height="375" Margin="22,66,0,0" VerticalAlignment="Top" Width="355" FontSize="16"                                      />
 
     </Grid>
 </Page>

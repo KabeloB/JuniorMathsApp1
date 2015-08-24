@@ -16,8 +16,7 @@
         <Button x:ConnectionId='2' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="223,506,0,0" VerticalAlignment="Top" Width="152"                       Background="#FF111010" BorderBrush="#FF8D0FD4" FontSize="16"/>
         <Button x:ConnectionId='3' x:Name="btnDeleteChild" Content="Delete" HorizontalAlignment="Left" Margin="223,462,0,0" VerticalAlignment="Top" Width="152"                              Background="#FF0F0D0D" BorderBrush="#FFE01745" FontSize="16"/>
         <Button x:ConnectionId='4' x:Name="btnEditChildDetails" Content="Edit Child Details" HorizontalAlignment="Left" Margin="20,507,0,0" VerticalAlignment="Top" Width="152"                                   Background="#FF111010" BorderBrush="#FF23CFCF" FontSize="16"/>
-        <ListView x:Name="lsViewChildren" HorizontalAlignment="Left" Height="417" Margin="20,39,0,0" VerticalAlignment="Top" Width="355" FontSize="16" Foreground="#FFF1ECF1"/>
-        <ListBox HorizontalAlignment="Left" Height="0" Margin="446,425,-59,0" VerticalAlignment="Top" Width="13"/>
+        <ListView x:ConnectionId='5' x:Name="lsViewChildren" HorizontalAlignment="Left" Height="417" Margin="20,39,0,0" VerticalAlignment="Top" Width="355" FontSize="16" Foreground="#FFF1ECF1"                                                                           />
 
     </Grid>
 </Page>

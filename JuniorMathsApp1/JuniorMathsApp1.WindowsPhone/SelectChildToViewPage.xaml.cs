@@ -116,7 +116,6 @@ namespace JuniorMathsApp1
         string surname =  "";
         string age = "";
         string grade = "";
-        //private void MySelectionChanged(object sender, SelectionChangedEventArgs e)
         private void MySelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
