@@ -55,6 +55,9 @@ namespace JuniorMathsApp1
         string[] equation = new string[10];
         string[] answerArray = new string[10];
 
+        List<string> listEquations = new List<string>();
+        List<string> listAnswer = new List<string>();
+
         int h, m, s;
         private DispatcherTimer timer = new DispatcherTimer();
 
@@ -264,8 +267,6 @@ namespace JuniorMathsApp1
                         btnBack.IsEnabled = true;
                         txtEnterAnswer.IsEnabled = false;
 
-                       
-
                         string msg = "Please select a difficulty level first before proceeding with the test!";
                         messageBox(msg);
                     }
@@ -302,16 +303,14 @@ namespace JuniorMathsApp1
                                 equation1 = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
-                                equation[countIndex] = equation1;
-                                answerArray[countIndex] = answer1;
-                                storeAnswer = "" + answerArray[incrementArray];
+                                listEquations.Add(equation1);
+                                listAnswer.Add(answer1);
 
-                                lblEquation.Text = "" + equation[incrementArray];
                                 countIndex = countIndex + 1;
-
                             }
 
-                            sendAnswer = Convert.ToInt32(answerArray[countIndex]);
+                            storeAnswer = "" + listAnswer.ElementAt(0);
+                            lblEquation.Text = "" + listEquations.ElementAt(0);
 
                         }
                         else if (getTestDifficulty.Equals("Intermediate"))
@@ -341,16 +340,14 @@ namespace JuniorMathsApp1
                                 equation1 = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
-                                equation[countIndex] = equation1;
-                                answerArray[countIndex] = answer1;
-                                storeAnswer = "" + answerArray[incrementArray];
+                                listEquations.Add(equation1);
+                                listAnswer.Add(answer1);
 
-                                lblEquation.Text = "" + equation[incrementArray];
                                 countIndex = countIndex + 1;
-
                             }
 
-                            sendAnswer = Convert.ToInt32(answerArray[countIndex]);
+                            storeAnswer = "" + listAnswer.ElementAt(0);
+                            lblEquation.Text = "" + listEquations.ElementAt(0);
 
 
                         }
@@ -385,17 +382,19 @@ namespace JuniorMathsApp1
                                 answerArray[countIndex] = answer1;
                                 storeAnswer = "" + answerArray[incrementArray];
 
-                                lblEquation.Text = "" + equation[incrementArray];
-                                countIndex = countIndex + 1;
+                                listEquations.Add(equation1);
+                                listAnswer.Add(answer1);
 
+                                countIndex = countIndex + 1;
                             }
 
-                            sendAnswer = Convert.ToInt32(answerArray[countIndex]);
+                            storeAnswer = "" + listAnswer.ElementAt(0);
+                            lblEquation.Text = "" + listEquations.ElementAt(0);
 
                         }
 
 
-                        lblCompletedQuestion.Text = "" + count;
+                        lblCompletedQuestion.Text = "" + completedQuestions;
 
 
                     }
@@ -449,16 +448,14 @@ namespace JuniorMathsApp1
                                 equation1 = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
-                                equation[countIndex] = equation1;
-                                answerArray[countIndex] = answer1;
-                                storeAnswer = "" + answerArray[incrementArray];
+                                listEquations.Add(equation1);
+                                listAnswer.Add(answer1);
 
-                                lblEquation.Text = "" + equation[incrementArray];
                                 countIndex = countIndex + 1;
-
                             }
 
-                            sendAnswer = Convert.ToInt32(answerArray[countIndex]);
+                            storeAnswer = "" + listAnswer.ElementAt(0);
+                            lblEquation.Text = "" + listEquations.ElementAt(0);
 
 
 
@@ -490,16 +487,14 @@ namespace JuniorMathsApp1
                                 equation1 = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
-                                equation[countIndex] = equation1;
-                                answerArray[countIndex] = answer1;
-                                storeAnswer = "" + answerArray[incrementArray];
+                                listEquations.Add(equation1);
+                                listAnswer.Add(answer1);
 
-                                lblEquation.Text = "" + equation[incrementArray];
                                 countIndex = countIndex + 1;
-
                             }
 
-                            sendAnswer = Convert.ToInt32(answerArray[countIndex]);
+                            storeAnswer = "" + listAnswer.ElementAt(0);
+                            lblEquation.Text = "" + listEquations.ElementAt(0);
 
                         }
                         else if (getTestDifficulty.Equals("Advanced"))
@@ -529,23 +524,21 @@ namespace JuniorMathsApp1
                                 equation1 = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
-                                equation[countIndex] = equation1;
-                                answerArray[countIndex] = answer1;
-                                storeAnswer = "" + answerArray[incrementArray];
+                                listEquations.Add(equation1);
+                                listAnswer.Add(answer1);
 
-                                lblEquation.Text = "" + equation[incrementArray];
                                 countIndex = countIndex + 1;
-
                             }
 
-                            sendAnswer = Convert.ToInt32(answerArray[countIndex]);
+                            storeAnswer = "" + listAnswer.ElementAt(0);
+                            lblEquation.Text = "" + listEquations.ElementAt(0);
 
 
 
                         }
 
 
-                        lblCompletedQuestion.Text = "" + count;
+                        lblCompletedQuestion.Text = "" + completedQuestions;
 
 
                     }
@@ -563,8 +556,8 @@ namespace JuniorMathsApp1
 
         }
 
-       
 
+        int nextQuestionCount = 0;
         //Button to submit the answer
         private void btnSubmitAnswer_Click(object sender, RoutedEventArgs e)
         {
@@ -595,9 +588,8 @@ namespace JuniorMathsApp1
                             txtWrong.Text = "Wrong Answers: " + (wrongAnswers = wrongAnswers + 1);
                         }
 
-
+                        
                         completedQuestions = completedQuestions + 1;
-                        lblCount.Text = "" + completedQuestions;
 
                         if (completedQuestions >= 10)
                         {
@@ -613,6 +605,7 @@ namespace JuniorMathsApp1
 
                         incrementArray = incrementArray + 1;
                         countIndex = countIndex + 1;
+                        nextQuestionCount = nextQuestionCount + 1;
                         txtEnterAnswer.Text = "";
                         doCalculation();
                     }
@@ -671,40 +664,26 @@ namespace JuniorMathsApp1
                         //Put this block of code in the ELSE BLOCK
                         if (getTestDifficulty.Equals("Biginner"))
                         {
-                            
+                            storeAnswer = "" + listAnswer.ElementAt(nextQuestionCount);
 
-                            storeAnswer = "" + answerArray[incrementArray];
-
-                            lblEquation.Text = "" + equation[incrementArray];
-
-                            sendAnswer = Convert.ToInt32(answerArray[countIndex]);
+                            lblEquation.Text = "" + listEquations.ElementAt(nextQuestionCount);
 
                         }
                         else if (getTestDifficulty.Equals("Intermediate"))
                         {
-                            storeAnswer = "" + answerArray[incrementArray];
+                            storeAnswer = "" + listAnswer.ElementAt(nextQuestionCount);
 
-                            lblEquation.Text = "" + equation[incrementArray];
-
-                            sendAnswer = Convert.ToInt32(answerArray[countIndex]);
-
-
-
+                            lblEquation.Text = "" + listEquations.ElementAt(nextQuestionCount);
                         }
                         else if (getTestDifficulty.Equals("Advanced"))
                         {
-                            storeAnswer = "" + answerArray[incrementArray];
+                            storeAnswer = "" + listAnswer.ElementAt(nextQuestionCount);
 
-                            lblEquation.Text = "" + equation[incrementArray];
-
-                            sendAnswer = Convert.ToInt32(answerArray[countIndex]);
-
-
-
+                            lblEquation.Text = "" + listEquations.ElementAt(nextQuestionCount);
                         }
 
 
-                        lblCompletedQuestion.Text = "" + count;
+                        lblCompletedQuestion.Text = "" + completedQuestions;
 
 
                     }
@@ -733,35 +712,25 @@ namespace JuniorMathsApp1
                         //Put this block of code in the ELSE BLOCK
                         if (getTestDifficulty.Equals("Biginner"))
                         {
-                            storeAnswer = "" + answerArray[incrementArray];
+                            storeAnswer = "" + listAnswer.ElementAt(nextQuestionCount);
 
-                            lblEquation.Text = "" + equation[incrementArray];
-
-                            sendAnswer = Convert.ToInt32(answerArray[countIndex]);
-
+                            lblEquation.Text = "" + listEquations.ElementAt(nextQuestionCount);
                         }
                         else if (getTestDifficulty.Equals("Intermediate"))
                         {
-                            storeAnswer = "" + answerArray[incrementArray];
+                            storeAnswer = "" + listAnswer.ElementAt(nextQuestionCount);
 
-                            lblEquation.Text = "" + equation[incrementArray];
-
-                            sendAnswer = Convert.ToInt32(answerArray[countIndex]);
-
-
-
+                            lblEquation.Text = "" + listEquations.ElementAt(nextQuestionCount);
                         }
                         else if (getTestDifficulty.Equals("Advanced"))
                         {
-                            storeAnswer = "" + answerArray[incrementArray];
+                            storeAnswer = "" + listAnswer.ElementAt(nextQuestionCount);
 
-                            lblEquation.Text = "" + equation[incrementArray];
-
-                            sendAnswer = Convert.ToInt32(answerArray[countIndex]);
+                            lblEquation.Text = "" + listEquations.ElementAt(nextQuestionCount);
                         }
 
 
-                        lblCompletedQuestion.Text = "" + count;
+                        lblCompletedQuestion.Text = "" + completedQuestions;
 
 
                     }

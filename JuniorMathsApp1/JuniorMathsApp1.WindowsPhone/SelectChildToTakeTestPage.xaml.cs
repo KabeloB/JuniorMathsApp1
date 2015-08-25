@@ -51,7 +51,7 @@ namespace JuniorMathsApp1
 
                 lsvChooseChild.Items.Add("ID" + "\t" + "NAME & SURNAME");
 
-                foreach (var c in children)
+                foreach(var c in children)
                 {
                     lsvChooseChild.Items.Add(c.Id + "-" + c.Name + "_" + c.Surname);
 
