@@ -29,7 +29,6 @@ namespace JuniorMathsApp1
     public sealed partial class NewTestPage : Page
     {
 
-
         string getIds = "";
         int parentID = 0;
         int childID = 0;
