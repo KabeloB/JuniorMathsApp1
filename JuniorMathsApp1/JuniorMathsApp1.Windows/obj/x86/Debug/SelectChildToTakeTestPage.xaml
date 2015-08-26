@@ -11,10 +11,10 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
-        <TextBlock HorizontalAlignment="Left" Margin="39,31,0,0" TextWrapping="Wrap" Text="Please select child to take test" VerticalAlignment="Top" FontSize="36" Foreground="#FF1EE0D7"/>
-        <ListView x:ConnectionId='1' x:Name="lsvChooseChild" HorizontalAlignment="Left" Height="462" Margin="39,79,0,0" VerticalAlignment="Top" Width="473"                                                                            Foreground="#FF18EABA"/>
-        <Button x:ConnectionId='2' x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="36,581,0,0" VerticalAlignment="Top" Width="196"                         Background="#FF010F01" BorderBrush="#FF17D828" FontSize="16"/>
-        <Button x:ConnectionId='3' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="323,581,0,0" VerticalAlignment="Top" Width="192"                       Background="#FF0E0101" BorderBrush="#FFE43F1A" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="467,59,0,0" TextWrapping="Wrap" Text="Please select child to take test" VerticalAlignment="Top" FontSize="36" Foreground="#FF1EE0D7"/>
+        <ListView x:ConnectionId='1' x:Name="lsvChooseChild" HorizontalAlignment="Left" Height="462" Margin="467,107,0,0" VerticalAlignment="Top" Width="473"                                                                            Foreground="#FF18EABA"/>
+        <Button x:ConnectionId='2' x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="464,609,0,0" VerticalAlignment="Top" Width="196"                         Background="#FF010F01" BorderBrush="#FF17D828" FontSize="16"/>
+        <Button x:ConnectionId='3' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="751,609,0,0" VerticalAlignment="Top" Width="192"                       Background="#FF0E0101" BorderBrush="#FFE43F1A" FontSize="16"/>
 
     </Grid>
 </Page>
