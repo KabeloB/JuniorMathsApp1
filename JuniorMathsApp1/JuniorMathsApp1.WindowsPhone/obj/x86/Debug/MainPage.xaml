@@ -11,15 +11,15 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
-        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Junior Math App" VerticalAlignment="Top" FontSize="20" Width="160" Foreground="#FF56D9EE"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,56,0,0" TextWrapping="Wrap" Text="Enter Username:" VerticalAlignment="Top" FontSize="16" Foreground="#FF82C340"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,132,0,0" TextWrapping="Wrap" Text="Enter Password:" VerticalAlignment="Top" FontSize="16" Foreground="#FF7FC13D"/>
-        <TextBox x:Name="txtUsername"  PlaceholderText="enter email address" HorizontalAlignment="Left" Margin="10,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="352" Height="20" FontSize="16"/>
-        <Button x:ConnectionId='1' x:Name="btnLogin1" Content="Login" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top"                         Width="358" Height="48" FontSize="16" Foreground="#FFEEE3E3" Background="#FF0F0101" BorderBrush="#FF1697E0"/>
-        <Button x:ConnectionId='2' x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="10,250,0,0" VerticalAlignment="Top"                           Width="358" Height="48" FontSize="16" Background="#FF0F0101" BorderBrush="#FF712CD4"/>
-        <Button x:ConnectionId='3' x:Name="btnForgotPassword" Content="Forgot Password" HorizontalAlignment="Left" Margin="10,303,0,0" VerticalAlignment="Top"                                 Height="48" Width="358" FontSize="16" Background="#FF0F0101" BorderBrush="#FFDA145C"/>
-        <PasswordBox x:Name="pwbEnterPassword" PlaceholderText="enter password"  HorizontalAlignment="Left" Margin="10,151,0,0" VerticalAlignment="Top" Width="352" FontSize="20" Height="29"/>
-        <Button x:ConnectionId='4' Content="About App" HorizontalAlignment="Left" Margin="10,356,0,0" VerticalAlignment="Top" Width="358" Background="#FF010F03" BorderBrush="#FF26F012" FontSize="16" Height="48"                       />
+        <TextBlock HorizontalAlignment="Left" Margin="10,9,0,0" TextWrapping="Wrap" Text="Junior Math App" VerticalAlignment="Top" FontSize="36" Width="270" Foreground="#FF56D9EE"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,66,0,0" TextWrapping="Wrap" Text="Enter Username:" VerticalAlignment="Top" FontSize="16" Foreground="#FF82C340"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,142,0,0" TextWrapping="Wrap" Text="Enter Password:" VerticalAlignment="Top" FontSize="16" Foreground="#FF7FC13D"/>
+        <TextBox x:Name="txtUsername"  PlaceholderText="enter email address" HorizontalAlignment="Left" Margin="10,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="352" Height="20" FontSize="16"/>
+        <Button x:ConnectionId='1' x:Name="btnLogin1" Content="Login" HorizontalAlignment="Left" Margin="10,205,0,0" VerticalAlignment="Top"                         Width="358" Height="48" FontSize="16" Foreground="#FFEEE3E3" Background="#FF0F0101" BorderBrush="#FF1697E0"/>
+        <Button x:ConnectionId='2' x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="10,260,0,0" VerticalAlignment="Top"                           Width="358" Height="48" FontSize="16" Background="#FF0F0101" BorderBrush="#FF712CD4"/>
+        <Button x:ConnectionId='3' x:Name="btnForgotPassword" Content="Forgot Password" HorizontalAlignment="Left" Margin="10,313,0,0" VerticalAlignment="Top"                                 Height="48" Width="358" FontSize="16" Background="#FF0F0101" BorderBrush="#FFDA145C"/>
+        <PasswordBox x:Name="pwbEnterPassword" PlaceholderText="enter password"  HorizontalAlignment="Left" Margin="10,161,0,0" VerticalAlignment="Top" Width="352" FontSize="20" Height="29"/>
+        <Button x:ConnectionId='4' Content="About App" HorizontalAlignment="Left" Margin="10,366,0,0" VerticalAlignment="Top" Width="358" Background="#FF010F03" BorderBrush="#FF26F012" FontSize="16" Height="48"                       />
 
     </Grid>
 </Page>
