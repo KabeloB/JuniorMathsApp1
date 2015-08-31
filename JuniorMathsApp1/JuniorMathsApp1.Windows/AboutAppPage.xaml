@@ -11,9 +11,9 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
-        <TextBlock HorizontalAlignment="Left" Margin="527,111,0,0" TextWrapping="Wrap" Text="This application will assist parents to keep track of their childrens  progress regarding thier mathematical skills by allowing them to take a series of math questions and calculating their test results to see how well they did." VerticalAlignment="Top" Height="220" Width="276" FontSize="20" Foreground="#FF38EC5C"/>
-        <TextBlock HorizontalAlignment="Left" Margin="527,49,0,0" TextWrapping="Wrap" Text="About Application" VerticalAlignment="Top" FontSize="36" Foreground="#FF0FDBF0"/>
-        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="524,357,0,0" VerticalAlignment="Top" Width="179" Click="btnBack_Click" Background="#FF0C0101" BorderBrush="#FFEA0C0C" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="523,135,0,0" TextWrapping="Wrap" Text="This application will assist parents to keep track of their childrens  progress regarding thier mathematical skills by allowing them to take a series of math questions and calculating their test results to see how well they did." VerticalAlignment="Top" Height="220" Width="276" FontSize="20" Foreground="#FF38EC5C"/>
+        <TextBlock HorizontalAlignment="Left" Margin="523,73,0,0" TextWrapping="Wrap" Text="About Application" VerticalAlignment="Top" FontSize="36" Foreground="#FF0FDBF0"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="520,381,0,0" VerticalAlignment="Top" Width="179" Click="btnBack_Click" Background="#FF0C0101" BorderBrush="#FFEA0C0C" FontSize="20"/>
 
     </Grid>
 </Page>
