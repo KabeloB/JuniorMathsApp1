@@ -25,6 +25,7 @@ namespace JuniorMathsApp1
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        //Object declarations
         ParentViewModel objParent = new ParentViewModel();
 
         Register objReg = new Register();
