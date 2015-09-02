@@ -599,17 +599,23 @@ namespace JuniorMathsApp1
 
                             timer.Stop();
                             this.Frame.Navigate(typeof(MenuPage), parentID);
+                            listAnswer = new List<string>();
+                            listEquations = new List<string>();
                             msg = "You have completed all questions for the test!" +
                                   "\nNavigate to view results to display the score...";
                             messageBox(msg);
 
                         }
+                        else
+                        {
+                            incrementArray = incrementArray + 1;
+                            countIndex = countIndex + 1;
+                            nextQuestionCount = nextQuestionCount + 1;
+                            txtEnterAnswer.Text = "";
+                            doCalculation();
+                        }
 
-                        incrementArray = incrementArray + 1;
-                        countIndex = countIndex + 1;
-                        nextQuestionCount = nextQuestionCount + 1;
-                        txtEnterAnswer.Text = "";
-                        doCalculation();
+                        
                     }
                     else
                     {

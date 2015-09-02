@@ -113,6 +113,18 @@ namespace JuniorMathsApp1
                 else
                 {
                     convNum = Convert.ToInt32(idNum);
+
+                    if (convNum <= 0)
+                    {
+                        msg = "Please select a child first before proceeding with the test!";
+                        messageBox(msg);
+                    }
+                    else
+                    {
+                        string objToSend = "" + parentId + "#" + idNum;
+                        this.Frame.Navigate(typeof(NewTestPage), objToSend);
+                    }
+           
                 }
                 
             }
@@ -121,17 +133,7 @@ namespace JuniorMathsApp1
 
             }
 
-            if(convNum <= 0)
-            {
-                msg = "Please select a child first before proceeding with the test!";
-                messageBox(msg);
-            }
-            else
-            {
-                string objToSend = "" + parentId + "#" + idNum;
-                this.Frame.Navigate(typeof(NewTestPage), objToSend);
-            }
-           
+            
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)

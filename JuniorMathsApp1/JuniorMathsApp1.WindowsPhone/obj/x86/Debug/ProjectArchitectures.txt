@@ -1,1 +1,1 @@
-D:\Mod\Documents\Visual Studio 2013\Projects\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.WindowsPhone\JuniorMathsApp1.WindowsPhone.csproj;x86
+D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.WindowsPhone\JuniorMathsApp1.WindowsPhone.csproj;x86

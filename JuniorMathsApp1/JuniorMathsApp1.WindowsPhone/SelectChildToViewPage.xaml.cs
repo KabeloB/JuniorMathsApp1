@@ -155,6 +155,17 @@ namespace JuniorMathsApp1
                 else
                 {
                    convNum = Convert.ToInt32(idNum);
+
+                   if (convNum <= 0)
+                   {
+                       msg = "Please select a child first before proceeding with viewing test results!";
+                       messageBox(msg);
+                   }
+                   else
+                   {
+                       string objToSend = "" + parentId + "#" + idNum;
+                       this.Frame.Navigate(typeof(ViewAllResultsPage), objToSend);
+                   }
                 }
                
             }
@@ -163,16 +174,7 @@ namespace JuniorMathsApp1
 
             }
 
-            if(convNum <= 0)
-            {
-                msg = "Please select a child first before proceeding with viewing test results!";
-                messageBox(msg);
-            }
-            else
-            {
-                string objToSend = "" + parentId + "#" + idNum;
-                this.Frame.Navigate(typeof(ViewAllResultsPage), objToSend);
-            }
+           
            
 
         }
@@ -220,29 +222,43 @@ namespace JuniorMathsApp1
             childrenViewModel = new ChildrenViewModel();
             objTestViewModel = new TestViewModel();
             string strMsg = "";
-            int convNum = myParentId(idNum);
-            int getResult = 0;
-
-            if (convNum <= 0)
+            try
             {
-                strMsg = "Please select a child first before proceeding with the delete process!";
-                messageBox(strMsg);
-            }
-            else
-            {
-                try
-                {
-                    childrenViewModel.deleteChildRecords(convNum);
-                    objTestViewModel.deleteChildTestRecords(convNum);
-                    strMsg = "You have successfully deleted: " + name + " from the database!";
-                    messageBox(strMsg);
-                    this.Frame.Navigate(typeof(MenuPage), parentId);
-                }
-                catch (Exception)
-                {
+                    if(strMsg.Equals(""))
+                    {
+                        strMsg = "Please select a child first before proceeding with the delete process!";
+                        messageBox(strMsg);
+                    }
+                    else
+                    {
+                        int convNum = myParentId(idNum);
+                        int getResult = 0;
 
-                }
-            }
+                        if (convNum <= 0)
+                        {
+                            strMsg = "Please select a child first before proceeding with the delete process!";
+                            messageBox(strMsg);
+                        }
+                        else
+                        {
+                    
+                                childrenViewModel.deleteChildRecords(convNum);
+                                objTestViewModel.deleteChildTestRecords(convNum);
+                                strMsg = "You have successfully deleted: " + name + " from the database!";
+                                messageBox(strMsg);
+                                this.Frame.Navigate(typeof(MenuPage), parentId);
+                    
+                        }
+
+                    }
+
+              }
+              catch (Exception)
+              {
+
+              }
+
+
         }
 
         //Button to update child details
@@ -257,39 +273,47 @@ namespace JuniorMathsApp1
 
             try
             {
-                convertChildId = Convert.ToInt32(idNum);
-                convertParentId = Convert.ToInt32(parentId);
-                regChild = childrenViewModel.getChildDetails(convertChildId,parentId);
+                if (strMsg.Equals(""))
+                {
+                    strMsg = "Please select a child first before proceeding with the editing process!";
+                    messageBox(strMsg);
+
+                }
+                else
+                {
+                    convertChildId = Convert.ToInt32(idNum);
+                    convertParentId = Convert.ToInt32(parentId);
+                    regChild = childrenViewModel.getChildDetails(convertChildId, parentId);
+
+                    if ((convertChildId <= 0) && (convertParentId <= 0))
+                    {
+                        strMsg = "Please select a child first before proceeding with the editing process!";
+                        messageBox(strMsg);
+                    }
+                    else
+                    {
+                        if (regChild != null)
+                        {
+                            this.Frame.Navigate(typeof(EditedSelectedChildPage), regChild);
+                            string msg = "Found child details in the database!";
+                            messageBox(msg);
+                        }
+                        else
+                        {
+                            string msg = "Couldn't retrive child infomation from the database";
+                            messageBox(msg);
+                        }
+                    }
+                }
             }
             catch(Exception)
             {
 
             }
 
-
-            if ((convertChildId <= 0) && (convertParentId <= 0))
-            {
-                strMsg = "Please select a child first before proceeding with the editing process!";
-                messageBox(strMsg);
-            }
-            else
-            {
-                if(regChild != null)
-                {
-                    this.Frame.Navigate(typeof(EditedSelectedChildPage), regChild);
-                    string msg = "Found child details in the database!";
-                    messageBox(msg);
-                }
-                else
-                {
-                    string msg = "Couldn't retrive child infomation from the database";
-                    messageBox(msg);
-                }
-            }
+            
+            
         }
          
-
-
-        
     }
 }

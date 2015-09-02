@@ -597,6 +597,12 @@ namespace JuniorMathsApp1
 
                             timer.Stop();
                             this.Frame.Navigate(typeof(MenuPage), parentID);
+
+                            listAnswer = new List<string>();
+                            listEquations = new List<string>();
+
+                            listEquations.ElementAt(nextQuestionCount);
+
                             msg = "You have completed all questions for the test!" +
                                   "\nNavigate to view results to display the score...";
                             messageBox(msg);

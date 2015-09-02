@@ -23,7 +23,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="24,110,0,0" TextWrapping="Wrap" Text="Enter Name:" VerticalAlignment="Top" FontSize="16" Foreground="#FF23F10E" Width="352"/>
         <Button Content="Back" HorizontalAlignment="Left" Margin="204,462,0,0" VerticalAlignment="Top" Width="172" Height="44" Click="Button_Click" BorderBrush="#FFE41717" Background="#FF0E0000" FontSize="14"/>
         <TextBlock x:Name="lblGetParentIdNum" HorizontalAlignment="Left" Margin="331,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Foreground="#FF12F1DD" Width="28"/>
-        <ComboBox x:Name="cbSelectGrade" HorizontalAlignment="Left" Margin="24,398,0,0" VerticalAlignment="Top" Width="178" FontSize="16"/>
+        <ComboBox x:Name="cbSelectGrade" HorizontalAlignment="Left" Margin="24,398,0,0" VerticalAlignment="Top" Width="172" FontSize="16"/>
 
     </Grid>
 </Page>
