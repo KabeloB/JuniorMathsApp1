@@ -11,15 +11,19 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
-        <TextBlock HorizontalAlignment="Left" Margin="10,9,0,0" TextWrapping="Wrap" Text="Junior Math App" VerticalAlignment="Top" FontSize="36" Width="270" Foreground="#FF56D9EE"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,66,0,0" TextWrapping="Wrap" Text="Enter Username:" VerticalAlignment="Top" FontSize="16" Foreground="#FF82C340" Width="122"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,142,0,0" TextWrapping="Wrap" Text="Enter Password:" VerticalAlignment="Top" FontSize="16" Foreground="#FF7FC13D" Width="117"/>
-        <TextBox x:Name="txtUsername" PlaceholderText="enter email address" HorizontalAlignment="Left" Margin="10,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="374" Height="20" FontSize="16"/>
-        <Button x:Name="btnLogin1" Content="Login" HorizontalAlignment="Left" Margin="10,205,0,0" VerticalAlignment="Top" Click="btnLogin1_Click" Width="380" Height="48" FontSize="16" Foreground="#FFEEE3E3" Background="#FF0F0101" BorderBrush="#FF1697E0"/>
-        <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="10,260,0,0" VerticalAlignment="Top" Click="btnRegister_Click" Width="380" Height="48" FontSize="16" Background="#FF0F0101" BorderBrush="#FF712CD4"/>
-        <Button x:Name="btnForgotPassword" Content="Forgot Password" HorizontalAlignment="Left" Margin="10,313,0,0" VerticalAlignment="Top" Click="btnForgotPassword_Click" Height="48" Width="380" FontSize="16" Background="#FF0F0101" BorderBrush="#FFDA145C"/>
-        <PasswordBox x:Name="pwbEnterPassword" PlaceholderText="enter password"  HorizontalAlignment="Left" Margin="10,161,0,0" VerticalAlignment="Top" Width="374" FontSize="20" Height="29"/>
-        <Button Content="About App" HorizontalAlignment="Left" Margin="10,366,0,0" VerticalAlignment="Top" Width="380" Background="#FF010F03" BorderBrush="#FF26F012" FontSize="16" Height="48" Click="Button_Click_1"/>
+        <ScrollViewer HorizontalAlignment="Left" Height="433" VerticalAlignment="Top" Width="400">
+            <Grid VerticalAlignment="Top" Height="436" Width="399">
+                <TextBlock HorizontalAlignment="Left" Margin="9,19,0,0" TextWrapping="Wrap" Text="Junior Math App" VerticalAlignment="Top" FontSize="36" Width="270" Foreground="#FF56D9EE"/>
+                <TextBlock HorizontalAlignment="Left" Margin="9,76,0,0" TextWrapping="Wrap" Text="Enter Username:" VerticalAlignment="Top" FontSize="16" Foreground="#FF82C340" Width="122"/>
+                <TextBlock HorizontalAlignment="Left" Margin="9,152,0,0" TextWrapping="Wrap" Text="Enter Password:" VerticalAlignment="Top" FontSize="16" Foreground="#FF7FC13D" Width="117"/>
+                <TextBox x:Name="txtUsername" PlaceholderText="enter email address" HorizontalAlignment="Left" Margin="9,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="374" Height="20" FontSize="16"/>
+                <Button x:Name="btnLogin1" Content="Login" HorizontalAlignment="Left" Margin="9,215,0,0" VerticalAlignment="Top" Click="btnLogin1_Click" Width="380" Height="48" FontSize="16" Foreground="#FFEEE3E3" Background="#FF0F0101" BorderBrush="#FF1697E0"/>
+                <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="9,271,0,0" VerticalAlignment="Top" Click="btnRegister_Click" Width="380" Height="48" FontSize="16" Background="#FF0F0101" BorderBrush="#FF712CD4"/>
+                <Button x:Name="btnForgotPassword" Content="Forgot Password" HorizontalAlignment="Left" Margin="9,324,0,0" VerticalAlignment="Top" Click="btnForgotPassword_Click" Height="48" Width="380" FontSize="16" Background="#FF0F0101" BorderBrush="#FFDA145C"/>
+                <PasswordBox x:Name="pwbEnterPassword" PlaceholderText="enter password"  HorizontalAlignment="Left" Margin="9,171,0,0" VerticalAlignment="Top" Width="374" FontSize="20" Height="29"/>
+                <Button Content="About App" HorizontalAlignment="Left" Margin="9,377,0,0" VerticalAlignment="Top" Width="380" Background="#FF010F03" BorderBrush="#FF26F012" FontSize="16" Height="48" Click="Button_Click_1"/>
+            </Grid>
+        </ScrollViewer>
 
     </Grid>
 </Page>
