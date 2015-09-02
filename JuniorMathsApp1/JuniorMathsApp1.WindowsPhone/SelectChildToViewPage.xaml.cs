@@ -10,6 +10,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -41,7 +42,6 @@ namespace JuniorMathsApp1
 
         int getSelectedItem;
 
-
         public SelectChildToViewPage()
         {
             this.InitializeComponent();
@@ -60,7 +60,7 @@ namespace JuniorMathsApp1
                 children = childrensViewModel.GetChildren(parentId);
                 regChild = new RegisterChild();
 
-                lsViewChildren.Items.Add("ID" + "\t" + "NAME & SURNAME");
+                lsViewChildren.Items.Add("ID" + "-" + "NAME_SURNAME");
 
                 foreach (var c in children)
                 {
@@ -123,18 +123,21 @@ namespace JuniorMathsApp1
                 objItems = "" + e.AddedItems[0];
                 idNum = objItems.Substring(0, objItems.IndexOf("-"));
                 name = objItems.Substring(2, objItems.IndexOf("_") - 2);
-                /*
-                objItems = "" +e.AddedItems[0];
-                idNum = objItems.Substring(0, objItems.IndexOf("_"));
-                name = objItems.Substring(2, objItems.IndexOf("_"));
-                surname = objItems.Substring(objItems.IndexOf("_"), objItems.IndexOf("#"));
-                age = objItems.Substring(objItems.IndexOf("#"), objItems.IndexOf("$"));
-                grade = objItems.Substring(objItems.IndexOf("$"), objItems.Length);
-                 * */
-            }
-            catch(Exception)
-            {
 
+                //Change background color of selected item in listview
+                Brush SelectedBrush = new SolidColorBrush((Color)App.Current.Resources["SystemColorControlAccentColor"]);
+                Brush NormalBrush = new SolidColorBrush(Colors.Transparent);
+                for (int i = 0; i < lsViewChildren.Items.Count; i++)
+                {
+                    ListViewItem Item = lsViewChildren.ContainerFromIndex(i) as ListViewItem;
+                    Item.Background = Item.IsSelected ? SelectedBrush : NormalBrush;
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                string msg = "Error is: " + ex.Message;
+                messageBox(msg);
             }
             //Debug.WriteLine("Selected: {0}", e.AddedItems[0]);
             
@@ -147,9 +150,12 @@ namespace JuniorMathsApp1
             int convNum = 0;
             try
             {
-                if(idNum.Equals(""))
+                int verifyNum;
+                bool isNumerical = int.TryParse(idNum, out verifyNum);
+
+                if(idNum.Equals("") || isNumerical == false)
                 {
-                    string msgErr = "Please select a child before proceeding!";
+                    string msgErr = "Please select a child before proceeding to view test results!";
                     messageBox(msgErr);
                 }
                 else
@@ -221,18 +227,22 @@ namespace JuniorMathsApp1
         {
             childrenViewModel = new ChildrenViewModel();
             objTestViewModel = new TestViewModel();
+
             string strMsg = "";
+            int convNum = 0;
             try
             {
-                    if(strMsg.Equals(""))
-                    {
-                        strMsg = "Please select a child first before proceeding with the delete process!";
+                int verifyNum;
+                bool isNumerical = int.TryParse(idNum, out verifyNum);
+
+                if (idNum.Equals("") || isNumerical == false)
+                {
+                        strMsg = "Please select a child first before proceeding with the deleting process!";
                         messageBox(strMsg);
                     }
                     else
                     {
-                        int convNum = myParentId(idNum);
-                        int getResult = 0;
+                        convNum = myParentId(idNum);
 
                         if (convNum <= 0)
                         {
@@ -259,6 +269,7 @@ namespace JuniorMathsApp1
               }
 
 
+
         }
 
         //Button to update child details
@@ -273,7 +284,10 @@ namespace JuniorMathsApp1
 
             try
             {
-                if (strMsg.Equals(""))
+                int verifyNum;
+                bool isNumerical = int.TryParse(idNum, out verifyNum);
+
+                if (idNum.Equals("") || isNumerical == false)
                 {
                     strMsg = "Please select a child first before proceeding with the editing process!";
                     messageBox(strMsg);

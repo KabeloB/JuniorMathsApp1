@@ -3,11 +3,13 @@ using JuniorMathsApp1.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -49,7 +51,7 @@ namespace JuniorMathsApp1
                 children = childrensViewModel.GetChildren(parentId);
                 regChild = new RegisterChild();
 
-                lsvChooseChild.Items.Add("ID" + "\t" + "NAME & SURNAME");
+                lsvChooseChild.Items.Add("ID" + "-" + "NAME_SURNAME");
 
                 foreach(var c in children)
                 {
@@ -85,7 +87,7 @@ namespace JuniorMathsApp1
         
         private void lsvChooseChild_ItemClick(object sender, ItemClickEventArgs e)
         {
-            
+            Debug.WriteLine("Click!");
         }
         
         string objItems = "";
@@ -98,6 +100,15 @@ namespace JuniorMathsApp1
             objItems = "" + e.AddedItems[0];
             idNum = objItems.Substring(0, objItems.IndexOf("-"));
             name = objItems.Substring(2, objItems.IndexOf("_") - 2);
+
+            //Change background color of selected item in listview
+            Brush SelectedBrush = new SolidColorBrush((Color)App.Current.Resources["SystemColorControlAccentColor"]);
+            Brush NormalBrush = new SolidColorBrush(Colors.Transparent);
+            for (int i = 0; i < lsvChooseChild.Items.Count; i++)
+            {
+                ListViewItem Item = lsvChooseChild.ContainerFromIndex(i) as ListViewItem;
+                Item.Background = Item.IsSelected ? SelectedBrush : NormalBrush;
+            }
         }
 
         private void btnSelect_Click(object sender, RoutedEventArgs e)
@@ -105,7 +116,10 @@ namespace JuniorMathsApp1
             int convNum = 0;
             try
             {
-                if(idNum.Equals(""))
+                int verifyNum;
+                bool isNumerical = int.TryParse(idNum, out verifyNum);
+
+                if (idNum.Equals("") || isNumerical == false)
                 {
                     msg = "Please select a child first before proceeding with the test!";
                     messageBox(msg);

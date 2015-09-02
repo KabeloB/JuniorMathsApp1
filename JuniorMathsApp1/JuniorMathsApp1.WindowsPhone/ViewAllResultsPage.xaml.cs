@@ -4,11 +4,13 @@ using JuniorMathsApp1.TestClasses;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -145,6 +147,24 @@ namespace JuniorMathsApp1
             {
                 messageBox("Child id can't be empty!");
             }
+        }
+
+
+        private void lsViewTest_selectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //Change background color of selected item in listview
+            Brush SelectedBrush = new SolidColorBrush((Color)App.Current.Resources["SystemColorControlAccentColor"]);
+            Brush NormalBrush = new SolidColorBrush(Colors.Transparent);
+            for (int i = 0; i < lsViewTest.Items.Count; i++)
+            {
+                ListViewItem Item = lsViewTest.ContainerFromIndex(i) as ListViewItem;
+                Item.Background = Item.IsSelected ? SelectedBrush : NormalBrush;
+            }
+        }
+
+        private void lsViewTest_itemClicked(object sender, ItemClickEventArgs e)
+        {
+            Debug.WriteLine("Click!");
         }
 
     }

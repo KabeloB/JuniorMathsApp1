@@ -15,10 +15,11 @@
         <TextBlock HorizontalAlignment="Left" Margin="10,96,0,0" TextWrapping="Wrap" Text="All Results:" VerticalAlignment="Top" Height="24" Width="148" FontSize="16" Foreground="#FF19DC19"/>
         <Button x:ConnectionId='1' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="214,511,0,0" VerticalAlignment="Top" Width="175"                       Height="55" Background="#FF0F0101" BorderBrush="#FFF31111" FontSize="16"/>
         <Button x:ConnectionId='2' x:Name="btnReturnMainMenu" Content="Return to main menu" HorizontalAlignment="Left" Margin="9,511,0,0" VerticalAlignment="Top"                                 Height="55" Width="172" Background="#FF011501" BorderBrush="#FF2FEA12" FontSize="16"/>
-        <ListView x:Name="lsViewTest" HorizontalAlignment="Left" Height="378" Margin="9,124,0,0" VerticalAlignment="Top" Width="380" Foreground="#FF21DECD"/>
+        <ListView x:ConnectionId='3' x:Name="lsViewTest" HorizontalAlignment="Left" Height="378" Margin="9,124,0,0" VerticalAlignment="Top" Width="380" Foreground="#FF21DECD"                                                                                  />
+           
         <TextBlock HorizontalAlignment="Left" Margin="9,61,0,0" TextWrapping="Wrap" Text="Results for:" VerticalAlignment="Top" Foreground="#FF18E418" FontSize="16" Height="18"/>
         <TextBlock x:Name="lblChId" HorizontalAlignment="Left" Margin="141,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="248" Foreground="#FF12F0E6" Height="18"/>
-        <Button x:ConnectionId='3' x:Name="btnDeleteAll" Content="Delete all" HorizontalAlignment="Left" Margin="10,564,0,0" VerticalAlignment="Top" Height="55" Width="171" Background="#FF00010E" BorderBrush="#FF1326EA"                            FontSize="16"/>
+        <Button x:ConnectionId='4' x:Name="btnDeleteAll" Content="Delete all" HorizontalAlignment="Left" Margin="10,564,0,0" VerticalAlignment="Top" Height="55" Width="171" Background="#FF00010E" BorderBrush="#FF1326EA"                            FontSize="16"/>
 
     </Grid>
 </Page>

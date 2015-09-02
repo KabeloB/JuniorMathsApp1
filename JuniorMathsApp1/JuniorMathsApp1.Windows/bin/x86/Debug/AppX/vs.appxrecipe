@@ -20,13 +20,13 @@
     <AppXManifest Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-09-01T13:41:35.780</Modified>
+      <Modified>2015-09-02T09:26:04.292</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\JuniorMathsApp1.Windows.exe">
       <PackagePath>JuniorMathsApp1.Windows.exe</PackagePath>
-      <Modified>2015-09-01T13:41:35.111</Modified>
+      <Modified>2015-09-02T09:26:03.990</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\SQLite.WinRT81\3.8.10.2\Redist\Debug\x86\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
@@ -34,115 +34,115 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Assets\JuniorMathsApp-Background1.jpg">
       <PackagePath>Assets\JuniorMathsApp-Background1.jpg</PackagePath>
-      <Modified>2015-09-01T12:51:56.788</Modified>
+      <Modified>2015-09-02T07:57:22.297</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-09-01T12:51:56.791</Modified>
+      <Modified>2015-09-02T07:57:22.299</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-09-01T12:51:56.793</Modified>
+      <Modified>2015-09-02T07:57:22.302</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-09-01T12:51:56.796</Modified>
+      <Modified>2015-09-02T07:57:22.304</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-09-01T12:51:56.798</Modified>
+      <Modified>2015-09-02T07:57:22.307</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Grade1QuestionsXML2\Medium.xml">
       <PackagePath>Grade1QuestionsXML2\Medium.xml</PackagePath>
-      <Modified>2015-09-01T12:51:56.825</Modified>
+      <Modified>2015-09-02T07:57:22.344</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Grade1QuestionsXML3\Advanced.xml">
       <PackagePath>Grade1QuestionsXML3\Advanced.xml</PackagePath>
-      <Modified>2015-09-01T12:51:56.829</Modified>
+      <Modified>2015-09-02T07:57:22.349</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Grade1QuestionsXML\Beginner.xml">
       <PackagePath>Grade1QuestionsXML\Beginner.xml</PackagePath>
-      <Modified>2015-09-01T12:51:56.822</Modified>
+      <Modified>2015-09-02T07:57:22.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Grade2QuestionsXML2\Medium.xml">
       <PackagePath>Grade2QuestionsXML2\Medium.xml</PackagePath>
-      <Modified>2015-09-01T12:51:56.835</Modified>
+      <Modified>2015-09-02T07:57:22.378</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Grade2QuestionsXML3\Advanced.xml">
       <PackagePath>Grade2QuestionsXML3\Advanced.xml</PackagePath>
-      <Modified>2015-09-01T12:51:56.840</Modified>
+      <Modified>2015-09-02T07:57:22.383</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Grade2QuestionsXML\Beginner.xml">
       <PackagePath>Grade2QuestionsXML\Beginner.xml</PackagePath>
-      <Modified>2015-09-01T12:51:56.833</Modified>
+      <Modified>2015-09-02T07:57:22.355</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2015-09-01T13:41:34.432</Modified>
+      <Modified>2015-09-02T09:26:03.411</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\AboutAppPage.xbf">
       <PackagePath>AboutAppPage.xbf</PackagePath>
-      <Modified>2015-09-01T13:41:34.464</Modified>
+      <Modified>2015-09-02T09:26:03.412</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\EditedSelectedChildPage.xbf">
       <PackagePath>EditedSelectedChildPage.xbf</PackagePath>
-      <Modified>2015-09-01T13:41:34.467</Modified>
+      <Modified>2015-09-02T09:26:03.413</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2015-09-01T13:41:34.474</Modified>
+      <Modified>2015-09-02T09:26:03.418</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\MenuPage.xbf">
       <PackagePath>MenuPage.xbf</PackagePath>
-      <Modified>2015-09-01T13:41:34.477</Modified>
+      <Modified>2015-09-02T09:26:03.418</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\NewTestPage.xbf">
       <PackagePath>NewTestPage.xbf</PackagePath>
-      <Modified>2015-09-01T13:41:34.481</Modified>
+      <Modified>2015-09-02T09:26:03.419</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\RegisterNewChild.xbf">
       <PackagePath>RegisterNewChild.xbf</PackagePath>
-      <Modified>2015-09-01T13:41:34.484</Modified>
+      <Modified>2015-09-02T09:26:03.420</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\RegistrationPage.xbf">
       <PackagePath>RegistrationPage.xbf</PackagePath>
-      <Modified>2015-09-01T13:41:34.486</Modified>
+      <Modified>2015-09-02T09:26:03.420</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\ResetPasswordPage.xbf">
       <PackagePath>ResetPasswordPage.xbf</PackagePath>
-      <Modified>2015-09-01T13:41:34.489</Modified>
+      <Modified>2015-09-02T09:26:03.421</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\SelectChildToTakeTestPage.xbf">
       <PackagePath>SelectChildToTakeTestPage.xbf</PackagePath>
-      <Modified>2015-09-01T13:41:34.539</Modified>
+      <Modified>2015-09-02T09:26:03.425</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\SelectChildToViewPage.xbf">
       <PackagePath>SelectChildToViewPage.xbf</PackagePath>
-      <Modified>2015-09-01T13:41:34.545</Modified>
+      <Modified>2015-09-02T09:26:03.426</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\UpdateParentsDetailsPage.xbf">
       <PackagePath>UpdateParentsDetailsPage.xbf</PackagePath>
-      <Modified>2015-09-01T13:41:34.589</Modified>
+      <Modified>2015-09-02T09:26:03.427</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\VerifyUserPage.xbf">
       <PackagePath>VerifyUserPage.xbf</PackagePath>
-      <Modified>2015-09-01T13:41:34.595</Modified>
+      <Modified>2015-09-02T09:26:03.428</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\ViewAllResultsPage.xbf">
       <PackagePath>ViewAllResultsPage.xbf</PackagePath>
-      <Modified>2015-09-01T13:41:34.602</Modified>
+      <Modified>2015-09-02T09:26:03.429</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\JuniorMathsApp1.Windows.xr.xml">
       <PackagePath>JuniorMathsApp1.Windows.xr.xml</PackagePath>
-      <Modified>2015-09-01T12:51:57.677</Modified>
+      <Modified>2015-09-02T07:57:23.746</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-09-01T13:41:35.400</Modified>
+      <Modified>2015-09-02T09:26:04.175</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
