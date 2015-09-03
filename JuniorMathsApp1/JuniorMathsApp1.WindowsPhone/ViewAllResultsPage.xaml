@@ -17,7 +17,23 @@
                 <TextBlock HorizontalAlignment="Left" Margin="10,80,0,0" TextWrapping="Wrap" Text="All Results:" VerticalAlignment="Top" Height="24" Width="148" FontSize="16" Foreground="#FF19DC19"/>
                 <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="214,495,0,0" VerticalAlignment="Top" Width="175" Click="btnBack_Click" Height="55" Background="#FF0F0101" BorderBrush="#FFF31111" FontSize="16"/>
                 <Button x:Name="btnReturnMainMenu" Content="Return to main menu" HorizontalAlignment="Left" Margin="9,495,0,0" VerticalAlignment="Top" Click="btnReturnMainMenu_Click" Height="55" Width="172" Background="#FF011501" BorderBrush="#FF2FEA12" FontSize="16"/>
-                <ListView x:Name="lsViewTest" HorizontalAlignment="Left" Height="378" Margin="9,108,0,0" VerticalAlignment="Top" Width="380" Foreground="#FF21DECD" ItemClick="lsViewTest_itemClicked" SelectionChanged="lsViewTest_selectionChanged"/>
+                <ListView x:Name="lsViewTest" HorizontalAlignment="Left" Height="378" Margin="9,108,0,0" VerticalAlignment="Top" Width="380" Foreground="#FF21DECD" ItemClick="lsViewTest_itemClicked" SelectionChanged="lsViewTest_selectionChanged">
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="HorizontalAlignment" Value="Stretch">
+                            </Setter>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Border BorderThickness="0,0,0,1" >
+                                <Grid Width="auto" HorizontalAlignment="Stretch">
+                                    <TextBlock VerticalAlignment="Center" FontSize="16" Grid.Column="0" Foreground="#FF1FE4E4" Text="{Binding}" />
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
 
                 <TextBlock HorizontalAlignment="Left" Margin="9,45,0,0" TextWrapping="Wrap" Text="Results for:" VerticalAlignment="Top" Foreground="#FF18E418" FontSize="16" Height="18"/>
                 <TextBlock x:Name="lblChId" HorizontalAlignment="Left" Margin="141,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="248" Foreground="#FF12F0E6" Height="18"/>
