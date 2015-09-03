@@ -12,7 +12,7 @@
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
         <ScrollViewer HorizontalAlignment="Center" Height="768" VerticalAlignment="Top" Width="1366">
-            <Grid VerticalAlignment="Top" Height="1057" Width="723">
+            <Grid VerticalAlignment="Top" Height="768" Width="723">
                 <TextBlock HorizontalAlignment="Left" Margin="127,35,0,0" TextWrapping="Wrap" Text="Please select child to take test" VerticalAlignment="Top" FontSize="36" Foreground="#FF1EE0D7"/>
                 <ListView x:ConnectionId='1' x:Name="lsvChooseChild" HorizontalAlignment="Left" Height="462" Margin="127,83,0,0" VerticalAlignment="Top" Width="473"                                                                            Foreground="#FF18EABA">
                     <ListView.ItemContainerStyle>

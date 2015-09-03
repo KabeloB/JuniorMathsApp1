@@ -12,7 +12,7 @@
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
         <ScrollViewer HorizontalAlignment="Center" Height="768" VerticalAlignment="Top" Width="1366">
-            <Grid VerticalAlignment="Top" Height="758" Width="577">
+            <Grid VerticalAlignment="Top" Height="768" Width="577">
                 <Button x:ConnectionId='1' x:Name="btnStartTest" Content="Start New Test" HorizontalAlignment="Left" Margin="95,164,0,0" VerticalAlignment="Top" Width="393"                            Height="54" FontSize="20" Background="#FF010D11"/>
                 <Button x:ConnectionId='2' x:Name="btnViewTestResults" Content="View More Options" HorizontalAlignment="Left" Margin="95,237,0,0" VerticalAlignment="Top" Width="393"                                  Height="54" RenderTransformOrigin="0.481,1.395" FontSize="20" Background="#FF01080F"/>
                 <Button x:ConnectionId='3' x:Name="btnEditChildDetails" Content="Edit Parent Account Details" HorizontalAlignment="Left" Margin="95,384,0,0" VerticalAlignment="Top" Width="393"                                   Height="54" FontSize="20" Background="#FF0E0101"/>
