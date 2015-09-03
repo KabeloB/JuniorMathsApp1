@@ -11,7 +11,7 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
-        <ScrollViewer HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="1366">
+        <ScrollViewer HorizontalAlignment="Center" Height="768" VerticalAlignment="Top" Width="1366">
             <Grid VerticalAlignment="Top" Height="758" Width="607">
                 <TextBox x:Name="txtConfirmEmail" HorizontalAlignment="Left" Margin="118,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="369"/>
                 <TextBlock HorizontalAlignment="Left" Margin="155,17,0,0" TextWrapping="Wrap" Text="Verify User Details" VerticalAlignment="Top" FontSize="36" Width="300" Foreground="#FF1FCFC7"/>
