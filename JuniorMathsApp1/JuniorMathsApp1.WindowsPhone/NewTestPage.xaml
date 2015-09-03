@@ -21,8 +21,8 @@
                 <Button x:Name="btnCancelTest" Content="Cancel Test" HorizontalAlignment="Left" Margin="200,421,0,0" VerticalAlignment="Top" Height="58" Width="172" FontSize="16" Click="btnCancelTest_Click" Background="#FF0E0101" BorderBrush="#FFF32A0A"/>
                 <TextBlock HorizontalAlignment="Left" Margin="240,492,0,-11" TextWrapping="Wrap" Text="/10)" VerticalAlignment="Top" FontSize="20" Foreground="#FF1BC313" RenderTransformOrigin="0.414,-0.183"/>
                 <Button x:Name="btnStartTest" Content="Start Test" HorizontalAlignment="Left" Margin="10,298,0,0" VerticalAlignment="Top" Height="56" Width="362" FontSize="16" Click="btnStartTest_Click" Foreground="#FFE3EEED" Background="#FF110101" BorderBrush="#FF2EF10F"/>
-                <TextBlock x:Name="txtRight" HorizontalAlignment="Left" Margin="10,527,0,-50" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="362" Height="28" Foreground="#FFD5F50D"/>
-                <TextBlock x:Name="txtWrong" HorizontalAlignment="Left" Margin="9,570,0,-93" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="362" Height="28" Foreground="#FFD4F30E"/>
+                <TextBlock x:Name="txtRight" HorizontalAlignment="Left" Margin="10,527,0,-50" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="362" Height="28" Foreground="#FF950AF5"/>
+                <TextBlock x:Name="txtWrong" HorizontalAlignment="Left" Margin="9,570,0,-93" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="362" Height="28" Foreground="#FF950AF5"/>
                 <TextBlock x:Name="lblEquation" HorizontalAlignment="Left" Margin="9,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="145" FontSize="36" Foreground="#FFE2E20C"/>
                 <TextBlock HorizontalAlignment="Left" Margin="9,181,0,0" TextWrapping="Wrap" Text="Please select difficulty:" VerticalAlignment="Top" FontSize="16" Foreground="#FF04E0E0"/>
                 <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="9,421,0,0" VerticalAlignment="Top" Width="168" Height="58" Background="#FF131001" BorderBrush="#FFDBF009" FontSize="16" Click="btnBack_Click"/>
