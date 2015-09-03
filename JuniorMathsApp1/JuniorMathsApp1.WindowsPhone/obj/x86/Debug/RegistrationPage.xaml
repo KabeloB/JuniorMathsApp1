@@ -11,8 +11,8 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
-        <ScrollViewer HorizontalAlignment="Center" Height="473" VerticalAlignment="Top" Width="400">
-            <Grid VerticalAlignment="Top" Height="847" Width="398">
+        <ScrollViewer HorizontalAlignment="Center" Height="480" VerticalAlignment="Top" Width="400">
+            <Grid VerticalAlignment="Top" Height="638" Width="398">
                 <TextBlock HorizontalAlignment="Left" Margin="10,13,0,0" TextWrapping="Wrap" Text="Registration New Account" VerticalAlignment="Top" FontSize="30" Foreground="#FF21D1E2" Width="357"/>
                 <TextBlock HorizontalAlignment="Left" Margin="10,79,0,0" TextWrapping="Wrap" Text="Enter Name:" VerticalAlignment="Top" FontSize="16" Foreground="#FF0CF536" Width="152"/>
                 <TextBlock HorizontalAlignment="Left" Margin="10,134,0,0" TextWrapping="Wrap" Text="Enter Surname:" VerticalAlignment="Top" FontSize="16" Foreground="#FF0EF037" Width="152"/>

@@ -132,8 +132,8 @@
     </Compile>
     <Compile Include="SQLite.cs" />
     <Compile Include="SQLiteAsync.cs" />
-    <Compile Include="TestClasses\TestsViewModel.cs" />
-    <Compile Include="TestClasses\TestViewModel.cs" />
+    <Compile Include="Model\TestClasses\TestsViewModel.cs" />
+    <Compile Include="Model\TestClasses\TestViewModel.cs" />
     <Compile Include="UpdateParentsDetailsPage.xaml.cs">
       <DependentUpon>UpdateParentsDetailsPage.xaml</DependentUpon>
     </Compile>
