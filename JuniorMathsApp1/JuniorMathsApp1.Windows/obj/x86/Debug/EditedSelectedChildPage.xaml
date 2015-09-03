@@ -11,19 +11,23 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
-        <TextBlock HorizontalAlignment="Left" Margin="476,65,0,0" TextWrapping="Wrap" Text="Edit child details below:" VerticalAlignment="Top" FontSize="36" Foreground="#FF25D4E6"/>
-        <Button x:ConnectionId='1' x:Name="btnProceed" Content="Proceed To Update" HorizontalAlignment="Left" Margin="473,444,0,0" VerticalAlignment="Top" Width="197"                          BorderBrush="#FF3ED437" Background="#FF0C0202"/>
-        <Button x:ConnectionId='2' x:Name="btnBackToMenu" Content="Back" HorizontalAlignment="Left" Margin="739,444,0,0" VerticalAlignment="Top" Width="220" Foreground="#FFE4D3D3" Background="#FF0A0202" BorderBrush="#FFE21010"                            />
-        <TextBlock HorizontalAlignment="Left" Margin="476,144,0,0" TextWrapping="Wrap" Text="Child ID:" VerticalAlignment="Top" FontSize="22" Foreground="#FF51DC28"/>
-        <TextBlock HorizontalAlignment="Left" Margin="476,196,0,0" TextWrapping="Wrap" Text="Current Child Name:" VerticalAlignment="Top" FontSize="22" Foreground="#FF4CD423"/>
-        <TextBlock HorizontalAlignment="Left" Margin="476,252,0,0" TextWrapping="Wrap" Text="Current Child Surname:" VerticalAlignment="Top" FontSize="22" Foreground="#FF4CD423"/>
-        <TextBlock HorizontalAlignment="Left" Margin="476,314,0,0" TextWrapping="Wrap" Text="Current Child Age:" VerticalAlignment="Top" FontSize="22" Foreground="#FF4DDC23"/>
-        <TextBox x:Name="txtCurrentChildName" HorizontalAlignment="Left" Margin="740,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="216"/>
-        <TextBox x:Name="txtCurrentChildSurname_" HorizontalAlignment="Left" Margin="740,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214"/>
-        <TextBox x:Name="txtCurrentChildAge" HorizontalAlignment="Left" Margin="740,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214"/>
-        <TextBlock HorizontalAlignment="Left" Margin="476,374,0,0" TextWrapping="Wrap" Text="Current Child Grade:" VerticalAlignment="Top" FontSize="22" Foreground="#FF4FDC26"/>
-        <TextBlock x:Name="lblChildsID" HorizontalAlignment="Left" Margin="740,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" Width="26" Foreground="#FF31CEDE"/>
-        <ComboBox x:Name="cbCurrentChildGrade" HorizontalAlignment="Left" Margin="740,368,0,0" VerticalAlignment="Top" Width="214"/>
+        <ScrollViewer HorizontalAlignment="Left" Height="758" Margin="0,10,0,0" VerticalAlignment="Top" Width="1366">
+            <Grid VerticalAlignment="Top" Height="758" Width="500">
+                <TextBlock HorizontalAlignment="Left" Margin="22,19,0,0" TextWrapping="Wrap" Text="Edit child details below:" VerticalAlignment="Top" FontSize="36" Foreground="#FF25D4E6"/>
+                <Button x:ConnectionId='1' x:Name="btnProceed" Content="Proceed To Update" HorizontalAlignment="Left" Margin="19,398,0,0" VerticalAlignment="Top" Width="197"                          BorderBrush="#FF3ED437" Background="#FF0C0202"/>
+                <Button x:ConnectionId='2' x:Name="btnBackToMenu" Content="Back" HorizontalAlignment="Left" Margin="285,398,-5,0" VerticalAlignment="Top" Width="220" Foreground="#FFE4D3D3" Background="#FF0A0202" BorderBrush="#FFE21010"                            />
+                <TextBlock HorizontalAlignment="Left" Margin="22,98,0,0" TextWrapping="Wrap" Text="Child ID:" VerticalAlignment="Top" FontSize="22" Foreground="#FF51DC28"/>
+                <TextBlock HorizontalAlignment="Left" Margin="22,150,0,0" TextWrapping="Wrap" Text="Current Child Name:" VerticalAlignment="Top" FontSize="22" Foreground="#FF4CD423"/>
+                <TextBlock HorizontalAlignment="Left" Margin="22,206,0,0" TextWrapping="Wrap" Text="Current Child Surname:" VerticalAlignment="Top" FontSize="22" Foreground="#FF4CD423"/>
+                <TextBlock HorizontalAlignment="Left" Margin="22,268,0,0" TextWrapping="Wrap" Text="Current Child Age:" VerticalAlignment="Top" FontSize="22" Foreground="#FF4DDC23"/>
+                <TextBox x:Name="txtCurrentChildName" HorizontalAlignment="Left" Margin="286,138,-2,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="216"/>
+                <TextBox x:Name="txtCurrentChildSurname_" HorizontalAlignment="Left" Margin="286,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214"/>
+                <TextBox x:Name="txtCurrentChildAge" HorizontalAlignment="Left" Margin="286,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214"/>
+                <TextBlock HorizontalAlignment="Left" Margin="22,328,0,0" TextWrapping="Wrap" Text="Current Child Grade:" VerticalAlignment="Top" FontSize="22" Foreground="#FF4FDC26"/>
+                <TextBlock x:Name="lblChildsID" HorizontalAlignment="Left" Margin="286,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" Width="26" Foreground="#FF31CEDE"/>
+                <ComboBox x:Name="cbCurrentChildGrade" HorizontalAlignment="Left" Margin="286,322,0,0" VerticalAlignment="Top" Width="214"/>
+            </Grid>
+        </ScrollViewer>
 
     </Grid>
 </Page>

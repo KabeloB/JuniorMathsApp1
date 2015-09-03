@@ -11,21 +11,25 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
-        <TextBlock HorizontalAlignment="Left" Margin="525,49,0,0" TextWrapping="Wrap" Text="Update Parent Details" VerticalAlignment="Top" FontSize="36" Foreground="#FF11E8D4"/>
-        <TextBlock HorizontalAlignment="Left" Margin="453,124,0,0" TextWrapping="Wrap" Text="Parent ID:" VerticalAlignment="Top" FontSize="24" Foreground="#FF0DF12C"/>
-        <TextBlock x:Name="lblParentID" HorizontalAlignment="Left" Margin="596,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="34" Foreground="#FF14EAD6"/>
-        <TextBlock HorizontalAlignment="Left" Margin="453,188,0,0" TextWrapping="Wrap" Text="Enter New Name:" VerticalAlignment="Top" FontSize="24" Foreground="#FF11F330"/>
-        <TextBlock HorizontalAlignment="Left" Margin="453,254,0,0" TextWrapping="Wrap" Text="Enter New Surname:" VerticalAlignment="Top" FontSize="24" Foreground="#FF13F031"/>
-        <TextBlock HorizontalAlignment="Left" Margin="453,315,0,0" TextWrapping="Wrap" Text="Enter New Email:" VerticalAlignment="Top" FontSize="24" Foreground="#FF0FF02D"/>
-        <TextBlock HorizontalAlignment="Left" Margin="453,375,0,0" TextWrapping="Wrap" Text="Enter New Phone no:" VerticalAlignment="Top" FontSize="24" Foreground="#FF10F02E"/>
-        <TextBlock HorizontalAlignment="Left" Margin="453,434,0,0" TextWrapping="Wrap" Text="Enter New Password:" VerticalAlignment="Top" FontSize="24" Foreground="#FF11F02F"/>
-        <TextBox x:Name="txtEnterNewName" HorizontalAlignment="Left" Margin="685,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
-        <TextBox x:Name="txtEnterNewSurname" HorizontalAlignment="Left" Margin="685,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
-        <TextBox x:Name="txtEnterNewEmail" HorizontalAlignment="Left" Margin="685,312,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
-        <TextBox x:Name="txtEnterNewPhoneNo" HorizontalAlignment="Left" Margin="685,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
-        <TextBox x:Name="txtEnterNewPassword" HorizontalAlignment="Left" Margin="685,431,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
-        <Button x:ConnectionId='1' x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="450,523,0,0" VerticalAlignment="Top" Width="225" FontSize="16" BorderBrush="#FF1BD14C" Background="#FF0C0101"                     />
-        <Button x:ConnectionId='2' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="723,523,0,0" VerticalAlignment="Top" Width="225" FontSize="16" Background="#FF110101" BorderBrush="#FFEE1313"                      />
+        <ScrollViewer HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="1366">
+            <Grid VerticalAlignment="Top" Height="1039" Width="613">
+                <TextBlock HorizontalAlignment="Left" Margin="130,28,0,0" TextWrapping="Wrap" Text="Update Parent Details" VerticalAlignment="Top" FontSize="36" Foreground="#FF11E8D4"/>
+                <TextBlock HorizontalAlignment="Left" Margin="58,103,0,0" TextWrapping="Wrap" Text="Parent ID:" VerticalAlignment="Top" FontSize="24" Foreground="#FF0DF12C"/>
+                <TextBlock x:Name="lblParentID" HorizontalAlignment="Left" Margin="201,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="34" Foreground="#FF14EAD6"/>
+                <TextBlock HorizontalAlignment="Left" Margin="58,167,0,0" TextWrapping="Wrap" Text="Enter New Name:" VerticalAlignment="Top" FontSize="24" Foreground="#FF11F330"/>
+                <TextBlock HorizontalAlignment="Left" Margin="58,233,0,0" TextWrapping="Wrap" Text="Enter New Surname:" VerticalAlignment="Top" FontSize="24" Foreground="#FF13F031"/>
+                <TextBlock HorizontalAlignment="Left" Margin="58,294,0,0" TextWrapping="Wrap" Text="Enter New Email:" VerticalAlignment="Top" FontSize="24" Foreground="#FF0FF02D"/>
+                <TextBlock HorizontalAlignment="Left" Margin="58,354,0,0" TextWrapping="Wrap" Text="Enter New Phone no:" VerticalAlignment="Top" FontSize="24" Foreground="#FF10F02E"/>
+                <TextBlock HorizontalAlignment="Left" Margin="58,413,0,0" TextWrapping="Wrap" Text="Enter New Password:" VerticalAlignment="Top" FontSize="24" Foreground="#FF11F02F"/>
+                <TextBox x:Name="txtEnterNewName" HorizontalAlignment="Left" Margin="290,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
+                <TextBox x:Name="txtEnterNewSurname" HorizontalAlignment="Left" Margin="290,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
+                <TextBox x:Name="txtEnterNewEmail" HorizontalAlignment="Left" Margin="290,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
+                <TextBox x:Name="txtEnterNewPhoneNo" HorizontalAlignment="Left" Margin="290,351,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
+                <TextBox x:Name="txtEnterNewPassword" HorizontalAlignment="Left" Margin="290,410,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
+                <Button x:ConnectionId='1' x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="55,502,0,0" VerticalAlignment="Top" Width="225" FontSize="16" BorderBrush="#FF1BD14C" Background="#FF0C0101"                     />
+                <Button x:ConnectionId='2' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="328,502,0,0" VerticalAlignment="Top" Width="225" FontSize="16" Background="#FF110101" BorderBrush="#FFEE1313"                      />
+            </Grid>
+        </ScrollViewer>
 
     </Grid>
 </Page>

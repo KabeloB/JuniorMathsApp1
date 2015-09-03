@@ -29,7 +29,6 @@ namespace JuniorMathsApp1
     public sealed partial class NewTestPage : Page
     {
 
-
         string getIds = "";
         int parentID = 0;
         int childID = 0;
@@ -58,6 +57,7 @@ namespace JuniorMathsApp1
         List<string> listEquations = new List<string>();
         List<string> listAnswer = new List<string>();
 
+
         int h, m, s;
         private DispatcherTimer timer = new DispatcherTimer();
 
@@ -69,7 +69,6 @@ namespace JuniorMathsApp1
         public NewTestPage()
         {
             this.InitializeComponent();
-
             btnSubmitAnswer.IsEnabled = false;
             btnCancelTest.IsEnabled = false;
             btnBack.IsEnabled = true;
@@ -85,10 +84,10 @@ namespace JuniorMathsApp1
 
 
             timer.Tick += Each_Tick;
-            
+
         }
 
-        
+
 
         //Retrive random questions from the xml file
         public int getRandomQuestion()
@@ -161,7 +160,7 @@ namespace JuniorMathsApp1
         public void Each_Tick(object sender, object e)
         {
             s = s - 1;
-            if(s == -1)
+            if (s == -1)
             {
                 m = m - 1;
                 s = 59;
@@ -174,7 +173,7 @@ namespace JuniorMathsApp1
                 m = 59;
             }
 
-            if ((h == 0) &&(m == 0) && (s == 0))
+            if ((h == 0) && (m == 0) && (s == 0))
             {
                 timer.Stop();
                 outOfTime = true;
@@ -188,7 +187,7 @@ namespace JuniorMathsApp1
 
                 this.Frame.Navigate(typeof(MenuPage), parentID);
                 msg = "Sorry!" +
-                      "\nYou ran out of time..." + 
+                      "\nYou ran out of time..." +
                       "\nNavigate to test results to view score.";
                 messageBox(msg);
             }
@@ -217,6 +216,7 @@ namespace JuniorMathsApp1
         {
             int getInsertResult = objTest.insertTestResults(childID, 0, 0, objDate.ToString());
             this.Frame.Navigate(typeof(MenuPage), parentID);
+            timer.Stop();
             msg = "You have cancelled the test!" +
                   "\nYour score for the test will be 0!";
 
@@ -230,7 +230,7 @@ namespace JuniorMathsApp1
         private void btnStartTest_Click(object sender, RoutedEventArgs e)
         {
 
-            if(objRegChild.Grade.Equals("Grade 1"))
+            if (objRegChild.Grade.Equals("Grade 1"))
             {
                 //Allocated time to finish test in minutes
                 h = 5;
@@ -240,11 +240,11 @@ namespace JuniorMathsApp1
                 h = 3;
             }
 
-            
+
             m = 0;
             s = 0;
 
-            
+
 
             try
             {
@@ -266,6 +266,8 @@ namespace JuniorMathsApp1
                         btnCancelTest.IsEnabled = false;
                         btnBack.IsEnabled = true;
                         txtEnterAnswer.IsEnabled = false;
+
+
 
                         string msg = "Please select a difficulty level first before proceeding with the test!";
                         messageBox(msg);
@@ -300,7 +302,7 @@ namespace JuniorMathsApp1
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
                                 int convertXMLid = Convert.ToInt32(id);
 
-                                equation1 = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
+                                equation1 = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("=") - 1);
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
                                 listEquations.Add(equation1);
@@ -311,7 +313,6 @@ namespace JuniorMathsApp1
 
                             storeAnswer = "" + listAnswer.ElementAt(0);
                             lblEquation.Text = "" + listEquations.ElementAt(0);
-
                         }
                         else if (getTestDifficulty.Equals("Intermediate"))
                         {
@@ -337,13 +338,14 @@ namespace JuniorMathsApp1
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
                                 int convertXMLid = Convert.ToInt32(id);
 
-                                equation1 = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
+                                equation1 = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("=") - 1);
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
                                 listEquations.Add(equation1);
                                 listAnswer.Add(answer1);
 
                                 countIndex = countIndex + 1;
+
                             }
 
                             storeAnswer = "" + listAnswer.ElementAt(0);
@@ -375,17 +377,14 @@ namespace JuniorMathsApp1
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
                                 int convertXMLid = Convert.ToInt32(id);
 
-                                equation1 = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
+                                equation1 = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("=") - 1);
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
-
-                                equation[countIndex] = equation1;
-                                answerArray[countIndex] = answer1;
-                                storeAnswer = "" + answerArray[incrementArray];
 
                                 listEquations.Add(equation1);
                                 listAnswer.Add(answer1);
 
                                 countIndex = countIndex + 1;
+
                             }
 
                             storeAnswer = "" + listAnswer.ElementAt(0);
@@ -394,7 +393,7 @@ namespace JuniorMathsApp1
                         }
 
 
-                        lblCount.Text = "" + completedQuestions;
+                        lblCompletedQuestion.Text = "" + count;
 
 
                     }
@@ -445,13 +444,14 @@ namespace JuniorMathsApp1
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
                                 int convertXMLid = Convert.ToInt32(id);
 
-                                equation1 = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
+                                equation1 = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("=") - 1);
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
                                 listEquations.Add(equation1);
                                 listAnswer.Add(answer1);
 
                                 countIndex = countIndex + 1;
+
                             }
 
                             storeAnswer = "" + listAnswer.ElementAt(0);
@@ -484,13 +484,14 @@ namespace JuniorMathsApp1
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
                                 int convertXMLid = Convert.ToInt32(id);
 
-                                equation1 = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
+                                equation1 = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("=") - 1);
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
                                 listEquations.Add(equation1);
                                 listAnswer.Add(answer1);
 
                                 countIndex = countIndex + 1;
+
                             }
 
                             storeAnswer = "" + listAnswer.ElementAt(0);
@@ -521,13 +522,14 @@ namespace JuniorMathsApp1
                                 id = numberOne.Value.Substring(0, numberOne.Value.IndexOf("."));
                                 int convertXMLid = Convert.ToInt32(id);
 
-                                equation1 = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("="));
+                                equation1 = numberOne.Value.Substring(numberOne.Value.IndexOf(".") + 1, numberOne.Value.IndexOf("=") - 1);
                                 answer1 = numberOne.Value.Substring(numberOne.Value.IndexOf("=") + 1);
 
                                 listEquations.Add(equation1);
                                 listAnswer.Add(answer1);
 
                                 countIndex = countIndex + 1;
+
                             }
 
                             storeAnswer = "" + listAnswer.ElementAt(0);
@@ -538,7 +540,7 @@ namespace JuniorMathsApp1
                         }
 
 
-                        lblCount.Text = "" + completedQuestions;
+                        lblCompletedQuestion.Text = "" + count;
 
 
                     }
@@ -570,7 +572,7 @@ namespace JuniorMathsApp1
                 bool isNumerical = int.TryParse(getUserAnswer, out verifyNum);
 
                 //check if user answer is entered
-                if(!getUserAnswer.Equals(""))
+                if (!getUserAnswer.Equals(""))
                 {
                     if (isNumerical == true)
                     {
@@ -580,7 +582,7 @@ namespace JuniorMathsApp1
 
                         if (convUserAnswer == convSystemAnswer)
                         {
-                            txtRight.Text = "Correct Answers: " + (rightAnswer = rightAnswer + 1) ;
+                            txtRight.Text = "Correct Answers: " + (rightAnswer = rightAnswer + 1);
 
                         }
                         else
@@ -588,8 +590,9 @@ namespace JuniorMathsApp1
                             txtWrong.Text = "Wrong Answers: " + (wrongAnswers = wrongAnswers + 1);
                         }
 
-                        
+
                         completedQuestions = completedQuestions + 1;
+                        lblCount.Text = "" + completedQuestions;
 
                         if (completedQuestions >= 10)
                         {
@@ -597,23 +600,23 @@ namespace JuniorMathsApp1
 
                             timer.Stop();
                             this.Frame.Navigate(typeof(MenuPage), parentID);
-
                             listAnswer = new List<string>();
                             listEquations = new List<string>();
-
-                            listEquations.ElementAt(nextQuestionCount);
-
                             msg = "You have completed all questions for the test!" +
                                   "\nNavigate to view results to display the score...";
                             messageBox(msg);
 
                         }
+                        else
+                        {
+                            incrementArray = incrementArray + 1;
+                            countIndex = countIndex + 1;
+                            nextQuestionCount = nextQuestionCount + 1;
+                            txtEnterAnswer.Text = "";
+                            doCalculation();
+                        }
 
-                        incrementArray = incrementArray + 1;
-                        countIndex = countIndex + 1;
-                        nextQuestionCount = nextQuestionCount + 1;
-                        txtEnterAnswer.Text = "";
-                        doCalculation();
+
                     }
                     else
                     {
@@ -626,13 +629,13 @@ namespace JuniorMathsApp1
                     msg = "Please enter an answer before proceeding!";
                     messageBox(msg);
                 }
-               
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                
+
             }
-            
+
 
 
         }
@@ -680,16 +683,18 @@ namespace JuniorMathsApp1
                             storeAnswer = "" + listAnswer.ElementAt(nextQuestionCount);
 
                             lblEquation.Text = "" + listEquations.ElementAt(nextQuestionCount);
+
                         }
                         else if (getTestDifficulty.Equals("Advanced"))
                         {
                             storeAnswer = "" + listAnswer.ElementAt(nextQuestionCount);
 
                             lblEquation.Text = "" + listEquations.ElementAt(nextQuestionCount);
+
                         }
 
 
-                        lblCount.Text = "" + completedQuestions;
+                        lblCompletedQuestion.Text = "" + count;
 
 
                     }
@@ -721,12 +726,14 @@ namespace JuniorMathsApp1
                             storeAnswer = "" + listAnswer.ElementAt(nextQuestionCount);
 
                             lblEquation.Text = "" + listEquations.ElementAt(nextQuestionCount);
+
                         }
                         else if (getTestDifficulty.Equals("Intermediate"))
                         {
                             storeAnswer = "" + listAnswer.ElementAt(nextQuestionCount);
 
                             lblEquation.Text = "" + listEquations.ElementAt(nextQuestionCount);
+
                         }
                         else if (getTestDifficulty.Equals("Advanced"))
                         {
@@ -736,7 +743,7 @@ namespace JuniorMathsApp1
                         }
 
 
-                        lblCount.Text = "" + completedQuestions;
+                        lblCompletedQuestion.Text = "" + count;
 
 
                     }
@@ -746,18 +753,18 @@ namespace JuniorMathsApp1
 
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                messageBox("Error found: " + ex.Message);
             }
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(SelectChildToTakeTestPage), parentID);
-            
+
         }
 
-        
+
     }
 }
