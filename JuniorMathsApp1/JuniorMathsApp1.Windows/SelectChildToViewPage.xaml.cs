@@ -208,7 +208,7 @@ namespace JuniorMathsApp1
 
             if (convNum <= 0)
             {
-                strMsg = "Please select a child first before proceeding with the delete process!";
+                strMsg = "Please select a child first before proceeding with the deleting process!";
                 messageBox(strMsg);
             }
             else
