@@ -24,6 +24,7 @@
       <RootProperty Name="Width" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="Content" />
+      <RootProperty Name="FontSize" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="HorizontalAlignment" />
