@@ -150,7 +150,7 @@ namespace JuniorMathsApp1
                     //Enter error message box here!
                     //String ErrorMessage = "Invalid user inputs, Ensure that all fields are filled in!";
                     //this.Frame.Navigate(typeof(RegisterNewChild), parentId);
-                    messageToDisplay = "Input fields can't be empty!";
+                    messageToDisplay = "Please ensure that all text fields are filled in before proceeding!";
                     messageBox(messageToDisplay);
                 }
             }
