@@ -11,8 +11,8 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
-        <ScrollViewer HorizontalAlignment="Left" Height="520" VerticalAlignment="Top" Width="400">
-            <Grid VerticalAlignment="Top" Height="515" Width="397">
+        <ScrollViewer HorizontalAlignment="Left" Height="508" VerticalAlignment="Top" Width="400">
+            <Grid VerticalAlignment="Top" Height="510" Width="397">
                 <TextBlock HorizontalAlignment="Left" Margin="10,195,0,0" TextWrapping="Wrap" Text="Enter Surname:" VerticalAlignment="Top" FontSize="16" Height="26" Width="352" Foreground="#FF29F10A"/>
                 <TextBlock HorizontalAlignment="Left" Margin="10,281,0,0" TextWrapping="Wrap" Text="Enter age:" VerticalAlignment="Top" FontSize="16" Height="27" Width="352" Foreground="#FF24F110"/>
                 <TextBlock HorizontalAlignment="Left" Margin="10,369,0,0" TextWrapping="Wrap" Text="Select grade:" VerticalAlignment="Top" FontSize="16" Height="27" Width="178" Foreground="#FF1EEC14"/>

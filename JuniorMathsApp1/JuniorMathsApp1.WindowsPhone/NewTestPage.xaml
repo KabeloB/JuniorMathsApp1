@@ -7,13 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Margin="0,0.333,0,9.667">
+    <Grid Margin="0,0.333,0,-0.333">
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
         <TextBlock x:Name="lblCompletedQuestion" HorizontalAlignment="Left" Margin="288,626,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Foreground="#FFE41774"/>
-        <ScrollViewer HorizontalAlignment="Left" Height="603" VerticalAlignment="Top" Width="400">
-            <Grid VerticalAlignment="Top" Height="602" Width="396">
+        <ScrollViewer HorizontalAlignment="Left" Height="604" VerticalAlignment="Top" Width="400">
+            <Grid VerticalAlignment="Top" Height="603" Width="396">
                 <TextBlock HorizontalAlignment="Left" Margin="11,0,0,0" TextWrapping="Wrap" Text="Complete all questions" VerticalAlignment="Top" FontSize="36" Foreground="#FF12B9DE" Height="47"/>
                 <TextBlock HorizontalAlignment="Left" Margin="9,103,0,0" TextWrapping="Wrap" Text="Enter answer here" VerticalAlignment="Top" FontSize="24" Foreground="#FF3EE60D"/>
                 <Button x:Name="btnSubmitAnswer" Content="Submit" HorizontalAlignment="Left" Margin="10,363,0,0" VerticalAlignment="Top" Width="362" Height="58" FontSize="16" Click="btnSubmitAnswer_Click" Background="#FF0E0101" BorderBrush="#FF1E4FF3"/>

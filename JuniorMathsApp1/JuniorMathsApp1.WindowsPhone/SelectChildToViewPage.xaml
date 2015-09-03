@@ -11,8 +11,8 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
-        <ScrollViewer HorizontalAlignment="Left" Height="585" VerticalAlignment="Top" Width="400">
-            <Grid VerticalAlignment="Top" Height="573" Width="402">
+        <ScrollViewer HorizontalAlignment="Left" Height="558" VerticalAlignment="Top" Width="400">
+            <Grid VerticalAlignment="Top" Height="555" Width="402">
                 <TextBlock HorizontalAlignment="Left" Margin="10,5,0,0" TextWrapping="Wrap" Text="Select child to view results" VerticalAlignment="Top" FontSize="28" Foreground="#FF1BD1D1" Width="355"/>
                 <Button x:Name="btnView" Content="View test records" HorizontalAlignment="Left" Margin="10,462,0,0" VerticalAlignment="Top" Click="btnView_Click" Width="152" Background="#FF110F0F" BorderBrush="#FF3BD418" FontSize="16"/>
                 <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="213,506,0,0" VerticalAlignment="Top" Width="152" Click="btnBack_Click" Background="#FF111010" BorderBrush="#FF8D0FD4" FontSize="16"/>
