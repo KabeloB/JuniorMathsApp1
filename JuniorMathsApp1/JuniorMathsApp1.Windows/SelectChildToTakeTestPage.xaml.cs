@@ -49,7 +49,7 @@ namespace JuniorMathsApp1
                 children = childrensViewModel.GetChildren(parentId);
                 regChild = new RegisterChild();
 
-                lsvChooseChild.Items.Add("ID" + "\t" + "NAME & SURNAME");
+                lsvChooseChild.Items.Add("ID" + "-" + "NAME_SURNAME");
 
                 foreach (var c in children)
                 {

@@ -14,7 +14,7 @@
         <ScrollViewer HorizontalAlignment="Center" Height="768" VerticalAlignment="Top" Width="1366">
             <Grid VerticalAlignment="Top" Height="1072" Width="723">
                 <ListView x:Name="lsViewChildren" HorizontalAlignment="Left" Height="480" Margin="125,70,0,0" VerticalAlignment="Top" Width="436" SelectionChanged="MySelectionChanged" ItemClick="lsViewChildren_ItemClick" Foreground="#FF1FE4E4" />
-                <TextBlock HorizontalAlignment="Left" Margin="146,22,0,0" TextWrapping="Wrap" Text="Select child to view results" VerticalAlignment="Top" FontSize="36" Foreground="#FF1BD1D1" Width="436"/>
+                <TextBlock HorizontalAlignment="Left" Margin="125,22,0,0" TextWrapping="Wrap" Text="Select child to view results" VerticalAlignment="Top" FontSize="36" Foreground="#FF1BD1D1" Width="436"/>
                 <Button x:Name="btnView" Content="View test records" HorizontalAlignment="Left" Margin="143,569,0,0" VerticalAlignment="Top" Click="btnView_Click" Width="188" Background="#FF110F0F" BorderBrush="#FF3BD418" FontSize="16"/>
                 <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="387,635,0,0" VerticalAlignment="Top" Width="198" Click="btnBack_Click" Background="#FF111010" BorderBrush="#FF8D0FD4" FontSize="16"/>
                 <Button x:Name="btnDeleteChild" Content="Delete" HorizontalAlignment="Left" Margin="387,569,0,0" VerticalAlignment="Top" Width="198" Click="btnDeleteChild_Click" Background="#FF0F0D0D" BorderBrush="#FFE01745" FontSize="16"/>
