@@ -12,7 +12,7 @@
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
         <ScrollViewer HorizontalAlignment="Center" Height="758" Margin="0,10,0,0" VerticalAlignment="Top" Width="1366">
-            <Grid VerticalAlignment="Top" Height="748" Width="535">
+            <Grid VerticalAlignment="Top" Height="758" Width="535">
                 <TextBlock HorizontalAlignment="Left" Margin="136,71,0,0" TextWrapping="Wrap" Text="This application will assist parents to keep track of their childrens  progress regarding thier mathematical skills by allowing them to take a series of math questions and calculating their test results to see how well they did." VerticalAlignment="Top" Height="220" Width="276" FontSize="20" Foreground="#FF38EC5C"/>
                 <TextBlock HorizontalAlignment="Left" Margin="136,9,0,0" TextWrapping="Wrap" Text="About Application" VerticalAlignment="Top" FontSize="36" Foreground="#FF0FDBF0"/>
                 <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="133,317,0,0" VerticalAlignment="Top" Width="179" Click="btnBack_Click" Background="#FF0C0101" BorderBrush="#FFEA0C0C" FontSize="20"/>

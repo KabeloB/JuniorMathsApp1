@@ -13,7 +13,7 @@
         </Grid.Background>
         <TextBlock x:Name="lblCompletedQuestion" HorizontalAlignment="Left" Margin="288,626,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Foreground="#FFE41774"/>
         <ScrollViewer HorizontalAlignment="Center" Height="768" VerticalAlignment="Top" Width="1366">
-            <Grid VerticalAlignment="Top" Height="961" Width="664">
+            <Grid VerticalAlignment="Top" Height="768" Width="664">
                 <TextBlock HorizontalAlignment="Left" Margin="139,34,0,0" TextWrapping="Wrap" Text="Complete all questions" VerticalAlignment="Top" FontSize="36" Foreground="#FF12B9DE"/>
                 <TextBlock HorizontalAlignment="Left" Margin="208,202,0,0" TextWrapping="Wrap" Text="Enter answer here" VerticalAlignment="Top" FontSize="24" Foreground="#FF3EE60D"/>
                 <Button x:Name="btnSubmitAnswer" Content="Submit" HorizontalAlignment="Left" Margin="136,475,0,0" VerticalAlignment="Top" Width="369" Height="58" FontSize="24" Click="btnSubmitAnswer_Click" Background="#FF0E0101" BorderBrush="#FF1E4FF3"/>

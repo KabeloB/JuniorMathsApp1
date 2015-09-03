@@ -14,7 +14,23 @@
         <ScrollViewer HorizontalAlignment="Center" Height="768" VerticalAlignment="Top" Width="1366">
             <Grid VerticalAlignment="Top" Height="1057" Width="723">
                 <TextBlock HorizontalAlignment="Left" Margin="127,35,0,0" TextWrapping="Wrap" Text="Please select child to take test" VerticalAlignment="Top" FontSize="36" Foreground="#FF1EE0D7"/>
-                <ListView x:ConnectionId='1' x:Name="lsvChooseChild" HorizontalAlignment="Left" Height="462" Margin="127,83,0,0" VerticalAlignment="Top" Width="473"                                                                            Foreground="#FF18EABA"/>
+                <ListView x:ConnectionId='1' x:Name="lsvChooseChild" HorizontalAlignment="Left" Height="462" Margin="127,83,0,0" VerticalAlignment="Top" Width="473"                                                                            Foreground="#FF18EABA">
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="HorizontalAlignment" Value="Stretch">
+                            </Setter>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Border BorderThickness="0,0,0,1" BorderBrush="Gray">
+                                <Grid Width="auto" HorizontalAlignment="Stretch">
+                                    <TextBlock VerticalAlignment="Center" FontSize="20" Grid.Column="0" Foreground="#FF1FE4E4" Text="{Binding}" />
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
                 <Button x:ConnectionId='2' x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="124,585,0,0" VerticalAlignment="Top" Width="196"                         Background="#FF010F01" BorderBrush="#FF17D828" FontSize="16"/>
                 <Button x:ConnectionId='3' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="411,585,0,0" VerticalAlignment="Top" Width="192"                       Background="#FF0E0101" BorderBrush="#FFE43F1A" FontSize="16"/>
             </Grid>
