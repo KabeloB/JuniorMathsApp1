@@ -11,7 +11,7 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
-        <ScrollViewer HorizontalAlignment="Left" Height="353" VerticalAlignment="Top" Width="400">
+        <ScrollViewer HorizontalAlignment="Center" Height="353" VerticalAlignment="Top" Width="400">
             <Grid VerticalAlignment="Top" Height="826" Width="400">
                 <TextBlock HorizontalAlignment="Left" Margin="3,-1,0,0" TextWrapping="Wrap" Text="Edit child details below:" VerticalAlignment="Top" FontSize="36" Foreground="#FF25D4E6" Height="50" Width="335"/>
                 <Button x:ConnectionId='1' x:Name="btnProceed" Content="Proceed To Update" HorizontalAlignment="Left" Margin="10,300,0,0" VerticalAlignment="Top" Width="164"                          BorderBrush="#FF3ED437" Background="#FF0C0202" FontSize="12" Height="38"/>

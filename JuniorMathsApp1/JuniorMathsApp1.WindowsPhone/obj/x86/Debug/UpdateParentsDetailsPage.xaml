@@ -11,7 +11,7 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
-        <ScrollViewer HorizontalAlignment="Left" Height="475" VerticalAlignment="Top" Width="400">
+        <ScrollViewer HorizontalAlignment="Center" Height="475" VerticalAlignment="Top" Width="400">
             <Grid VerticalAlignment="Top" Height="878" Width="398">
                 <TextBlock HorizontalAlignment="Left" Margin="2,4,0,0" TextWrapping="Wrap" Text="Update Parent Details" VerticalAlignment="Top" FontSize="36" Foreground="#FF11E8D4" Height="43" Width="356"/>
                 <TextBlock HorizontalAlignment="Left" Margin="4,62,0,0" TextWrapping="Wrap" Text="Parent ID:" VerticalAlignment="Top" FontSize="16" Foreground="#FF0DF12C"/>

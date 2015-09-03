@@ -12,7 +12,7 @@
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
         <TextBlock x:Name="lblCompletedQuestion" HorizontalAlignment="Left" Margin="288,626,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Foreground="#FFE41774"/>
-        <ScrollViewer HorizontalAlignment="Left" Height="604" VerticalAlignment="Top" Width="400">
+        <ScrollViewer HorizontalAlignment="Center" Height="604" VerticalAlignment="Top" Width="400">
             <Grid VerticalAlignment="Top" Height="832" Width="396">
                 <TextBlock HorizontalAlignment="Left" Margin="11,0,0,0" TextWrapping="Wrap" Text="Complete all questions" VerticalAlignment="Top" FontSize="36" Foreground="#FF12B9DE" Height="47"/>
                 <TextBlock HorizontalAlignment="Left" Margin="9,103,0,0" TextWrapping="Wrap" Text="Enter answer here" VerticalAlignment="Top" FontSize="24" Foreground="#FF3EE60D"/>

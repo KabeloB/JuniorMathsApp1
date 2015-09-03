@@ -11,7 +11,7 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
-        <ScrollViewer HorizontalAlignment="Left" Height="515" VerticalAlignment="Top" Width="400">
+        <ScrollViewer HorizontalAlignment="Center" Height="515" VerticalAlignment="Top" Width="400">
             <Grid VerticalAlignment="Top" Height="866" Width="399">
                 <TextBlock HorizontalAlignment="Left" Margin="8,5,0,0" TextWrapping="Wrap" Text="Please select child to take test" VerticalAlignment="Top" FontSize="28" Foreground="#FF1EE0D7" Height="44" Width="368"/>
                 <Button x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="8,462,0,0" VerticalAlignment="Top" Width="187" Click="btnSelect_Click" Background="#FF010F01" BorderBrush="#FF17D828" FontSize="16"/>
