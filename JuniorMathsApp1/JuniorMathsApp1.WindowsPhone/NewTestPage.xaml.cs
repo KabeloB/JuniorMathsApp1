@@ -216,6 +216,7 @@ namespace JuniorMathsApp1
         {
             int getInsertResult = objTest.insertTestResults(childID, 0, 0, objDate.ToString());
             this.Frame.Navigate(typeof(MenuPage), parentID);
+            timer.Stop();
             msg = "You have cancelled the test!" +
                   "\nYour score for the test will be 0!";
 
