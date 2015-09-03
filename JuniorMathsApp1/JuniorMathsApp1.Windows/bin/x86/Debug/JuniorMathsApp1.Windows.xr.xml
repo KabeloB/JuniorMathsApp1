@@ -98,6 +98,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Foreground" />
+      <RootProperty Name="FontSize" />
       <RootEvent Name="ItemClick" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
