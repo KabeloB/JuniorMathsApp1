@@ -66,6 +66,7 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="InputScope" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="UseLayoutRounding" />
       <RootProperty Name="RenderTransform" />
