@@ -13,7 +13,7 @@
         </Grid.Background>
         <ScrollViewer HorizontalAlignment="Center" Height="437" VerticalAlignment="Top" Width="400">
             <Grid VerticalAlignment="Top" Height="569" Width="400">
-                <TextBlock HorizontalAlignment="Left" Margin="25,42,0,0" TextWrapping="Wrap" Text="Edit child details below:" VerticalAlignment="Top" FontSize="36" Foreground="#FF25D4E6" Height="50" Width="335"/>
+                <TextBlock HorizontalAlignment="Left" Margin="25,42,0,0" TextWrapping="Wrap" Text="Edit child details below:" VerticalAlignment="Top" FontSize="36" Foreground="#FF25D4E6" Height="50" Width="352"/>
                 <Button x:Name="btnProceed" Content="Proceed To Update" HorizontalAlignment="Left" Margin="25,378,0,0" VerticalAlignment="Top" Width="164" Click="btnProceed_Click" BorderBrush="#FF3ED437" Background="#FF0C0202" FontSize="12" Height="60"/>
                 <Button x:Name="btnBackToMenu" Content="Back" HorizontalAlignment="Left" Margin="212,378,0,0" VerticalAlignment="Top" Width="165" Foreground="#FFE4D3D3" Background="#FF0A0202" BorderBrush="#FFE21010" Click="btnBackToMenu_Click" FontSize="12" Height="60"/>
                 <TextBlock HorizontalAlignment="Left" Margin="26,102,0,0" TextWrapping="Wrap" Text="Child ID:" VerticalAlignment="Top" FontSize="16" Foreground="#FF51DC28"/>
