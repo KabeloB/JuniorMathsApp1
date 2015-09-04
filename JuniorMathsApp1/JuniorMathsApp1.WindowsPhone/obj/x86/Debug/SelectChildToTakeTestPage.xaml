@@ -7,20 +7,20 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
+    <Grid Margin="0,-26.667,0,-0.333">
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
-        <ScrollViewer HorizontalAlignment="Center" Height="515" VerticalAlignment="Top" Width="400">
-            <Grid VerticalAlignment="Top" Height="639" Width="399">
-                <TextBlock HorizontalAlignment="Left" Margin="8,5,0,0" TextWrapping="Wrap" Text="Please select child to take test" VerticalAlignment="Top" FontSize="28" Foreground="#FF1EE0D7" Height="44" Width="368"/>
-                <Button x:ConnectionId='1' x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="8,462,0,0" VerticalAlignment="Top" Width="187"                         Background="#FF010F01" BorderBrush="#FF17D828" FontSize="16"/>
-                <Button x:ConnectionId='2' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="201,462,0,0" VerticalAlignment="Top" Width="186"                       Background="#FF0E0101" BorderBrush="#FFE43F1A" FontSize="16"/>
-                <ListView x:ConnectionId='3' x:Name="lsvChooseChild" HorizontalAlignment="Left" Height="375" Margin="7,73,0,0" VerticalAlignment="Top" Width="380"                                                                            >
+        <ScrollViewer HorizontalAlignment="Center" Height="553" VerticalAlignment="Top" Width="400">
+            <Grid VerticalAlignment="Top" Height="716" Width="399">
+                <TextBlock HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="Please select child to take test" VerticalAlignment="Top" FontSize="28" Foreground="#FF1EE0D7" Height="44" Width="368"/>
+                <Button x:ConnectionId='1' x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="10,492,0,0" VerticalAlignment="Top" Width="187"                         Background="#FF010F01" BorderBrush="#FF17D828" FontSize="16"/>
+                <Button x:ConnectionId='2' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="203,492,0,0" VerticalAlignment="Top" Width="186"                       Background="#FF0E0101" BorderBrush="#FFE43F1A" FontSize="16"/>
+                <ListView x:ConnectionId='3' x:Name="lsvChooseChild" HorizontalAlignment="Left" Height="375" Margin="9,103,0,0" VerticalAlignment="Top" Width="380"                                                                            >
                     <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem">
                             <Setter Property="HorizontalAlignment" Value="Stretch">
-                                </Setter>
+                            </Setter>
                         </Style>
                     </ListView.ItemContainerStyle>
                     <ListView.ItemTemplate>

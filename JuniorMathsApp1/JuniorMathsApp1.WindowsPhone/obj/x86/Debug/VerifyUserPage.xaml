@@ -7,19 +7,19 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
+    <Grid Margin="0,-26.667,0,-0.333">
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
-        <ScrollViewer HorizontalAlignment="Center" Height="303" VerticalAlignment="Top" Width="400">
-            <Grid  VerticalAlignment="Top" Height="386" Width="402">
-                <TextBox x:Name="txtConfirmEmail" HorizontalAlignment="Left" Margin="10,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="369" FontSize="16" Height="26"/>
-                <TextBlock HorizontalAlignment="Left" Margin="10,5,0,0" TextWrapping="Wrap" Text="Verify User Details" VerticalAlignment="Top" FontSize="36" Width="369" Foreground="#FF1FCFC7" Height="52"/>
-                <TextBlock HorizontalAlignment="Left" Margin="10,67,0,0" TextWrapping="Wrap" Text="Enter Email Address:" VerticalAlignment="Top" FontSize="16" Foreground="#FF14D626"/>
-                <Button x:ConnectionId='1' x:Name="btnVerifyUserDetails" Content="Process" HorizontalAlignment="Left" Margin="10,248,0,0" VerticalAlignment="Top"                                    Height="41" Width="166" FontSize="16" Foreground="#FFDAE2D6" BorderBrush="#FF46EE14" Background="#FF0F0F0F"/>
-                <Button x:ConnectionId='2' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="212,248,0,0" VerticalAlignment="Top" Width="167"                       Height="36" FontSize="16" BorderBrush="#FFD80D3C" Background="#FF111111"/>
-                <TextBlock HorizontalAlignment="Left" Margin="10,170,0,0" TextWrapping="Wrap" Text="Enter Phone Number:" VerticalAlignment="Top" FontSize="16" Foreground="#FF15DA39"/>
-                <TextBox x:Name="txtConfirmPhoneNo" HorizontalAlignment="Left" Margin="10,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="369" FontSize="16" Height="23"/>
+        <ScrollViewer HorizontalAlignment="Center" Height="345" VerticalAlignment="Top" Width="400">
+            <Grid  VerticalAlignment="Top" Height="418" Width="402">
+                <TextBox x:Name="txtConfirmEmail" HorizontalAlignment="Left" Margin="10,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="382" FontSize="16" Height="26"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,43,0,0" TextWrapping="Wrap" Text="Verify User Details" VerticalAlignment="Top" FontSize="36" Width="382" Foreground="#FF1FCFC7" Height="52"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,105,0,0" TextWrapping="Wrap" Text="Enter Email Address:" VerticalAlignment="Top" FontSize="16" Foreground="#FF14D626" Width="148"/>
+                <Button x:ConnectionId='1' x:Name="btnVerifyUserDetails" Content="Process" HorizontalAlignment="Left" Margin="10,286,0,0" VerticalAlignment="Top"                                    Height="41" Width="172" FontSize="16" Foreground="#FFDAE2D6" BorderBrush="#FF46EE14" Background="#FF0F0F0F"/>
+                <Button x:ConnectionId='2' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="219,286,0,0" VerticalAlignment="Top" Width="173"                       Height="36" FontSize="16" BorderBrush="#FFD80D3C" Background="#FF111111"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,208,0,0" TextWrapping="Wrap" Text="Enter Phone Number:" VerticalAlignment="Top" FontSize="16" Foreground="#FF15DA39" Width="157"/>
+                <TextBox x:Name="txtConfirmPhoneNo" HorizontalAlignment="Left" Margin="10,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="382" FontSize="16" Height="23"/>
             </Grid>
         </ScrollViewer>
 

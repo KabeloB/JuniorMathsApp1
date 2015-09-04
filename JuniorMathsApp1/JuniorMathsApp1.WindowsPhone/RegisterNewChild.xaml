@@ -7,25 +7,24 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
+    <Grid Margin="0,-26.667,0,-0.333">
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
-        <ScrollViewer HorizontalAlignment="Center" Height="508" VerticalAlignment="Top" Width="400">
+        <ScrollViewer HorizontalAlignment="Center" Height="505" VerticalAlignment="Top" Width="400">
             <Grid VerticalAlignment="Top" Height="638" Width="397">
-                <TextBlock HorizontalAlignment="Left" Margin="10,195,0,0" TextWrapping="Wrap" Text="Enter Surname:" VerticalAlignment="Top" FontSize="16" Height="26" Width="352" Foreground="#FF29F10A"/>
-                <TextBlock HorizontalAlignment="Left" Margin="10,281,0,0" TextWrapping="Wrap" Text="Enter age:" VerticalAlignment="Top" FontSize="16" Height="27" Width="352" Foreground="#FF24F110"/>
-                <TextBlock HorizontalAlignment="Left" Margin="10,369,0,0" TextWrapping="Wrap" Text="Select grade:" VerticalAlignment="Top" FontSize="16" Height="27" Width="178" Foreground="#FF1EEC14"/>
-                <Button x:Name="btnSaveInformation" Content="Save Information" HorizontalAlignment="Left" Margin="10,455,0,0" VerticalAlignment="Top" Width="172" Click="btnSaveInformation_Click" Height="44" Background="#FF0C0000" BorderBrush="#FF2FE212" FontSize="14"/>
-                <TextBox x:Name="txtChildName" HorizontalAlignment="Left" Margin="10,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="352" Height="35" FontSize="16" />
-                <TextBox x:Name="txtChildSurname" HorizontalAlignment="Left" Margin="10,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="352" Height="33" FontSize="16"/>
-                <TextBox x:Name="txtChildAge" HorizontalAlignment="Left" Margin="10,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="352" Height="33" FontSize="16"/>
-                <TextBlock HorizontalAlignment="Left" Margin="10,3,0,0" TextWrapping="Wrap" Text="Register new child" VerticalAlignment="Top" FontSize="36" Foreground="#FF0FDBF0" Height="42" Width="365"/>
-                <TextBlock HorizontalAlignment="Left" Margin="10,53,0,0" TextWrapping="Wrap" Text="Logged-in Parent Id:" VerticalAlignment="Top" Height="38" Width="209" FontSize="16" Foreground="#FF38F30F"/>
-                <TextBlock HorizontalAlignment="Left" Margin="10,103,0,0" TextWrapping="Wrap" Text="Enter Name:" VerticalAlignment="Top" FontSize="16" Foreground="#FF23F10E" Width="352"/>
-                <Button Content="Back" HorizontalAlignment="Left" Margin="190,455,0,0" VerticalAlignment="Top" Width="172" Height="44" Click="Button_Click" BorderBrush="#FFE41717" Background="#FF0E0000" FontSize="14"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,187,0,0" TextWrapping="Wrap" Text="Enter Surname:" VerticalAlignment="Top" FontSize="16" Height="26" Width="363" Foreground="#FF29F10A"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,273,0,0" TextWrapping="Wrap" Text="Enter age:" VerticalAlignment="Top" FontSize="16" Height="27" Width="363" Foreground="#FF24F110"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,361,0,0" TextWrapping="Wrap" Text="Select grade:" VerticalAlignment="Top" FontSize="16" Height="27" Width="184" Foreground="#FF1EEC14"/>
+                <Button x:Name="btnSaveInformation" Content="Save Information" HorizontalAlignment="Left" Margin="10,447,0,0" VerticalAlignment="Top" Width="178" Click="btnSaveInformation_Click" Height="44" Background="#FF0C0000" BorderBrush="#FF2FE212" FontSize="14"/>
+                <TextBox x:Name="txtChildName" HorizontalAlignment="Left" Margin="10,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="363" Height="35" FontSize="16" />
+                <TextBox x:Name="txtChildSurname" HorizontalAlignment="Left" Margin="10,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="363" Height="33" FontSize="16"/>
+                <TextBox x:Name="txtChildAge" HorizontalAlignment="Left" Margin="10,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="363" Height="33" FontSize="16"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,29,0,0" TextWrapping="Wrap" Text="Register new child" VerticalAlignment="Top" FontSize="36" Foreground="#FF0FDBF0" Height="42" Width="377"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,95,0,0" TextWrapping="Wrap" Text="Enter Name:" VerticalAlignment="Top" FontSize="16" Foreground="#FF23F10E" Width="363"/>
+                <Button Content="Back" HorizontalAlignment="Left" Margin="196,447,0,0" VerticalAlignment="Top" Width="177" Height="44" Click="Button_Click" BorderBrush="#FFE41717" Background="#FF0E0000" FontSize="14"/>
                 <TextBlock x:Name="lblGetParentIdNum" HorizontalAlignment="Left" Margin="317,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Foreground="#FF12F1DD" Width="28"/>
-                <ComboBox x:Name="cbSelectGrade" HorizontalAlignment="Left" Margin="10,391,0,0" VerticalAlignment="Top" Width="172" FontSize="16"/>
+                <ComboBox x:Name="cbSelectGrade" HorizontalAlignment="Left" Margin="10,383,0,0" VerticalAlignment="Top" Width="178" FontSize="16"/>
             </Grid>
         </ScrollViewer>
 

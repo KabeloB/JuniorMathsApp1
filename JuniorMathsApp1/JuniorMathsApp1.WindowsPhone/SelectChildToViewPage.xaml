@@ -7,18 +7,18 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Margin="0,0.333,0,-0.333">
+    <Grid Margin="0,-26.667,0,-0.333">
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
-        <ScrollViewer HorizontalAlignment="Center" Height="558" VerticalAlignment="Top" Width="400">
-            <Grid VerticalAlignment="Top" Height="723" Width="402">
-                <TextBlock HorizontalAlignment="Left" Margin="10,5,0,0" TextWrapping="Wrap" Text="Select child to view results" VerticalAlignment="Top" FontSize="28" Foreground="#FF1BD1D1" Width="355"/>
-                <Button x:Name="btnView" Content="View test records" HorizontalAlignment="Left" Margin="10,462,0,0" VerticalAlignment="Top" Click="btnView_Click" Width="152" Background="#FF110F0F" BorderBrush="#FF3BD418" FontSize="16"/>
-                <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="213,506,0,0" VerticalAlignment="Top" Width="152" Click="btnBack_Click" Background="#FF111010" BorderBrush="#FF8D0FD4" FontSize="16"/>
-                <Button x:Name="btnDeleteChild" Content="Delete" HorizontalAlignment="Left" Margin="213,462,0,0" VerticalAlignment="Top" Width="152" Click="btnDeleteChild_Click" Background="#FF0F0D0D" BorderBrush="#FFE01745" FontSize="16"/>
-                <Button x:Name="btnEditChildDetails" Content="Edit Child Details" HorizontalAlignment="Left" Margin="10,507,0,0" VerticalAlignment="Top" Width="152" Click="btnEditChildDetails_Click" Background="#FF111010" BorderBrush="#FF23CFCF" FontSize="16"/>
-                <ListView x:Name="lsViewChildren" HorizontalAlignment="Left" Height="377" Margin="10,79,0,0" VerticalAlignment="Top" Width="355" SelectionChanged="MySelectionChanged" Foreground="#FF1FE4E4" ItemClick="lsViewChildren_ItemClick">
+        <ScrollViewer HorizontalAlignment="Center" Height="591" VerticalAlignment="Top" Width="400">
+            <Grid VerticalAlignment="Top" Height="756" Width="402">
+                <TextBlock HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="Select child to view results" VerticalAlignment="Top" FontSize="28" Foreground="#FF1BD1D1" Width="382"/>
+                <Button x:Name="btnView" Content="View test records" HorizontalAlignment="Left" Margin="10,492,0,0" VerticalAlignment="Top" Click="btnView_Click" Width="164" Background="#FF110F0F" BorderBrush="#FF3BD418" FontSize="16"/>
+                <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="228,536,0,0" VerticalAlignment="Top" Width="164" Click="btnBack_Click" Background="#FF111010" BorderBrush="#FF8D0FD4" FontSize="16"/>
+                <Button x:Name="btnDeleteChild" Content="Delete" HorizontalAlignment="Left" Margin="228,492,0,0" VerticalAlignment="Top" Width="164" Click="btnDeleteChild_Click" Background="#FF0F0D0D" BorderBrush="#FFE01745" FontSize="16"/>
+                <Button x:Name="btnEditChildDetails" Content="Edit Child Details" HorizontalAlignment="Left" Margin="10,537,0,0" VerticalAlignment="Top" Width="164" Click="btnEditChildDetails_Click" Background="#FF111010" BorderBrush="#FF23CFCF" FontSize="16"/>
+                <ListView x:Name="lsViewChildren" HorizontalAlignment="Left" Height="377" Margin="10,109,0,0" VerticalAlignment="Top" Width="382" SelectionChanged="MySelectionChanged" Foreground="#FF1FE4E4" ItemClick="lsViewChildren_ItemClick">
                     <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem">
                             <Setter Property="HorizontalAlignment" Value="Stretch">

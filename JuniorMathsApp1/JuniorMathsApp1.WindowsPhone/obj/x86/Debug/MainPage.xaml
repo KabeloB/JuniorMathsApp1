@@ -7,21 +7,21 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
+    <Grid Margin="0,-26.667,0,-0.333">
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
-        <ScrollViewer HorizontalAlignment="Center" Height="433" VerticalAlignment="Top" Width="400">
+        <ScrollViewer HorizontalAlignment="Center" Height="457" VerticalAlignment="Top" Width="400">
             <Grid VerticalAlignment="Top" Height="639" Width="399">
-                <TextBlock HorizontalAlignment="Left" Margin="9,19,0,0" TextWrapping="Wrap" Text="Junior Math App" VerticalAlignment="Top" FontSize="36" Width="270" Foreground="#FF56D9EE"/>
-                <TextBlock HorizontalAlignment="Left" Margin="9,76,0,0" TextWrapping="Wrap" Text="Enter Username:" VerticalAlignment="Top" FontSize="16" Foreground="#FF82C340" Width="122"/>
-                <TextBlock HorizontalAlignment="Left" Margin="9,152,0,0" TextWrapping="Wrap" Text="Enter Password:" VerticalAlignment="Top" FontSize="16" Foreground="#FF7FC13D" Width="117"/>
-                <TextBox x:Name="txtUsername" PlaceholderText="enter email address" HorizontalAlignment="Left" Margin="9,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="374" Height="20" FontSize="16"/>
-                <Button x:ConnectionId='1' x:Name="btnLogin1" Content="Login" HorizontalAlignment="Left" Margin="9,215,0,0" VerticalAlignment="Top"                         Width="380" Height="48" FontSize="16" Foreground="#FFEEE3E3" Background="#FF0F0101" BorderBrush="#FF1697E0"/>
-                <Button x:ConnectionId='2' x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="9,271,0,0" VerticalAlignment="Top"                           Width="380" Height="48" FontSize="16" Background="#FF0F0101" BorderBrush="#FF712CD4"/>
-                <Button x:ConnectionId='3' x:Name="btnForgotPassword" Content="Forgot Password" HorizontalAlignment="Left" Margin="9,324,0,0" VerticalAlignment="Top"                                 Height="48" Width="380" FontSize="16" Background="#FF0F0101" BorderBrush="#FFDA145C"/>
-                <PasswordBox x:Name="pwbEnterPassword" PlaceholderText="enter password"  HorizontalAlignment="Left" Margin="9,171,0,0" VerticalAlignment="Top" Width="374" FontSize="20" Height="29"/>
-                <Button x:ConnectionId='4' Content="About App" HorizontalAlignment="Left" Margin="9,377,0,0" VerticalAlignment="Top" Width="380" Background="#FF010F03" BorderBrush="#FF26F012" FontSize="16" Height="48"                       />
+                <TextBlock HorizontalAlignment="Left" Margin="10,37,0,0" TextWrapping="Wrap" Text="Junior Math App" VerticalAlignment="Top" FontSize="36" Width="374" Foreground="#FF56D9EE" FontWeight="Bold" FontStyle="Italic"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,94,0,0" TextWrapping="Wrap" Text="Enter Username:" VerticalAlignment="Top" FontSize="16" Foreground="#FF82C340" Width="122"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,170,0,0" TextWrapping="Wrap" Text="Enter Password:" VerticalAlignment="Top" FontSize="16" Foreground="#FF7FC13D" Width="117"/>
+                <TextBox x:Name="txtUsername" PlaceholderText="enter email address" HorizontalAlignment="Left" Margin="10,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="374" Height="20" FontSize="16"/>
+                <Button x:ConnectionId='1' x:Name="btnLogin1" Content="Login" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top"                         Width="380" Height="48" FontSize="16" Foreground="#FFEEE3E3" Background="#FF0F0101" BorderBrush="#FF1697E0"/>
+                <Button x:ConnectionId='2' x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="10,289,0,0" VerticalAlignment="Top"                           Width="380" Height="48" FontSize="16" Background="#FF0F0101" BorderBrush="#FF712CD4"/>
+                <Button x:ConnectionId='3' x:Name="btnForgotPassword" Content="Forgot Password" HorizontalAlignment="Left" Margin="10,342,0,0" VerticalAlignment="Top"                                 Height="48" Width="380" FontSize="16" Background="#FF0F0101" BorderBrush="#FFDA145C"/>
+                <PasswordBox x:Name="pwbEnterPassword" PlaceholderText="enter password"  HorizontalAlignment="Left" Margin="10,189,0,0" VerticalAlignment="Top" Width="374" FontSize="20" Height="29"/>
+                <Button x:ConnectionId='4' Content="About App" HorizontalAlignment="Left" Margin="10,395,0,0" VerticalAlignment="Top" Width="380" Background="#FF010F03" BorderBrush="#FF26F012" FontSize="16" Height="48"                       />
             </Grid>
         </ScrollViewer>
 

@@ -7,20 +7,20 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
+    <Grid Margin="0,-26.667,0,-0.333">
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
         </Grid.Background>
-        <ScrollViewer HorizontalAlignment="Center" Height="408" VerticalAlignment="Top" Width="400">
+        <ScrollViewer HorizontalAlignment="Center" Height="451" VerticalAlignment="Top" Width="400">
             <Grid VerticalAlignment="Top" Height="642" Width="398">
-                <Button x:Name="btnStartTest" Content="Start New Test" HorizontalAlignment="Left" Margin="10,126,0,0" VerticalAlignment="Top" Width="378" Click="btnStartTest_Click" Height="54" FontSize="16" Background="#FF010D11"/>
-                <Button x:Name="btnViewTestResults" Content="View More Options" HorizontalAlignment="Left" Margin="10,181,0,0" VerticalAlignment="Top" Width="378" Click="btnViewTestResults_Click" Height="54" RenderTransformOrigin="0.481,1.395" FontSize="16" Background="#FF01080F"/>
-                <Button x:Name="btnEditChildDetails" Content="Edit Parent Account Details" HorizontalAlignment="Left" Margin="10,295,0,0" VerticalAlignment="Top" Width="378" Click="btnEditChildDetails_Click" Height="54" FontSize="16" Background="#FF0E0101"/>
-                <Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="10,355,0,0" VerticalAlignment="Top" Width="378" Click="btnLogout_Click" Height="54" FontSize="16" Background="#FF0A0101"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Menu Functions" VerticalAlignment="Top" FontSize="36" FontStyle="Italic" FontWeight="Bold" Foreground="#FF23CFE0" Margin="10,3,0,0" Width="285"/>
-                <Button x:Name="btnRegisterNewChild" Content="Register New Child" HorizontalAlignment="Left" Margin="10,238,0,0" VerticalAlignment="Top" Width="378" Click="btnRegisterNewChild_Click" Height="54" FontSize="16" Background="#FF0A0101"/>
-                <TextBlock HorizontalAlignment="Left" Margin="7,51,0,0" TextWrapping="Wrap" Text="Logged-in as:" VerticalAlignment="Top" FontSize="20" Foreground="#FF08D2E6" Width="148" Height="33"/>
-                <TextBlock x:Name="lblParentIdenNum" HorizontalAlignment="Left" Margin="10,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Height="32" Width="378" Foreground="#FF47DC26"/>
+                <Button x:Name="btnStartTest" Content="Start New Test" HorizontalAlignment="Left" Margin="10,161,0,0" VerticalAlignment="Top" Width="378" Click="btnStartTest_Click" Height="54" FontSize="16" Background="#FF010D11"/>
+                <Button x:Name="btnViewTestResults" Content="View More Options" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Width="378" Click="btnViewTestResults_Click" Height="54" RenderTransformOrigin="0.481,1.395" FontSize="16" Background="#FF01080F"/>
+                <Button x:Name="btnEditChildDetails" Content="Edit Parent Account Details" HorizontalAlignment="Left" Margin="10,330,0,0" VerticalAlignment="Top" Width="378" Click="btnEditChildDetails_Click" Height="54" FontSize="16" Background="#FF0E0101"/>
+                <Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="10,390,0,0" VerticalAlignment="Top" Width="378" Click="btnLogout_Click" Height="54" FontSize="16" Background="#FF0A0101"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Menu Functions" VerticalAlignment="Top" FontSize="36" FontStyle="Italic" FontWeight="Bold" Foreground="#FF23CFE0" Margin="10,38,0,0" Width="285"/>
+                <Button x:Name="btnRegisterNewChild" Content="Register New Child" HorizontalAlignment="Left" Margin="10,273,0,0" VerticalAlignment="Top" Width="378" Click="btnRegisterNewChild_Click" Height="54" FontSize="16" Background="#FF0A0101"/>
+                <TextBlock HorizontalAlignment="Left" Margin="7,86,0,0" TextWrapping="Wrap" Text="Logged-in as:" VerticalAlignment="Top" FontSize="20" Foreground="#FF08D2E6" Width="148" Height="33"/>
+                <TextBlock x:Name="lblParentIdenNum" HorizontalAlignment="Left" Margin="10,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Height="32" Width="378" Foreground="#FF47DC26"/>
             </Grid>
         </ScrollViewer>
     </Grid>
