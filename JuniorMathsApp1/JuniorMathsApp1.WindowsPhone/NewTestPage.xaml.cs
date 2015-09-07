@@ -227,6 +227,7 @@ namespace JuniorMathsApp1
         int countIndex = 0;
         int sendAnswer = 0;
         int incrementArray = 0;
+
         private void btnStartTest_Click(object sender, RoutedEventArgs e)
         {
 
