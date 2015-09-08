@@ -141,7 +141,7 @@ namespace JuniorMathsApp1
                     else
                     {
                         //Enter error message box here!
-                        string ErrorMessage = "Please ensure that all text field are entered!";
+                        string ErrorMessage = "Please ensure that all text fields are entered!";
                         messageBox(ErrorMessage);
                         //this.Frame.Navigate(typeof(MainPage));
                         

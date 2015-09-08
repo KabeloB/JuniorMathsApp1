@@ -246,7 +246,6 @@ namespace JuniorMathsApp1
             s = 0;
 
             
-
             try
             {
                 //get the random number to select a random question: Conver the number to a string
