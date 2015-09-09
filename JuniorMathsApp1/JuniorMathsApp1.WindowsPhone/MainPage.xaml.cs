@@ -47,18 +47,6 @@ namespace JuniorMathsApp1
         {
             var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
             await msgDisplay.ShowAsync();
-
-            /*
-            msgDisplay.Commands.Clear();
-            msgDisplay.Commands.Add(new UICommand { Label = "Close", Id = 0});
-
-            var res = await msgDisplay.ShowAsync();
-
-            if((int)res.Id == 0)
-            {
-               await msgDisplay.ShowAsync();
-            }
-            */
         }
 
 
