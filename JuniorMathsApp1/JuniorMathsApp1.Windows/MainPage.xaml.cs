@@ -45,6 +45,7 @@ namespace JuniorMathsApp1
         private async void messageBox(string msg)
         {
             var msgDisplay = new Windows.UI.Popups.MessageDialog(msg);
+
             await msgDisplay.ShowAsync();
 
         }
