@@ -19,7 +19,7 @@
                 <Button x:Name="btnSaveInformation" Content="Save Information" HorizontalAlignment="Left" Margin="10,447,0,0" VerticalAlignment="Top" Width="178" Click="btnSaveInformation_Click" Height="44" Background="#FF0C0000" BorderBrush="#FF2FE212" FontSize="14"/>
                 <TextBox x:Name="txtChildName" HorizontalAlignment="Left" Margin="10,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="363" Height="35" FontSize="16" />
                 <TextBox x:Name="txtChildSurname" HorizontalAlignment="Left" Margin="10,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="363" Height="33" FontSize="16"/>
-                <TextBox x:Name="txtChildAge" HorizontalAlignment="Left" Margin="10,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="363" Height="33" FontSize="16"/>
+                <TextBox x:Name="txtChildAge" InputScope="Number" HorizontalAlignment="Left" Margin="10,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="363" Height="33" FontSize="16"/>
                 <TextBlock HorizontalAlignment="Left" Margin="10,29,0,0" TextWrapping="Wrap" Text="Register new child" VerticalAlignment="Top" FontSize="36" Foreground="#FF0FDBF0" Height="42" Width="377"/>
                 <TextBlock HorizontalAlignment="Left" Margin="10,95,0,0" TextWrapping="Wrap" Text="Enter Name:" VerticalAlignment="Top" FontSize="16" Foreground="#FF23F10E" Width="363"/>
                 <Button Content="Back" HorizontalAlignment="Left" Margin="196,447,0,0" VerticalAlignment="Top" Width="177" Height="44" Click="Button_Click" BorderBrush="#FFE41717" Background="#FF0E0000" FontSize="14"/>

@@ -19,7 +19,7 @@
                 <Button x:Name="btnVerifyUserDetails" Content="Process" HorizontalAlignment="Left" Margin="10,286,0,0" VerticalAlignment="Top" Click="btnVerifyUserDetails_Click" Height="41" Width="172" FontSize="16" Foreground="#FFDAE2D6" BorderBrush="#FF46EE14" Background="#FF0F0F0F"/>
                 <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="219,286,0,0" VerticalAlignment="Top" Width="173" Click="btnBack_Click" Height="36" FontSize="16" BorderBrush="#FFD80D3C" Background="#FF111111"/>
                 <TextBlock HorizontalAlignment="Left" Margin="10,208,0,0" TextWrapping="Wrap" Text="Enter Phone Number:" VerticalAlignment="Top" FontSize="16" Foreground="#FF15DA39" Width="157"/>
-                <TextBox x:Name="txtConfirmPhoneNo" HorizontalAlignment="Left" Margin="10,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="382" FontSize="16" Height="23"/>
+                <TextBox x:Name="txtConfirmPhoneNo" InputScope="Number" HorizontalAlignment="Left" Margin="10,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="382" FontSize="16" Height="23"/>
             </Grid>
         </ScrollViewer>
 
