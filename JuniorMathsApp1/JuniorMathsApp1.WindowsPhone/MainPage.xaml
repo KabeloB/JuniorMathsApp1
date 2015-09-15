@@ -14,8 +14,8 @@
         <ScrollViewer HorizontalAlignment="Center" Height="457" VerticalAlignment="Top" Width="400">
             <Grid VerticalAlignment="Top" Height="639" Width="399">
                 <TextBlock HorizontalAlignment="Left" Margin="10,37,0,0" TextWrapping="Wrap" Text="Junior Math App" VerticalAlignment="Top" FontSize="36" Width="374" Foreground="#FF56D9EE" FontWeight="Bold" FontStyle="Italic"/>
-                <TextBlock HorizontalAlignment="Left" Margin="10,94,0,0" TextWrapping="Wrap" Text="Enter Username:" VerticalAlignment="Top" FontSize="16" Foreground="#FF82C340" Width="122"/>
-                <TextBlock HorizontalAlignment="Left" Margin="10,170,0,0" TextWrapping="Wrap" Text="Enter Password:" VerticalAlignment="Top" FontSize="16" Foreground="#FF7FC13D" Width="117"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,94,0,0" TextWrapping="Wrap" Text="Enter Username:" VerticalAlignment="Top" FontSize="16" Foreground="#FF0CD9EE" Width="122"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,170,0,0" TextWrapping="Wrap" Text="Enter Password:" VerticalAlignment="Top" FontSize="16" Foreground="#FF0CD9EE" Width="117"/>
                 <TextBox x:Name="txtUsername" PlaceholderText="enter email address" HorizontalAlignment="Left" Margin="10,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="374" Height="20" FontSize="16"/>
                 <Button x:Name="btnLogin1" Content="Login" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" Click="btnLogin1_Click" Width="380" Height="48" FontSize="16" Foreground="#FFEEE3E3" Background="#FF0F0101" BorderBrush="#FF1697E0"/>
                 <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="10,289,0,0" VerticalAlignment="Top" Click="btnRegister_Click" Width="380" Height="48" FontSize="16" Background="#FF0F0101" BorderBrush="#FF712CD4"/>
