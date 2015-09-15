@@ -26,7 +26,7 @@
                         <CompositeTransform SkewX="-0.117" TranslateX="0.025" Rotation="0.192" TranslateY="0.013"/>
                     </TextBox.RenderTransform>
                 </TextBox>
-                <TextBox x:Name="txtEnterPhoneNo" HorizontalAlignment="Left" Margin="198,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="191" FontSize="16" />
+                <TextBox x:Name="txtEnterPhoneNo" InputScope="Number" HorizontalAlignment="Left" Margin="198,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="191" FontSize="16" />
                 <Button x:ConnectionId='1' x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="10,392,0,0" VerticalAlignment="Top" Width="171"                         Background="#FF0F0101" BorderBrush="#FF1D62DA" Height="39"/>
                 <TextBox x:Name="txtEnterPassword" HorizontalAlignment="Left" Margin="198,323,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="191" Height="34" FontSize="16"/>
                 <Button x:ConnectionId='2' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="218,392,0,0" VerticalAlignment="Top" Width="171"                       BorderBrush="#FFF12F10" Background="#FF0F0101"/>
