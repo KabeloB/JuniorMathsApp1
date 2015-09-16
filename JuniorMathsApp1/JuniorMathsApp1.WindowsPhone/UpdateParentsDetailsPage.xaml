@@ -14,13 +14,13 @@
         <ScrollViewer HorizontalAlignment="Center" Height="515" VerticalAlignment="Top" Width="400">
             <Grid VerticalAlignment="Top" Height="640" Width="398">
                 <TextBlock HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" Text="Update Parent Details" VerticalAlignment="Top" FontSize="36" Foreground="#FF11E8D4" Height="43" Width="378"/>
-                <TextBlock HorizontalAlignment="Left" Margin="12,96,0,0" TextWrapping="Wrap" Text="Parent ID:" VerticalAlignment="Top" FontSize="16" Foreground="#FF0DF12C" Width="72"/>
+                <TextBlock HorizontalAlignment="Left" Margin="12,96,0,0" TextWrapping="Wrap" Text="Parent ID:" VerticalAlignment="Top" FontSize="16" Foreground="#FF0CD9EE" Width="72"/>
                 <TextBlock x:Name="lblParentID" HorizontalAlignment="Left" Margin="175,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="34" Foreground="#FF14EAD6"/>
-                <TextBlock HorizontalAlignment="Left" Margin="12,153,0,0" TextWrapping="Wrap" Text="Enter New Name:" VerticalAlignment="Top" FontSize="16" Foreground="#FF11F330" Width="131"/>
-                <TextBlock HorizontalAlignment="Left" Margin="10,214,0,0" TextWrapping="Wrap" Text="Enter New Surname:" VerticalAlignment="Top" FontSize="16" Foreground="#FF13F031" Width="152"/>
-                <TextBlock HorizontalAlignment="Left" Margin="12,280,0,0" TextWrapping="Wrap" Text="Enter New Email:" VerticalAlignment="Top" FontSize="16" Foreground="#FF0FF02D" Width="125"/>
-                <TextBlock HorizontalAlignment="Left" Margin="12,341,0,0" TextWrapping="Wrap" Text="Enter New Phone no:" VerticalAlignment="Top" FontSize="16" Foreground="#FF10F02E" Width="157"/>
-                <TextBlock HorizontalAlignment="Left" Margin="12,400,0,0" TextWrapping="Wrap" Text="Enter New Password:" VerticalAlignment="Top" FontSize="16" Foreground="#FF11F02F" Width="155"/>
+                <TextBlock HorizontalAlignment="Left" Margin="12,153,0,0" TextWrapping="Wrap" Text="Enter New Name:" VerticalAlignment="Top" FontSize="16" Foreground="#FF0CD9EE" Width="131"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,214,0,0" TextWrapping="Wrap" Text="Enter New Surname:" VerticalAlignment="Top" FontSize="16" Foreground="#FF0CD9EE" Width="152"/>
+                <TextBlock HorizontalAlignment="Left" Margin="12,280,0,0" TextWrapping="Wrap" Text="Enter New Email:" VerticalAlignment="Top" FontSize="16" Foreground="#FF0CD9EE" Width="125"/>
+                <TextBlock HorizontalAlignment="Left" Margin="12,341,0,0" TextWrapping="Wrap" Text="Enter New Phone no:" VerticalAlignment="Top" FontSize="16" Foreground="#FF0CD9EE" Width="157"/>
+                <TextBlock HorizontalAlignment="Left" Margin="12,400,0,0" TextWrapping="Wrap" Text="Enter New Password:" VerticalAlignment="Top" FontSize="16" Foreground="#FF0CD9EE" Width="155"/>
                 <TextBox x:Name="txtEnterNewName" HorizontalAlignment="Left" Margin="175,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="213" FontSize="16" Height="33"/>
                 <TextBox x:Name="txtEnterNewSurname" HorizontalAlignment="Left" Margin="175,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="213" FontSize="16" Height="25"/>
                 <TextBox x:Name="txtEnterNewEmail" HorizontalAlignment="Left" Margin="175,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="213" FontSize="16" Height="20"/>
