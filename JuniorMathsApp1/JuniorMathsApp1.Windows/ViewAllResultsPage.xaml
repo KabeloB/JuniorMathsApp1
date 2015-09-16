@@ -14,7 +14,7 @@
         <ScrollViewer HorizontalAlignment="Center" Height="768" VerticalAlignment="Top" Width="1366">
             <Grid VerticalAlignment="Top" Height="768" Width="723">
                 <TextBlock HorizontalAlignment="Left" Margin="116,10,0,0" TextWrapping="Wrap" Text="View all previous test results" VerticalAlignment="Top" Height="46" Width="456" FontSize="36" Foreground="#FF19F1E8"/>
-                <TextBlock HorizontalAlignment="Left" Margin="116,110,0,0" TextWrapping="Wrap" Text="All Results:" VerticalAlignment="Top" Height="25" Width="148" FontSize="24" Foreground="#FF19DC19"/>
+                <TextBlock HorizontalAlignment="Left" Margin="116,110,0,0" TextWrapping="Wrap" Text="All Results:" VerticalAlignment="Top" Height="25" Width="148" FontSize="24" Foreground="#FF0CD9EE"/>
                 <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="412,582,0,0" VerticalAlignment="Top" Width="213" Click="btnBack_Click" Height="43" Background="#FF0F0101" BorderBrush="#FFF31111" FontSize="16"/>
                 <Button x:Name="btnReturnMainMenu" Content="Return to main menu" HorizontalAlignment="Left" Margin="113,582,0,0" VerticalAlignment="Top" Click="btnReturnMainMenu_Click" Height="43" Width="213" Background="#FF011501" BorderBrush="#FF2FEA12" FontSize="16"/>
                 <ListView x:Name="lsViewTest" HorizontalAlignment="Left" Height="406" Margin="116,156,0,0" VerticalAlignment="Top" Width="506" Foreground="#FF21DECD">
@@ -34,7 +34,7 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <TextBlock HorizontalAlignment="Left" Margin="116,63,0,0" TextWrapping="Wrap" Text="Results for:" VerticalAlignment="Top" Foreground="#FF18E418" FontSize="24"/>
+                <TextBlock HorizontalAlignment="Left" Margin="116,63,0,0" TextWrapping="Wrap" Text="Results for:" VerticalAlignment="Top" Foreground="#FF0CD9EE" FontSize="24"/>
                 <TextBlock x:Name="lblChId" HorizontalAlignment="Left" Margin="248,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="324" Foreground="#FF12F0E6"/>
                 <Button x:Name="btnDeleteAll" Content="Delete all" HorizontalAlignment="Left" Margin="113,641,0,0" VerticalAlignment="Top" Height="43" Width="213" Background="#FF00010E" BorderBrush="#FF1326EA" Click="btnDeleteAll_Click" FontSize="16"/>
             </Grid>
