@@ -25,6 +25,10 @@
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Assets\JuniorMathsApp-Background1.jpg">
       <PackagePath>Assets\JuniorMathsApp-Background1.jpg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Assets\JuniorMathsApp-SplashScreen_Windows.scale-180.png">
+      <PackagePath>Assets\JuniorMathsApp-SplashScreen_Windows.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -35,7 +39,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Assets\SplashScreen.scale-180.png">
+      <PackagePath>Assets\SplashScreen.scale-180.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Mod\Source\Repos\JuniorMathsApp1\JuniorMathsApp1\JuniorMathsApp1.Windows\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>

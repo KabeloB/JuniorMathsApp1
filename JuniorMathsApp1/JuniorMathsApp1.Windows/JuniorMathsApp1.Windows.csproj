@@ -176,9 +176,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\JuniorMathsApp-Background1.jpg" />
+    <Content Include="Assets\JuniorMathsApp-SplashScreen_Windows.scale-180.png" />
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-180.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
     <Content Include="Grade1QuestionsXML2\Medium.xml" />
     <Content Include="Grade1QuestionsXML3\Advanced.xml" />
