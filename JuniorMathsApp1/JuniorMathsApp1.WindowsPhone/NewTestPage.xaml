@@ -9,7 +9,7 @@
 
     <Grid Margin="0,-26.667,0,-0.333">
         <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
+            <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg" Opacity="0.7"/>
         </Grid.Background>
         <TextBlock x:Name="lblCompletedQuestion" HorizontalAlignment="Left" Margin="288,626,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Foreground="#FFE41774"/>
         <ScrollViewer HorizontalAlignment="Center" Height="655" VerticalAlignment="Top" Width="400">

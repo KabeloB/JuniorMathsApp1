@@ -9,7 +9,7 @@
 
     <Grid Margin="0,-26.667,0,-0.333">
         <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
+            <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg" Opacity="0.7"/>
         </Grid.Background>
         <ScrollViewer HorizontalAlignment="Center" Height="333" VerticalAlignment="Top" Width="400" RenderTransformOrigin="-0.583,-1.783">
             <Grid VerticalAlignment="Top" Height="412" Width="402">
