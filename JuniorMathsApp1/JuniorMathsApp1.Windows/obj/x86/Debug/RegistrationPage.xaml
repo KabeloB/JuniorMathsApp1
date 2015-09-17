@@ -9,17 +9,17 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
+            <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg" Opacity="0.7"/>
         </Grid.Background>
         <ScrollViewer HorizontalAlignment="Center" Height="768" VerticalAlignment="Top" Width="1366">
             <Grid VerticalAlignment="Top" Height="768" Width="625">
                 <TextBlock HorizontalAlignment="Left" Margin="102,24,0,0" TextWrapping="Wrap" Text="Registration New Account" VerticalAlignment="Top" FontSize="36" Foreground="#FF21D1E2"/>
-                <TextBlock HorizontalAlignment="Left" Margin="102,99,0,0" TextWrapping="Wrap" Text="Enter Name:" VerticalAlignment="Top" FontSize="20" Foreground="#FF0CF536"/>
-                <TextBlock HorizontalAlignment="Left" Margin="102,158,0,0" TextWrapping="Wrap" Text="Enter Surname:" VerticalAlignment="Top" FontSize="20" Foreground="#FF0EF037"/>
+                <TextBlock HorizontalAlignment="Left" Margin="102,99,0,0" TextWrapping="Wrap" Text="Enter Name:" VerticalAlignment="Top" FontSize="20" Foreground="#FF0CD9EE"/>
+                <TextBlock HorizontalAlignment="Left" Margin="102,158,0,0" TextWrapping="Wrap" Text="Enter Surname:" VerticalAlignment="Top" FontSize="20" Foreground="#FF0CD9EE"/>
                 <TextBox x:Name="txtEnterName" HorizontalAlignment="Left" Margin="313,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201"/>
-                <TextBlock HorizontalAlignment="Left" Margin="102,222,0,0" TextWrapping="Wrap" Text="Enter Email Address:" VerticalAlignment="Top" FontSize="20" Foreground="#FF11F93B"/>
-                <TextBlock HorizontalAlignment="Left" Margin="102,284,0,0" TextWrapping="Wrap" Text="Enter Phone Number:" VerticalAlignment="Top" FontSize="20" Foreground="#FF16F53F"/>
-                <TextBlock HorizontalAlignment="Left" Margin="102,343,0,0" TextWrapping="Wrap" Text="Enter Password:" VerticalAlignment="Top" FontSize="20" Foreground="#FF14EE3C"/>
+                <TextBlock HorizontalAlignment="Left" Margin="102,222,0,0" TextWrapping="Wrap" Text="Enter Email Address:" VerticalAlignment="Top" FontSize="20" Foreground="#FF0CD9EE"/>
+                <TextBlock HorizontalAlignment="Left" Margin="102,284,0,0" TextWrapping="Wrap" Text="Enter Phone Number:" VerticalAlignment="Top" FontSize="20" Foreground="#FF0CD9EE"/>
+                <TextBlock HorizontalAlignment="Left" Margin="102,343,0,0" TextWrapping="Wrap" Text="Enter Password:" VerticalAlignment="Top" FontSize="20" Foreground="#FF0CD9EE"/>
                 <TextBox x:Name="txtEnterSurname" HorizontalAlignment="Left" Margin="313,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Height="32"/>
                 <TextBox x:Name="txtEnterEmail" HorizontalAlignment="Left" Margin="313.986,210.85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Width="201.844" Height="34.98">
                     <TextBox.RenderTransform>

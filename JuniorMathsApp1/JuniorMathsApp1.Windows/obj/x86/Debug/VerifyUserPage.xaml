@@ -9,16 +9,16 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg"/>
+            <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg" Opacity="0.7"/>
         </Grid.Background>
         <ScrollViewer HorizontalAlignment="Center" Height="768" VerticalAlignment="Top" Width="1366">
             <Grid VerticalAlignment="Top" Height="768" Width="607">
                 <TextBox x:Name="txtConfirmEmail" HorizontalAlignment="Left" Margin="118,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="369"/>
                 <TextBlock HorizontalAlignment="Left" Margin="155,17,0,0" TextWrapping="Wrap" Text="Verify User Details" VerticalAlignment="Top" FontSize="36" Width="300" Foreground="#FF1FCFC7"/>
-                <TextBlock HorizontalAlignment="Left" Margin="118,100,0,0" TextWrapping="Wrap" Text="Enter Email Address:" VerticalAlignment="Top" FontSize="24" Foreground="#FF14D626"/>
+                <TextBlock HorizontalAlignment="Left" Margin="118,100,0,0" TextWrapping="Wrap" Text="Enter Email Address:" VerticalAlignment="Top" FontSize="24" Foreground="#FF0CD9EE"/>
                 <Button x:ConnectionId='1' x:Name="btnVerifyUserDetails" Content="Process" HorizontalAlignment="Left" Margin="115,328,0,0" VerticalAlignment="Top"                                    Height="36" Width="166" FontSize="16" Foreground="#FFDAE2D6" BorderBrush="#FF46EE14" Background="#FF0F0F0F"/>
                 <Button x:ConnectionId='2' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="323,328,0,0" VerticalAlignment="Top" Width="167"                       Height="36" FontSize="16" BorderBrush="#FFD80D3C" Background="#FF111111"/>
-                <TextBlock HorizontalAlignment="Left" Margin="118,202,0,0" TextWrapping="Wrap" Text="Enter Phone Number:" VerticalAlignment="Top" FontSize="24" Foreground="#FF15DA39"/>
+                <TextBlock HorizontalAlignment="Left" Margin="118,202,0,0" TextWrapping="Wrap" Text="Enter Phone Number:" VerticalAlignment="Top" FontSize="24" Foreground="#FF0CD9EE"/>
                 <TextBox x:Name="txtConfirmPhoneNo" InputScope="Number" HorizontalAlignment="Left" Margin="118,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="369"/>
             </Grid>
         </ScrollViewer>
