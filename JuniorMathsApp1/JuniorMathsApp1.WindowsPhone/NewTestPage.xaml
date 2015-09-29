@@ -9,27 +9,30 @@
 
     <Grid Margin="0,-26.667,0,-0.333">
         <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg" Opacity="0.7"/>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FF464342" Offset="1"/>
+            </LinearGradientBrush>
         </Grid.Background>
         <TextBlock x:Name="lblCompletedQuestion" HorizontalAlignment="Left" Margin="288,626,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Foreground="#FFE41774"/>
         <ScrollViewer HorizontalAlignment="Center" Height="655" VerticalAlignment="Top" Width="400">
             <Grid VerticalAlignment="Top" Height="853" Width="396">
-                <TextBlock HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="Complete all questions" VerticalAlignment="Top" FontSize="36" Foreground="#FF12B9DE" Height="47" Width="376"/>
-                <TextBlock HorizontalAlignment="Left" Margin="8,185,0,0" TextWrapping="Wrap" Text="Enter answer here" VerticalAlignment="Top" FontSize="24" Foreground="#FF0CD9EE" Width="196"/>
-                <Button x:Name="btnSubmitAnswer" Content="Submit" HorizontalAlignment="Left" Margin="7,427,0,0" VerticalAlignment="Top" Width="378" Height="58" FontSize="16" Click="btnSubmitAnswer_Click" Background="#FF0E0101" BorderBrush="#FF1E4FF3"/>
-                <TextBlock HorizontalAlignment="Left" Margin="10,551,0,0" TextWrapping="Wrap" Text="Completed questions:  (" VerticalAlignment="Top" FontSize="20" Width="214" Foreground="#FF0CD9EE"/>
-                <Button x:Name="btnCancelTest" Content="Cancel Test" HorizontalAlignment="Left" Margin="207,486,0,0" VerticalAlignment="Top" Height="58" Width="178" FontSize="16" Click="btnCancelTest_Click" Background="#FF0E0101" BorderBrush="#FFF32A0A"/>
-                <TextBlock HorizontalAlignment="Left" Margin="246,551,0,0" TextWrapping="Wrap" Text="/10)" VerticalAlignment="Top" FontSize="20" Foreground="#FF0CD9EE" RenderTransformOrigin="0.414,-0.183" Width="36"/>
-                <Button x:Name="btnStartTest" Content="Start Test" HorizontalAlignment="Left" Margin="7,383,0,0" VerticalAlignment="Top" Height="56" Width="379" FontSize="16" Click="btnStartTest_Click" Foreground="#FFE3EEED" Background="#FF110101" BorderBrush="#FF2EF10F"/>
-                <TextBlock x:Name="txtRight" HorizontalAlignment="Left" Margin="8,583,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="375" Height="28" Foreground="#FF0CD9EE"/>
-                <TextBlock x:Name="txtWrong" HorizontalAlignment="Left" Margin="10,616,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="375" Height="28" Foreground="#FF0CD9EE"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="Complete all questions" VerticalAlignment="Top" FontSize="36" Foreground="#FF0CD9EE" Height="47" Width="376"/>
+                <TextBlock HorizontalAlignment="Left" Margin="8,185,0,0" TextWrapping="Wrap" Text="Enter answer here" VerticalAlignment="Top" FontSize="24" Foreground="#FF0CD9EE" Width="375" FontWeight="Bold"/>
+                <Button x:Name="btnSubmitAnswer" Content="Submit" HorizontalAlignment="Left" Margin="7,427,0,0" VerticalAlignment="Top" Width="378" Height="58" FontSize="16" Click="btnSubmitAnswer_Click" Background="#FF0E0101" BorderBrush="White"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,551,0,0" TextWrapping="Wrap" Text="Completed questions:  (" VerticalAlignment="Top" FontSize="20" Width="248" Foreground="#FF0CD9EE" FontWeight="Bold"/>
+                <Button x:Name="btnCancelTest" Content="Cancel Test" HorizontalAlignment="Left" Margin="207,486,0,0" VerticalAlignment="Top" Height="58" Width="178" FontSize="16" Click="btnCancelTest_Click" Background="#FF0E0101" BorderBrush="White"/>
+                <TextBlock HorizontalAlignment="Left" Margin="263,551,0,0" TextWrapping="Wrap" Text="/10)" VerticalAlignment="Top" FontSize="20" Foreground="#FF0CD9EE" RenderTransformOrigin="0.414,-0.183" Width="59" FontWeight="Bold"/>
+                <Button x:Name="btnStartTest" Content="Start Test" HorizontalAlignment="Left" Margin="7,383,0,0" VerticalAlignment="Top" Height="56" Width="379" FontSize="16" Click="btnStartTest_Click" Foreground="#FFE3EEED" Background="#FF110101" BorderBrush="White"/>
+                <TextBlock x:Name="txtRight" HorizontalAlignment="Left" Margin="8,583,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="375" Height="28" Foreground="#FF0CD9EE" FontWeight="Bold"/>
+                <TextBlock x:Name="txtWrong" HorizontalAlignment="Left" Margin="10,616,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="375" Height="28" Foreground="#FF0CD9EE" FontWeight="Bold"/>
                 <TextBlock x:Name="lblEquation" HorizontalAlignment="Left" Margin="88,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="99" Width="234" FontSize="72" Foreground="#FFE2E20C"/>
-                <TextBlock HorizontalAlignment="Left" Margin="7,263,0,0" TextWrapping="Wrap" Text="Please select difficulty:" VerticalAlignment="Top" FontSize="24" Foreground="#FF04E0E0" Width="251"/>
-                <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="8,486,0,0" VerticalAlignment="Top" Width="174" Height="58" Background="#FF131001" BorderBrush="#FFDBF009" FontSize="16" Click="btnBack_Click"/>
+                <TextBlock HorizontalAlignment="Left" Margin="7,263,0,0" TextWrapping="Wrap" Text="Please select difficulty:" VerticalAlignment="Top" FontSize="24" Foreground="#FF0CD9EE" Width="376" FontWeight="Bold"/>
+                <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="8,486,0,0" VerticalAlignment="Top" Width="174" Height="58" Background="#FF131001" BorderBrush="White" FontSize="16" Click="btnBack_Click"/>
                 <TextBox x:Name="txtEnterAnswer" InputScope="Number" HorizontalAlignment="Left" Margin="6,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" FontSize="16"/>
-                <TextBlock x:Name="lblTimeRemaining" HorizontalAlignment="Left" Margin="245,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="141" FontSize="24" Foreground="#FF0B20F5"/>
-                <TextBlock HorizontalAlignment="Left" Margin="8,340,0,0" TextWrapping="Wrap" Text="The time remaining:" VerticalAlignment="Top" Height="31" Width="218" Foreground="#FF0CD9EE" FontSize="24"/>
-                <TextBlock x:Name="lblCount" HorizontalAlignment="Left" Margin="224,551,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="18" RenderTransformOrigin="0.366,1.181" Foreground="#FFE224BF"/>
+                <TextBlock x:Name="lblTimeRemaining" HorizontalAlignment="Left" Margin="245,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="141" FontSize="24" Foreground="#FF0B20F5" FontWeight="Bold"/>
+                <TextBlock HorizontalAlignment="Left" Margin="8,340,0,0" TextWrapping="Wrap" Text="The time remaining:" VerticalAlignment="Top" Height="31" Width="232" Foreground="#FF0CD9EE" FontSize="24" FontWeight="Bold"/>
+                <TextBlock x:Name="lblCount" HorizontalAlignment="Left" Margin="240,551,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="18" RenderTransformOrigin="0.366,1.181" Foreground="#FFE224BF" FontWeight="Bold"/>
                 <ComboBox x:Name="cbTestDifficulty" HorizontalAlignment="Left" Margin="9,287,0,0" VerticalAlignment="Top" Width="250"/>
             </Grid>
         </ScrollViewer>

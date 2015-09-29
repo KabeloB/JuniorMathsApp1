@@ -9,7 +9,10 @@
 
     <Grid Margin="0,-26.667,0,-0.333">
         <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg" Opacity="0.7"/>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
         </Grid.Background>
         <ScrollViewer HorizontalAlignment="Center" Height="451" VerticalAlignment="Top" Width="400">
             <Grid VerticalAlignment="Top" Height="642" Width="398">
@@ -19,8 +22,8 @@
                 <Button x:ConnectionId='4' x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="10,390,0,0" VerticalAlignment="Top" Width="378"                         Height="54" FontSize="16" Background="#FF0A0101"/>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Menu Functions" VerticalAlignment="Top" FontSize="36" FontStyle="Italic" FontWeight="Bold" Foreground="#FF23CFE0" Margin="10,38,0,0" Width="285"/>
                 <Button x:ConnectionId='5' x:Name="btnRegisterNewChild" Content="Register New Child" HorizontalAlignment="Left" Margin="10,273,0,0" VerticalAlignment="Top" Width="378"                                   Height="54" FontSize="16" Background="#FF0A0101"/>
-                <TextBlock HorizontalAlignment="Left" Margin="7,86,0,0" TextWrapping="Wrap" Text="Logged-in as:" VerticalAlignment="Top" FontSize="20" Foreground="#FF08D2E6" Width="148" Height="33"/>
-                <TextBlock x:Name="lblParentIdenNum" HorizontalAlignment="Left" Margin="10,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Height="32" Width="378" Foreground="#FF47DC26"/>
+                <TextBlock HorizontalAlignment="Left" Margin="7,86,0,0" TextWrapping="Wrap" Text="Logged-in as:" VerticalAlignment="Top" FontSize="20" Foreground="#FF08D2E6" Width="381" Height="33" FontWeight="Bold"/>
+                <TextBlock x:Name="lblParentIdenNum" HorizontalAlignment="Left" Margin="10,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Height="32" Width="378" Foreground="#FF47DC26" FontWeight="Bold"/>
             </Grid>
         </ScrollViewer>
     </Grid>

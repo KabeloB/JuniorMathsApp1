@@ -9,15 +9,18 @@
 
     <Grid Margin="0,-26.667,0,-0.333">
         <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg" Opacity="0.7"/>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FF464342" Offset="1"/>
+            </LinearGradientBrush>
         </Grid.Background>
         <ScrollViewer HorizontalAlignment="Center" Height="591" VerticalAlignment="Top" Width="400">
             <Grid VerticalAlignment="Top" Height="756" Width="402">
-                <TextBlock HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="Select child to view results" VerticalAlignment="Top" FontSize="28" Foreground="#FF1BD1D1" Width="382"/>
-                <Button x:Name="btnView" Content="View test records" HorizontalAlignment="Left" Margin="10,492,0,0" VerticalAlignment="Top" Click="btnView_Click" Width="164" Background="#FF110F0F" BorderBrush="#FF3BD418" FontSize="16"/>
-                <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="228,536,0,0" VerticalAlignment="Top" Width="164" Click="btnBack_Click" Background="#FF111010" BorderBrush="#FF8D0FD4" FontSize="16"/>
-                <Button x:Name="btnDeleteChild" Content="Delete" HorizontalAlignment="Left" Margin="228,492,0,0" VerticalAlignment="Top" Width="164" Click="btnDeleteChild_Click" Background="#FF0F0D0D" BorderBrush="#FFE01745" FontSize="16"/>
-                <Button x:Name="btnEditChildDetails" Content="Edit Child Details" HorizontalAlignment="Left" Margin="10,537,0,0" VerticalAlignment="Top" Width="164" Click="btnEditChildDetails_Click" Background="#FF111010" BorderBrush="#FF23CFCF" FontSize="16"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="Select child to view results" VerticalAlignment="Top" FontSize="28" Foreground="#FF0CD9EE" Width="382"/>
+                <Button x:Name="btnView" Content="View test records" HorizontalAlignment="Left" Margin="10,492,0,0" VerticalAlignment="Top" Click="btnView_Click" Width="164" Background="#FF110F0F" BorderBrush="White" FontSize="16"/>
+                <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="228,536,0,0" VerticalAlignment="Top" Width="164" Click="btnBack_Click" Background="#FF111010" BorderBrush="White" FontSize="16"/>
+                <Button x:Name="btnDeleteChild" Content="Delete" HorizontalAlignment="Left" Margin="228,492,0,0" VerticalAlignment="Top" Width="164" Click="btnDeleteChild_Click" Background="#FF0F0D0D" BorderBrush="White" FontSize="16"/>
+                <Button x:Name="btnEditChildDetails" Content="Edit Child Details" HorizontalAlignment="Left" Margin="10,537,0,0" VerticalAlignment="Top" Width="164" Click="btnEditChildDetails_Click" Background="#FF111010" BorderBrush="White" FontSize="16"/>
                 <ListView x:Name="lsViewChildren" HorizontalAlignment="Left" Height="377" Margin="10,109,0,0" VerticalAlignment="Top" Width="382" SelectionChanged="MySelectionChanged" Foreground="#FF1FE4E4" ItemClick="lsViewChildren_ItemClick">
                     <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem">

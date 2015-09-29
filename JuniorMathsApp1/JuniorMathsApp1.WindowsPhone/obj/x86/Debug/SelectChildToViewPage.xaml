@@ -9,7 +9,10 @@
 
     <Grid Margin="0,-26.667,0,-0.333">
         <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg" Opacity="0.7"/>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
         </Grid.Background>
         <ScrollViewer HorizontalAlignment="Center" Height="591" VerticalAlignment="Top" Width="400">
             <Grid VerticalAlignment="Top" Height="756" Width="402">
