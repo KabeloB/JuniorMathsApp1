@@ -17,8 +17,8 @@
         <ScrollViewer HorizontalAlignment="Center" Height="553" VerticalAlignment="Top" Width="400">
             <Grid VerticalAlignment="Top" Height="716" Width="399">
                 <TextBlock HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="Please select child to take test" VerticalAlignment="Top" FontSize="28" Foreground="#FF0CD9EE" Height="44" Width="368"/>
-                <Button x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="10,492,0,0" VerticalAlignment="Top" Width="187" Click="btnSelect_Click" Background="#FF010F01" BorderBrush="#FF17D828" FontSize="16"/>
-                <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="203,492,0,0" VerticalAlignment="Top" Width="186" Click="btnBack_Click" Background="#FF0E0101" BorderBrush="#FFE43F1A" FontSize="16"/>
+                <Button x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="10,492,0,0" VerticalAlignment="Top" Width="187" Click="btnSelect_Click" Background="#FF010F01" BorderBrush="White" FontSize="16"/>
+                <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="203,492,0,0" VerticalAlignment="Top" Width="186" Click="btnBack_Click" Background="#FF0E0101" BorderBrush="White" FontSize="16"/>
                 <ListView x:Name="lsvChooseChild" HorizontalAlignment="Left" Height="375" Margin="9,103,0,0" VerticalAlignment="Top" Width="380" SelectionChanged="MySelectionChanged"  ItemClick="lsvChooseChild_ItemClick">
                     <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem">

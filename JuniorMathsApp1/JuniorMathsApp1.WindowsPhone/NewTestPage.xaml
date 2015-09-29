@@ -15,7 +15,7 @@
             </LinearGradientBrush>
         </Grid.Background>
         <TextBlock x:Name="lblCompletedQuestion" HorizontalAlignment="Left" Margin="288,626,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Foreground="#FFE41774"/>
-        <ScrollViewer HorizontalAlignment="Center" Height="655" VerticalAlignment="Top" Width="400">
+        <ScrollViewer HorizontalAlignment="Center" Height="667" VerticalAlignment="Top" Width="400">
             <Grid VerticalAlignment="Top" Height="853" Width="396">
                 <TextBlock HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="Complete all questions" VerticalAlignment="Top" FontSize="36" Foreground="#FF0CD9EE" Height="47" Width="376"/>
                 <TextBlock HorizontalAlignment="Left" Margin="8,185,0,0" TextWrapping="Wrap" Text="Enter answer here" VerticalAlignment="Top" FontSize="24" Foreground="#FF0CD9EE" Width="375" FontWeight="Bold"/>
