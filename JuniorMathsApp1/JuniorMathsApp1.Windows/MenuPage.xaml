@@ -7,10 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
-        <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg" Opacity="0.7"/>
-        </Grid.Background>
+    <Grid Background="#FF464342">
         <ScrollViewer HorizontalAlignment="Center" Height="768" VerticalAlignment="Top" Width="1366">
             <Grid VerticalAlignment="Top" Height="768" Width="577">
                 <Button x:Name="btnStartTest" Content="Start New Test" HorizontalAlignment="Left" Margin="95,164,0,0" VerticalAlignment="Top" Width="393" Click="btnStartTest_Click" Height="54" FontSize="20" Background="#FF010D11"/>

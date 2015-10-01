@@ -7,10 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
-        <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg" Opacity="0.7"/>
-        </Grid.Background>
+    <Grid Background="#FF464342">
         <ScrollViewer HorizontalAlignment="Center" Height="768" VerticalAlignment="Top" Width="1366">
             <Grid VerticalAlignment="Top" Height="768" Width="723">
                 <TextBlock HorizontalAlignment="Left" Margin="116,10,0,0" TextWrapping="Wrap" Text="View all previous test results" VerticalAlignment="Top" Height="46" Width="456" FontSize="36" Foreground="#FF19F1E8"/>
