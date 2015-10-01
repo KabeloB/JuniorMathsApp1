@@ -7,13 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
-        <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg" Opacity="0.7"/>
-        </Grid.Background>
+    <Grid Background="#FF464342">
         <ScrollViewer HorizontalAlignment="Center" Height="768" VerticalAlignment="Top" Width="1366">
             <Grid VerticalAlignment="Top" Height="768" Width="723">
-                <TextBlock HorizontalAlignment="Left" Margin="127,35,0,0" TextWrapping="Wrap" Text="Please select child to take test" VerticalAlignment="Top" FontSize="36" Foreground="#FF1EE0D7"/>
+                <TextBlock HorizontalAlignment="Left" Margin="127,35,0,0" TextWrapping="Wrap" Text="Please select child to take test" VerticalAlignment="Top" FontSize="36" Foreground="#FF0CD9EE"/>
                 <ListView x:ConnectionId='1' x:Name="lsvChooseChild" HorizontalAlignment="Left" Height="462" Margin="127,83,0,0" VerticalAlignment="Top" Width="473"                                                                            Foreground="#FF18EABA">
                     <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem">
@@ -31,8 +28,8 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Button x:ConnectionId='2' x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="124,585,0,0" VerticalAlignment="Top" Width="196"                         Background="#FF010F01" BorderBrush="#FF17D828" FontSize="16"/>
-                <Button x:ConnectionId='3' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="411,585,0,0" VerticalAlignment="Top" Width="192"                       Background="#FF0E0101" BorderBrush="#FFE43F1A" FontSize="16"/>
+                <Button x:ConnectionId='2' x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="124,585,0,0" VerticalAlignment="Top" Width="196"                         Background="#FF0C0101" BorderBrush="White" FontSize="16"/>
+                <Button x:ConnectionId='3' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="411,585,0,0" VerticalAlignment="Top" Width="192"                       Background="#FF0C0101" BorderBrush="White" FontSize="16"/>
             </Grid>
         </ScrollViewer>
 

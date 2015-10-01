@@ -393,7 +393,7 @@ namespace JuniorMathsApp1
                         }
 
 
-                        lblCompletedQuestion.Text = "" + count;
+                        
 
 
                     }
@@ -540,7 +540,7 @@ namespace JuniorMathsApp1
                         }
 
 
-                        lblCompletedQuestion.Text = "" + count;
+                       
 
 
                     }
@@ -694,7 +694,7 @@ namespace JuniorMathsApp1
                         }
 
 
-                        lblCompletedQuestion.Text = "" + count;
+                        
 
 
                     }
@@ -743,7 +743,7 @@ namespace JuniorMathsApp1
                         }
 
 
-                        lblCompletedQuestion.Text = "" + count;
+                        
 
 
                     }

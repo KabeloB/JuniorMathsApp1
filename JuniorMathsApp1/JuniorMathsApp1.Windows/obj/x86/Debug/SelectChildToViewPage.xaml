@@ -7,10 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
-        <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg" Opacity="0.7"/>
-        </Grid.Background>
+    <Grid Background="#FF464342">
         <ScrollViewer HorizontalAlignment="Center" Height="768" VerticalAlignment="Top" Width="1366">
             <Grid VerticalAlignment="Top" Height="768" Width="723">
                 <ListView x:ConnectionId='1' x:Name="lsViewChildren" HorizontalAlignment="Left" Height="480" Margin="125,70,0,0" VerticalAlignment="Top" Width="436"                                                                            Foreground="#FF1FE4E4" >
@@ -30,11 +27,11 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <TextBlock HorizontalAlignment="Left" Margin="125,22,0,0" TextWrapping="Wrap" Text="Select child to view results" VerticalAlignment="Top" FontSize="36" Foreground="#FF1BD1D1" Width="436"/>
-                <Button x:ConnectionId='2' x:Name="btnView" Content="View test records" HorizontalAlignment="Left" Margin="143,569,0,0" VerticalAlignment="Top"                       Width="188" Background="#FF110F0F" BorderBrush="#FF3BD418" FontSize="16"/>
-                <Button x:ConnectionId='3' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="387,635,0,0" VerticalAlignment="Top" Width="198"                       Background="#FF111010" BorderBrush="#FF8D0FD4" FontSize="16"/>
-                <Button x:ConnectionId='4' x:Name="btnDeleteChild" Content="Delete" HorizontalAlignment="Left" Margin="387,569,0,0" VerticalAlignment="Top" Width="198"                              Background="#FF0F0D0D" BorderBrush="#FFE01745" FontSize="16"/>
-                <Button x:ConnectionId='5' x:Name="btnEditChildDetails" Content="Edit Child Details" HorizontalAlignment="Left" Margin="143,635,0,0" VerticalAlignment="Top" Width="188"                                   Background="#FF111010" BorderBrush="#FF23CFCF" FontSize="16"/>
+                <TextBlock HorizontalAlignment="Left" Margin="125,22,0,0" TextWrapping="Wrap" Text="Select child to view results" VerticalAlignment="Top" FontSize="36" Foreground="#FF0CD9EE" Width="436"/>
+                <Button x:ConnectionId='2' x:Name="btnView" Content="View test records" HorizontalAlignment="Left" Margin="143,569,0,0" VerticalAlignment="Top"                       Width="188" Background="#FF0C0101" BorderBrush="White" FontSize="16"/>
+                <Button x:ConnectionId='3' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="387,635,0,0" VerticalAlignment="Top" Width="198"                       Background="#FF0C0101" BorderBrush="White" FontSize="16"/>
+                <Button x:ConnectionId='4' x:Name="btnDeleteChild" Content="Delete" HorizontalAlignment="Left" Margin="387,569,0,0" VerticalAlignment="Top" Width="198"                              Background="#FF0C0101" BorderBrush="White" FontSize="16"/>
+                <Button x:ConnectionId='5' x:Name="btnEditChildDetails" Content="Edit Child Details" HorizontalAlignment="Left" Margin="143,635,0,0" VerticalAlignment="Top" Width="188"                                   Background="#FF0C0101" BorderBrush="White" FontSize="16"/>
             </Grid>
         </ScrollViewer>
 

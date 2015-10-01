@@ -7,13 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
-        <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="Assets/JuniorMathsApp-Background1.jpg" Opacity="0.7"/>
-        </Grid.Background>
+    <Grid Background="#FF464342">
         <ScrollViewer HorizontalAlignment="Center" Height="768" VerticalAlignment="Top" Width="1366">
             <Grid VerticalAlignment="Top" Height="768" Width="613">
-                <TextBlock HorizontalAlignment="Left" Margin="130,28,0,0" TextWrapping="Wrap" Text="Update Parent Details" VerticalAlignment="Top" FontSize="36" Foreground="#FF11E8D4"/>
+                <TextBlock HorizontalAlignment="Left" Margin="130,28,0,0" TextWrapping="Wrap" Text="Update Parent Details" VerticalAlignment="Top" FontSize="36" Foreground="#FF0CD9EE"/>
                 <TextBlock HorizontalAlignment="Left" Margin="58,103,0,0" TextWrapping="Wrap" Text="Parent ID:" VerticalAlignment="Top" FontSize="24" Foreground="#FF0CD9EE"/>
                 <TextBlock x:Name="lblParentID" HorizontalAlignment="Left" Margin="201,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="34" Foreground="#FF14EAD6"/>
                 <TextBlock HorizontalAlignment="Left" Margin="58,167,0,0" TextWrapping="Wrap" Text="Enter New Name:" VerticalAlignment="Top" FontSize="24" Foreground="#FF0CD9EE"/>
@@ -26,8 +23,8 @@
                 <TextBox x:Name="txtEnterNewEmail" HorizontalAlignment="Left" Margin="290,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
                 <TextBox x:Name="txtEnterNewPhoneNo" HorizontalAlignment="Left" Margin="290,351,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
                 <TextBox x:Name="txtEnterNewPassword" HorizontalAlignment="Left" Margin="290,410,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
-                <Button x:ConnectionId='1' x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="55,502,0,0" VerticalAlignment="Top" Width="225" FontSize="16" BorderBrush="#FF1BD14C" Background="#FF0C0101"                     />
-                <Button x:ConnectionId='2' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="328,502,0,0" VerticalAlignment="Top" Width="225" FontSize="16" Background="#FF110101" BorderBrush="#FFEE1313"                      />
+                <Button x:ConnectionId='1' x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="55,502,0,0" VerticalAlignment="Top" Width="225" FontSize="16" BorderBrush="White" Background="#FF0C0101"                     />
+                <Button x:ConnectionId='2' x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="328,502,0,0" VerticalAlignment="Top" Width="225" FontSize="16" Background="#FF0C0101" BorderBrush="White"                      />
             </Grid>
         </ScrollViewer>
 

@@ -8,7 +8,7 @@
     mc:Ignorable="d">
 
     <Grid Background="#FF464342">
-        <TextBlock x:Name="lblCompletedQuestion" HorizontalAlignment="Left" Margin="288,626,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Foreground="#FFE41774"/>
+      
         <ScrollViewer HorizontalAlignment="Center" Height="768" VerticalAlignment="Top" Width="1366">
             <Grid VerticalAlignment="Top" Height="768" Width="664">
                 <TextBlock HorizontalAlignment="Left" Margin="139,34,0,0" TextWrapping="Wrap" Text="Complete all questions" VerticalAlignment="Top" FontSize="36" Foreground="#FF0CD9EE"/>
