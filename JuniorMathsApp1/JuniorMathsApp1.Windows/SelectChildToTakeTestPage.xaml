@@ -10,7 +10,7 @@
     <Grid Background="#FF464342">
         <ScrollViewer HorizontalAlignment="Center" Height="768" VerticalAlignment="Top" Width="1366">
             <Grid VerticalAlignment="Top" Height="768" Width="723">
-                <TextBlock HorizontalAlignment="Left" Margin="127,35,0,0" TextWrapping="Wrap" Text="Please select child to take test" VerticalAlignment="Top" FontSize="36" Foreground="#FF1EE0D7"/>
+                <TextBlock HorizontalAlignment="Left" Margin="127,35,0,0" TextWrapping="Wrap" Text="Please select child to take test" VerticalAlignment="Top" FontSize="36" Foreground="#FF0CD9EE"/>
                 <ListView x:Name="lsvChooseChild" HorizontalAlignment="Left" Height="462" Margin="127,83,0,0" VerticalAlignment="Top" Width="473" ItemClick="lsvChooseChild_ItemClick" SelectionChanged="MySelectionChanged" Foreground="#FF18EABA">
                     <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem">
@@ -28,8 +28,8 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Button x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="124,585,0,0" VerticalAlignment="Top" Width="196" Click="btnSelect_Click" Background="#FF010F01" BorderBrush="#FF17D828" FontSize="16"/>
-                <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="411,585,0,0" VerticalAlignment="Top" Width="192" Click="btnBack_Click" Background="#FF0E0101" BorderBrush="#FFE43F1A" FontSize="16"/>
+                <Button x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="124,585,0,0" VerticalAlignment="Top" Width="196" Click="btnSelect_Click" Background="#FF0C0101" BorderBrush="White" FontSize="16"/>
+                <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="411,585,0,0" VerticalAlignment="Top" Width="192" Click="btnBack_Click" Background="#FF0C0101" BorderBrush="White" FontSize="16"/>
             </Grid>
         </ScrollViewer>
 

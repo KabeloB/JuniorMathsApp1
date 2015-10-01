@@ -10,13 +10,13 @@
     <Grid Background="#FF464342">
         <ScrollViewer HorizontalAlignment="Center" Height="768" VerticalAlignment="Top" Width="1366">
             <Grid VerticalAlignment="Top" Height="768" Width="577">
-                <Button x:Name="btnStartTest" Content="Start New Test" HorizontalAlignment="Left" Margin="95,164,0,0" VerticalAlignment="Top" Width="393" Click="btnStartTest_Click" Height="54" FontSize="20" Background="#FF010D11"/>
-                <Button x:Name="btnViewTestResults" Content="View More Options" HorizontalAlignment="Left" Margin="95,237,0,0" VerticalAlignment="Top" Width="393" Click="btnViewTestResults_Click" Height="54" RenderTransformOrigin="0.481,1.395" FontSize="20" Background="#FF01080F"/>
-                <Button x:Name="btnEditChildDetails" Content="Edit Parent Account Details" HorizontalAlignment="Left" Margin="95,384,0,0" VerticalAlignment="Top" Width="393" Click="btnEditChildDetails_Click" Height="54" FontSize="20" Background="#FF0E0101"/>
-                <Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="95,456,0,0" VerticalAlignment="Top" Width="393" Click="btnLogout_Click" Height="54" FontSize="20" Background="#FF0A0101"/>
-                <TextBlock HorizontalAlignment="Left" Margin="163,22,0,0" TextWrapping="Wrap" Text="Menu Functions" VerticalAlignment="Top" FontSize="36" FontStyle="Italic" FontWeight="Bold" Foreground="#FF23CFE0"/>
-                <Button x:Name="btnRegisterNewChild" Content="Register New Child" HorizontalAlignment="Left" Margin="95,309,0,0" VerticalAlignment="Top" Width="393" Click="btnRegisterNewChild_Click" Height="54" FontSize="20" Background="#FF0A0101"/>
-                <TextBlock HorizontalAlignment="Left" Margin="98,93,0,0" TextWrapping="Wrap" Text="Logged-in as:" VerticalAlignment="Top" FontSize="22" Foreground="#FF08D2E6"/>
+                <Button x:Name="btnStartTest" Content="Start New Test" HorizontalAlignment="Left" Margin="95,164,0,0" VerticalAlignment="Top" Width="393" Click="btnStartTest_Click" Height="54" FontSize="20" Background="#FF0C0101"/>
+                <Button x:Name="btnViewTestResults" Content="View More Options" HorizontalAlignment="Left" Margin="95,237,0,0" VerticalAlignment="Top" Width="393" Click="btnViewTestResults_Click" Height="54" RenderTransformOrigin="0.481,1.395" FontSize="20" Background="#FF0C0101"/>
+                <Button x:Name="btnEditChildDetails" Content="Edit Parent Account Details" HorizontalAlignment="Left" Margin="95,384,0,0" VerticalAlignment="Top" Width="393" Click="btnEditChildDetails_Click" Height="54" FontSize="20" Background="#FF0C0101"/>
+                <Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="95,456,0,0" VerticalAlignment="Top" Width="393" Click="btnLogout_Click" Height="54" FontSize="20" Background="#FF0C0101"/>
+                <TextBlock HorizontalAlignment="Left" Margin="163,22,0,0" TextWrapping="Wrap" Text="Menu Functions" VerticalAlignment="Top" FontSize="36" FontStyle="Italic" FontWeight="Bold" Foreground="#FF0CD9EE"/>
+                <Button x:Name="btnRegisterNewChild" Content="Register New Child" HorizontalAlignment="Left" Margin="95,309,0,0" VerticalAlignment="Top" Width="393" Click="btnRegisterNewChild_Click" Height="54" FontSize="20" Background="#FF0C0101"/>
+                <TextBlock HorizontalAlignment="Left" Margin="98,93,0,0" TextWrapping="Wrap" Text="Logged-in as:" VerticalAlignment="Top" FontSize="22" Foreground="#FF0CD9EE"/>
                 <TextBlock x:Name="lblParentIdenNum" HorizontalAlignment="Left" Margin="98,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" Height="26" Width="387" Foreground="#FF47DC26"/>
             </Grid>
         </ScrollViewer>

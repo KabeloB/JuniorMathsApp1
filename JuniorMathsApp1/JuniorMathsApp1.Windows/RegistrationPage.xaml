@@ -10,7 +10,7 @@
     <Grid Background="#FF464342">
         <ScrollViewer HorizontalAlignment="Center" Height="768" VerticalAlignment="Top" Width="1366">
             <Grid VerticalAlignment="Top" Height="768" Width="625">
-                <TextBlock HorizontalAlignment="Left" Margin="102,24,0,0" TextWrapping="Wrap" Text="Registration New Account" VerticalAlignment="Top" FontSize="36" Foreground="#FF21D1E2"/>
+                <TextBlock HorizontalAlignment="Left" Margin="102,24,0,0" TextWrapping="Wrap" Text="Registration New Account" VerticalAlignment="Top" FontSize="36" Foreground="#FF0CD9EE"/>
                 <TextBlock HorizontalAlignment="Left" Margin="102,99,0,0" TextWrapping="Wrap" Text="Enter Name:" VerticalAlignment="Top" FontSize="20" Foreground="#FF0CD9EE"/>
                 <TextBlock HorizontalAlignment="Left" Margin="102,158,0,0" TextWrapping="Wrap" Text="Enter Surname:" VerticalAlignment="Top" FontSize="20" Foreground="#FF0CD9EE"/>
                 <TextBox x:Name="txtEnterName" HorizontalAlignment="Left" Margin="313,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201"/>
@@ -24,10 +24,10 @@
                     </TextBox.RenderTransform>
                 </TextBox>
                 <TextBox x:Name="txtEnterPhoneNo" InputScope="Number" HorizontalAlignment="Left" Margin="313,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" />
-                <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="99,393,0,0" VerticalAlignment="Top" Width="196" Click="btnSubmit_Click" Background="#FF0F0101" BorderBrush="#FF1D62DA"/>
+                <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="99,393,0,0" VerticalAlignment="Top" Width="196" Click="btnSubmit_Click" Background="#FF0C0101" BorderBrush="White"/>
                 <TextBox x:Name="txtEnterPassword" HorizontalAlignment="Left" Margin="313,335,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Height="23"/>
-                <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="310,393,0,0" VerticalAlignment="Top" Width="207" Click="btnBack_Click" BorderBrush="#FFF12F10" Background="#FF0F0101"/>
-                <Button Content="Clear All" HorizontalAlignment="Left" Margin="99,451,0,0" VerticalAlignment="Top" Width="196" Background="#FF0A0101" BorderBrush="#FFC0EC2A" Click="Button_Click"/>
+                <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="310,393,0,0" VerticalAlignment="Top" Width="207" Click="btnBack_Click" BorderBrush="White" Background="#FF0C0101"/>
+                <Button Content="Clear All" HorizontalAlignment="Left" Margin="99,451,0,0" VerticalAlignment="Top" Width="196" Background="#FF0C0101" BorderBrush="White" Click="Button_Click"/>
             </Grid>
         </ScrollViewer>
 
