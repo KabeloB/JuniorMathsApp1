@@ -25,7 +25,7 @@
                 <TextBlock HorizontalAlignment="Left" Margin="139,286,0,0" TextWrapping="Wrap" Text="Please select difficulty:" VerticalAlignment="Top" FontSize="24" Foreground="#FF0CD9EE"/>
                 <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="136,544,0,0" VerticalAlignment="Top" Width="168" Height="58" Background="#FF0C0101" BorderBrush="White" FontSize="24" Click="btnBack_Click"/>
                 <TextBox x:Name="txtEnterAnswer" InputScope="Number" HorizontalAlignment="Left" Margin="139,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="363"/>
-                <TextBlock x:Name="lblTimeRemaining" HorizontalAlignment="Left" Margin="370,359,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="132" FontSize="24" Foreground="#FF0B20F5"/>
+                <TextBlock x:Name="lblTimeRemaining" HorizontalAlignment="Left" Margin="370,359,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="132" FontSize="24" Foreground="#FFF5200B"/>
                 <TextBlock HorizontalAlignment="Left" Margin="139,359,0,0" TextWrapping="Wrap" Text="The time remaining:" VerticalAlignment="Top" Height="31" Width="211" Foreground="#FF0CD9EE" FontSize="24"/>
                 <TextBlock x:Name="lblCount" HorizontalAlignment="Left" Margin="399,624,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" Width="23" RenderTransformOrigin="0.366,1.181" Foreground="#FFE224BF"/>
             </Grid>
