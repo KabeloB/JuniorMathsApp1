@@ -7,7 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Margin="0,-26.667,0,-0.333" Background="#FF464342">
+    <Grid Margin="0,-26.667,0,-0.333">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FF464342" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <ScrollViewer HorizontalAlignment="Center" Height="333" VerticalAlignment="Top" Width="400" RenderTransformOrigin="-0.583,-1.783">
             <Grid VerticalAlignment="Top" Height="412" Width="402">
                 <TextBlock HorizontalAlignment="Left" Margin="35,106,0,0" TextWrapping="Wrap" Text="This application will assist parents to keep track of their childrens  progress regarding thier mathematical skills by allowing them to take a series of math questions and calculating their test results to see how well they did." VerticalAlignment="Top" Height="138" Width="260" FontSize="16" Foreground="#FFE5E6F1"/>

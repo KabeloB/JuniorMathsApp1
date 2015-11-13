@@ -28,7 +28,7 @@
                 <TextBox x:Name="txtCurrentChildAge" HorizontalAlignment="Left" Margin="212,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
                 <TextBlock HorizontalAlignment="Left" Margin="26,322,0,0" TextWrapping="Wrap" Text="Current Child Grade:" VerticalAlignment="Top" FontSize="16" Foreground="#FF0CD9EE" Height="22" FontWeight="Bold"/>
                 <TextBlock x:Name="lblChildsID" HorizontalAlignment="Left" Margin="212,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" Width="74" Foreground="#FF31CEDE" FontWeight="Bold"/>
-                <ComboBox x:Name="cbCurrentChildGrade" HorizontalAlignment="Left" Margin="212,296,0,0" VerticalAlignment="Top" Width="165" FontSize="16" Foreground="#FF0E0101"/>
+                <ComboBox x:Name="cbCurrentChildGrade" HorizontalAlignment="Left" Margin="212,296,0,0" VerticalAlignment="Top" Width="165" FontSize="16" Foreground="#FFF1EBEB"/>
             </Grid>
         </ScrollViewer>
 
