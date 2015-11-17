@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="48271kabelo.240140B25166A" Publisher="CN=E7E178D8-F4EB-4211-8F89-EC1FD652B7E8" Version="1.1.0.3" />
+  <Identity Name="48271kabelo.240140B25166A" Publisher="CN=E7E178D8-F4EB-4211-8F89-EC1FD652B7E8" Version="1.1.0.4" />
   <mp:PhoneIdentity PhoneProductId="c8981db8-0bfc-4dfb-8999-e64ece6a52e7" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Junior Math Application</DisplayName>
